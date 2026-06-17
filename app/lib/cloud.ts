@@ -1,7 +1,17 @@
+// app/lib/cloud.ts
 import { db } from "./firebase";
-import { doc, getDoc, collection, getDocs } from "firebase/firestore";
+import {
+  doc,
+  getDoc,
+  setDoc,
+  addDoc,
+  collection,
+  getDocs,
+  serverTimestamp,
+} from "firebase/firestore";
 
 const COLLECTION = "students";
+const MOCK_COLLECTION = "mockResults";
 
 export function emailToId(email: string): string {
   return email.trim().toLowerCase().replace(/\//g, "_");
@@ -11,7 +21,17 @@ export function currentWeekId(d: Date = new Date()): string {
   const x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
   const day = (x.getDay() + 6) % 7;
   x.setDate(x.getDate() - day);
-  return `${x.getFullYear()}-${String(x.getMonth() + 1).padStart(2, "0")}-${String(x.getDate()).padStart(2, "0")}`;
+  return ymd(x);
+}
+
+function ymd(d: Date): string {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+function daysBetween(a: string, b: string): number {
+  const da = new Date(a + "T00:00:00");
+  const dbb = new Date(b + "T00:00:00");
+  return Math.round((dbb.getTime() - da.getTime()) / 86400000);
 }
 
 export interface StudentProfile {
@@ -75,5 +95,87 @@ export async function loadWeeklyLeaderboard(): Promise<WeeklyRankEntry[]> {
   } catch (e) {
     console.error("loadWeeklyLeaderboard error:", e);
     return [];
+  }
+}
+
+export interface MockSavePayload {
+  earnedPoints: number;
+  totalPoints: number;
+  percent: number;
+  correctCount: number;
+  totalQuestions: number;
+  bySection: object;
+}
+
+export async function saveMockResult(
+  email: string,
+  name: string,
+  payload: MockSavePayload
+): Promise<{ xpGained: number } | null> {
+  if (!email || !db) return null;
+  try {
+    const id = emailToId(email);
+    const ref = doc(db, COLLECTION, id);
+    const snap = await getDoc(ref);
+    const cur = (snap.exists() ? snap.data() : {}) as {
+      name?: string; weeklyXp?: number; weekId?: string;
+      streak?: number; bestStreak?: number; lastStudyDate?: string;
+      todayCount?: number; netsatAttempts?: number; netsatBestPercent?: number;
+    };
+
+    const today = ymd(new Date());
+    const last = cur.lastStudyDate || "";
+    let streak = cur.streak ?? 0;
+    if (last === today) {
+      // ทำกิจกรรมวันนี้ไปแล้ว
+    } else if (last && daysBetween(last, today) === 1) {
+      streak += 1;
+    } else {
+      streak = 1;
+    }
+    const bestStreak = Math.max(cur.bestStreak ?? 0, streak);
+    const todayCount = last === today ? (cur.todayCount ?? 0) + 1 : 1;
+
+    const thisWeek = currentWeekId();
+    const prevWeekly = cur.weekId === thisWeek ? (cur.weeklyXp ?? 0) : 0;
+    const weeklyXp = prevWeekly + payload.earnedPoints;
+
+    await addDoc(collection(db, MOCK_COLLECTION), {
+      email: id,
+      name: name || cur.name || "",
+      exam: "NETSAT",
+      earnedPoints: payload.earnedPoints,
+      totalPoints: payload.totalPoints,
+      percent: payload.percent,
+      correctCount: payload.correctCount,
+      totalQuestions: payload.totalQuestions,
+      bySection: payload.bySection,
+      weekId: thisWeek,
+      createdAt: serverTimestamp(),
+    });
+
+    await setDoc(
+      ref,
+      {
+        email: id,
+        name: name || cur.name || "",
+        weeklyXp,
+        weekId: thisWeek,
+        streak,
+        bestStreak,
+        lastStudyDate: today,
+        todayCount,
+        netsatAttempts: (cur.netsatAttempts ?? 0) + 1,
+        netsatBestPercent: Math.max(cur.netsatBestPercent ?? 0, payload.percent),
+        netsatLastPercent: payload.percent,
+        updatedAt: serverTimestamp(),
+      },
+      { merge: true }
+    );
+
+    return { xpGained: payload.earnedPoints };
+  } catch (e) {
+    console.error("saveMockResult error:", e);
+    return null;
   }
 }
