@@ -14,7 +14,7 @@ import {
   type MockResult,
   type Section,
 } from "../lib/netsat";
-import { saveMockResult } from "../lib/cloud";
+import { saveMockResult, loadHiddenItemIds } from "../lib/cloud";
 
 type Phase = "intro" | "loading" | "taking" | "result";
 
@@ -58,8 +58,8 @@ export default function NetsatPage() {
     setError("");
     setPhase("loading");
     try {
-      const bank = await loadBank();
-      const m = assembleMock(bank);
+      const [bank, hidden] = await Promise.all([loadBank(), loadHiddenItemIds()]);
+      const m = assembleMock(bank, new Set(hidden));
       setMock(m);
       setAnswers({});
       setSecondsLeft(EXAM_SECONDS);
@@ -107,12 +107,14 @@ export default function NetsatPage() {
       .catch(() => setSaveMsg("บันทึกไม่สำเร็จ"));
   }, [mock, answers]);
 
+  // นาฬิกาจับเวลา
   useEffect(() => {
     if (phase !== "taking") return;
     const id = setInterval(() => setSecondsLeft((s) => Math.max(0, s - 1)), 1000);
     return () => clearInterval(id);
   }, [phase]);
 
+  // หมดเวลา → ส่งอัตโนมัติ
   useEffect(() => {
     if (phase === "taking" && secondsLeft === 0) submit();
   }, [phase, secondsLeft, submit]);
@@ -131,6 +133,7 @@ export default function NetsatPage() {
     submit();
   }
 
+  // ───────────────── intro ─────────────────
   if (phase === "intro" || phase === "loading") {
     return (
       <main className="flex-1 flex items-center justify-center px-4 py-12 bg-[#f4f6fb]">
@@ -162,11 +165,13 @@ export default function NetsatPage() {
     );
   }
 
+  // ───────────────── result ─────────────────
   if (phase === "result" && result && mock) {
     const sectionsOrder: Section[] = ["WRITING_ERROR", "WRITING_SC", "READING_SHORT", "READING_LONG"];
     return (
       <main className="flex-1 bg-[#f4f6fb]">
         <div className="max-w-3xl mx-auto px-4 py-8">
+          {/* สรุปคะแนน */}
           <div className="rounded-3xl bg-white border-2 border-[#FFD700] shadow-lg p-6 text-center">
             <p className="text-gray-500 font-bold">คะแนนสอบจำลอง NETSAT</p>
             <p className="text-5xl font-black text-[#003399] my-2">
@@ -199,8 +204,10 @@ export default function NetsatPage() {
                 กลับหน้าหลัก
               </Link>
             </div>
+            <p className="text-[11px] text-gray-400 mt-4">เร็ว ๆ นี้: บันทึกผลขึ้นระบบ + นับแต้มเข้าอันดับรายสัปดาห์</p>
           </div>
 
+          {/* ทบทวนเฉลย */}
           <h2 className="text-lg font-black text-[#003399] mt-8 mb-3">ทบทวนเฉลยทุกข้อ</h2>
           <div className="space-y-4">
             {items.map((it, i) => {
@@ -278,9 +285,11 @@ export default function NetsatPage() {
     );
   }
 
+  // ───────────────── taking ─────────────────
   const lowTime = secondsLeft <= 5 * 60;
   return (
     <main className="flex-1 bg-[#f4f6fb] pb-24">
+      {/* แถบจับเวลา (ติดบน) */}
       <div className="sticky top-0 z-10 bg-white border-b-2 border-[#003399]/10 shadow-sm">
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
           <div className={`font-black text-lg ${lowTime ? "text-red-600" : "text-[#003399]"}`}>
