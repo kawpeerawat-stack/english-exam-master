@@ -14,6 +14,8 @@ import {
   collection,
   getDocs,
   serverTimestamp,
+  arrayUnion,
+  arrayRemove,
 } from "firebase/firestore";
 
 const COLLECTION = "students";
@@ -184,6 +186,33 @@ export async function loadAllMockResults(max = 500): Promise<MockResultRow[]> {
   } catch (e) {
     console.error("loadAllMockResults error:", e);
     return [];
+  }
+}
+
+// ── ข้อที่ครู "ซ่อน" (เก็บ id ไว้ใน config/hiddenItems → engine กรองออกตอนสุ่ม) ──
+export async function loadHiddenItemIds(): Promise<string[]> {
+  if (!db) return [];
+  try {
+    const ref = doc(db, "config", "hiddenItems");
+    const snap = await getDoc(ref);
+    if (!snap.exists()) return [];
+    const d = snap.data() as { ids?: string[] };
+    return Array.isArray(d.ids) ? d.ids : [];
+  } catch (e) {
+    console.error("loadHiddenItemIds error:", e);
+    return [];
+  }
+}
+
+export async function setItemHidden(itemId: string, hidden: boolean): Promise<boolean> {
+  if (!db) return false;
+  try {
+    const ref = doc(db, "config", "hiddenItems");
+    await setDoc(ref, { ids: hidden ? arrayUnion(itemId) : arrayRemove(itemId) }, { merge: true });
+    return true;
+  } catch (e) {
+    console.error("setItemHidden error:", e);
+    return false;
   }
 }
 
