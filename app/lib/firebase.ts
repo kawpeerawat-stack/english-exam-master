@@ -13,7 +13,7 @@ const firebaseConfig = {
 };
 
 // reCAPTCHA v3 site key — เป็น "คีย์สาธารณะ" ใส่ในโค้ดได้
-const RECAPTCHA_SITE_KEY = "6Lf5ciQtAAAAAKa75OcaW0Fr5CXPVIdFgwsfKpGU";
+const RECAPTCHA_SITE_KEY = "6Lfc1hgtAAAAAA_ots_YmAA7Xc6q_1qgcz0G2xIp";
 
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
