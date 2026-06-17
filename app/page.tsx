@@ -10,9 +10,11 @@ import {
   type SeasonRankEntry,
 } from "./lib/cloud";
 
+// ── คีย์เก็บตัวตนผู้ใช้ใน localStorage (ใช้อีเมลเป็นกุญแจ เหมือนแอป vocab) ──
 const LS_EMAIL = "exam_user_email";
 const LS_NAME = "exam_user_name";
 
+// ── ข้อมูลสนามสอบ (ตาม blueprint) ──
 interface ExamCard {
   key: string;
   title: string;
@@ -21,8 +23,8 @@ interface ExamCard {
   items: string;
   time: string;
   parts: string;
-  href: string | null;
-  accent: string;
+  href: string | null; // null = ยังไม่เปิด
+  accent: string; // สีหัวการ์ด
 }
 
 const EXAMS: ExamCard[] = [
@@ -73,6 +75,7 @@ export default function HomePage() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
 
+  // ฟอร์มล็อกอิน
   const [emailInput, setEmailInput] = useState("");
   const [nameInput, setNameInput] = useState("");
 
@@ -80,6 +83,7 @@ export default function HomePage() {
   const [board, setBoard] = useState<SeasonRankEntry[]>([]);
   const [loadingData, setLoadingData] = useState(false);
 
+  // โหลดตัวตนจาก localStorage ตอนเปิดหน้า
   useEffect(() => {
     try {
       const e = window.localStorage.getItem(LS_EMAIL) || "";
@@ -92,6 +96,7 @@ export default function HomePage() {
     setReady(true);
   }, []);
 
+  // เมื่อมีอีเมลแล้ว → โหลดโปรไฟล์ + อันดับจากคลาวด์
   useEffect(() => {
     if (!email) return;
     let alive = true;
@@ -101,6 +106,7 @@ export default function HomePage() {
       if (!alive) return;
       setProfile(p);
       setBoard(b);
+      // ถ้าในระบบมีชื่ออยู่แล้วแต่เครื่องนี้ยังไม่มี ให้ใช้ชื่อจากระบบ
       if (p?.name && !name) {
         setName(p.name);
         try {
@@ -151,6 +157,7 @@ export default function HomePage() {
 
   if (!ready) return null;
 
+  // ───────────────────────── หน้าล็อกอิน ─────────────────────────
   if (!email) {
     return (
       <main className="flex-1 flex items-center justify-center px-4 py-10 bg-[#f4f6fb]">
@@ -192,6 +199,7 @@ export default function HomePage() {
     );
   }
 
+  // ───────────────────────── หน้า hub ─────────────────────────
   const displayName = name || profile?.name || email.split("@")[0];
   const seasonXp = profile?.seasonXp ?? 0;
   const streak = profile?.streak ?? 0;
@@ -201,6 +209,7 @@ export default function HomePage() {
 
   return (
     <main className="flex-1 bg-[#f4f6fb]">
+      {/* แถบหัว */}
       <header className="bg-[#003399] text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2">
@@ -234,7 +243,9 @@ export default function HomePage() {
       </header>
 
       <div className="max-w-6xl mx-auto px-4 py-6 grid lg:grid-cols-[1fr_300px] gap-6">
+        {/* คอลัมน์หลัก */}
         <section>
+          {/* คำทักทาย */}
           <div className="mb-6">
             <h1 className="text-2xl sm:text-3xl font-black text-[#003399]">
               {greetingByHour()}, {displayName}! 🔥 ลุยสอบจำลองกันเถอะ
@@ -291,6 +302,7 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* คอลัมน์ข้าง — อันดับการแข่งขัน NETSAT */}
         <aside>
           <div className="rounded-2xl bg-white border-2 border-gray-200 p-5">
             <div className="flex items-center justify-between mb-1">
