@@ -74,7 +74,7 @@ export interface AssembledMock {
   totalQuestions: number;
 }
 
-export const EXAM_SECONDS = 90 * 60;
+export const EXAM_SECONDS = 55 * 60;
 const TARGET_READING = 20;
 
 export async function loadBank(): Promise<NetsatBank> {
