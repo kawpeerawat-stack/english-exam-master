@@ -2,7 +2,8 @@
 // ─────────────────────────────────────────────────────────────
 //   - collection "students" ใช้ร่วมกับแอป vocab → ล็อกอิน/แต้ม/streak เป็นระบบเดียวกัน
 //   - ผลสอบจำลองเขียนลง collection ใหม่ "mockResults"
-//   - การแข่งขัน NETSAT Challenge นับจาก seasonXp (เฉพาะคะแนนสอบจำลอง)
+//   - แต้มสะสม (seasonXp/weeklyXp/streak) ยังบวกทุกครั้งเพื่อจูงใจให้ฝึกบ่อย
+//   - การแข่งขัน NETSAT Challenge จัดอันดับจาก "เปอร์เซ็นต์สอบครั้งที่ดีที่สุด" (เสมอกันตัดที่เวลาน้อยกว่า)
 // ─────────────────────────────────────────────────────────────
 
 import { db } from "./firebase";
@@ -29,6 +30,9 @@ export const SEASON_END = new Date("2026-08-10T23:59:59+07:00");
 export function isSeasonOver(now: Date = new Date()): boolean {
   return now.getTime() > SEASON_END.getTime();
 }
+
+// ── จำกัดจำนวนครั้งที่ทำสอบได้ต่อวัน (กันการฟาร์มแต้ม) — แก้ตัวเลขได้ ──
+export const ATTEMPTS_PER_DAY = 3;
 
 // ── อีเมลที่เป็น "ครู" (เข้าหน้า /admin ได้) — เพิ่มอีเมลในวงเล็บได้ ──
 export const TEACHER_EMAILS = ["kawpeerawat@gmail.com"];
@@ -63,8 +67,11 @@ export interface StudentProfile {
   email: string;
   weeklyXp: number;
   seasonXp: number;
+  seasonBestPercent: number;
+  seasonBestTimeSec: number;
   streak: number;
   bestStreak: number;
+  todayAttempts: number;
 }
 
 export async function loadStudent(email: string): Promise<StudentProfile | null> {
@@ -77,20 +84,39 @@ export async function loadStudent(email: string): Promise<StudentProfile | null>
       name?: string; email?: string;
       weeklyXp?: number; weekId?: string;
       seasonXp?: number; seasonId?: string;
+      seasonBestPercent?: number; seasonBestTimeSec?: number;
       streak?: number; bestStreak?: number;
+      lastStudyDate?: string; todayCount?: number;
     };
     const thisWeek = currentWeekId();
+    const sameSeason = d.seasonId === SEASON_ID;
     return {
       name: d.name || "",
       email: (d.email || email).toLowerCase(),
       weeklyXp: d.weekId === thisWeek ? (d.weeklyXp ?? 0) : 0,
-      seasonXp: d.seasonId === SEASON_ID ? (d.seasonXp ?? 0) : 0,
+      seasonXp: sameSeason ? (d.seasonXp ?? 0) : 0,
+      seasonBestPercent: sameSeason ? (d.seasonBestPercent ?? 0) : 0,
+      seasonBestTimeSec: sameSeason ? (d.seasonBestTimeSec ?? 0) : 0,
       streak: d.streak ?? 0,
       bestStreak: d.bestStreak ?? 0,
+      todayAttempts: d.lastStudyDate === ymd(new Date()) ? (d.todayCount ?? 0) : 0,
     };
   } catch (e) {
     console.error("loadStudent error:", e);
     return null;
+  }
+}
+
+// นับจำนวนครั้งที่ "ทำสอบสำเร็จ" ในวันนี้ (ใช้บังคับลิมิตต่อวัน)
+export async function countTodayAttempts(email: string): Promise<number> {
+  if (!email || !db) return 0;
+  try {
+    const snap = await getDoc(doc(db, COLLECTION, emailToId(email)));
+    if (!snap.exists()) return 0;
+    const d = snap.data() as { lastStudyDate?: string; todayCount?: number };
+    return d.lastStudyDate === ymd(new Date()) ? (d.todayCount ?? 0) : 0;
+  } catch {
+    return 0;
   }
 }
 
@@ -121,11 +147,13 @@ export async function loadWeeklyLeaderboard(): Promise<WeeklyRankEntry[]> {
   }
 }
 
-// ── อันดับการแข่งขัน NETSAT (นับเฉพาะคะแนนสอบจำลอง สะสมจนถึงวันตัดรอบ) ──
+// ── อันดับการแข่งขัน NETSAT (จัดอันดับจากเปอร์เซ็นต์ครั้งที่ดีที่สุด เสมอกันตัดที่เวลาน้อยกว่า) ──
 export interface SeasonRankEntry {
   email: string;
   name: string;
   seasonXp: number;
+  bestPercent: number;
+  timeSec: number; // เวลาที่ใช้ในรอบที่ดีที่สุด (วินาที)
 }
 
 export async function loadSeasonLeaderboard(): Promise<SeasonRankEntry[]> {
@@ -134,13 +162,29 @@ export async function loadSeasonLeaderboard(): Promise<SeasonRankEntry[]> {
     const snap = await getDocs(collection(db, COLLECTION));
     const entries: SeasonRankEntry[] = [];
     snap.forEach((s) => {
-      const d = s.data() as { email?: string; name?: string; seasonXp?: number; seasonId?: string };
-      const seasonXp = d.seasonId === SEASON_ID ? (d.seasonXp ?? 0) : 0;
-      if (seasonXp > 0) {
-        entries.push({ email: (d.email || s.id).toLowerCase(), name: d.name || "(ไม่มีชื่อ)", seasonXp });
-      }
+      const d = s.data() as {
+        email?: string; name?: string; seasonId?: string;
+        seasonXp?: number; seasonBestPercent?: number; seasonBestTimeSec?: number;
+      };
+      if (d.seasonId !== SEASON_ID) return;
+      const seasonXp = d.seasonXp ?? 0;
+      const timeSec = d.seasonBestTimeSec ?? 0;
+      // เก็บเฉพาะคนที่มีผลในรอบนี้ (มีแต้มสะสม หรือ มีสถิติครั้งดีสุด)
+      if (seasonXp <= 0 && timeSec <= 0) return;
+      entries.push({
+        email: (d.email || s.id).toLowerCase(),
+        name: d.name || "(ไม่มีชื่อ)",
+        seasonXp,
+        bestPercent: d.seasonBestPercent ?? 0,
+        timeSec,
+      });
     });
-    entries.sort((a, b) => b.seasonXp - a.seasonXp);
+    // เปอร์เซ็นต์มากก่อน, เสมอกันใช้เวลาน้อยกว่า (timeSec 0 = ยังไม่มีสถิติ → ไปท้าย)
+    entries.sort(
+      (a, b) =>
+        b.bestPercent - a.bestPercent ||
+        (a.timeSec || Number.MAX_SAFE_INTEGER) - (b.timeSec || Number.MAX_SAFE_INTEGER)
+    );
     return entries;
   } catch (e) {
     console.error("loadSeasonLeaderboard error:", e);
@@ -158,6 +202,9 @@ export interface MockResultRow {
   percent: number;
   correctCount: number;
   totalQuestions: number;
+  timeSec: number;
+  tabSwitches: number;
+  awaySec: number;
   createdAtMs: number;
 }
 
@@ -178,6 +225,9 @@ export async function loadAllMockResults(max = 500): Promise<MockResultRow[]> {
         percent: Number(d.percent ?? 0),
         correctCount: Number(d.correctCount ?? 0),
         totalQuestions: Number(d.totalQuestions ?? 0),
+        timeSec: Number(d.timeSec ?? 0),
+        tabSwitches: Number(d.tabSwitches ?? 0),
+        awaySec: Number(d.awaySec ?? 0),
         createdAtMs: ts?.toMillis?.() ?? 0,
       });
     });
@@ -223,6 +273,9 @@ export interface MockSavePayload {
   correctCount: number;
   totalQuestions: number;
   bySection: object;
+  timeSec: number;      // เวลาที่ใช้สอบ (วินาที)
+  tabSwitches: number;  // จำนวนครั้งที่ออกจากหน้าจอ
+  awaySec: number;      // เวลารวมที่ออกจากหน้าจอ (วินาที)
 }
 
 export async function saveMockResult(
@@ -238,6 +291,7 @@ export async function saveMockResult(
     const cur = (snap.exists() ? snap.data() : {}) as {
       name?: string; weeklyXp?: number; weekId?: string;
       seasonXp?: number; seasonId?: string;
+      seasonBestPercent?: number; seasonBestTimeSec?: number;
       streak?: number; bestStreak?: number; lastStudyDate?: string;
       todayCount?: number; netsatAttempts?: number; netsatBestPercent?: number;
     };
@@ -270,6 +324,23 @@ export async function saveMockResult(
       seasonXp = inSeason ? payload.earnedPoints : 0;
     }
 
+    // คะแนนชิงรางวัล = "ครั้งที่ดีที่สุด" (เปอร์เซ็นต์สูงสุด; เสมอกันเก็บเวลาที่น้อยกว่า) — เฉพาะช่วงแข่ง
+    const sameSeason = cur.seasonId === SEASON_ID;
+    const prevBestPct = sameSeason ? (cur.seasonBestPercent ?? -1) : -1;
+    const prevBestTime = sameSeason ? (cur.seasonBestTimeSec ?? 0) : 0;
+    let seasonBestPercent = prevBestPct < 0 ? 0 : prevBestPct;
+    let seasonBestTimeSec = prevBestTime;
+    if (inSeason) {
+      const isBetter =
+        prevBestPct < 0 ||
+        payload.percent > prevBestPct ||
+        (payload.percent === prevBestPct && (prevBestTime <= 0 || payload.timeSec < prevBestTime));
+      if (isBetter) {
+        seasonBestPercent = payload.percent;
+        seasonBestTimeSec = payload.timeSec;
+      }
+    }
+
     // 1) เก็บผลสอบเต็ม ๆ ลง collection ใหม่
     await addDoc(collection(db, MOCK_COLLECTION), {
       email: id,
@@ -281,6 +352,9 @@ export async function saveMockResult(
       correctCount: payload.correctCount,
       totalQuestions: payload.totalQuestions,
       bySection: payload.bySection,
+      timeSec: payload.timeSec,
+      tabSwitches: payload.tabSwitches,
+      awaySec: payload.awaySec,
       weekId: thisWeek,
       seasonId: SEASON_ID,
       createdAt: serverTimestamp(),
@@ -296,6 +370,8 @@ export async function saveMockResult(
         weekId: thisWeek,
         seasonXp,
         seasonId: SEASON_ID,
+        seasonBestPercent,
+        seasonBestTimeSec,
         streak,
         bestStreak,
         lastStudyDate: today,
