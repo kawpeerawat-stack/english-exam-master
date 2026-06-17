@@ -1,4 +1,10 @@
 // app/lib/cloud.ts
+// ─────────────────────────────────────────────────────────────
+//   - collection "students" ใช้ร่วมกับแอป vocab → ล็อกอิน/แต้ม/streak เป็นระบบเดียวกัน
+//   - ผลสอบจำลองเขียนลง collection ใหม่ "mockResults"
+//   - การแข่งขัน NETSAT Challenge นับจาก seasonXp (เฉพาะคะแนนสอบจำลอง)
+// ─────────────────────────────────────────────────────────────
+
 import { db } from "./firebase";
 import {
   doc,
@@ -16,7 +22,7 @@ const MOCK_COLLECTION = "mockResults";
 // ── ฤดูกาลแข่งขัน NETSAT ──
 // เปลี่ยน SEASON_ID เมื่อต้องการ "รีเซ็ตอันดับใหม่ทั้งหมด" → ทุกคนกลับเป็น 0 อัตโนมัติ
 export const SEASON_ID = "netsat-2026";
-// วันตัดรอบ (เวลาไทย) — หลังจากนี้การทำสอบจะไม่บวกแต้มเข้าอันดับอีก
+// วันตัดรอบ (เวลาไทย) — หลังจากนี้การทำสอบจะไม่บวกแต้มเข้าอันดับอีก (อันดับล็อกผลสุดท้าย)
 export const SEASON_END = new Date("2026-08-10T23:59:59+07:00");
 export function isSeasonOver(now: Date = new Date()): boolean {
   return now.getTime() > SEASON_END.getTime();
@@ -26,6 +32,7 @@ export function emailToId(email: string): string {
   return email.trim().toLowerCase().replace(/\//g, "_");
 }
 
+// รหัสสัปดาห์ = วันจันทร์ของสัปดาห์นั้น (ใช้กับ weeklyXp ที่แชร์กับแอป vocab)
 export function currentWeekId(d: Date = new Date()): string {
   const x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
   const day = (x.getDay() + 6) % 7;
@@ -159,6 +166,7 @@ export async function saveMockResult(
       todayCount?: number; netsatAttempts?: number; netsatBestPercent?: number;
     };
 
+    // streak รายวัน
     const today = ymd(new Date());
     const last = cur.lastStudyDate || "";
     let streak = cur.streak ?? 0;
@@ -172,6 +180,7 @@ export async function saveMockResult(
     const bestStreak = Math.max(cur.bestStreak ?? 0, streak);
     const todayCount = last === today ? (cur.todayCount ?? 0) + 1 : 1;
 
+    // แต้มรายสัปดาห์ (แชร์กับแอปคำศัพท์ — บวกตามปกติ)
     const thisWeek = currentWeekId();
     const prevWeekly = cur.weekId === thisWeek ? (cur.weeklyXp ?? 0) : 0;
     const weeklyXp = prevWeekly + payload.earnedPoints;
@@ -185,6 +194,7 @@ export async function saveMockResult(
       seasonXp = inSeason ? payload.earnedPoints : 0;
     }
 
+    // 1) เก็บผลสอบเต็ม ๆ ลง collection ใหม่
     await addDoc(collection(db, MOCK_COLLECTION), {
       email: id,
       name: name || cur.name || "",
@@ -200,6 +210,7 @@ export async function saveMockResult(
       createdAt: serverTimestamp(),
     });
 
+    // 2) อัปเดตโปรไฟล์นักเรียน
     await setDoc(
       ref,
       {
