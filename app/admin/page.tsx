@@ -6,11 +6,15 @@ import {
   isTeacher,
   loadAllMockResults,
   loadSeasonLeaderboard,
+  ATTEMPTS_PER_DAY,
   type MockResultRow,
   type SeasonRankEntry,
 } from "../lib/cloud";
+import { fmtTime } from "../lib/netsat";
 
 const LS_EMAIL = "exam_user_email";
+// จำนวนครั้งที่ออกจากหน้าจอที่ถือว่า "น่าสงสัย"
+const SUSPICIOUS_SWITCHES = 5;
 
 function fmtDate(ms: number): string {
   if (!ms) return "—";
@@ -27,8 +31,10 @@ interface StudentAgg {
   name: string;
   attempts: number;
   bestPercent: number;
+  bestTimeSec: number;
   lastPercent: number;
   lastMs: number;
+  maxSwitches: number;
 }
 
 export default function AdminPage() {
@@ -80,7 +86,7 @@ export default function AdminPage() {
     return m;
   }, [board]);
 
-  // สรุปผลรายคน
+  // สรุปผลรายคน — best = เปอร์เซ็นต์สูงสุด, เสมอกันใช้เวลาน้อยกว่า
   const students = useMemo<StudentAgg[]>(() => {
     const map = new Map<string, StudentAgg>();
     for (const r of rows) {
@@ -91,24 +97,37 @@ export default function AdminPage() {
           name: r.name || r.email.split("@")[0],
           attempts: 1,
           bestPercent: r.percent,
+          bestTimeSec: r.timeSec,
           lastPercent: r.percent,
           lastMs: r.createdAtMs,
+          maxSwitches: r.tabSwitches,
         });
       } else {
         cur.attempts += 1;
-        cur.bestPercent = Math.max(cur.bestPercent, r.percent);
+        const better =
+          r.percent > cur.bestPercent ||
+          (r.percent === cur.bestPercent && r.timeSec > 0 && (cur.bestTimeSec <= 0 || r.timeSec < cur.bestTimeSec));
+        if (better) {
+          cur.bestPercent = r.percent;
+          cur.bestTimeSec = r.timeSec;
+        }
         if (r.createdAtMs > cur.lastMs) {
           cur.lastMs = r.createdAtMs;
           cur.lastPercent = r.percent;
         }
+        cur.maxSwitches = Math.max(cur.maxSwitches, r.tabSwitches);
         if (r.name && !cur.name) cur.name = r.name;
       }
     }
     return Array.from(map.values()).sort(
-      (a, b) => (seasonByEmail.get(b.email) ?? 0) - (seasonByEmail.get(a.email) ?? 0) || b.attempts - a.attempts
+      (a, b) =>
+        b.bestPercent - a.bestPercent ||
+        (a.bestTimeSec || Number.MAX_SAFE_INTEGER) - (b.bestTimeSec || Number.MAX_SAFE_INTEGER) ||
+        b.attempts - a.attempts
     );
-  }, [rows, seasonByEmail]);
+  }, [rows]);
 
+  const winners = students.slice(0, 3);
   const totalAttempts = rows.length;
   const avgPercent = rows.length ? Math.round(rows.reduce((s, r) => s + r.percent, 0) / rows.length) : 0;
 
@@ -136,9 +155,7 @@ export default function AdminPage() {
         <div className="text-center max-w-sm">
           <div className="text-4xl mb-3">🔒</div>
           <p className="font-black text-lg text-[#003399]">หน้านี้สำหรับครูเท่านั้น</p>
-          <p className="text-sm text-gray-500 mt-2">
-            บัญชี {email} ไม่มีสิทธิ์เข้าถึงโหมดครู
-          </p>
+          <p className="text-sm text-gray-500 mt-2">บัญชี {email} ไม่มีสิทธิ์เข้าถึงโหมดครู</p>
           <Link href="/" className="mt-4 inline-block text-[#003399] underline font-bold">
             ← กลับหน้าหลัก
           </Link>
@@ -199,9 +216,53 @@ export default function AdminPage() {
           </div>
         </section>
 
+        {/* ผู้ชนะ (ตรวจสอบก่อนแจกรางวัล) */}
+        <section>
+          <h2 className="text-lg font-black text-[#003399] mb-1">🏅 ผู้นำ 3 อันดับ (ชิงรางวัล)</h2>
+          <p className="text-[11px] text-gray-500 mb-3">
+            จัดอันดับจากเปอร์เซ็นต์ครั้งที่ดีที่สุด เสมอกันตัดที่เวลาน้อยกว่า —
+            <b className="text-[#003399]"> ก่อนแจกเงินรางวัล แนะนำให้เรียก 3 คนนี้มาทำสดแบบคุมสอบ 1 รอบเพื่อยืนยันฝีมือ</b>
+          </p>
+          <div className="grid sm:grid-cols-3 gap-3">
+            {winners.length === 0 ? (
+              <p className="text-sm text-gray-400">ยังไม่มีผู้ทำสอบ</p>
+            ) : (
+              winners.map((w, i) => {
+                const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : "🥉";
+                const prize = i === 0 ? "700฿" : i === 1 ? "300฿" : "100฿";
+                const flagged = w.maxSwitches >= SUSPICIOUS_SWITCHES;
+                return (
+                  <div
+                    key={w.email}
+                    className={`rounded-2xl border-2 p-4 ${flagged ? "border-red-300 bg-red-50" : "border-[#FFD700] bg-white"}`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl">{medal}</span>
+                      <span className="text-xs font-black bg-[#FFD700] text-[#003399] rounded-full px-2 py-0.5">
+                        {prize}
+                      </span>
+                    </div>
+                    <div className="font-black text-gray-800 mt-1 truncate">{w.name}</div>
+                    <div className="text-[11px] text-gray-400 truncate">{w.email}</div>
+                    <div className="mt-2 text-2xl font-black text-[#003399]">{w.bestPercent}%</div>
+                    <div className="text-xs text-gray-500">
+                      เวลา {fmtTime(w.bestTimeSec)} · ทำ {w.attempts} ครั้ง
+                    </div>
+                    {flagged && (
+                      <div className="mt-2 text-[11px] font-bold text-red-600">
+                        ⚠️ ออกจากหน้าจอสูงสุด {w.maxSwitches} ครั้ง — ควรตรวจสอบ
+                      </div>
+                    )}
+                  </div>
+                );
+              })
+            )}
+          </div>
+        </section>
+
         {/* รายชื่อนักเรียน */}
         <section>
-          <h2 className="text-lg font-black text-[#003399] mb-3">👥 รายชื่อนักเรียน</h2>
+          <h2 className="text-lg font-black text-[#003399] mb-3">👥 รายชื่อนักเรียน (เรียงตามคะแนนแข่งขัน)</h2>
           <div className="rounded-2xl bg-white border-2 border-gray-200 overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -211,38 +272,53 @@ export default function AdminPage() {
                     <th className="px-3 py-2 font-black">ชื่อ</th>
                     <th className="px-3 py-2 font-black text-center">ครั้ง</th>
                     <th className="px-3 py-2 font-black text-center">ดีสุด</th>
+                    <th className="px-3 py-2 font-black text-center">เวลา</th>
+                    <th className="px-3 py-2 font-black text-center">ออกจอ</th>
                     <th className="px-3 py-2 font-black text-center">ล่าสุด</th>
-                    <th className="px-3 py-2 font-black text-center">แต้มสะสม</th>
+                    <th className="px-3 py-2 font-black text-center">XP</th>
                   </tr>
                 </thead>
                 <tbody>
                   {students.length === 0 ? (
                     <tr>
-                      <td colSpan={6} className="px-3 py-6 text-center text-gray-400">
+                      <td colSpan={8} className="px-3 py-6 text-center text-gray-400">
                         {loading ? "กำลังโหลด…" : "ยังไม่มีนักเรียนทำสอบ"}
                       </td>
                     </tr>
                   ) : (
-                    students.map((s, i) => (
-                      <tr key={s.email} className="border-t border-gray-100">
-                        <td className="px-3 py-2 text-gray-400">{i + 1}</td>
-                        <td className="px-3 py-2">
-                          <div className="font-bold text-gray-800">{s.name}</div>
-                          <div className="text-[11px] text-gray-400">{s.email}</div>
-                        </td>
-                        <td className="px-3 py-2 text-center font-bold">{s.attempts}</td>
-                        <td className="px-3 py-2 text-center font-bold text-green-600">{s.bestPercent}%</td>
-                        <td className="px-3 py-2 text-center text-gray-600">{s.lastPercent}%</td>
-                        <td className="px-3 py-2 text-center font-black text-[#003399]">
-                          {seasonByEmail.get(s.email) ?? 0}
-                        </td>
-                      </tr>
-                    ))
+                    students.map((s, i) => {
+                      const flagged = s.maxSwitches >= SUSPICIOUS_SWITCHES;
+                      return (
+                        <tr key={s.email} className="border-t border-gray-100">
+                          <td className="px-3 py-2 text-gray-400">{i + 1}</td>
+                          <td className="px-3 py-2">
+                            <div className="font-bold text-gray-800">{s.name}</div>
+                            <div className="text-[11px] text-gray-400">{s.email}</div>
+                          </td>
+                          <td className="px-3 py-2 text-center font-bold">{s.attempts}</td>
+                          <td className="px-3 py-2 text-center font-bold text-green-600">{s.bestPercent}%</td>
+                          <td className="px-3 py-2 text-center text-gray-600">
+                            {s.bestTimeSec > 0 ? fmtTime(s.bestTimeSec) : "—"}
+                          </td>
+                          <td className={`px-3 py-2 text-center font-bold ${flagged ? "text-red-600" : "text-gray-500"}`}>
+                            {flagged ? `⚠️ ${s.maxSwitches}` : s.maxSwitches}
+                          </td>
+                          <td className="px-3 py-2 text-center text-gray-600">{s.lastPercent}%</td>
+                          <td className="px-3 py-2 text-center font-black text-[#003399]">
+                            {seasonByEmail.get(s.email) ?? 0}
+                          </td>
+                        </tr>
+                      );
+                    })
                   )}
                 </tbody>
               </table>
             </div>
           </div>
+          <p className="text-[11px] text-gray-400 mt-2">
+            &quot;ออกจอ&quot; = จำนวนครั้งสูงสุดที่ออกจากหน้าสอบในรอบใดรอบหนึ่ง (≥ {SUSPICIOUS_SWITCHES} ครั้ง = น่าสงสัย) ·
+            จำกัด {ATTEMPTS_PER_DAY} ครั้ง/วัน
+          </p>
         </section>
 
         {/* ผลสอบล่าสุด */}
@@ -255,40 +331,47 @@ export default function AdminPage() {
                   <tr className="bg-[#003399]/5 text-[#003399] text-left">
                     <th className="px-3 py-2 font-black">เวลา</th>
                     <th className="px-3 py-2 font-black">ชื่อ</th>
-                    <th className="px-3 py-2 font-black text-center">คะแนน</th>
                     <th className="px-3 py-2 font-black text-center">%</th>
                     <th className="px-3 py-2 font-black text-center">ถูก</th>
+                    <th className="px-3 py-2 font-black text-center">ใช้เวลา</th>
+                    <th className="px-3 py-2 font-black text-center">ออกจอ</th>
                   </tr>
                 </thead>
                 <tbody>
                   {rows.length === 0 ? (
                     <tr>
-                      <td colSpan={5} className="px-3 py-6 text-center text-gray-400">
+                      <td colSpan={6} className="px-3 py-6 text-center text-gray-400">
                         {loading ? "กำลังโหลด…" : "ยังไม่มีผลสอบ"}
                       </td>
                     </tr>
                   ) : (
-                    rows.slice(0, 50).map((r) => (
-                      <tr key={r.id} className="border-t border-gray-100">
-                        <td className="px-3 py-2 text-gray-500 whitespace-nowrap">{fmtDate(r.createdAtMs)}</td>
-                        <td className="px-3 py-2">
-                          <div className="font-bold text-gray-800">{r.name || r.email.split("@")[0]}</div>
-                        </td>
-                        <td className="px-3 py-2 text-center font-bold text-[#003399]">
-                          {r.earnedPoints}/{r.totalPoints}
-                        </td>
-                        <td className="px-3 py-2 text-center font-bold">{r.percent}%</td>
-                        <td className="px-3 py-2 text-center text-gray-600">
-                          {r.correctCount}/{r.totalQuestions}
-                        </td>
-                      </tr>
-                    ))
+                    rows.slice(0, 50).map((r) => {
+                      const flagged = r.tabSwitches >= SUSPICIOUS_SWITCHES;
+                      return (
+                        <tr key={r.id} className={`border-t border-gray-100 ${flagged ? "bg-red-50" : ""}`}>
+                          <td className="px-3 py-2 text-gray-500 whitespace-nowrap">{fmtDate(r.createdAtMs)}</td>
+                          <td className="px-3 py-2">
+                            <div className="font-bold text-gray-800">{r.name || r.email.split("@")[0]}</div>
+                          </td>
+                          <td className="px-3 py-2 text-center font-bold text-[#003399]">{r.percent}%</td>
+                          <td className="px-3 py-2 text-center text-gray-600">
+                            {r.correctCount}/{r.totalQuestions}
+                          </td>
+                          <td className="px-3 py-2 text-center text-gray-600">
+                            {r.timeSec > 0 ? fmtTime(r.timeSec) : "—"}
+                          </td>
+                          <td className={`px-3 py-2 text-center font-bold ${flagged ? "text-red-600" : "text-gray-500"}`}>
+                            {flagged ? `⚠️ ${r.tabSwitches}` : r.tabSwitches}
+                          </td>
+                        </tr>
+                      );
+                    })
                   )}
                 </tbody>
               </table>
             </div>
           </div>
-          <p className="text-[11px] text-gray-400 mt-2">แสดงผลสอบล่าสุดสูงสุด 50 รายการ</p>
+          <p className="text-[11px] text-gray-400 mt-2">แสดงผลสอบล่าสุดสูงสุด 50 รายการ · แถวสีแดง = ออกจากหน้าจอบ่อยผิดปกติ</p>
         </section>
       </div>
     </main>
