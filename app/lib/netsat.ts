@@ -1,5 +1,11 @@
 // app/lib/netsat.ts
+// ─────────────────────────────────────────────────────────────
 // เครื่องประกอบ "ชุดสอบจำลอง NETSAT" จากคลังข้อ (public/netsat-bank.json)
+//   - สุ่มข้อทุกครั้งตาม blueprint: Error 10 + Sentence Completion 10 + Reading 20 (รวม 40 ข้อ)
+//   - Writing: สลับตำแหน่งตัวเลือกทุกครั้ง (กันลอก) — เฉลยตามไปด้วย
+//   - Reading: ไม่สลับตัวเลือก (คำเฉลยไทยอ้าง "ตอบข้อ X") แต่สุ่มว่าได้บท/ข้อไหน
+//   - ให้คะแนนถ่วงน้ำหนัก (2/3/4) ตามที่ฝังในคลังข้อ
+// ─────────────────────────────────────────────────────────────
 
 export type Section = "WRITING_ERROR" | "WRITING_SC" | "READING_SHORT" | "READING_LONG";
 
@@ -10,6 +16,7 @@ export const SECTION_LABEL: Record<Section, string> = {
   READING_LONG: "Part 4 — Reading: Information & Argument",
 };
 
+// ── โครงข้อมูลในคลัง (public/netsat-bank.json) ──
 export interface BankWritingItem {
   id: string;
   exam_type: string;
@@ -51,6 +58,7 @@ export interface NetsatBank {
   readingLong: BankReadingPassage[];
 }
 
+// ── ข้อในชุดที่ประกอบแล้ว ──
 export interface MockQuestion {
   uid: string;
   section: Section;
@@ -74,9 +82,11 @@ export interface AssembledMock {
   totalQuestions: number;
 }
 
-export const EXAM_SECONDS = 55 * 60;
+// ── เวลาสอบ (วินาที) ──
+export const EXAM_SECONDS = 50 * 60;
 const TARGET_READING = 20;
 
+// ── โหลดคลังข้อ ──
 export async function loadBank(): Promise<NetsatBank> {
   const res = await fetch("/netsat-bank.json", { cache: "force-cache" });
   if (!res.ok) throw new Error("โหลดคลังข้อไม่สำเร็จ");
@@ -96,6 +106,7 @@ function sample<T>(arr: T[], n: number): T[] {
   return shuffle(arr).slice(0, n);
 }
 
+// สลับตำแหน่งตัวเลือก + คืน index ของคำตอบที่ถูกหลังสลับ
 function shuffleOptions(options: string[], correctIndex: number): { options: string[]; correctIndex: number } {
   const order = shuffle(options.map((_, i) => i));
   return {
@@ -104,6 +115,7 @@ function shuffleOptions(options: string[], correctIndex: number): { options: str
   };
 }
 
+// เลือกข้อ Writing: เอาแนว NETSAT ก่อน ถ้าไม่พอเติมจากที่เหลือ
 function pickWriting(pool: BankWritingItem[], n: number): BankWritingItem[] {
   const netsat = pool.filter((x) => x.exam_type === "NETSAT");
   const others = pool.filter((x) => x.exam_type !== "NETSAT");
@@ -112,15 +124,16 @@ function pickWriting(pool: BankWritingItem[], n: number): BankWritingItem[] {
   return shuffle(chosen);
 }
 
-export function assembleMock(bank: NetsatBank): AssembledMock {
+export function assembleMock(bank: NetsatBank, hiddenIds: Set<string> = new Set()): AssembledMock {
   const questions: MockQuestion[] = [];
   const passages: Record<string, MockPassage> = {};
   let uid = 0;
   const nextUid = () => `q${uid++}`;
 
+  // Writing — Error 10 + SC 10 (สลับตัวเลือก) — ตัดข้อที่ครูซ่อนออกก่อน
   const writing: { items: BankWritingItem[]; section: Section }[] = [
-    { items: pickWriting(bank.writingError, 10), section: "WRITING_ERROR" },
-    { items: pickWriting(bank.writingSC, 10), section: "WRITING_SC" },
+    { items: pickWriting(bank.writingError.filter((x) => !hiddenIds.has(x.id)), 10), section: "WRITING_ERROR" },
+    { items: pickWriting(bank.writingSC.filter((x) => !hiddenIds.has(x.id)), 10), section: "WRITING_SC" },
   ];
   for (const grp of writing) {
     for (const it of grp.items) {
@@ -137,13 +150,15 @@ export function assembleMock(bank: NetsatBank): AssembledMock {
     }
   }
 
+  // Reading — รวม 20 ข้อ (1 บทสั้น + บทยาวเติมจนครบ), ไม่สลับตัวเลือก
   let readingCount = 0;
   const addPassage = (p: BankReadingPassage, section: Section, max: number) => {
     if (readingCount >= TARGET_READING) return;
-    const take = Math.min(max, p.questions.length, TARGET_READING - readingCount);
+    const qs = p.questions.filter((q) => !hiddenIds.has(q.id));
+    const take = Math.min(max, qs.length, TARGET_READING - readingCount);
     if (take <= 0) return;
     passages[p.id] = { id: p.id, title: p.title, passage: p.passage, wordCount: p.wordCount };
-    for (const q of p.questions.slice(0, take)) {
+    for (const q of qs.slice(0, take)) {
       questions.push({
         uid: nextUid(),
         section,
@@ -169,6 +184,7 @@ export function assembleMock(bank: NetsatBank): AssembledMock {
   return { questions, passages, totalPoints, totalQuestions: questions.length };
 }
 
+// ── ตรวจคะแนน ──
 export interface SectionScore {
   correct: number;
   total: number;
@@ -211,6 +227,7 @@ export function scoreMock(mock: AssembledMock, answers: Record<string, number>):
   };
 }
 
+// mm:ss
 export function fmtTime(sec: number): string {
   const m = Math.floor(sec / 60);
   const s = sec % 60;
