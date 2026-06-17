@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import {
   loadBank,
@@ -8,13 +8,14 @@ import {
   scoreMock,
   fmtTime,
   EXAM_SECONDS,
+  MIN_SUBMIT_SECONDS,
   SECTION_LABEL,
   type AssembledMock,
   type MockQuestion,
   type MockResult,
   type Section,
 } from "../lib/netsat";
-import { saveMockResult, loadHiddenItemIds } from "../lib/cloud";
+import { saveMockResult, loadHiddenItemIds, countTodayAttempts, ATTEMPTS_PER_DAY } from "../lib/cloud";
 
 type Phase = "intro" | "loading" | "taking" | "result";
 
@@ -53,9 +54,36 @@ export default function NetsatPage() {
   const [result, setResult] = useState<MockResult | null>(null);
   const [error, setError] = useState("");
   const [saveMsg, setSaveMsg] = useState("");
+  const [tabSwitches, setTabSwitches] = useState(0);
+
+  // refs สำหรับเก็บค่าแม่นยำ ไม่ขึ้นกับการ re-render
+  const secondsLeftRef = useRef(EXAM_SECONDS);
+  const tabSwitchesRef = useRef(0);
+  const awayMsRef = useRef(0);
+  const awayStartRef = useRef(0);
+
+  useEffect(() => {
+    secondsLeftRef.current = secondsLeft;
+  }, [secondsLeft]);
 
   const start = useCallback(async () => {
     setError("");
+    // ── ลิมิตจำนวนครั้งต่อวัน (เฉพาะผู้ที่ล็อกอิน) ──
+    let email = "";
+    try {
+      email = window.localStorage.getItem("exam_user_email") || "";
+    } catch {
+      /* ignore */
+    }
+    if (email) {
+      const done = await countTodayAttempts(email);
+      if (done >= ATTEMPTS_PER_DAY) {
+        setError(
+          `วันนี้ทำสอบครบ ${ATTEMPTS_PER_DAY} ครั้งแล้ว 🎯 พักสมองก่อนนะครับ แล้วพรุ่งนี้ค่อยมาต่อ (จำกัดเพื่อความยุติธรรมในการแข่งขัน)`
+        );
+        return;
+      }
+    }
     setPhase("loading");
     try {
       const [bank, hidden] = await Promise.all([loadBank(), loadHiddenItemIds()]);
@@ -63,6 +91,11 @@ export default function NetsatPage() {
       setMock(m);
       setAnswers({});
       setSecondsLeft(EXAM_SECONDS);
+      secondsLeftRef.current = EXAM_SECONDS;
+      tabSwitchesRef.current = 0;
+      awayMsRef.current = 0;
+      awayStartRef.current = 0;
+      setTabSwitches(0);
       setResult(null);
       setSaveMsg("");
       setPhase("taking");
@@ -75,10 +108,20 @@ export default function NetsatPage() {
 
   const submit = useCallback(() => {
     if (!mock) return;
+    // ปิดการจับเวลา "ออกจากจอ" ถ้ากำลังออกอยู่
+    if (awayStartRef.current > 0) {
+      awayMsRef.current += Date.now() - awayStartRef.current;
+      awayStartRef.current = 0;
+    }
+
     const r = scoreMock(mock, answers);
     setResult(r);
     setPhase("result");
     window.scrollTo(0, 0);
+
+    const timeSec = Math.min(EXAM_SECONDS, EXAM_SECONDS - secondsLeftRef.current);
+    const tabSw = tabSwitchesRef.current;
+    const awaySec = Math.round(awayMsRef.current / 1000);
 
     let email = "";
     let name = "";
@@ -100,6 +143,9 @@ export default function NetsatPage() {
       correctCount: r.correctCount,
       totalQuestions: r.totalQuestions,
       bySection: r.bySection,
+      timeSec,
+      tabSwitches: tabSw,
+      awaySec,
     })
       .then((res) =>
         setSaveMsg(res ? `บันทึกผลแล้ว ✓ +${res.xpGained} XP` : "บันทึกไม่สำเร็จ — เช็กการเชื่อมต่อ/โดเมน reCAPTCHA")
@@ -119,15 +165,37 @@ export default function NetsatPage() {
     if (phase === "taking" && secondsLeft === 0) submit();
   }, [phase, secondsLeft, submit]);
 
+  // จับการ "ออกจากหน้าจอ/สลับแท็บ" ระหว่างสอบ
+  useEffect(() => {
+    if (phase !== "taking") return;
+    const onVis = () => {
+      if (document.visibilityState === "hidden") {
+        if (awayStartRef.current === 0) awayStartRef.current = Date.now();
+        tabSwitchesRef.current += 1;
+        setTabSwitches(tabSwitchesRef.current);
+      } else if (awayStartRef.current > 0) {
+        awayMsRef.current += Date.now() - awayStartRef.current;
+        awayStartRef.current = 0;
+      }
+    };
+    document.addEventListener("visibilitychange", onVis);
+    return () => document.removeEventListener("visibilitychange", onVis);
+  }, [phase]);
+
   const items = useMemo(() => (mock ? buildRenderItems(mock) : []), [mock]);
   const answeredCount = Object.keys(answers).length;
+
+  // ── เงื่อนไขส่งคำตอบ: ต้องทำครบ 40 นาทีก่อน ──
+  const elapsed = EXAM_SECONDS - secondsLeft;
+  const canSubmit = elapsed >= MIN_SUBMIT_SECONDS;
+  const submitCountdown = Math.max(0, MIN_SUBMIT_SECONDS - elapsed);
 
   function choose(uid: string, idx: number) {
     setAnswers((a) => ({ ...a, [uid]: idx }));
   }
 
   function handleSubmitClick() {
-    if (!mock) return;
+    if (!mock || !canSubmit) return;
     const left = mock.totalQuestions - answeredCount;
     if (left > 0 && !window.confirm(`ยังมีข้อที่ยังไม่ตอบ ${left} ข้อ ต้องการส่งคำตอบเลยไหม?`)) return;
     submit();
@@ -147,7 +215,15 @@ export default function NetsatPage() {
             <p>• Error Identification 10 ข้อ</p>
             <p>• Sentence Completion 10 ข้อ</p>
             <p>• Reading (สั้น + ยาว) 20 ข้อ</p>
-            <p className="text-gray-500 pt-1">คะแนนถ่วงน้ำหนัก 2/3/4 ตามความยาก · สุ่มข้อใหม่ทุกครั้ง · จับเวลา 50 นาที (หมดเวลาส่งอัตโนมัติ)</p>
+            <p className="text-gray-500 pt-1">
+              คะแนนถ่วงน้ำหนัก 2/3/4 ตามความยาก · สุ่มข้อใหม่ทุกครั้ง · หมดเวลา 50 นาทีส่งอัตโนมัติ
+            </p>
+          </div>
+          <div className="mt-3 rounded-xl bg-amber-50 border border-amber-200 p-4 text-sm text-amber-800 space-y-1">
+            <p className="font-black">📋 กติกาการแข่งขัน</p>
+            <p>⏳ ส่งคำตอบได้หลังทำครบ <b>40 นาที</b> (ก่อนหน้านั้นทบทวน/แก้คำตอบได้)</p>
+            <p>🔁 ทำได้ <b>{ATTEMPTS_PER_DAY} ครั้ง/วัน</b> · จัดอันดับจาก <b>เปอร์เซ็นต์ครั้งที่ดีที่สุด</b></p>
+            <p>👀 อยู่ในหน้าจอตลอดการสอบ — ระบบบันทึกการออกจากหน้าจอ</p>
           </div>
           {error && <p className="mt-4 text-sm text-red-600 font-bold">{error}</p>}
           <button
@@ -175,11 +251,10 @@ export default function NetsatPage() {
           <div className="rounded-3xl bg-white border-2 border-[#FFD700] shadow-lg p-6 text-center">
             <p className="text-gray-500 font-bold">คะแนนสอบจำลอง NETSAT</p>
             <p className="text-5xl font-black text-[#003399] my-2">
-              {result.earnedPoints}
-              <span className="text-2xl text-gray-400"> / {result.totalPoints}</span>
+              {result.percent}%
             </p>
             <p className="text-gray-600 font-bold">
-              ตอบถูก {result.correctCount}/{result.totalQuestions} ข้อ · {result.percent}%
+              ได้ {result.earnedPoints}/{result.totalPoints} คะแนน · ตอบถูก {result.correctCount}/{result.totalQuestions} ข้อ
             </p>
             {saveMsg && <p className="mt-2 text-sm font-bold text-[#003399]">{saveMsg}</p>}
             <div className="mt-4 grid grid-cols-2 gap-2 text-left text-sm">
@@ -204,7 +279,7 @@ export default function NetsatPage() {
                 กลับหน้าหลัก
               </Link>
             </div>
-            <p className="text-[11px] text-gray-400 mt-4">เร็ว ๆ นี้: บันทึกผลขึ้นระบบ + นับแต้มเข้าอันดับรายสัปดาห์</p>
+            <p className="text-[11px] text-gray-400 mt-4">อันดับนับจากเปอร์เซ็นต์ครั้งที่ดีที่สุด · ทำซ้ำเพื่อพัฒนาคะแนนได้</p>
           </div>
 
           {/* ทบทวนเฉลย */}
@@ -298,10 +373,28 @@ export default function NetsatPage() {
           <div className="text-sm text-gray-500 font-bold">
             ตอบแล้ว {answeredCount}/{mock?.totalQuestions ?? 0}
           </div>
-          <button onClick={handleSubmitClick} className="rounded-xl bg-[#FFD700] text-[#003399] font-black px-4 py-2 hover:brightness-95 transition">
-            ส่งคำตอบ
+          <button
+            onClick={handleSubmitClick}
+            disabled={!canSubmit}
+            className={`rounded-xl font-black px-4 py-2 transition ${
+              canSubmit
+                ? "bg-[#FFD700] text-[#003399] hover:brightness-95"
+                : "bg-gray-200 text-gray-400 cursor-not-allowed"
+            }`}
+          >
+            {canSubmit ? "ส่งคำตอบ" : `ส่งได้ใน ${fmtTime(submitCountdown)}`}
           </button>
         </div>
+        {!canSubmit && (
+          <div className="bg-[#003399]/5 text-[#003399] text-xs text-center py-1.5 font-bold">
+            ⏳ ส่งคำตอบได้หลังทำครบ 40 นาที — ระหว่างนี้ทบทวน/แก้คำตอบได้
+          </div>
+        )}
+        {tabSwitches > 0 && (
+          <div className="bg-amber-50 border-t border-amber-200 text-amber-800 text-xs text-center py-1.5 font-bold">
+            ⚠️ ออกจากหน้าสอบแล้ว {tabSwitches} ครั้ง — ระบบบันทึกไว้เพื่อความยุติธรรม กรุณาอยู่ในหน้าจอ
+          </div>
+        )}
       </div>
 
       <div className="max-w-3xl mx-auto px-4 py-6 space-y-4">
@@ -360,9 +453,14 @@ export default function NetsatPage() {
 
         <button
           onClick={handleSubmitClick}
-          className="w-full rounded-xl bg-[#003399] text-white font-black py-3 text-lg hover:bg-[#002266] transition"
+          disabled={!canSubmit}
+          className={`w-full rounded-xl font-black py-3 text-lg transition ${
+            canSubmit
+              ? "bg-[#003399] text-white hover:bg-[#002266]"
+              : "bg-gray-200 text-gray-400 cursor-not-allowed"
+          }`}
         >
-          ส่งคำตอบ
+          {canSubmit ? "ส่งคำตอบ" : `ส่งได้หลังทำครบ 40 นาที (อีก ${fmtTime(submitCountdown)})`}
         </button>
       </div>
     </main>
