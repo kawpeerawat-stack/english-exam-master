@@ -9,6 +9,7 @@ import {
   type StudentProfile,
   type SeasonRankEntry,
 } from "./lib/cloud";
+import { fmtTime } from "./lib/netsat";
 
 // ── คีย์เก็บตัวตนผู้ใช้ใน localStorage (ใช้อีเมลเป็นกุญแจ เหมือนแอป vocab) ──
 const LS_EMAIL = "exam_user_email";
@@ -106,7 +107,6 @@ export default function HomePage() {
       if (!alive) return;
       setProfile(p);
       setBoard(b);
-      // ถ้าในระบบมีชื่ออยู่แล้วแต่เครื่องนี้ยังไม่มี ให้ใช้ชื่อจากระบบ
       if (p?.name && !name) {
         setName(p.name);
         try {
@@ -206,6 +206,11 @@ export default function HomePage() {
   const level = Math.floor(seasonXp / 100) + 1;
   const intoLevel = seasonXp % 100;
   const seasonOver = isSeasonOver();
+  const myBest = profile?.seasonBestPercent ?? 0;
+  const myBestTime = profile?.seasonBestTimeSec ?? 0;
+
+  // อันดับ: แสดงเฉพาะคนที่มีสถิติครั้งดีที่สุดแล้ว (timeSec > 0)
+  const ranked = board.filter((r) => r.timeSec > 0);
 
   return (
     <main className="flex-1 bg-[#f4f6fb]">
@@ -251,6 +256,12 @@ export default function HomePage() {
               {greetingByHour()}, {displayName}! 🔥 ลุยสอบจำลองกันเถอะ
             </h1>
             <p className="text-gray-500 mt-1">ความสม่ำเสมอ คือกุญแจสู่มหาวิทยาลัยในฝัน</p>
+            {myBest > 0 && (
+              <p className="text-sm font-bold text-[#003399] mt-2">
+                🏅 คะแนนสอบ NETSAT ดีที่สุดของคุณรอบนี้: {myBest}%{" "}
+                <span className="text-gray-400 font-normal">(ใช้เวลา {fmtTime(myBestTime)})</span>
+              </p>
+            )}
           </div>
 
           <h2 className="text-lg font-black text-[#003399] mb-3">🎯 ศูนย์รวมข้อสอบจำลอง (Mock Exams)</h2>
@@ -314,15 +325,15 @@ export default function HomePage() {
               )}
             </div>
             <p className="text-[11px] text-gray-500 mb-3">
-              {seasonOver ? "🏁 อันดับสุดท้าย" : "สะสมคะแนนสอบจำลอง · ตัดรอบ 10 ส.ค. 2569"}
+              {seasonOver ? "🏁 อันดับสุดท้าย" : "จัดอันดับจากเปอร์เซ็นต์ดีที่สุด · ตัดรอบ 10 ส.ค. 2569"}
             </p>
             {loadingData ? (
               <p className="text-sm text-gray-400">กำลังโหลด…</p>
-            ) : board.length === 0 ? (
+            ) : ranked.length === 0 ? (
               <p className="text-sm text-gray-400">ยังไม่มีใครทำคะแนน — ทำสอบจำลองให้จบเพื่อขึ้นอันดับ!</p>
             ) : (
               <ol className="space-y-2">
-                {board.slice(0, 10).map((row, i) => {
+                {ranked.slice(0, 10).map((row, i) => {
                   const me = row.email === email.toLowerCase();
                   const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : `${i + 1}.`;
                   return (
@@ -336,14 +347,17 @@ export default function HomePage() {
                         <span className="w-6 text-center">{medal}</span>
                         <span className="truncate">{me ? "คุณ" : row.name}</span>
                       </span>
-                      <span className="font-bold text-[#003399]">{row.seasonXp}</span>
+                      <span className="text-right shrink-0">
+                        <span className="font-bold text-[#003399]">{row.bestPercent}%</span>
+                        <span className="block text-[10px] text-gray-400">{fmtTime(row.timeSec)}</span>
+                      </span>
                     </li>
                   );
                 })}
               </ol>
             )}
             <p className="text-[11px] text-gray-400 mt-3">
-              นับเฉพาะคะแนนสอบจำลอง สะสมจนถึงวันตัดรอบ — ยิ่งทำบ่อยและทำได้ดี ยิ่งแต้มสูง
+              จัดอันดับจาก &quot;เปอร์เซ็นต์ครั้งที่ดีที่สุด&quot; เสมอกันตัดที่เวลาน้อยกว่า — ทำซ้ำได้ นับเฉพาะรอบที่ดีสุด
             </p>
           </div>
         </aside>
