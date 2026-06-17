@@ -28,6 +28,12 @@ export function isSeasonOver(now: Date = new Date()): boolean {
   return now.getTime() > SEASON_END.getTime();
 }
 
+// ── อีเมลที่เป็น "ครู" (เข้าหน้า /admin ได้) — เพิ่มอีเมลในวงเล็บได้ ──
+export const TEACHER_EMAILS = ["kawpeerawat@gmail.com"];
+export function isTeacher(email: string): boolean {
+  return TEACHER_EMAILS.includes(email.trim().toLowerCase());
+}
+
 export function emailToId(email: string): string {
   return email.trim().toLowerCase().replace(/\//g, "_");
 }
@@ -136,6 +142,47 @@ export async function loadSeasonLeaderboard(): Promise<SeasonRankEntry[]> {
     return entries;
   } catch (e) {
     console.error("loadSeasonLeaderboard error:", e);
+    return [];
+  }
+}
+
+// ── อ่านผลสอบทั้งหมด (สำหรับหน้าครู /admin) ──
+export interface MockResultRow {
+  id: string;
+  email: string;
+  name: string;
+  earnedPoints: number;
+  totalPoints: number;
+  percent: number;
+  correctCount: number;
+  totalQuestions: number;
+  createdAtMs: number;
+}
+
+export async function loadAllMockResults(max = 500): Promise<MockResultRow[]> {
+  if (!db) return [];
+  try {
+    const snap = await getDocs(collection(db, MOCK_COLLECTION));
+    const rows: MockResultRow[] = [];
+    snap.forEach((s) => {
+      const d = s.data() as Record<string, unknown>;
+      const ts = d.createdAt as { toMillis?: () => number } | undefined;
+      rows.push({
+        id: s.id,
+        email: String(d.email ?? ""),
+        name: String(d.name ?? ""),
+        earnedPoints: Number(d.earnedPoints ?? 0),
+        totalPoints: Number(d.totalPoints ?? 0),
+        percent: Number(d.percent ?? 0),
+        correctCount: Number(d.correctCount ?? 0),
+        totalQuestions: Number(d.totalQuestions ?? 0),
+        createdAtMs: ts?.toMillis?.() ?? 0,
+      });
+    });
+    rows.sort((a, b) => b.createdAtMs - a.createdAtMs);
+    return rows.slice(0, max);
+  } catch (e) {
+    console.error("loadAllMockResults error:", e);
     return [];
   }
 }
