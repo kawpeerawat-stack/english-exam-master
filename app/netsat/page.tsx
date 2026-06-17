@@ -112,13 +112,13 @@ export default function NetsatPage() {
           <div className="text-center">
             <div className="text-4xl mb-2">📖 📊</div>
             <h1 className="text-2xl font-black text-[#003399]">NETSAT — สอบจำลองภาษาอังกฤษ (มข.)</h1>
-            <p className="text-gray-600 mt-1 font-bold">40 ข้อ / 90 นาที</p>
+            <p className="text-gray-600 mt-1 font-bold">40 ข้อ / 55 นาที</p>
           </div>
           <div className="mt-5 rounded-xl bg-[#003399]/5 p-4 text-sm text-gray-700 space-y-1">
             <p>• Error Identification 10 ข้อ</p>
             <p>• Sentence Completion 10 ข้อ</p>
             <p>• Reading (สั้น + ยาว) 20 ข้อ</p>
-            <p className="text-gray-500 pt-1">คะแนนถ่วงน้ำหนัก 2/3/4 ตามความยาก · สุ่มข้อใหม่ทุกครั้ง · จับเวลา 90 นาที (หมดเวลาส่งอัตโนมัติ)</p>
+            <p className="text-gray-500 pt-1">คะแนนถ่วงน้ำหนัก 2/3/4 ตามความยาก · สุ่มข้อใหม่ทุกครั้ง · จับเวลา 55 นาที (หมดเวลาส่งอัตโนมัติ)</p>
           </div>
           {error && <p className="mt-4 text-sm text-red-600 font-bold">{error}</p>}
           <button
