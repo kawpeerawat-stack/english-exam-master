@@ -13,6 +13,15 @@ import {
 const COLLECTION = "students";
 const MOCK_COLLECTION = "mockResults";
 
+// ── ฤดูกาลแข่งขัน NETSAT ──
+// เปลี่ยน SEASON_ID เมื่อต้องการ "รีเซ็ตอันดับใหม่ทั้งหมด" → ทุกคนกลับเป็น 0 อัตโนมัติ
+export const SEASON_ID = "netsat-2026";
+// วันตัดรอบ (เวลาไทย) — หลังจากนี้การทำสอบจะไม่บวกแต้มเข้าอันดับอีก
+export const SEASON_END = new Date("2026-08-10T23:59:59+07:00");
+export function isSeasonOver(now: Date = new Date()): boolean {
+  return now.getTime() > SEASON_END.getTime();
+}
+
 export function emailToId(email: string): string {
   return email.trim().toLowerCase().replace(/\//g, "_");
 }
@@ -38,6 +47,7 @@ export interface StudentProfile {
   name: string;
   email: string;
   weeklyXp: number;
+  seasonXp: number;
   streak: number;
   bestStreak: number;
 }
@@ -51,6 +61,7 @@ export async function loadStudent(email: string): Promise<StudentProfile | null>
     const d = snap.data() as {
       name?: string; email?: string;
       weeklyXp?: number; weekId?: string;
+      seasonXp?: number; seasonId?: string;
       streak?: number; bestStreak?: number;
     };
     const thisWeek = currentWeekId();
@@ -58,6 +69,7 @@ export async function loadStudent(email: string): Promise<StudentProfile | null>
       name: d.name || "",
       email: (d.email || email).toLowerCase(),
       weeklyXp: d.weekId === thisWeek ? (d.weeklyXp ?? 0) : 0,
+      seasonXp: d.seasonId === SEASON_ID ? (d.seasonXp ?? 0) : 0,
       streak: d.streak ?? 0,
       bestStreak: d.bestStreak ?? 0,
     };
@@ -83,17 +95,40 @@ export async function loadWeeklyLeaderboard(): Promise<WeeklyRankEntry[]> {
       const d = s.data() as { email?: string; name?: string; weeklyXp?: number; weekId?: string };
       const weeklyXp = d.weekId === thisWeek ? (d.weeklyXp ?? 0) : 0;
       if (weeklyXp > 0) {
-        entries.push({
-          email: (d.email || s.id).toLowerCase(),
-          name: d.name || "(ไม่มีชื่อ)",
-          weeklyXp,
-        });
+        entries.push({ email: (d.email || s.id).toLowerCase(), name: d.name || "(ไม่มีชื่อ)", weeklyXp });
       }
     });
     entries.sort((a, b) => b.weeklyXp - a.weeklyXp);
     return entries;
   } catch (e) {
     console.error("loadWeeklyLeaderboard error:", e);
+    return [];
+  }
+}
+
+// ── อันดับการแข่งขัน NETSAT (นับเฉพาะคะแนนสอบจำลอง สะสมจนถึงวันตัดรอบ) ──
+export interface SeasonRankEntry {
+  email: string;
+  name: string;
+  seasonXp: number;
+}
+
+export async function loadSeasonLeaderboard(): Promise<SeasonRankEntry[]> {
+  if (!db) return [];
+  try {
+    const snap = await getDocs(collection(db, COLLECTION));
+    const entries: SeasonRankEntry[] = [];
+    snap.forEach((s) => {
+      const d = s.data() as { email?: string; name?: string; seasonXp?: number; seasonId?: string };
+      const seasonXp = d.seasonId === SEASON_ID ? (d.seasonXp ?? 0) : 0;
+      if (seasonXp > 0) {
+        entries.push({ email: (d.email || s.id).toLowerCase(), name: d.name || "(ไม่มีชื่อ)", seasonXp });
+      }
+    });
+    entries.sort((a, b) => b.seasonXp - a.seasonXp);
+    return entries;
+  } catch (e) {
+    console.error("loadSeasonLeaderboard error:", e);
     return [];
   }
 }
@@ -119,6 +154,7 @@ export async function saveMockResult(
     const snap = await getDoc(ref);
     const cur = (snap.exists() ? snap.data() : {}) as {
       name?: string; weeklyXp?: number; weekId?: string;
+      seasonXp?: number; seasonId?: string;
       streak?: number; bestStreak?: number; lastStudyDate?: string;
       todayCount?: number; netsatAttempts?: number; netsatBestPercent?: number;
     };
@@ -140,6 +176,15 @@ export async function saveMockResult(
     const prevWeekly = cur.weekId === thisWeek ? (cur.weeklyXp ?? 0) : 0;
     const weeklyXp = prevWeekly + payload.earnedPoints;
 
+    // แต้มฤดูกาลแข่งขัน NETSAT (สะสมเฉพาะช่วงแข่ง; รีเซ็ตเมื่อ SEASON_ID เปลี่ยน)
+    const inSeason = !isSeasonOver();
+    let seasonXp: number;
+    if (cur.seasonId === SEASON_ID) {
+      seasonXp = (cur.seasonXp ?? 0) + (inSeason ? payload.earnedPoints : 0);
+    } else {
+      seasonXp = inSeason ? payload.earnedPoints : 0;
+    }
+
     await addDoc(collection(db, MOCK_COLLECTION), {
       email: id,
       name: name || cur.name || "",
@@ -151,6 +196,7 @@ export async function saveMockResult(
       totalQuestions: payload.totalQuestions,
       bySection: payload.bySection,
       weekId: thisWeek,
+      seasonId: SEASON_ID,
       createdAt: serverTimestamp(),
     });
 
@@ -161,6 +207,8 @@ export async function saveMockResult(
         name: name || cur.name || "",
         weeklyXp,
         weekId: thisWeek,
+        seasonXp,
+        seasonId: SEASON_ID,
         streak,
         bestStreak,
         lastStudyDate: today,
