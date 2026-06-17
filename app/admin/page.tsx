@@ -156,9 +156,17 @@ export default function AdminPage() {
             <span className="text-2xl">🛡️</span>
             <span className="text-xl font-black">โหมดครู — English Exam Master</span>
           </div>
-          <Link href="/" className="text-sm text-white/80 underline hover:text-white">
-            ← หน้าหลัก
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/admin/items"
+              className="text-sm rounded-lg bg-[#FFD700] text-[#003399] px-3 py-1.5 font-black hover:brightness-95 transition"
+            >
+              📝 ตรวจ/ซ่อนข้อสอบ
+            </Link>
+            <Link href="/" className="text-sm text-white/80 underline hover:text-white">
+              ← หน้าหลัก
+            </Link>
+          </div>
         </div>
       </header>
 
