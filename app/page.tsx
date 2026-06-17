@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   loadStudent,
-  loadWeeklyLeaderboard,
+  loadSeasonLeaderboard,
+  isSeasonOver,
   type StudentProfile,
-  type WeeklyRankEntry,
+  type SeasonRankEntry,
 } from "./lib/cloud";
 
 const LS_EMAIL = "exam_user_email";
@@ -25,9 +26,39 @@ interface ExamCard {
 }
 
 const EXAMS: ExamCard[] = [
-  { key: "TGAT", title: "TGAT 1", subtitle: "English Communication", icons: "🎙️ 📖", items: "60 ข้อ", time: "60 นาที", parts: "Speaking 30 · Reading 30", href: null, accent: "#003399" },
-  { key: "ALEVEL", title: "A-Level 82", subtitle: "ภาษาอังกฤษ", icons: "🎧 📖 ✏️", items: "80 ข้อ", time: "90 นาที", parts: "Listening-Speaking · Reading · Writing", href: null, accent: "#b91c1c" },
-  { key: "NETSAT", title: "NETSAT", subtitle: "ภาษาอังกฤษ (มข.)", icons: "📖 📊", items: "40 ข้อ", time: "55 นาที", parts: "Reading · Writing / Structure", href: "/netsat", accent: "#003399" },
+  {
+    key: "TGAT",
+    title: "TGAT 1",
+    subtitle: "English Communication",
+    icons: "🎙️ 📖",
+    items: "60 ข้อ",
+    time: "60 นาที",
+    parts: "Speaking 30 · Reading 30",
+    href: null,
+    accent: "#003399",
+  },
+  {
+    key: "ALEVEL",
+    title: "A-Level 82",
+    subtitle: "ภาษาอังกฤษ",
+    icons: "🎧 📖 ✏️",
+    items: "80 ข้อ",
+    time: "90 นาที",
+    parts: "Listening-Speaking · Reading · Writing",
+    href: null,
+    accent: "#b91c1c",
+  },
+  {
+    key: "NETSAT",
+    title: "NETSAT",
+    subtitle: "ภาษาอังกฤษ (มข.)",
+    icons: "📖 📊",
+    items: "40 ข้อ",
+    time: "50 นาที",
+    parts: "Reading · Writing / Structure",
+    href: "/netsat",
+    accent: "#003399",
+  },
 ];
 
 function greetingByHour(): string {
@@ -41,17 +72,23 @@ export default function HomePage() {
   const [ready, setReady] = useState(false);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+
   const [emailInput, setEmailInput] = useState("");
   const [nameInput, setNameInput] = useState("");
+
   const [profile, setProfile] = useState<StudentProfile | null>(null);
-  const [board, setBoard] = useState<WeeklyRankEntry[]>([]);
+  const [board, setBoard] = useState<SeasonRankEntry[]>([]);
   const [loadingData, setLoadingData] = useState(false);
 
   useEffect(() => {
     try {
-      setEmail(window.localStorage.getItem(LS_EMAIL) || "");
-      setName(window.localStorage.getItem(LS_NAME) || "");
-    } catch { /* ignore */ }
+      const e = window.localStorage.getItem(LS_EMAIL) || "";
+      const n = window.localStorage.getItem(LS_NAME) || "";
+      setEmail(e);
+      setName(n);
+    } catch {
+      /* ignore */
+    }
     setReady(true);
   }, []);
 
@@ -60,28 +97,39 @@ export default function HomePage() {
     let alive = true;
     setLoadingData(true);
     (async () => {
-      const [p, b] = await Promise.all([loadStudent(email), loadWeeklyLeaderboard()]);
+      const [p, b] = await Promise.all([loadStudent(email), loadSeasonLeaderboard()]);
       if (!alive) return;
       setProfile(p);
       setBoard(b);
       if (p?.name && !name) {
         setName(p.name);
-        try { window.localStorage.setItem(LS_NAME, p.name); } catch { /* ignore */ }
+        try {
+          window.localStorage.setItem(LS_NAME, p.name);
+        } catch {
+          /* ignore */
+        }
       }
       setLoadingData(false);
     })();
-    return () => { alive = false; };
+    return () => {
+      alive = false;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [email]);
 
   function handleLogin() {
     const e = emailInput.trim().toLowerCase();
-    if (!e || !e.includes("@")) { alert("กรุณากรอกอีเมลให้ถูกต้อง"); return; }
+    if (!e || !e.includes("@")) {
+      alert("กรุณากรอกอีเมลให้ถูกต้อง");
+      return;
+    }
     const n = nameInput.trim();
     try {
       window.localStorage.setItem(LS_EMAIL, e);
       if (n) window.localStorage.setItem(LS_NAME, n);
-    } catch { /* ignore */ }
+    } catch {
+      /* ignore */
+    }
     setEmail(e);
     setName(n);
   }
@@ -90,9 +138,15 @@ export default function HomePage() {
     try {
       window.localStorage.removeItem(LS_EMAIL);
       window.localStorage.removeItem(LS_NAME);
-    } catch { /* ignore */ }
-    setEmail(""); setName(""); setProfile(null); setBoard([]);
-    setEmailInput(""); setNameInput("");
+    } catch {
+      /* ignore */
+    }
+    setEmail("");
+    setName("");
+    setProfile(null);
+    setBoard([]);
+    setEmailInput("");
+    setNameInput("");
   }
 
   if (!ready) return null;
@@ -107,28 +161,43 @@ export default function HomePage() {
             <p className="text-sm text-gray-500 mt-1">ศูนย์สอบจำลอง NETSAT · TGAT · A-Level</p>
           </div>
           <label className="block text-sm font-bold text-gray-700 mb-1">อีเมล</label>
-          <input type="email" value={emailInput} onChange={(e) => setEmailInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleLogin()} placeholder="you@example.com"
-            className="w-full rounded-xl border-2 border-gray-200 px-4 py-3 mb-4 outline-none focus:border-[#003399]" />
+          <input
+            type="email"
+            value={emailInput}
+            onChange={(e) => setEmailInput(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleLogin()}
+            placeholder="you@example.com"
+            className="w-full rounded-xl border-2 border-gray-200 px-4 py-3 mb-4 outline-none focus:border-[#003399]"
+          />
           <label className="block text-sm font-bold text-gray-700 mb-1">ชื่อที่แสดง (ถ้ามีในระบบแล้วเว้นว่างได้)</label>
-          <input type="text" value={nameInput} onChange={(e) => setNameInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleLogin()} placeholder="เช่น น้องสมชาย"
-            className="w-full rounded-xl border-2 border-gray-200 px-4 py-3 mb-6 outline-none focus:border-[#003399]" />
-          <button onClick={handleLogin}
-            className="w-full rounded-xl bg-[#003399] text-white font-black py-3 text-lg hover:bg-[#002266] transition">
+          <input
+            type="text"
+            value={nameInput}
+            onChange={(e) => setNameInput(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleLogin()}
+            placeholder="เช่น น้องสมชาย"
+            className="w-full rounded-xl border-2 border-gray-200 px-4 py-3 mb-6 outline-none focus:border-[#003399]"
+          />
+          <button
+            onClick={handleLogin}
+            className="w-full rounded-xl bg-[#003399] text-white font-black py-3 text-lg hover:bg-[#002266] transition"
+          >
             เข้าสู่ระบบ
           </button>
-          <p className="text-xs text-gray-400 text-center mt-4">ใช้อีเมลเดียวกับแอปคำศัพท์ เพื่อให้แต้มและสถิติเชื่อมกัน</p>
+          <p className="text-xs text-gray-400 text-center mt-4">
+            ใช้อีเมลเดียวกับแอปคำศัพท์ เพื่อให้แต้มและสถิติเชื่อมกัน
+          </p>
         </div>
       </main>
     );
   }
 
   const displayName = name || profile?.name || email.split("@")[0];
-  const weeklyXp = profile?.weeklyXp ?? 0;
+  const seasonXp = profile?.seasonXp ?? 0;
   const streak = profile?.streak ?? 0;
-  const level = Math.floor(weeklyXp / 100) + 1;
-  const intoLevel = weeklyXp % 100;
+  const level = Math.floor(seasonXp / 100) + 1;
+  const intoLevel = seasonXp % 100;
+  const seasonOver = isSeasonOver();
 
   return (
     <main className="flex-1 bg-[#f4f6fb]">
@@ -153,9 +222,13 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex items-center gap-1 font-bold">
-              <span>🔥</span><span>{streak}</span><span className="text-[11px] text-white/70">วัน</span>
+              <span>🔥</span>
+              <span>{streak}</span>
+              <span className="text-[11px] text-white/70">วัน</span>
             </div>
-            <button onClick={handleLogout} className="text-[11px] text-white/70 underline hover:text-white">ออกจากระบบ</button>
+            <button onClick={handleLogout} className="text-[11px] text-white/70 underline hover:text-white">
+              ออกจากระบบ
+            </button>
           </div>
         </div>
       </header>
@@ -175,19 +248,42 @@ export default function HomePage() {
             {EXAMS.map((ex) => {
               const active = !!ex.href;
               return (
-                <div key={ex.key} className={`rounded-2xl bg-white border-2 p-5 flex flex-col ${active ? "border-[#FFD700] shadow-lg" : "border-gray-200"}`}>
+                <div
+                  key={ex.key}
+                  className={`rounded-2xl bg-white border-2 p-5 flex flex-col ${
+                    active ? "border-[#FFD700] shadow-lg" : "border-gray-200"
+                  }`}
+                >
                   <div className="flex items-center justify-between">
-                    <h3 className="text-xl font-black" style={{ color: ex.accent }}>{ex.title}</h3>
-                    {!active && <span className="text-[10px] font-bold bg-gray-100 text-gray-500 rounded-full px-2 py-0.5">เร็ว ๆ นี้</span>}
+                    <h3 className="text-xl font-black" style={{ color: ex.accent }}>
+                      {ex.title}
+                    </h3>
+                    {!active && (
+                      <span className="text-[10px] font-bold bg-gray-100 text-gray-500 rounded-full px-2 py-0.5">
+                        เร็ว ๆ นี้
+                      </span>
+                    )}
                   </div>
                   <p className="text-sm font-bold text-gray-600">{ex.subtitle}</p>
                   <div className="text-2xl my-3">{ex.icons}</div>
-                  <p className="font-black text-gray-800">{ex.items} / {ex.time}</p>
+                  <p className="font-black text-gray-800">
+                    {ex.items} / {ex.time}
+                  </p>
                   <p className="text-xs text-gray-500 mt-1 flex-1">{ex.parts}</p>
                   {active ? (
-                    <Link href={ex.href!} className="mt-4 block text-center rounded-xl bg-[#003399] text-white font-black py-2.5 hover:bg-[#002266] transition">เริ่มสอบจำลอง</Link>
+                    <Link
+                      href={ex.href!}
+                      className="mt-4 block text-center rounded-xl bg-[#003399] text-white font-black py-2.5 hover:bg-[#002266] transition"
+                    >
+                      เริ่มสอบจำลอง
+                    </Link>
                   ) : (
-                    <button disabled className="mt-4 rounded-xl bg-gray-100 text-gray-400 font-black py-2.5 cursor-not-allowed">เร็ว ๆ นี้</button>
+                    <button
+                      disabled
+                      className="mt-4 rounded-xl bg-gray-100 text-gray-400 font-black py-2.5 cursor-not-allowed"
+                    >
+                      เร็ว ๆ นี้
+                    </button>
                   )}
                 </div>
               );
@@ -197,29 +293,46 @@ export default function HomePage() {
 
         <aside>
           <div className="rounded-2xl bg-white border-2 border-gray-200 p-5">
-            <h2 className="text-base font-black text-[#003399] mb-3">🏆 อันดับประจำสัปดาห์</h2>
+            <div className="flex items-center justify-between mb-1">
+              <h2 className="text-base font-black text-[#003399]">🏆 NETSAT Challenge</h2>
+              {seasonOver && (
+                <span className="text-[10px] font-bold bg-gray-800 text-white rounded-full px-2 py-0.5">
+                  ปิดรอบแล้ว
+                </span>
+              )}
+            </div>
+            <p className="text-[11px] text-gray-500 mb-3">
+              {seasonOver ? "🏁 อันดับสุดท้าย" : "สะสมคะแนนสอบจำลอง · ตัดรอบ 10 ส.ค. 2569"}
+            </p>
             {loadingData ? (
               <p className="text-sm text-gray-400">กำลังโหลด…</p>
             ) : board.length === 0 ? (
-              <p className="text-sm text-gray-400">ยังไม่มีคะแนนสัปดาห์นี้ — เริ่มทำข้อสอบเพื่อขึ้นอันดับ!</p>
+              <p className="text-sm text-gray-400">ยังไม่มีใครทำคะแนน — ทำสอบจำลองให้จบเพื่อขึ้นอันดับ!</p>
             ) : (
               <ol className="space-y-2">
-                {board.slice(0, 8).map((row, i) => {
+                {board.slice(0, 10).map((row, i) => {
                   const me = row.email === email.toLowerCase();
                   const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : `${i + 1}.`;
                   return (
-                    <li key={row.email} className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm ${me ? "bg-[#FFD700]/20 font-black" : "bg-gray-50"}`}>
+                    <li
+                      key={row.email}
+                      className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm ${
+                        me ? "bg-[#FFD700]/20 font-black" : "bg-gray-50"
+                      }`}
+                    >
                       <span className="flex items-center gap-2 truncate">
                         <span className="w-6 text-center">{medal}</span>
                         <span className="truncate">{me ? "คุณ" : row.name}</span>
                       </span>
-                      <span className="font-bold text-[#003399]">{row.weeklyXp}</span>
+                      <span className="font-bold text-[#003399]">{row.seasonXp}</span>
                     </li>
                   );
                 })}
               </ol>
             )}
-            <p className="text-[11px] text-gray-400 mt-3">นับแต้มรวมทุกกิจกรรมในสัปดาห์ (รีเซ็ตทุกวันจันทร์) — เร็ว ๆ นี้จะรวมคะแนนสอบจำลองด้วย</p>
+            <p className="text-[11px] text-gray-400 mt-3">
+              นับเฉพาะคะแนนสอบจำลอง สะสมจนถึงวันตัดรอบ — ยิ่งทำบ่อยและทำได้ดี ยิ่งแต้มสูง
+            </p>
           </div>
         </aside>
       </div>
