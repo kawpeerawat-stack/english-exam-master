@@ -27,7 +27,7 @@ interface ExamCard {
 const EXAMS: ExamCard[] = [
   { key: "TGAT", title: "TGAT 1", subtitle: "English Communication", icons: "🎙️ 📖", items: "60 ข้อ", time: "60 นาที", parts: "Speaking 30 · Reading 30", href: null, accent: "#003399" },
   { key: "ALEVEL", title: "A-Level 82", subtitle: "ภาษาอังกฤษ", icons: "🎧 📖 ✏️", items: "80 ข้อ", time: "90 นาที", parts: "Listening-Speaking · Reading · Writing", href: null, accent: "#b91c1c" },
-  { key: "NETSAT", title: "NETSAT", subtitle: "ภาษาอังกฤษ (มข.)", icons: "📖 📊", items: "40 ข้อ", time: "90 นาที", parts: "Reading · Writing / Structure", href: "/netsat", accent: "#003399" },
+  { key: "NETSAT", title: "NETSAT", subtitle: "ภาษาอังกฤษ (มข.)", icons: "📖 📊", items: "40 ข้อ", time: "55 นาที", parts: "Reading · Writing / Structure", href: "/netsat", accent: "#003399" },
 ];
 
 function greetingByHour(): string {
