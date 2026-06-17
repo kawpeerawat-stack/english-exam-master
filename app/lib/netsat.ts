@@ -84,6 +84,8 @@ export interface AssembledMock {
 
 // ── เวลาสอบ (วินาที) ──
 export const EXAM_SECONDS = 50 * 60;
+// ต้องทำอย่างน้อย 40 นาทีก่อนจึงกด "ส่ง" ได้ (กันการรัวมั่วแล้วรีบส่งเพื่อฟาร์มหลายรอบ)
+export const MIN_SUBMIT_SECONDS = 40 * 60;
 const TARGET_READING = 20;
 
 // ── โหลดคลังข้อ ──
