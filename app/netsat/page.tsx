@@ -14,6 +14,7 @@ import {
   type MockResult,
   type Section,
 } from "../lib/netsat";
+import { saveMockResult } from "../lib/cloud";
 
 type Phase = "intro" | "loading" | "taking" | "result";
 
@@ -51,6 +52,7 @@ export default function NetsatPage() {
   const [secondsLeft, setSecondsLeft] = useState(EXAM_SECONDS);
   const [result, setResult] = useState<MockResult | null>(null);
   const [error, setError] = useState("");
+  const [saveMsg, setSaveMsg] = useState("");
 
   const start = useCallback(async () => {
     setError("");
@@ -62,6 +64,7 @@ export default function NetsatPage() {
       setAnswers({});
       setSecondsLeft(EXAM_SECONDS);
       setResult(null);
+      setSaveMsg("");
       setPhase("taking");
       window.scrollTo(0, 0);
     } catch {
@@ -71,15 +74,38 @@ export default function NetsatPage() {
   }, []);
 
   const submit = useCallback(() => {
-    setMock((m) => {
-      if (m) {
-        setResult(scoreMock(m, answers));
-        setPhase("result");
-        window.scrollTo(0, 0);
-      }
-      return m;
-    });
-  }, [answers]);
+    if (!mock) return;
+    const r = scoreMock(mock, answers);
+    setResult(r);
+    setPhase("result");
+    window.scrollTo(0, 0);
+
+    let email = "";
+    let name = "";
+    try {
+      email = window.localStorage.getItem("exam_user_email") || "";
+      name = window.localStorage.getItem("exam_user_name") || "";
+    } catch {
+      /* ignore */
+    }
+    if (!email) {
+      setSaveMsg("ℹ️ ทำแบบไม่ล็อกอิน — ผลไม่ถูกบันทึก (เข้าสู่ระบบจากหน้าหลักเพื่อเก็บแต้ม)");
+      return;
+    }
+    setSaveMsg("กำลังบันทึกผล…");
+    saveMockResult(email, name, {
+      earnedPoints: r.earnedPoints,
+      totalPoints: r.totalPoints,
+      percent: r.percent,
+      correctCount: r.correctCount,
+      totalQuestions: r.totalQuestions,
+      bySection: r.bySection,
+    })
+      .then((res) =>
+        setSaveMsg(res ? `บันทึกผลแล้ว ✓ +${res.xpGained} XP` : "บันทึกไม่สำเร็จ — เช็กการเชื่อมต่อ/โดเมน reCAPTCHA")
+      )
+      .catch(() => setSaveMsg("บันทึกไม่สำเร็จ"));
+  }, [mock, answers]);
 
   useEffect(() => {
     if (phase !== "taking") return;
@@ -112,13 +138,13 @@ export default function NetsatPage() {
           <div className="text-center">
             <div className="text-4xl mb-2">📖 📊</div>
             <h1 className="text-2xl font-black text-[#003399]">NETSAT — สอบจำลองภาษาอังกฤษ (มข.)</h1>
-            <p className="text-gray-600 mt-1 font-bold">40 ข้อ / 55 นาที</p>
+            <p className="text-gray-600 mt-1 font-bold">40 ข้อ / 50 นาที</p>
           </div>
           <div className="mt-5 rounded-xl bg-[#003399]/5 p-4 text-sm text-gray-700 space-y-1">
             <p>• Error Identification 10 ข้อ</p>
             <p>• Sentence Completion 10 ข้อ</p>
             <p>• Reading (สั้น + ยาว) 20 ข้อ</p>
-            <p className="text-gray-500 pt-1">คะแนนถ่วงน้ำหนัก 2/3/4 ตามความยาก · สุ่มข้อใหม่ทุกครั้ง · จับเวลา 55 นาที (หมดเวลาส่งอัตโนมัติ)</p>
+            <p className="text-gray-500 pt-1">คะแนนถ่วงน้ำหนัก 2/3/4 ตามความยาก · สุ่มข้อใหม่ทุกครั้ง · จับเวลา 50 นาที (หมดเวลาส่งอัตโนมัติ)</p>
           </div>
           {error && <p className="mt-4 text-sm text-red-600 font-bold">{error}</p>}
           <button
@@ -150,6 +176,7 @@ export default function NetsatPage() {
             <p className="text-gray-600 font-bold">
               ตอบถูก {result.correctCount}/{result.totalQuestions} ข้อ · {result.percent}%
             </p>
+            {saveMsg && <p className="mt-2 text-sm font-bold text-[#003399]">{saveMsg}</p>}
             <div className="mt-4 grid grid-cols-2 gap-2 text-left text-sm">
               {sectionsOrder.map((sec) => {
                 const s = result.bySection[sec];
@@ -172,7 +199,6 @@ export default function NetsatPage() {
                 กลับหน้าหลัก
               </Link>
             </div>
-            <p className="text-[11px] text-gray-400 mt-4">เร็ว ๆ นี้: บันทึกผลขึ้นระบบ + นับแต้มเข้าอันดับรายสัปดาห์</p>
           </div>
 
           <h2 className="text-lg font-black text-[#003399] mt-8 mb-3">ทบทวนเฉลยทุกข้อ</h2>
