@@ -3,7 +3,6 @@
 import { Fragment, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import {
-  isTeacher,
   loadAllMockResults,
   loadSeasonLeaderboard,
   ATTEMPTS_PER_DAY,
@@ -12,7 +11,6 @@ import {
 } from "../lib/cloud";
 import { fmtTime } from "../lib/netsat";
 
-const LS_EMAIL = "exam_user_email";
 // จำนวนครั้งที่ออกจากหน้าจอที่ถือว่า "น่าสงสัย"
 const SUSPICIOUS_SWITCHES = 5;
 
@@ -183,23 +181,28 @@ function StudentProgress({ attempts }: { attempts: MockResultRow[] }) {
 }
 
 export default function AdminPage() {
-  const [ready, setReady] = useState(false);
-  const [email, setEmail] = useState("");
+  // null = กำลังตรวจสถานะล็อกอิน, false = ยังไม่ล็อกอิน, true = ล็อกอินแล้ว
+  const [authed, setAuthed] = useState<boolean | null>(null);
+  const [pw, setPw] = useState("");
+  const [loginErr, setLoginErr] = useState("");
+  const [loggingIn, setLoggingIn] = useState(false);
   const [rows, setRows] = useState<MockResultRow[]>([]);
   const [board, setBoard] = useState<SeasonRankEntry[]>([]);
   const [loading, setLoading] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
 
+  // ตรวจ cookie ล็อกอินจากเซิร์ฟเวอร์
   useEffect(() => {
-    try {
-      setEmail(window.localStorage.getItem(LS_EMAIL) || "");
-    } catch {
-      /* ignore */
-    }
-    setReady(true);
+    (async () => {
+      try {
+        const r = await fetch("/api/admin/me");
+        const j = await r.json();
+        setAuthed(!!j.authed);
+      } catch {
+        setAuthed(false);
+      }
+    })();
   }, []);
-
-  const allowed = isTeacher(email);
 
   async function reload() {
     setLoading(true);
@@ -209,8 +212,9 @@ export default function AdminPage() {
     setLoading(false);
   }
 
+  // โหลดข้อมูลเมื่อยืนยันว่าล็อกอินแล้ว
   useEffect(() => {
-    if (!allowed) return;
+    if (authed !== true) return;
     let alive = true;
     setLoading(true);
     (async () => {
@@ -223,7 +227,43 @@ export default function AdminPage() {
     return () => {
       alive = false;
     };
-  }, [allowed]);
+  }, [authed]);
+
+  async function doLogin() {
+    setLoginErr("");
+    const password = pw.trim();
+    if (!password) return;
+    setLoggingIn(true);
+    try {
+      const r = await fetch("/api/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
+      const j = await r.json();
+      if (r.ok && j.ok) {
+        setPw("");
+        setAuthed(true);
+      } else {
+        setLoginErr(j.error || "รหัสผ่านไม่ถูกต้อง");
+      }
+    } catch {
+      setLoginErr("เชื่อมต่อไม่ได้ ลองใหม่อีกครั้ง");
+    } finally {
+      setLoggingIn(false);
+    }
+  }
+
+  async function doLogout() {
+    try {
+      await fetch("/api/admin/logout", { method: "POST" });
+    } catch {
+      /* ignore */
+    }
+    setRows([]);
+    setBoard([]);
+    setAuthed(false);
+  }
 
   // แต้มสะสม (seasonXp) ต่อคน
   const seasonByEmail = useMemo(() => {
@@ -289,32 +329,45 @@ export default function AdminPage() {
   const totalAttempts = rows.length;
   const avgPercent = rows.length ? Math.round(rows.reduce((s, r) => s + r.percent, 0) / rows.length) : 0;
 
-  if (!ready) return null;
-
-  // ── ยังไม่ได้ล็อกอิน ──
-  if (!email) {
+  // ── กำลังตรวจสถานะ ──
+  if (authed === null) {
     return (
       <main className="flex-1 flex items-center justify-center px-4 py-16 bg-[#f4f6fb]">
-        <div className="text-center">
-          <div className="text-4xl mb-3">🔒</div>
-          <p className="font-bold text-gray-700">กรุณาเข้าสู่ระบบจากหน้าหลักก่อน</p>
-          <Link href="/" className="mt-4 inline-block text-[#003399] underline font-bold">
-            ← ไปหน้าหลัก
-          </Link>
-        </div>
+        <p className="text-gray-400">กำลังตรวจสอบ…</p>
       </main>
     );
   }
 
-  // ── ล็อกอินแล้วแต่ไม่ใช่ครู ──
-  if (!allowed) {
+  // ── ยังไม่ล็อกอิน → ฟอร์มใส่รหัสผ่าน ──
+  if (!authed) {
     return (
       <main className="flex-1 flex items-center justify-center px-4 py-16 bg-[#f4f6fb]">
-        <div className="text-center max-w-sm">
-          <div className="text-4xl mb-3">🔒</div>
-          <p className="font-black text-lg text-[#003399]">หน้านี้สำหรับครูเท่านั้น</p>
-          <p className="text-sm text-gray-500 mt-2">บัญชี {email} ไม่มีสิทธิ์เข้าถึงโหมดครู</p>
-          <Link href="/" className="mt-4 inline-block text-[#003399] underline font-bold">
+        <div className="w-full max-w-sm rounded-2xl bg-white border-2 border-gray-200 p-6">
+          <div className="text-center mb-4">
+            <div className="text-4xl mb-2">🛡️</div>
+            <h1 className="font-black text-lg text-[#003399]">โหมดครู</h1>
+            <p className="text-sm text-gray-500 mt-1">ใส่รหัสผ่านเพื่อเข้าดูข้อมูล</p>
+          </div>
+          <input
+            type="password"
+            value={pw}
+            onChange={(e) => setPw(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") doLogin();
+            }}
+            placeholder="รหัสผ่านครู"
+            autoFocus
+            className="w-full rounded-lg border-2 border-gray-200 px-3 py-2 focus:border-[#003399] outline-none"
+          />
+          {loginErr && <p className="text-sm text-red-500 mt-2">{loginErr}</p>}
+          <button
+            onClick={doLogin}
+            disabled={loggingIn || !pw.trim()}
+            className="mt-3 w-full rounded-lg bg-[#003399] text-white font-black py-2.5 hover:brightness-110 transition disabled:opacity-50"
+          >
+            {loggingIn ? "กำลังเข้า…" : "เข้าสู่ระบบ"}
+          </button>
+          <Link href="/" className="mt-4 block text-center text-sm text-gray-400 underline hover:text-gray-600">
             ← กลับหน้าหลัก
           </Link>
         </div>
@@ -341,6 +394,12 @@ export default function AdminPage() {
             <Link href="/" className="text-sm text-white/80 underline hover:text-white">
               ← หน้าหลัก
             </Link>
+            <button
+              onClick={doLogout}
+              className="text-sm rounded-lg bg-white/15 px-3 py-1.5 font-bold hover:bg-white/25 transition"
+            >
+              ออกจากระบบ
+            </button>
           </div>
         </div>
       </header>
