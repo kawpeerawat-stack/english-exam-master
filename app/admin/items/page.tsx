@@ -2,18 +2,17 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { isTeacher, loadHiddenItemIds, setItemHidden } from "../../lib/cloud";
-import { loadBank, type BankWritingItem } from "../../lib/netsat";
+import { loadHiddenItemIds, setItemHidden } from "../../lib/cloud";
+import { type BankWritingItem } from "../../lib/netsat";
 
-const LS_EMAIL = "exam_user_email";
 const LETTERS = ["A", "B", "C", "D", "E"];
 const PAGE_SIZE = 25;
 
 type Row = BankWritingItem & { section: "Error" | "SC" };
 
 export default function AdminItemsPage() {
-  const [ready, setReady] = useState(false);
-  const [email, setEmail] = useState("");
+  // null = ตรวจสถานะ, false = ยังไม่ล็อกอิน, true = ล็อกอินแล้ว
+  const [authed, setAuthed] = useState<boolean | null>(null);
   const [items, setItems] = useState<Row[]>([]);
   const [hidden, setHidden] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(false);
@@ -24,36 +23,46 @@ export default function AdminItemsPage() {
   const [onlyHidden, setOnlyHidden] = useState(false);
   const [page, setPage] = useState(0);
 
+  // ตรวจ cookie ล็อกอินครู (จุดล็อกอินจริงอยู่ที่ /admin)
   useEffect(() => {
-    try {
-      setEmail(window.localStorage.getItem(LS_EMAIL) || "");
-    } catch {
-      /* ignore */
-    }
-    setReady(true);
+    (async () => {
+      try {
+        const r = await fetch("/api/admin/me");
+        const j = await r.json();
+        setAuthed(!!j.authed);
+      } catch {
+        setAuthed(false);
+      }
+    })();
   }, []);
 
-  const allowed = isTeacher(email);
-
   useEffect(() => {
-    if (!allowed) return;
+    if (authed !== true) return;
     let alive = true;
     setLoading(true);
     (async () => {
-      const [bank, h] = await Promise.all([loadBank(), loadHiddenItemIds()]);
-      if (!alive) return;
-      const rows: Row[] = [
-        ...bank.writingError.map((x) => ({ ...x, section: "Error" as const })),
-        ...bank.writingSC.map((x) => ({ ...x, section: "SC" as const })),
-      ];
-      setItems(rows);
-      setHidden(new Set(h));
-      setLoading(false);
+      try {
+        // ดึงคลัง "ฉบับมีเฉลย" จากเซิร์ฟเวอร์ (ปลดล็อกด้วย cookie ครู)
+        const [bankRes, h] = await Promise.all([fetch("/api/admin/bank"), loadHiddenItemIds()]);
+        const bank = (await bankRes.json()) as {
+          writingError?: BankWritingItem[];
+          writingSC?: BankWritingItem[];
+        };
+        if (!alive) return;
+        const rows: Row[] = [
+          ...(bank.writingError ?? []).map((x) => ({ ...x, section: "Error" as const })),
+          ...(bank.writingSC ?? []).map((x) => ({ ...x, section: "SC" as const })),
+        ];
+        setItems(rows);
+        setHidden(new Set(h));
+      } finally {
+        if (alive) setLoading(false);
+      }
     })();
     return () => {
       alive = false;
     };
-  }, [allowed]);
+  }, [authed]);
 
   useEffect(() => {
     setPage(0);
@@ -89,30 +98,26 @@ export default function AdminItemsPage() {
     setBusy("");
   }
 
-  if (!ready) return null;
-
-  if (!email) {
+  if (authed === null) {
     return (
       <main className="flex-1 flex items-center justify-center px-4 py-16 bg-[#f4f6fb]">
-        <div className="text-center">
-          <div className="text-4xl mb-3">🔒</div>
-          <p className="font-bold text-gray-700">กรุณาเข้าสู่ระบบจากหน้าหลักก่อน</p>
-          <Link href="/" className="mt-4 inline-block text-[#003399] underline font-bold">
-            ← ไปหน้าหลัก
-          </Link>
-        </div>
+        <p className="text-gray-400">กำลังตรวจสอบ…</p>
       </main>
     );
   }
 
-  if (!allowed) {
+  if (!authed) {
     return (
       <main className="flex-1 flex items-center justify-center px-4 py-16 bg-[#f4f6fb]">
         <div className="text-center max-w-sm">
-          <div className="text-4xl mb-3">🔒</div>
-          <p className="font-black text-lg text-[#003399]">หน้านี้สำหรับครูเท่านั้น</p>
-          <Link href="/" className="mt-4 inline-block text-[#003399] underline font-bold">
-            ← กลับหน้าหลัก
+          <div className="text-4xl mb-3">🛡️</div>
+          <p className="font-black text-lg text-[#003399]">ต้องเข้าสู่ระบบโหมดครูก่อน</p>
+          <p className="text-sm text-gray-500 mt-2">เข้าสู่ระบบที่หน้าโหมดครู แล้วกลับมาหน้านี้ได้เลย</p>
+          <Link
+            href="/admin"
+            className="mt-4 inline-block rounded-lg bg-[#003399] text-white px-4 py-2 font-black hover:brightness-110 transition"
+          >
+            ไปหน้าเข้าสู่ระบบครู →
           </Link>
         </div>
       </main>
