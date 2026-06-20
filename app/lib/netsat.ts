@@ -1,6 +1,6 @@
 // app/lib/netsat.ts
 // ─────────────────────────────────────────────────────────────
-// เครื่องประกอบ "ชุดสอบจำลอง NETSAT" จากคลังข้อ (public/netsat-bank.json)
+// เครื่องประกอบ "ชุดสอบจำลอง NETSAT" จากคลังข้อฉบับเต็ม (app/lib/netsat-bank-full.json) ฝั่งเซิร์ฟเวอร์
 //   - สุ่มข้อทุกครั้งตาม blueprint: Error 10 + Sentence Completion 10 + Reading 20 (รวม 40 ข้อ)
 //   - Writing: สลับตำแหน่งตัวเลือกทุกครั้ง (กันลอก) — เฉลยตามไปด้วย
 //   - Reading: ไม่สลับตัวเลือก (คำเฉลยไทยอ้าง "ตอบข้อ X") แต่สุ่มว่าได้บท/ข้อไหน
@@ -16,7 +16,7 @@ export const SECTION_LABEL: Record<Section, string> = {
   READING_LONG: "Part 4 — Reading: Information & Argument",
 };
 
-// ── โครงข้อมูลในคลัง (public/netsat-bank.json) ──
+// ── โครงข้อมูลในคลัง ──
 export interface BankWritingItem {
   id: string;
   exam_type: string;
@@ -88,9 +88,10 @@ export const EXAM_SECONDS = 50 * 60;
 export const MIN_SUBMIT_SECONDS = 40 * 60;
 const TARGET_READING = 20;
 
-// ── โหลดคลังข้อ ──
+// ── โหลดคลังข้อ (ฉบับไม่มีเฉลย — ใช้ฝั่งเบราว์เซอร์ เช่นหน้า /admin/items) ──
+// หมายเหตุ: ฉบับนี้ไม่มี answerIndex/explanation_th แล้ว (เฉลยอยู่ฝั่งเซิร์ฟเวอร์เท่านั้น)
 export async function loadBank(): Promise<NetsatBank> {
-  const res = await fetch("/netsat-bank.json", { cache: "force-cache" });
+  const res = await fetch("/netsat-bank-public.json", { cache: "force-cache" });
   if (!res.ok) throw new Error("โหลดคลังข้อไม่สำเร็จ");
   return (await res.json()) as NetsatBank;
 }
@@ -139,7 +140,12 @@ export function assembleMock(bank: NetsatBank, hiddenIds: Set<string> = new Set(
   ];
   for (const grp of writing) {
     for (const it of grp.items) {
-      const s = shuffleOptions(it.options, it.answerIndex);
+      // Error Identification: คงลำดับเดิม เพื่อให้เลขกำกับ (1)(2)(3)(4) ตรงตำแหน่งในประโยค
+      // Sentence Completion: สลับตัวเลือก (กันลอกคำตอบ)
+      const s =
+        grp.section === "WRITING_SC"
+          ? shuffleOptions(it.options, it.answerIndex)
+          : { options: it.options, correctIndex: it.answerIndex };
       questions.push({
         uid: nextUid(),
         section: grp.section,
@@ -234,4 +240,98 @@ export function fmtTime(sec: number): string {
   const m = Math.floor(sec / 60);
   const s = sec % 60;
   return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+}
+
+// ─────────────────────────────────────────────────────────────
+// สำหรับ Layer B (ตรวจฝั่งเซิร์ฟเวอร์):
+//   - ฝั่งเด็กได้รับเฉพาะ "โจทย์" (ไม่มีเฉลย)
+//   - เฉลยเก็บเป็น answerKey ไว้ฝั่งเซิร์ฟเวอร์ (ใน session) แล้วใช้ตรวจตอนส่ง
+// ─────────────────────────────────────────────────────────────
+
+// ข้อสอบฉบับ "ไม่มีเฉลย" ที่ส่งให้ฝั่งเด็ก
+export interface PublicQuestion {
+  uid: string;
+  section: Section;
+  passageId?: string;
+  stem: string;
+  options: string[];
+  points: number;
+}
+
+export interface AnswerKeyEntry {
+  correctIndex: number;
+  points: number;
+  section: Section;
+  explanation_th: string;
+}
+
+export interface AssembledForServer {
+  publicQuestions: PublicQuestion[];
+  answerKey: Record<string, AnswerKeyEntry>;
+  passages: Record<string, MockPassage>;
+  totalPoints: number;
+  totalQuestions: number;
+}
+
+// แยกชุดที่ประกอบแล้วเป็น (โจทย์ไม่มีเฉลย) + (เฉลยเก็บฝั่งเซิร์ฟเวอร์)
+export function splitAssembled(mock: AssembledMock): AssembledForServer {
+  const publicQuestions: PublicQuestion[] = [];
+  const answerKey: Record<string, AnswerKeyEntry> = {};
+  for (const q of mock.questions) {
+    publicQuestions.push({
+      uid: q.uid,
+      section: q.section,
+      passageId: q.passageId,
+      stem: q.stem,
+      options: q.options,
+      points: q.points,
+    });
+    answerKey[q.uid] = {
+      correctIndex: q.correctIndex,
+      points: q.points,
+      section: q.section,
+      explanation_th: q.explanation_th,
+    };
+  }
+  return {
+    publicQuestions,
+    answerKey,
+    passages: mock.passages,
+    totalPoints: mock.totalPoints,
+    totalQuestions: mock.totalQuestions,
+  };
+}
+
+// ตรวจคะแนนจาก answerKey (ฝั่งเซิร์ฟเวอร์)
+export function scoreFromKey(
+  answerKey: Record<string, AnswerKeyEntry>,
+  answers: Record<string, number>
+): MockResult {
+  let earnedPoints = 0;
+  let correctCount = 0;
+  let totalPoints = 0;
+  let totalQuestions = 0;
+  const bySection: Partial<Record<Section, SectionScore>> = {};
+  for (const uid of Object.keys(answerKey)) {
+    const k = answerKey[uid];
+    totalQuestions += 1;
+    totalPoints += k.points;
+    const sec = (bySection[k.section] ??= { correct: 0, total: 0, earned: 0, points: 0 });
+    sec.total += 1;
+    sec.points += k.points;
+    if (answers[uid] === k.correctIndex) {
+      earnedPoints += k.points;
+      correctCount += 1;
+      sec.correct += 1;
+      sec.earned += k.points;
+    }
+  }
+  return {
+    earnedPoints,
+    totalPoints,
+    correctCount,
+    totalQuestions,
+    percent: totalPoints > 0 ? Math.round((earnedPoints / totalPoints) * 100) : 0,
+    bySection,
+  };
 }
