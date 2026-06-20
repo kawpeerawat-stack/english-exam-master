@@ -18,48 +18,27 @@ import {
   arrayUnion,
   arrayRemove,
 } from "firebase/firestore";
+import {
+  SEASON_ID,
+  SEASON_END,
+  isSeasonOver,
+  ATTEMPTS_PER_DAY,
+  emailToId,
+  currentWeekId,
+  ymd,
+  daysBetween,
+} from "./season";
+
+// re-export เพื่อให้ไฟล์อื่นที่เคย import จาก cloud.ts ใช้งานได้เหมือนเดิม
+export { SEASON_ID, SEASON_END, isSeasonOver, ATTEMPTS_PER_DAY, emailToId, currentWeekId };
 
 const COLLECTION = "students";
 const MOCK_COLLECTION = "mockResults";
-
-// ── ฤดูกาลแข่งขัน NETSAT ──
-// เปลี่ยน SEASON_ID เมื่อต้องการ "รีเซ็ตอันดับใหม่ทั้งหมด" → ทุกคนกลับเป็น 0 อัตโนมัติ
-export const SEASON_ID = "netsat-2026";
-// วันตัดรอบ (เวลาไทย) — หลังจากนี้การทำสอบจะไม่บวกแต้มเข้าอันดับอีก (อันดับล็อกผลสุดท้าย)
-export const SEASON_END = new Date("2026-08-10T23:59:59+07:00");
-export function isSeasonOver(now: Date = new Date()): boolean {
-  return now.getTime() > SEASON_END.getTime();
-}
-
-// ── จำกัดจำนวนครั้งที่ทำสอบได้ต่อวัน (กันการฟาร์มแต้ม) — แก้ตัวเลขได้ ──
-export const ATTEMPTS_PER_DAY = 3;
 
 // ── อีเมลที่เป็น "ครู" (เข้าหน้า /admin ได้) — เพิ่มอีเมลในวงเล็บได้ ──
 export const TEACHER_EMAILS = ["kawpeerawat@gmail.com"];
 export function isTeacher(email: string): boolean {
   return TEACHER_EMAILS.includes(email.trim().toLowerCase());
-}
-
-export function emailToId(email: string): string {
-  return email.trim().toLowerCase().replace(/\//g, "_");
-}
-
-// รหัสสัปดาห์ = วันจันทร์ของสัปดาห์นั้น (ใช้กับ weeklyXp ที่แชร์กับแอป vocab)
-export function currentWeekId(d: Date = new Date()): string {
-  const x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
-  const day = (x.getDay() + 6) % 7;
-  x.setDate(x.getDate() - day);
-  return ymd(x);
-}
-
-function ymd(d: Date): string {
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-}
-
-function daysBetween(a: string, b: string): number {
-  const da = new Date(a + "T00:00:00");
-  const dbb = new Date(b + "T00:00:00");
-  return Math.round((dbb.getTime() - da.getTime()) / 86400000);
 }
 
 export interface StudentProfile {
@@ -159,27 +138,57 @@ export interface SeasonRankEntry {
 export async function loadSeasonLeaderboard(): Promise<SeasonRankEntry[]> {
   if (!db) return [];
   try {
-    const snap = await getDocs(collection(db, COLLECTION));
-    const entries: SeasonRankEntry[] = [];
+    // อ่านอันดับจาก mockResults (เขียนโดยเซิร์ฟเวอร์เท่านั้น = ปลอมคะแนนไม่ได้)
+    // ไม่อ่านจาก students.seasonBestPercent อีกต่อไป เพราะ students ฝั่งเด็กเขียนทับได้
+    const snap = await getDocs(collection(db, MOCK_COLLECTION));
+    const byEmail = new Map<
+      string,
+      { name: string; nameAtMs: number; bestPercent: number; bestTimeSec: number; seasonXp: number }
+    >();
     snap.forEach((s) => {
       const d = s.data() as {
         email?: string; name?: string; seasonId?: string;
-        seasonXp?: number; seasonBestPercent?: number; seasonBestTimeSec?: number;
+        percent?: number; timeSec?: number; earnedPoints?: number;
+        createdAt?: { toMillis?: () => number };
       };
       if (d.seasonId !== SEASON_ID) return;
-      const seasonXp = d.seasonXp ?? 0;
-      const timeSec = d.seasonBestTimeSec ?? 0;
-      // เก็บเฉพาะคนที่มีผลในรอบนี้ (มีแต้มสะสม หรือ มีสถิติครั้งดีสุด)
-      if (seasonXp <= 0 && timeSec <= 0) return;
-      entries.push({
-        email: (d.email || s.id).toLowerCase(),
-        name: d.name || "(ไม่มีชื่อ)",
-        seasonXp,
-        bestPercent: d.seasonBestPercent ?? 0,
-        timeSec,
-      });
+      const email = (d.email || "").toLowerCase();
+      if (!email) return;
+      const percent = d.percent ?? 0;
+      const timeSec = d.timeSec ?? 0;
+      const earned = d.earnedPoints ?? 0;
+      const ms = d.createdAt?.toMillis?.() ?? 0;
+      const cur = byEmail.get(email);
+      if (!cur) {
+        byEmail.set(email, {
+          name: d.name || "(ไม่มีชื่อ)",
+          nameAtMs: ms,
+          bestPercent: percent,
+          bestTimeSec: timeSec,
+          seasonXp: earned,
+        });
+      } else {
+        cur.seasonXp += earned; // แต้มสะสม = ผลรวมคะแนนที่ได้ทุกครั้ง
+        // ครั้งที่ดีกว่า: % สูงกว่า หรือ % เท่ากันแต่เวลาน้อยกว่า
+        const better =
+          percent > cur.bestPercent ||
+          (percent === cur.bestPercent && timeSec > 0 && (cur.bestTimeSec <= 0 || timeSec < cur.bestTimeSec));
+        if (better) {
+          cur.bestPercent = percent;
+          cur.bestTimeSec = timeSec;
+        }
+        if (ms >= cur.nameAtMs && d.name) {
+          cur.name = d.name;
+          cur.nameAtMs = ms;
+        }
+      }
     });
-    // เปอร์เซ็นต์มากก่อน, เสมอกันใช้เวลาน้อยกว่า (timeSec 0 = ยังไม่มีสถิติ → ไปท้าย)
+
+    const entries: SeasonRankEntry[] = [];
+    byEmail.forEach((v, email) => {
+      entries.push({ email, name: v.name, seasonXp: v.seasonXp, bestPercent: v.bestPercent, timeSec: v.bestTimeSec });
+    });
+    // เปอร์เซ็นต์มากก่อน, เสมอกันใช้เวลาน้อยกว่า
     entries.sort(
       (a, b) =>
         b.bestPercent - a.bestPercent ||
