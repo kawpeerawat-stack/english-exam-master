@@ -1,35 +1,50 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
 import {
-  loadBank,
-  assembleMock,
-  scoreMock,
   fmtTime,
   EXAM_SECONDS,
   MIN_SUBMIT_SECONDS,
   SECTION_LABEL,
-  type AssembledMock,
-  type MockQuestion,
   type MockResult,
   type Section,
 } from "../lib/netsat";
-import { saveMockResult, loadHiddenItemIds, countTodayAttempts, ATTEMPTS_PER_DAY } from "../lib/cloud";
+import { ATTEMPTS_PER_DAY } from "../lib/season";
 
 type Phase = "intro" | "loading" | "taking" | "result";
+
+// โจทย์ฉบับไม่มีเฉลย (รับมาจาก API /start)
+interface PublicQuestion {
+  uid: string;
+  section: Section;
+  passageId?: string;
+  stem: string;
+  options: string[];
+  points: number;
+}
+interface Passage {
+  id: string;
+  title: string;
+  passage: string;
+  wordCount: number;
+}
+interface ReviewEntry {
+  correctIndex: number;
+  explanation_th: string;
+}
 
 type RenderItem =
   | { kind: "section"; section: Section }
   | { kind: "passage"; passageId: string }
-  | { kind: "question"; q: MockQuestion; number: number };
+  | { kind: "question"; q: PublicQuestion; number: number };
 
-function buildRenderItems(mock: AssembledMock): RenderItem[] {
+function buildRenderItems(questions: PublicQuestion[]): RenderItem[] {
   const items: RenderItem[] = [];
   const shown = new Set<string>();
   let lastSection: Section | null = null;
   let number = 0;
-  for (const q of mock.questions) {
+  for (const q of questions) {
     if (q.section !== lastSection) {
       items.push({ kind: "section", section: q.section });
       lastSection = q.section;
@@ -46,17 +61,76 @@ function buildRenderItems(mock: AssembledMock): RenderItem[] {
 
 const LETTERS = ["A", "B", "C", "D", "E"];
 
+// แสดงโจทย์ Error Identification แบบ "ขีดเส้นใต้ส่วนที่เลือก + เลขกำกับ (1)(2)(3)(4)"
+// รองรับ 2 รูปแบบในคลัง:  (A)[วลี]   และ   (A)วลี ...(B)วลี (วลีกินถึง marker ตัวถัดไป)
+function renderErrorStem(stem: string): ReactNode {
+  const nodes: ReactNode[] = [];
+  let key = 0;
+  const addPlain = (t: string) => {
+    if (t) nodes.push(<span key={key++}>{t}</span>);
+  };
+  const addUnderlined = (raw: string, num: number) => {
+    const mm = raw.match(/^(\s*)([\s\S]*?)(\s*)$/);
+    const lead = mm?.[1] ?? "";
+    const content = mm?.[2] ?? raw;
+    const trail = mm?.[3] ?? "";
+    addPlain(lead);
+    nodes.push(
+      <span key={key++} className="font-semibold">
+        <span className="underline decoration-2 underline-offset-2 decoration-gray-500">{content}</span>
+        <span className="text-[#003399] text-[0.8em]">({num})</span>
+      </span>
+    );
+    addPlain(trail);
+  };
+
+  if (/\([A-E]\)\[/.test(stem)) {
+    const re = /\(([A-E])\)\[([^\]]*)\]/g;
+    let last = 0;
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(stem)) !== null) {
+      addPlain(stem.slice(last, m.index));
+      addUnderlined(m[2], m[1].charCodeAt(0) - 64);
+      last = re.lastIndex;
+    }
+    addPlain(stem.slice(last));
+  } else {
+    const re = /\(([A-E])\)/g;
+    const marks: { letter: string; end: number; start: number }[] = [];
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(stem)) !== null) marks.push({ letter: m[1], start: m.index, end: re.lastIndex });
+    if (marks.length === 0) {
+      addPlain(stem);
+    } else {
+      addPlain(stem.slice(0, marks[0].start));
+      for (let i = 0; i < marks.length; i++) {
+        const end = i + 1 < marks.length ? marks[i + 1].start : stem.length;
+        addUnderlined(stem.slice(marks[i].end, end), marks[i].letter.charCodeAt(0) - 64);
+      }
+    }
+  }
+  return <span className="whitespace-pre-line">{nodes}</span>;
+}
+
+// ตัด "(A) " นำหน้าตัวเลือก Error ID (เราแสดงเป็นเลขกำกับแทน)
+function stripOptPrefix(opt: string): string {
+  return opt.replace(/^\([A-E]\)\s*/, "");
+}
+
 export default function NetsatPage() {
   const [phase, setPhase] = useState<Phase>("intro");
-  const [mock, setMock] = useState<AssembledMock | null>(null);
+  const [sessionId, setSessionId] = useState("");
+  const [questions, setQuestions] = useState<PublicQuestion[]>([]);
+  const [passages, setPassages] = useState<Record<string, Passage>>({});
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [secondsLeft, setSecondsLeft] = useState(EXAM_SECONDS);
   const [result, setResult] = useState<MockResult | null>(null);
+  const [review, setReview] = useState<Record<string, ReviewEntry>>({});
   const [error, setError] = useState("");
   const [saveMsg, setSaveMsg] = useState("");
   const [tabSwitches, setTabSwitches] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
 
-  // refs สำหรับเก็บค่าแม่นยำ ไม่ขึ้นกับการ re-render
   const secondsLeftRef = useRef(EXAM_SECONDS);
   const tabSwitchesRef = useRef(0);
   const awayMsRef = useRef(0);
@@ -68,61 +142,6 @@ export default function NetsatPage() {
 
   const start = useCallback(async () => {
     setError("");
-    // ── ลิมิตจำนวนครั้งต่อวัน (เฉพาะผู้ที่ล็อกอิน) ──
-    let email = "";
-    try {
-      email = window.localStorage.getItem("exam_user_email") || "";
-    } catch {
-      /* ignore */
-    }
-    if (email) {
-      const done = await countTodayAttempts(email);
-      if (done >= ATTEMPTS_PER_DAY) {
-        setError(
-          `วันนี้ทำสอบครบ ${ATTEMPTS_PER_DAY} ครั้งแล้ว 🎯 พักสมองก่อนนะครับ แล้วพรุ่งนี้ค่อยมาต่อ (จำกัดเพื่อความยุติธรรมในการแข่งขัน)`
-        );
-        return;
-      }
-    }
-    setPhase("loading");
-    try {
-      const [bank, hidden] = await Promise.all([loadBank(), loadHiddenItemIds()]);
-      const m = assembleMock(bank, new Set(hidden));
-      setMock(m);
-      setAnswers({});
-      setSecondsLeft(EXAM_SECONDS);
-      secondsLeftRef.current = EXAM_SECONDS;
-      tabSwitchesRef.current = 0;
-      awayMsRef.current = 0;
-      awayStartRef.current = 0;
-      setTabSwitches(0);
-      setResult(null);
-      setSaveMsg("");
-      setPhase("taking");
-      window.scrollTo(0, 0);
-    } catch {
-      setError("โหลดคลังข้อไม่สำเร็จ — ตรวจว่าไฟล์ public/netsat-bank.json อยู่ใน repo แล้ว");
-      setPhase("intro");
-    }
-  }, []);
-
-  const submit = useCallback(() => {
-    if (!mock) return;
-    // ปิดการจับเวลา "ออกจากจอ" ถ้ากำลังออกอยู่
-    if (awayStartRef.current > 0) {
-      awayMsRef.current += Date.now() - awayStartRef.current;
-      awayStartRef.current = 0;
-    }
-
-    const r = scoreMock(mock, answers);
-    setResult(r);
-    setPhase("result");
-    window.scrollTo(0, 0);
-
-    const timeSec = Math.min(EXAM_SECONDS, EXAM_SECONDS - secondsLeftRef.current);
-    const tabSw = tabSwitchesRef.current;
-    const awaySec = Math.round(awayMsRef.current / 1000);
-
     let email = "";
     let name = "";
     try {
@@ -132,26 +151,83 @@ export default function NetsatPage() {
       /* ignore */
     }
     if (!email) {
-      setSaveMsg("ℹ️ ทำแบบไม่ล็อกอิน — ผลไม่ถูกบันทึก (เข้าสู่ระบบจากหน้าหลักเพื่อเก็บแต้ม)");
+      setError("กรุณาเข้าสู่ระบบจากหน้าหลักก่อนเริ่มสอบ");
       return;
     }
-    setSaveMsg("กำลังบันทึกผล…");
-    saveMockResult(email, name, {
-      earnedPoints: r.earnedPoints,
-      totalPoints: r.totalPoints,
-      percent: r.percent,
-      correctCount: r.correctCount,
-      totalQuestions: r.totalQuestions,
-      bySection: r.bySection,
-      timeSec,
-      tabSwitches: tabSw,
-      awaySec,
-    })
-      .then((res) =>
-        setSaveMsg(res ? `บันทึกผลแล้ว ✓ +${res.xpGained} XP` : "บันทึกไม่สำเร็จ — เช็กการเชื่อมต่อ/โดเมน reCAPTCHA")
-      )
-      .catch(() => setSaveMsg("บันทึกไม่สำเร็จ"));
-  }, [mock, answers]);
+    setPhase("loading");
+    try {
+      const res = await fetch("/api/netsat/start", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, name }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error || "เริ่มสอบไม่สำเร็จ");
+        setPhase("intro");
+        return;
+      }
+      setSessionId(data.sessionId);
+      setQuestions(data.questions || []);
+      setPassages(data.passages || {});
+      setAnswers({});
+      const secs = data.examSeconds || EXAM_SECONDS;
+      setSecondsLeft(secs);
+      secondsLeftRef.current = secs;
+      tabSwitchesRef.current = 0;
+      awayMsRef.current = 0;
+      awayStartRef.current = 0;
+      setTabSwitches(0);
+      setResult(null);
+      setReview({});
+      setSaveMsg("");
+      setSubmitting(false);
+      setPhase("taking");
+      window.scrollTo(0, 0);
+    } catch {
+      setError("เชื่อมต่อเซิร์ฟเวอร์ไม่สำเร็จ ลองใหม่อีกครั้ง");
+      setPhase("intro");
+    }
+  }, []);
+
+  const submit = useCallback(async () => {
+    if (!sessionId || submitting) return;
+    if (awayStartRef.current > 0) {
+      awayMsRef.current += Date.now() - awayStartRef.current;
+      awayStartRef.current = 0;
+    }
+    let email = "";
+    try {
+      email = window.localStorage.getItem("exam_user_email") || "";
+    } catch {
+      /* ignore */
+    }
+    const tabSw = tabSwitchesRef.current;
+    const awaySec = Math.round(awayMsRef.current / 1000);
+    setSubmitting(true);
+    setSaveMsg("กำลังส่งและตรวจคำตอบ…");
+    try {
+      const res = await fetch("/api/netsat/grade", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sessionId, email, answers, tabSwitches: tabSw, awaySec }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setSaveMsg(data.error || "ส่งไม่สำเร็จ ลองใหม่");
+        setSubmitting(false);
+        return;
+      }
+      setResult(data.result as MockResult);
+      setReview((data.review || {}) as Record<string, ReviewEntry>);
+      setSaveMsg(`บันทึกผลแล้ว ✓ +${data.xpGained} XP`);
+      setPhase("result");
+      window.scrollTo(0, 0);
+    } catch {
+      setSaveMsg("เชื่อมต่อไม่สำเร็จ ลองส่งใหม่อีกครั้ง");
+      setSubmitting(false);
+    }
+  }, [sessionId, answers, submitting]);
 
   // นาฬิกาจับเวลา
   useEffect(() => {
@@ -165,7 +241,7 @@ export default function NetsatPage() {
     if (phase === "taking" && secondsLeft === 0) submit();
   }, [phase, secondsLeft, submit]);
 
-  // จับการ "ออกจากหน้าจอ/สลับแท็บ" ระหว่างสอบ
+  // จับการออกจากหน้าจอ/สลับแท็บ
   useEffect(() => {
     if (phase !== "taking") return;
     const onVis = () => {
@@ -182,21 +258,20 @@ export default function NetsatPage() {
     return () => document.removeEventListener("visibilitychange", onVis);
   }, [phase]);
 
-  const items = useMemo(() => (mock ? buildRenderItems(mock) : []), [mock]);
+  const items = useMemo(() => buildRenderItems(questions), [questions]);
   const answeredCount = Object.keys(answers).length;
-
-  // ── เงื่อนไขส่งคำตอบ: ต้องทำครบ 40 นาทีก่อน ──
   const elapsed = EXAM_SECONDS - secondsLeft;
   const canSubmit = elapsed >= MIN_SUBMIT_SECONDS;
   const submitCountdown = Math.max(0, MIN_SUBMIT_SECONDS - elapsed);
+  const totalQuestions = questions.length;
 
   function choose(uid: string, idx: number) {
     setAnswers((a) => ({ ...a, [uid]: idx }));
   }
 
   function handleSubmitClick() {
-    if (!mock || !canSubmit) return;
-    const left = mock.totalQuestions - answeredCount;
+    if (!sessionId || !canSubmit || submitting) return;
+    const left = totalQuestions - answeredCount;
     if (left > 0 && !window.confirm(`ยังมีข้อที่ยังไม่ตอบ ${left} ข้อ ต้องการส่งคำตอบเลยไหม?`)) return;
     submit();
   }
@@ -242,17 +317,14 @@ export default function NetsatPage() {
   }
 
   // ───────────────── result ─────────────────
-  if (phase === "result" && result && mock) {
+  if (phase === "result" && result) {
     const sectionsOrder: Section[] = ["WRITING_ERROR", "WRITING_SC", "READING_SHORT", "READING_LONG"];
     return (
       <main className="flex-1 bg-[#f4f6fb]">
         <div className="max-w-3xl mx-auto px-4 py-8">
-          {/* สรุปคะแนน */}
           <div className="rounded-3xl bg-white border-2 border-[#FFD700] shadow-lg p-6 text-center">
             <p className="text-gray-500 font-bold">คะแนนสอบจำลอง NETSAT</p>
-            <p className="text-5xl font-black text-[#003399] my-2">
-              {result.percent}%
-            </p>
+            <p className="text-5xl font-black text-[#003399] my-2">{result.percent}%</p>
             <p className="text-gray-600 font-bold">
               ได้ {result.earnedPoints}/{result.totalPoints} คะแนน · ตอบถูก {result.correctCount}/{result.totalQuestions} ข้อ
             </p>
@@ -263,7 +335,9 @@ export default function NetsatPage() {
                 if (!s) return null;
                 return (
                   <div key={sec} className="rounded-lg bg-[#003399]/5 px-3 py-2">
-                    <div className="font-bold text-[#003399]">{SECTION_LABEL[sec].split("—")[1]?.trim() ?? SECTION_LABEL[sec]}</div>
+                    <div className="font-bold text-[#003399]">
+                      {SECTION_LABEL[sec].split("—")[1]?.trim() ?? SECTION_LABEL[sec]}
+                    </div>
                     <div className="text-gray-600">
                       ถูก {s.correct}/{s.total} · {s.earned}/{s.points} คะแนน
                     </div>
@@ -282,7 +356,6 @@ export default function NetsatPage() {
             <p className="text-[11px] text-gray-400 mt-4">อันดับนับจากเปอร์เซ็นต์ครั้งที่ดีที่สุด · ทำซ้ำเพื่อพัฒนาคะแนนได้</p>
           </div>
 
-          {/* ทบทวนเฉลย */}
           <h2 className="text-lg font-black text-[#003399] mt-8 mb-3">ทบทวนเฉลยทุกข้อ</h2>
           <div className="space-y-4">
             {items.map((it, i) => {
@@ -294,7 +367,8 @@ export default function NetsatPage() {
                 );
               }
               if (it.kind === "passage") {
-                const p = mock.passages[it.passageId];
+                const p = passages[it.passageId];
+                if (!p) return null;
                 return (
                   <details key={`p${i}`} className="rounded-xl bg-white border border-gray-200 p-4">
                     <summary className="font-bold text-[#003399] cursor-pointer">
@@ -306,19 +380,26 @@ export default function NetsatPage() {
               }
               const q = it.q;
               const picked = answers[q.uid];
+              const rv = review[q.uid];
+              const correctIndex = rv ? rv.correctIndex : -1;
               const showLetters = q.section.startsWith("READING");
-              const correct = picked === q.correctIndex;
+              const isError = q.section === "WRITING_ERROR";
+              const correct = picked === correctIndex;
               return (
                 <div key={q.uid} className="rounded-xl bg-white border border-gray-200 p-4">
                   <div className="flex items-start gap-2">
-                    <span className={`shrink-0 w-7 h-7 rounded-full grid place-items-center text-xs font-black text-white ${correct ? "bg-green-600" : "bg-red-500"}`}>
+                    <span
+                      className={`shrink-0 w-7 h-7 rounded-full grid place-items-center text-xs font-black text-white ${
+                        correct ? "bg-green-600" : "bg-red-500"
+                      }`}
+                    >
                       {it.number}
                     </span>
-                    <p className="font-bold text-gray-800 whitespace-pre-line">{q.stem}</p>
+                    <p className="font-bold text-gray-800 whitespace-pre-line">{isError ? renderErrorStem(q.stem) : q.stem}</p>
                   </div>
                   <div className="mt-3 space-y-1.5">
                     {q.options.map((opt, oi) => {
-                      const isCorrect = oi === q.correctIndex;
+                      const isCorrect = oi === correctIndex;
                       const isPicked = oi === picked;
                       return (
                         <div
@@ -331,16 +412,22 @@ export default function NetsatPage() {
                               : "border-gray-200 text-gray-700"
                           }`}
                         >
-                          {showLetters && <span className="font-bold mr-1">{LETTERS[oi]}.</span>}
-                          {opt}
+                          {isError ? (
+                            <span className="inline-grid place-items-center w-5 h-5 rounded-full bg-[#003399]/10 text-[#003399] text-xs font-black mr-1.5 align-middle">
+                              {oi + 1}
+                            </span>
+                          ) : (
+                            showLetters && <span className="font-bold mr-1">{LETTERS[oi]}.</span>
+                          )}
+                          {isError ? stripOptPrefix(opt) : opt}
                           {isCorrect && <span className="ml-2 text-xs">✓ เฉลย</span>}
                           {isPicked && !isCorrect && <span className="ml-2 text-xs">← คุณตอบ</span>}
                         </div>
                       );
                     })}
                   </div>
-                  {q.explanation_th && (
-                    <p className="mt-2 text-sm text-gray-600 bg-gray-50 rounded-lg px-3 py-2">💡 {q.explanation_th}</p>
+                  {rv?.explanation_th && (
+                    <p className="mt-2 text-sm text-gray-600 bg-gray-50 rounded-lg px-3 py-2">💡 {rv.explanation_th}</p>
                   )}
                 </div>
               );
@@ -364,25 +451,22 @@ export default function NetsatPage() {
   const lowTime = secondsLeft <= 5 * 60;
   return (
     <main className="flex-1 bg-[#f4f6fb] pb-24">
-      {/* แถบจับเวลา (ติดบน) */}
       <div className="sticky top-0 z-10 bg-white border-b-2 border-[#003399]/10 shadow-sm">
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-          <div className={`font-black text-lg ${lowTime ? "text-red-600" : "text-[#003399]"}`}>
-            ⏱ {fmtTime(secondsLeft)}
-          </div>
+          <div className={`font-black text-lg ${lowTime ? "text-red-600" : "text-[#003399]"}`}>⏱ {fmtTime(secondsLeft)}</div>
           <div className="text-sm text-gray-500 font-bold">
-            ตอบแล้ว {answeredCount}/{mock?.totalQuestions ?? 0}
+            ตอบแล้ว {answeredCount}/{totalQuestions}
           </div>
           <button
             onClick={handleSubmitClick}
-            disabled={!canSubmit}
+            disabled={!canSubmit || submitting}
             className={`rounded-xl font-black px-4 py-2 transition ${
-              canSubmit
+              canSubmit && !submitting
                 ? "bg-[#FFD700] text-[#003399] hover:brightness-95"
                 : "bg-gray-200 text-gray-400 cursor-not-allowed"
             }`}
           >
-            {canSubmit ? "ส่งคำตอบ" : `ส่งได้ใน ${fmtTime(submitCountdown)}`}
+            {submitting ? "กำลังส่ง…" : canSubmit ? "ส่งคำตอบ" : `ส่งได้ใน ${fmtTime(submitCountdown)}`}
           </button>
         </div>
         {!canSubmit && (
@@ -407,7 +491,8 @@ export default function NetsatPage() {
             );
           }
           if (it.kind === "passage") {
-            const p = mock!.passages[it.passageId];
+            const p = passages[it.passageId];
+            if (!p) return null;
             return (
               <div key={`p${i}`} className="rounded-xl bg-white border-2 border-[#003399]/15 p-4">
                 <p className="font-black text-[#003399] mb-2">
@@ -420,13 +505,14 @@ export default function NetsatPage() {
           const q = it.q;
           const picked = answers[q.uid];
           const showLetters = q.section.startsWith("READING");
+          const isError = q.section === "WRITING_ERROR";
           return (
             <div key={q.uid} className="rounded-xl bg-white border border-gray-200 p-4">
               <div className="flex items-start gap-2">
                 <span className="shrink-0 w-7 h-7 rounded-full grid place-items-center text-xs font-black text-white bg-[#003399]">
                   {it.number}
                 </span>
-                <p className="font-bold text-gray-800 whitespace-pre-line">{q.stem}</p>
+                <p className="font-bold text-gray-800 whitespace-pre-line">{isError ? renderErrorStem(q.stem) : q.stem}</p>
               </div>
               <div className="mt-3 space-y-1.5">
                 {q.options.map((opt, oi) => {
@@ -441,8 +527,14 @@ export default function NetsatPage() {
                           : "border-gray-200 text-gray-700 hover:border-[#003399]/40"
                       }`}
                     >
-                      {showLetters && <span className="font-bold mr-1">{LETTERS[oi]}.</span>}
-                      {opt}
+                      {isError ? (
+                        <span className="inline-grid place-items-center w-5 h-5 rounded-full bg-[#003399]/10 text-[#003399] text-xs font-black mr-2 align-middle">
+                          {oi + 1}
+                        </span>
+                      ) : (
+                        showLetters && <span className="font-bold mr-1">{LETTERS[oi]}.</span>
+                      )}
+                      {isError ? stripOptPrefix(opt) : opt}
                     </button>
                   );
                 })}
@@ -453,14 +545,14 @@ export default function NetsatPage() {
 
         <button
           onClick={handleSubmitClick}
-          disabled={!canSubmit}
+          disabled={!canSubmit || submitting}
           className={`w-full rounded-xl font-black py-3 text-lg transition ${
-            canSubmit
+            canSubmit && !submitting
               ? "bg-[#003399] text-white hover:bg-[#002266]"
               : "bg-gray-200 text-gray-400 cursor-not-allowed"
           }`}
         >
-          {canSubmit ? "ส่งคำตอบ" : `ส่งได้หลังทำครบ 40 นาที (อีก ${fmtTime(submitCountdown)})`}
+          {submitting ? "กำลังส่ง…" : canSubmit ? "ส่งคำตอบ" : `ส่งได้หลังทำครบ 40 นาที (อีก ${fmtTime(submitCountdown)})`}
         </button>
       </div>
     </main>
