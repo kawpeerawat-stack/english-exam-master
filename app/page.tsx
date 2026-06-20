@@ -209,8 +209,10 @@ export default function HomePage() {
   const myBest = profile?.seasonBestPercent ?? 0;
   const myBestTime = profile?.seasonBestTimeSec ?? 0;
 
-  // อันดับ: แสดงเฉพาะคนที่มีสถิติครั้งดีที่สุดแล้ว (timeSec > 0)
-  const ranked = board.filter((r) => r.timeSec > 0);
+  // อันดับ: แสดงทุกคนที่มีคะแนนในซีซั่นนี้ เรียงตาม % (เวลาเป็นแค่ตัวตัดเสมอ)
+  // หมายเหตุ: ไม่กรอง timeSec อีกแล้ว — เดิมกรอง timeSec>0 ทำให้คนที่ "คะแนนดีสุด"
+  // เป็นครั้งที่ไม่มีเวลาบันทึก (ข้อมูลเก่า) หายไปทั้งคน
+  const ranked = board.filter((r) => r.bestPercent > 0);
 
   return (
     <main className="flex-1 bg-[#f4f6fb]">
