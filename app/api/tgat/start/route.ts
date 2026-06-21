@@ -1,6 +1,11 @@
-// app/api/tgat/start/route.ts  — 🐞 DEBUG VERSION (ชั่วคราว เพื่อหา error จริง)
-// ต่างจากตัวจริงแค่บรรทัด catch ท้ายสุด: จะส่งข้อความ error จริงกลับมาโชว์บนหน้าจอ
-// เมื่อแก้ปัญหาเสร็จ ผมจะส่งตัวสะอาด (ไม่โชว์ error) กลับให้ทับอีกที
+// app/api/tgat/start/route.ts
+// ─────────────────────────────────────────────────────────────
+// เริ่มทำข้อสอบ TGAT (ฝั่งเซิร์ฟเวอร์):
+//   1) เช็กลิมิตจำนวนครั้ง/วัน (นับแยกจาก NETSAT — ฟิลด์ tgatTodayCount)
+//   2) ประกอบชุดจากคลังฉบับเต็ม (มีเฉลย) ฝั่งเซิร์ฟเวอร์เท่านั้น
+//   3) เก็บเฉลย (answerKey) ลง session "tgatSessions" (เด็กอ่านไม่ได้)
+//   4) ส่งกลับเฉพาะ "โจทย์ไม่มีเฉลย" + บทสนทนา/บทความ (groups) + เวลาสอบ
+// ─────────────────────────────────────────────────────────────
 import { NextRequest, NextResponse } from "next/server";
 import { FieldValue } from "firebase-admin/firestore";
 import { adminDb } from "@/app/lib/firebaseAdmin";
@@ -15,10 +20,7 @@ export const dynamic = "force-dynamic";
 const bank = bankData as unknown as TgatBank;
 
 export async function POST(req: NextRequest) {
-  // ป้ายบอกว่าพังตรงขั้นไหน
-  let step = "init";
   try {
-    step = "parse-body";
     const body = (await req.json()) as { email?: string; name?: string };
     const email = (body.email || "").trim().toLowerCase();
     const name = (body.name || "").trim();
@@ -26,11 +28,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "กรุณาเข้าสู่ระบบก่อนเริ่มสอบ" }, { status: 400 });
     }
 
-    step = "adminDb()";
     const db = adminDb();
     const id = emailToId(email);
 
-    step = "read-students";
+    // 1) ลิมิตจำนวนครั้ง/วัน (ตัวนับเฉพาะ TGAT)
     const stuRef = db.collection("students").doc(id);
     const stuSnap = await stuRef.get();
     const stu = (stuSnap.exists ? stuSnap.data() : {}) as { tgatLastDate?: string; tgatTodayCount?: number };
@@ -43,7 +44,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    step = "read-config";
+    // 2) ข้อที่ครูซ่อน (config แยกของ TGAT — ว่างเป็นค่าเริ่มต้น)
     let hidden = new Set<string>();
     try {
       const cfg = await db.collection("config").doc("tgatHiddenItems").get();
@@ -53,22 +54,22 @@ export async function POST(req: NextRequest) {
       /* ไม่มี config ก็ไม่เป็นไร */
     }
 
-    step = "assemble";
+    // 3) ประกอบชุด + แยกเฉลยเก็บฝั่งเซิร์ฟเวอร์
     const mock = assembleTgat(bank, hidden);
     const split = splitTgat(mock);
 
-    step = "write-session";
     const sessionRef = await db.collection("tgatSessions").add({
       email: id,
       name,
       seasonId: TGAT_SEASON_ID,
       graded: false,
       countsForSeason: !isTgatSeasonOver(),
-      answerKey: split.answerKey,
+      answerKey: split.answerKey, // เฉลย — เก็บฝั่งเซิร์ฟเวอร์เท่านั้น
       totalQuestions: split.totalQuestions,
       createdAt: FieldValue.serverTimestamp(),
     });
 
+    // 4) ส่งกลับเฉพาะโจทย์ (ไม่มีเฉลย) + บทสนทนา/บทความ
     return NextResponse.json({
       sessionId: sessionRef.id,
       questions: split.publicQuestions,
@@ -78,8 +79,6 @@ export async function POST(req: NextRequest) {
     });
   } catch (e) {
     console.error("tgat/start error:", e);
-    const msg = e instanceof Error ? `${e.name}: ${e.message}` : String(e);
-    // 🐞 DEBUG: โชว์ขั้นที่พัง + ข้อความ error จริง
-    return NextResponse.json({ error: `🐞 [${step}] ${msg}` }, { status: 500 });
+    return NextResponse.json({ error: "เริ่มสอบไม่สำเร็จ ลองใหม่อีกครั้ง" }, { status: 500 });
   }
 }
