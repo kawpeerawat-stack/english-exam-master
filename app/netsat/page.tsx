@@ -130,6 +130,8 @@ export default function NetsatPage() {
   const [saveMsg, setSaveMsg] = useState("");
   const [tabSwitches, setTabSwitches] = useState(0);
   const [submitting, setSubmitting] = useState(false);
+  const [oath, setOath] = useState(false);
+  const [userName, setUserName] = useState("");
 
   const secondsLeftRef = useRef(EXAM_SECONDS);
   const tabSwitchesRef = useRef(0);
@@ -139,6 +141,14 @@ export default function NetsatPage() {
   useEffect(() => {
     secondsLeftRef.current = secondsLeft;
   }, [secondsLeft]);
+
+  useEffect(() => {
+    try {
+      setUserName(window.localStorage.getItem("exam_user_name") || "");
+    } catch {
+      /* ignore */
+    }
+  }, []);
 
   const start = useCallback(async () => {
     setError("");
@@ -300,13 +310,46 @@ export default function NetsatPage() {
             <p>🔁 ทำได้ <b>{ATTEMPTS_PER_DAY} ครั้ง/วัน</b> · จัดอันดับจาก <b>เปอร์เซ็นต์ครั้งที่ดีที่สุด</b></p>
             <p>👀 อยู่ในหน้าจอตลอดการสอบ — ระบบบันทึกการออกจากหน้าจอ</p>
           </div>
+          <div className="mt-3 rounded-xl border-2 border-[#003399]/30 bg-[#003399]/[0.04] p-4">
+            <p className="font-black text-[#003399] text-center mb-2">📜 คำปฏิญาณก่อนเริ่มสอบ</p>
+            <div className="text-[13px] leading-relaxed text-gray-700 space-y-1 text-center">
+              <p>
+                ข้าพเจ้า
+                {userName ? <b className="text-[#003399]"> {userName} </b> : " ___________ "}
+                ขอปฏิญาณต่อหน้าตัวเองว่า
+              </p>
+              <p>ข้าพเจ้าจะสู้ด้วย<b>สมองและสองมือของข้าพเจ้าเอง</b> ไม่พึ่ง AI ไม่หาทางลัด</p>
+              <p>
+                ทุกครั้งที่ข้าพเจ้า<b>ซื่อสัตย์</b> ข้าพเจ้ากำลังสร้าง “ตัวจริง” ที่แข็งแกร่งขึ้น
+                และเดินเข้าใกล้<b className="text-[#003399]">มหาวิทยาลัยในฝัน</b>ทีละก้าว
+              </p>
+              <p>
+                แต่หากข้าพเจ้าเลือกโกง ข้าพเจ้ายอมรับว่ากำลังขโมยโอกาสของตัวเอง
+                และในวันสอบจริง ข้าพเจ้าจะต้องเผชิญมันเพียงลำพังอย่างไม่พร้อม
+              </p>
+              <p className="font-bold text-[#003399] pt-1">
+                ข้าพเจ้าจึงขอเลือกความซื่อสัตย์ — เพื่อข้าพเจ้าในวันข้างหน้า
+              </p>
+            </div>
+            <label className="mt-3 flex items-start gap-2 cursor-pointer select-none rounded-lg bg-white border border-[#003399]/30 p-3">
+              <input
+                type="checkbox"
+                checked={oath}
+                onChange={(e) => setOath(e.target.checked)}
+                className="mt-0.5 h-5 w-5 accent-[#003399]"
+              />
+              <span className="text-sm font-bold text-gray-800">
+                ข้าพเจ้าขอปฏิญาณตามข้อความข้างต้น และจะทำข้อสอบนี้ด้วยตนเอง
+              </span>
+            </label>
+          </div>
           {error && <p className="mt-4 text-sm text-red-600 font-bold">{error}</p>}
           <button
             onClick={start}
-            disabled={phase === "loading"}
-            className="mt-6 w-full rounded-xl bg-[#003399] text-white font-black py-3 text-lg hover:bg-[#002266] transition disabled:opacity-60"
+            disabled={phase === "loading" || !oath}
+            className="mt-4 w-full rounded-xl bg-[#003399] text-white font-black py-3 text-lg hover:bg-[#002266] transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {phase === "loading" ? "กำลังเตรียมข้อสอบ…" : "เริ่มทำข้อสอบ"}
+            {phase === "loading" ? "กำลังเตรียมข้อสอบ…" : oath ? "เริ่มทำข้อสอบ" : "กรุณายอมรับคำปฏิญาณก่อน"}
           </button>
           <Link href="/" className="mt-3 block text-center text-sm text-gray-500 underline">
             ← กลับหน้าหลัก
