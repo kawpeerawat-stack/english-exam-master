@@ -1,0 +1,3948 @@
+{
+ "exam": "TGAT1",
+ "examLabel": "TGAT1 91 การสื่อสารภาษาอังกฤษ (English Communication)",
+ "blueprint": {
+  "totalItems": 60,
+  "timeMinutes": 60,
+  "fullScore": 100,
+  "sections": [
+   {
+    "key": "SPEAKING_QR",
+    "items": 10
+   },
+   {
+    "key": "SPEAKING_SHORT_CONV",
+    "items": 10,
+    "groups": 3
+   },
+   {
+    "key": "SPEAKING_LONG_CONV",
+    "items": 10,
+    "groups": 2
+   },
+   {
+    "key": "READING_CLOZE",
+    "items": 15,
+    "groups": 2
+   },
+   {
+    "key": "READING_COMP",
+    "items": 15,
+    "groups": 3
+   }
+  ]
+ },
+ "speakingQR": [
+  {
+   "id": "tgat-qr-001",
+   "topic": "thanking",
+   "prompt": "A: \"Thank you so much for helping me move today.\"",
+   "options": [
+    "No problem at all. I was happy to help.",
+    "Yes, I am moving next week.",
+    "Are you moving house?",
+    "Thank you too, then."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "เมื่อมีคนขอบคุณ ควรตอบรับอย่างสุภาพ เช่น No problem / You're welcome",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-002",
+   "topic": "permission",
+   "prompt": "A: \"Would you mind if I opened the window?\"",
+   "options": [
+    "Not at all. Go ahead.",
+    "Yes, I mind opening it.",
+    "No, you can never open it.",
+    "I already opened the door."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "Would you mind if...? ตอบรับว่า 'ไม่ขัดข้อง' ใช้ Not at all / Of course not",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-003",
+   "topic": "declining-invite",
+   "prompt": "A: \"I'm afraid I can't come to your party on Saturday.\"",
+   "options": [
+    "Oh, that's a shame. Maybe next time.",
+    "Great, see you there on Saturday!",
+    "Why are you coming then?",
+    "You can't be afraid of a party."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "เมื่ออีกฝ่ายปฏิเสธคำเชิญ ควรแสดงความเสียดายอย่างสุภาพ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-004",
+   "topic": "small-talk",
+   "prompt": "A: \"How was your trip to Chiang Mai?\"",
+   "options": [
+    "It was wonderful, thanks. We had a great time.",
+    "I'm going there next month.",
+    "Chiang Mai is in the north.",
+    "No, thank you very much."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ถามถึงทริปที่ผ่านมา (was) ต้องตอบด้วยอดีตและบอกความรู้สึก",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-005",
+   "topic": "directions",
+   "prompt": "A: \"Excuse me, could you tell me how to get to the station?\"",
+   "options": [
+    "Sure. Go straight and turn left at the corner.",
+    "No, I can't tell you anything.",
+    "The station is very large.",
+    "Yes, I certainly could."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ขอเส้นทาง ควรให้คำแนะนำเส้นทางจริง ไม่ใช่ตอบ yes/no ลอย ๆ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-006",
+   "topic": "sympathy",
+   "prompt": "A: \"I've got a terrible headache.\"",
+   "options": [
+    "Oh no. Why don't you take a rest?",
+    "Congratulations on that!",
+    "That's great to hear.",
+    "I have a head too."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "เมื่ออีกฝ่ายไม่สบาย ควรแสดงความห่วงใย/แนะนำ ไม่ใช่ยินดี",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-007",
+   "topic": "invitation",
+   "prompt": "A: \"Do you fancy going to the cinema tonight?\"",
+   "options": [
+    "Sure, that sounds great. What's on?",
+    "No, I don't have a fancy.",
+    "The cinema is closed forever.",
+    "Tonight is a Tuesday."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "fancy doing = อยากทำไหม ตอบรับด้วยความสนใจและถามต่อได้",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-008",
+   "topic": "apology",
+   "prompt": "A: \"I'm really sorry, but I broke your mug.\"",
+   "options": [
+    "Don't worry about it. It was old anyway.",
+    "Thank you for the new mug.",
+    "Yes, you broke it on purpose.",
+    "I'm sorry for your mug too."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "เมื่อมีคนขอโทษเรื่องเล็กน้อย ควรให้อภัยอย่างใจดี",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-009",
+   "topic": "congratulating",
+   "prompt": "A: \"Congratulations on passing your driving test!\"",
+   "options": [
+    "Thanks a lot! I was so nervous about it.",
+    "Sorry to hear that news.",
+    "No, I failed it badly.",
+    "Congratulations to you as well."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "เมื่อได้รับคำแสดงยินดี ควรขอบคุณ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-010",
+   "topic": "offering-help",
+   "prompt": "A: \"Shall I carry that bag for you? It looks heavy.\"",
+   "options": [
+    "Oh, thank you. That's very kind of you.",
+    "No, the bag is as light as air.",
+    "Yes, you shall not carry it.",
+    "I carry bags every day."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "Shall I...? เป็นการเสนอช่วยเหลือ ตอบรับด้วยการขอบคุณอย่างสุภาพ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-011",
+   "topic": "compliment",
+   "prompt": "A: \"I love your new haircut! It looks great.\"",
+   "options": [
+    "Thank you! That's so kind of you to say.",
+    "No, I don't love it.",
+    "Yes, it is a haircut.",
+    "You should cut your hair too."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ตอบรับคำชมด้วยการขอบคุณ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-012",
+   "topic": "clarify",
+   "prompt": "A: \"The meeting is at half past ten in room 304.\"",
+   "options": [
+    "Sorry, could you repeat the room number?",
+    "Yes, the meeting is nice.",
+    "No, I won't go.",
+    "Half past ten is a time."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ขอให้พูดซ้ำเมื่อฟังไม่ชัด",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-013",
+   "topic": "offer-decline",
+   "prompt": "A: \"Would you like some more coffee?\"",
+   "options": [
+    "No, thanks. I'm fine.",
+    "Yes, coffee is brown.",
+    "No, you can't have coffee.",
+    "I would like you."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ปฏิเสธการเสนอเครื่องดื่มอย่างสุภาพ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-014",
+   "topic": "suggest",
+   "prompt": "A: \"I'm so bored this afternoon.\"",
+   "options": [
+    "Why don't we go for a walk?",
+    "Because you are bored.",
+    "Boredom is a feeling.",
+    "No, you aren't bored."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "เสนอกิจกรรมเมื่ออีกฝ่ายเบื่อ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-015",
+   "topic": "agree-suggestion",
+   "prompt": "A: \"Let's order pizza for dinner tonight.\"",
+   "options": [
+    "Good idea! I'm starving.",
+    "No, pizza is round.",
+    "Dinner is in the evening.",
+    "You ordered it already."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ตอบรับข้อเสนออย่างกระตือรือร้น",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-016",
+   "topic": "phone",
+   "prompt": "A: \"Hello, could I speak to Mr. Brown, please?\"",
+   "options": [
+    "Just a moment, I'll put you through.",
+    "No, you couldn't.",
+    "Mr. Brown is a name.",
+    "Yes, you are speaking now."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "สำนวนรับโทรศัพท์: โอนสายให้",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-017",
+   "topic": "apology",
+   "prompt": "A: \"You're late again! The meeting started ten minutes ago.\"",
+   "options": [
+    "I'm so sorry. The traffic was terrible.",
+    "Thank you for waiting.",
+    "Yes, the meeting is late.",
+    "No, I'm very early."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ขอโทษเมื่อมาสาย พร้อมเหตุผล",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-018",
+   "topic": "permission",
+   "prompt": "A: \"Is it OK if I leave a bit early today?\"",
+   "options": [
+    "Sure, that's no problem.",
+    "No, early means late.",
+    "Yes, you left already.",
+    "You can't be OK."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "อนุญาตเมื่อถูกขอ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-019",
+   "topic": "introduce",
+   "prompt": "A: \"Hi, I'm Nina. Nice to meet you.\"",
+   "options": [
+    "Nice to meet you too. I'm Sam.",
+    "No, I won't meet you.",
+    "Nina is a nice name.",
+    "Goodbye, Nina."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "แนะนำตัวตอบกลับเมื่อพบกันครั้งแรก",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-020",
+   "topic": "directions",
+   "prompt": "A: \"How far is the post office from here?\"",
+   "options": [
+    "It's about a five-minute walk.",
+    "Yes, it's a post office.",
+    "No, I won't walk.",
+    "Far is the opposite of near."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "บอกระยะทาง/เวลาเดิน",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-021",
+   "topic": "restaurant",
+   "prompt": "A: \"Are you ready to order, or do you need a few more minutes?\"",
+   "options": [
+    "Could we have a few more minutes, please?",
+    "Yes, I am a customer.",
+    "No, ordering is hard.",
+    "The menu is very long."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ขอเวลาดูเมนูเพิ่ม",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-022",
+   "topic": "bad-news",
+   "prompt": "A: \"I failed my driving test again.\"",
+   "options": [
+    "Oh, I'm sorry to hear that. Better luck next time.",
+    "Congratulations on that!",
+    "That's wonderful news.",
+    "Yes, you passed it."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "แสดงความเห็นใจเมื่อได้ข่าวร้าย",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-023",
+   "topic": "preference",
+   "prompt": "A: \"Would you rather have tea or coffee?\"",
+   "options": [
+    "Tea, please, if that's OK.",
+    "Yes, I would rather.",
+    "No, I prefer nothing ever.",
+    "Coffee and tea are both drinks."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "เลือกสิ่งที่ชอบเมื่อถูกถาม",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-024",
+   "topic": "ask-about",
+   "prompt": "A: \"How's your sister doing these days?\"",
+   "options": [
+    "She's doing really well, thanks for asking.",
+    "Yes, I have a sister.",
+    "No, she isn't a day.",
+    "Sisters are family members."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ตอบถามสารทุกข์คนในครอบครัว",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-025",
+   "topic": "complaint",
+   "prompt": "A: \"Is everything all right with your room, sir?\"",
+   "options": [
+    "Actually, the air conditioner isn't working.",
+    "Yes, the room is a room.",
+    "No, I don't have a room.",
+    "Rooms are usually square."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ร้องเรียนปัญหาอย่างสุภาพ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-026",
+   "topic": "accept-help",
+   "prompt": "A: \"You look lost. Can I help you find something?\"",
+   "options": [
+    "Yes, please. I'm looking for the train station.",
+    "No, I am not a thing.",
+    "Yes, you look lost too.",
+    "Helping people is kind."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ตอบรับความช่วยเหลือ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-027",
+   "topic": "plan-time",
+   "prompt": "A: \"What time works best for you to meet tomorrow?\"",
+   "options": [
+    "How about two o'clock in the afternoon?",
+    "Yes, tomorrow is a day.",
+    "No, time doesn't work.",
+    "Meetings are useful things."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "เสนอเวลานัด",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-028",
+   "topic": "good-news",
+   "prompt": "A: \"Guess what? I got the job!\"",
+   "options": [
+    "That's fantastic! Congratulations!",
+    "I'm so sorry to hear that.",
+    "No, you didn't get it.",
+    "A job is a kind of work."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ยินดีกับข่าวดี",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-029",
+   "topic": "goodbye",
+   "prompt": "A: \"I'd better get going. It was lovely to see you.\"",
+   "options": [
+    "You too! Take care and see you soon.",
+    "No, don't ever go.",
+    "Yes, you are leaving now.",
+    "Going is an action."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "กล่าวลาตอบกลับ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-030",
+   "topic": "split-bill",
+   "prompt": "A: \"Shall we split the bill?\"",
+   "options": [
+    "Sure, that sounds fair.",
+    "No, bills are made of paper.",
+    "Yes, let's split the table.",
+    "I don't have a bill."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ตอบรับการหารค่าอาหาร",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-031",
+   "topic": "opinion",
+   "prompt": "A: \"What do you think of the new café on Main Street?\"",
+   "options": [
+    "I really like it. The coffee is excellent.",
+    "Yes, I do think sometimes.",
+    "No, cafés are buildings.",
+    "Main Street is a street."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "แสดงความคิดเห็น",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-032",
+   "topic": "reassure",
+   "prompt": "A: \"I'm really nervous about my interview tomorrow.\"",
+   "options": [
+    "Don't worry, you'll do great. Just be yourself.",
+    "Yes, you should be nervous.",
+    "Interviews are in the morning.",
+    "No, you won't have one."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ปลอบใจ/ให้กำลังใจ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-033",
+   "topic": "invite",
+   "prompt": "A: \"We're having a barbecue on Sunday. Would you like to join us?\"",
+   "options": [
+    "I'd love to! Thanks for inviting me.",
+    "No, barbecues are food.",
+    "Yes, Sunday is a day.",
+    "You can't join anything."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ตอบรับคำเชิญ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-034",
+   "topic": "favor",
+   "prompt": "A: \"Could you possibly water my plants while I'm away?\"",
+   "options": [
+    "Of course, no problem at all.",
+    "Yes, plants are green.",
+    "No, you can't be away.",
+    "Water is always wet."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ตอบรับเมื่อถูกขอความช่วยเหลือ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-035",
+   "topic": "confirm",
+   "prompt": "A: \"So, we'll meet at the entrance at noon, right?\"",
+   "options": [
+    "Yes, that's right. See you there.",
+    "No, noon is a time.",
+    "Entrances are just doors.",
+    "I won't meet you ever."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ยืนยันนัดหมาย",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-036",
+   "topic": "thank-help",
+   "prompt": "A: \"There you go — I've fixed your computer.\"",
+   "options": [
+    "Thank you so much! You're a lifesaver.",
+    "No, computers are machines.",
+    "Yes, you fixed it badly.",
+    "I don't own a computer."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ขอบคุณเมื่อได้รับความช่วยเหลือ",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-037",
+   "topic": "decline-invite",
+   "prompt": "A: \"Would you like to come to the concert with us?\"",
+   "options": [
+    "I'd love to, but I'm afraid I'm busy that night.",
+    "Yes, concerts are loud.",
+    "No, you can't come.",
+    "Music is very nice."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ปฏิเสธคำเชิญอย่างสุภาพ พร้อมเหตุผล",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-038",
+   "topic": "directions2",
+   "prompt": "A: \"Excuse me, where's the nearest ATM?\"",
+   "options": [
+    "There's one just around the corner, next to the bank.",
+    "Yes, ATMs give out money.",
+    "No, I will not go there.",
+    "Corners are everywhere."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "บอกตำแหน่งสถานที่",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-039",
+   "topic": "thanks-casual",
+   "prompt": "A: \"Thanks for the ride home!\"",
+   "options": [
+    "Anytime! Get some rest.",
+    "No, rides are in cars.",
+    "Yes, you are quite heavy.",
+    "Home is a kind of place."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "ตอบรับคำขอบคุณแบบเป็นกันเอง",
+   "verified": true
+  },
+  {
+   "id": "tgat-qr-040",
+   "topic": "small-talk",
+   "prompt": "A: \"Lovely weather today, isn't it?\"",
+   "options": [
+    "Yes, it's beautiful. Perfect for a walk.",
+    "No, weather is just air.",
+    "Yes, today is a day.",
+    "I really don't like you."
+   ],
+   "answerIndex": 0,
+   "explanation_th": "คุยเล่นเรื่องอากาศ (small talk)",
+   "verified": true
+  }
+ ],
+ "shortConversations": [
+  {
+   "id": "tgat-sc-001",
+   "title": "At a café",
+   "kind": "dialogue",
+   "text": "Waiter:  Good afternoon. Are you ready to order?\nCustomer: __(1)__\nWaiter:  Sure. Would you like anything to drink with that?\nCustomer: __(2)__\nWaiter:  Of course. __(3)__\nCustomer: Thank you.",
+   "questions": [
+    {
+     "id": "tgat-sc-001-1",
+     "stem": "(1)",
+     "options": [
+      "Yes, I'll have the chicken sandwich, please.",
+      "No, I am the waiter here.",
+      "This café looks very nice.",
+      "I ordered something yesterday."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ลูกค้าพร้อมสั่ง ควรบอกเมนูที่ต้องการ",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-sc-001-2",
+     "stem": "(2)",
+     "options": [
+      "Just a glass of water, thanks.",
+      "Yes, I am thirsty for nothing.",
+      "The word 'drink' is a noun.",
+      "No drinks for me ever again."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบคำถามเรื่องเครื่องดื่มด้วยสิ่งที่ต้องการ",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-sc-001-3",
+     "stem": "(3)",
+     "options": [
+      "I'll bring it right over.",
+      "You are not allowed to have water.",
+      "Goodbye and good luck forever.",
+      "I do not actually work here."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "พนักงานรับคำสั่งแล้ว ควรบอกว่าจะนำมาให้",
+     "blankNo": 3
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "tgat-sc-002",
+   "title": "Making weekend plans",
+   "kind": "dialogue",
+   "text": "Ann: Hi Mali, __(1)__\nMali: I'm good, thanks. Hey, are you free this weekend?\nAnn: __(2)__ Why?\nMali: There's a new art exhibition downtown. __(3)__\nAnn: That sounds great! __(4)__\nMali: Let's meet at ten on Saturday.",
+   "questions": [
+    {
+     "id": "tgat-sc-002-1",
+     "stem": "(1)",
+     "options": [
+      "how are you?",
+      "where am I now?",
+      "you are Mali, right.",
+      "goodbye for now."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ทักทายเพื่อน ควรถามสารทุกข์",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-sc-002-2",
+     "stem": "(2)",
+     "options": [
+      "I think so.",
+      "No, you are free.",
+      "A weekend has two days.",
+      "I was free last year."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบว่าว่างหรือไม่",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-sc-002-3",
+     "stem": "(3)",
+     "options": [
+      "Would you like to come?",
+      "You are not allowed to come.",
+      "I am definitely not going.",
+      "Art is a school subject."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ชวนเพื่อนไปด้วย",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-sc-002-4",
+     "stem": "(4)",
+     "options": [
+      "What time should we meet?",
+      "I really don't want to meet.",
+      "Time is money, they say.",
+      "We already met before."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตกลงไปแล้ว ควรถามเวลานัด",
+     "blankNo": 4
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "tgat-sc-003",
+   "title": "At the library desk",
+   "kind": "dialogue",
+   "text": "Student:   Excuse me, I'm looking for books on Thai history. __(1)__\nLibrarian: Certainly. They're on the second floor, in section H.\nStudent:   __(2)__\nLibrarian: Yes, you can borrow up to five at a time.\nStudent:   __(3)__\nLibrarian: You're welcome. Enjoy your reading.",
+   "questions": [
+    {
+     "id": "tgat-sc-003-1",
+     "stem": "(1)",
+     "options": [
+      "Could you help me find them?",
+      "I really don't need any help.",
+      "You should look for them.",
+      "History is a very old subject."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขอความช่วยเหลือหาหนังสือ",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-sc-003-2",
+     "stem": "(2)",
+     "options": [
+      "Can I borrow them?",
+      "No, I will not borrow them.",
+      "'Borrow' is an English verb.",
+      "The floor is the second one."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ถามเรื่องการยืม",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-sc-003-3",
+     "stem": "(3)",
+     "options": [
+      "Great, thank you very much.",
+      "No thanks for nothing at all.",
+      "I will not read any of them.",
+      "You are welcome too, I guess."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "จบบทสนทนาด้วยการขอบคุณ",
+     "blankNo": 3
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "tgat-sc-004",
+   "title": "At a pharmacy",
+   "text": "Pharmacist: Hello, how can I help you today?\nCustomer:   __(1)__\nPharmacist: I see. How long have you had these symptoms?\nCustomer:   __(2)__\nPharmacist: I'd recommend this syrup. Take it twice a day.\nCustomer:   __(3)__\nPharmacist: That'll be 120 baht.",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-sc-004-1",
+     "stem": "(1)",
+     "options": [
+      "I have a sore throat and a cough.",
+      "No, I am the pharmacist.",
+      "Help is a useful thing.",
+      "Hello is a greeting word."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกอาการเมื่อเภสัชกรถาม",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-sc-004-2",
+     "stem": "(2)",
+     "options": [
+      "Since yesterday morning.",
+      "Yes, I do have symptoms.",
+      "A day has 24 hours.",
+      "No, I won't tell you that."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบว่ามีอาการมานานเท่าไร (How long)",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-sc-004-3",
+     "stem": "(3)",
+     "options": [
+      "Thank you. How much is it?",
+      "No, syrup is sweet.",
+      "Twice means two times.",
+      "I never want to pay."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขอบคุณแล้วถามราคา",
+     "blankNo": 3
+    }
+   ]
+  },
+  {
+   "id": "tgat-sc-005",
+   "title": "At the lost and found",
+   "text": "Visitor: Excuse me, I think I left my umbrella here yesterday.\nStaff:   __(1)__\nVisitor: __(2)__\nStaff:   Let me check. ... Yes, is this the one?\nVisitor: __(3)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-sc-005-1",
+     "stem": "(1)",
+     "options": [
+      "Can you describe it for me?",
+      "No, umbrellas are for rain.",
+      "Yesterday was a nice day.",
+      "I left the building too."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "เจ้าหน้าที่ขอให้อธิบายลักษณะของหาย",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-sc-005-2",
+     "stem": "(2)",
+     "options": [
+      "It's a large black one with a wooden handle.",
+      "Yes, it is an umbrella.",
+      "No, I can't describe it.",
+      "Describing is hard work."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อธิบายลักษณะของที่หาย",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-sc-005-3",
+     "stem": "(3)",
+     "options": [
+      "Yes, that's it! Thank you so much.",
+      "No, mine was a car.",
+      "Umbrellas are very useful.",
+      "I don't want it anymore."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ยืนยันว่าใช่ของตน แล้วขอบคุณ",
+     "blankNo": 3
+    }
+   ]
+  },
+  {
+   "id": "tgat-sc-006",
+   "title": "Hotel check-in",
+   "text": "Receptionist: Good evening. Do you have a reservation?\nGuest:        __(1)__\nReceptionist: Let me see... a double room for two nights. Is that correct?\nGuest:        __(2)__\nReceptionist: Could I see your passport, please?\nGuest:        __(3)__\nReceptionist: Thank you. Here's your key. Breakfast is from seven to ten.\nGuest:        __(4)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-sc-006-1",
+     "stem": "(1)",
+     "options": [
+      "Yes, under the name Carter.",
+      "No, I am the receptionist.",
+      "Evening comes after noon.",
+      "Reservations are very nice."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ยืนยันการจองพร้อมบอกชื่อ",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-sc-006-2",
+     "stem": "(2)",
+     "options": [
+      "Yes, that's right.",
+      "No, rooms are quite large.",
+      "Two nights is a long time.",
+      "I will never stay here."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ยืนยันรายละเอียดห้องพัก",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-sc-006-3",
+     "stem": "(3)",
+     "options": [
+      "Sure, here you are.",
+      "No, passports are blue.",
+      "Seeing is believing.",
+      "I don't have a face today."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ยื่นพาสปอร์ตเมื่อถูกขอ",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-sc-006-4",
+     "stem": "(4)",
+     "options": [
+      "Great. What floor is the room on?",
+      "No, breakfast is food.",
+      "Keys are used to open doors.",
+      "Seven is just a number."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ถามต่อเรื่องชั้นของห้อง",
+     "blankNo": 4
+    }
+   ]
+  },
+  {
+   "id": "tgat-sc-007",
+   "title": "Making an appointment by phone",
+   "text": "Receptionist: Good morning, Dr. Lee's clinic. How can I help?\nCaller:       __(1)__\nReceptionist: Of course. Would Thursday at 3 p.m. suit you?\nCaller:       __(2)__\nReceptionist: Yes, five o'clock is fine. May I have your name?\nCaller:       __(3)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-sc-007-1",
+     "stem": "(1)",
+     "options": [
+      "I'd like to make an appointment, please.",
+      "No, mornings are early.",
+      "Clinics usually have doctors.",
+      "Help is an action word."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกจุดประสงค์: นัดหมาย",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-sc-007-2",
+     "stem": "(2)",
+     "options": [
+      "Could we make it a little later, around five?",
+      "No, Thursday is a weekday.",
+      "Yes, three is an odd number.",
+      "I won't come at all."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขอเลื่อนเวลานัดอย่างสุภาพ",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-sc-007-3",
+     "stem": "(3)",
+     "options": [
+      "It's James Walker.",
+      "No, names are just words.",
+      "Five o'clock is rather late.",
+      "I don't have any name."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกชื่อเมื่อถูกถาม",
+     "blankNo": 3
+    }
+   ]
+  },
+  {
+   "id": "tgat-sc-008",
+   "title": "At a clothing shop",
+   "text": "Assistant: Hi! Are you looking for anything in particular?\nCustomer:  __(1)__\nAssistant: Sure. What size are you?\nCustomer:  __(2)__\nAssistant: How about this blue one? Would you like to try it on?\nCustomer:  __(3)__\nAssistant: They're just over there, on the right.\nCustomer:  __(4)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-sc-008-1",
+     "stem": "(1)",
+     "options": [
+      "Yes, I'm looking for a jacket.",
+      "No, I am a shop assistant.",
+      "Particular is an adjective.",
+      "Looking uses your eyes."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกสิ่งที่กำลังมองหา",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-sc-008-2",
+     "stem": "(2)",
+     "options": [
+      "I'm a medium, I think.",
+      "No, sizes are numbers.",
+      "Yes, I am a size indeed.",
+      "I don't wear any clothes."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกไซซ์เมื่อถูกถาม",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-sc-008-3",
+     "stem": "(3)",
+     "options": [
+      "Yes, where are the fitting rooms?",
+      "No, blue is a colour.",
+      "Trying things is difficult.",
+      "I won't try anything on."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบรับแล้วถามที่ลองเสื้อ",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-sc-008-4",
+     "stem": "(4)",
+     "options": [
+      "Thanks. Do you have it in black as well?",
+      "No, the right is a direction.",
+      "Rooms are made for fitting.",
+      "Black is a dark colour."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ถามต่อเรื่องสีอื่น",
+     "blankNo": 4
+    }
+   ]
+  },
+  {
+   "id": "tgat-sc-009",
+   "title": "Asking a classmate for notes",
+   "text": "Mali: Hi, I was absent yesterday. __(1)__\nBen:  Yes, we have to read chapter four and answer the questions.\nMali: __(2)__\nBen:  Sure, I'll send you a photo of them tonight.\nMali: __(3)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-sc-009-1",
+     "stem": "(1)",
+     "options": [
+      "Did we have any homework?",
+      "No, I was present yesterday.",
+      "Yesterday is gone now.",
+      "Absent simply means away."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ถามเรื่องการบ้านที่พลาดไป",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-sc-009-2",
+     "stem": "(2)",
+     "options": [
+      "Could I borrow your notes from the lesson?",
+      "No, chapters are long.",
+      "Reading is good for you.",
+      "I won't do the work."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขอยืมโน้ตเพื่อน",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-sc-009-3",
+     "stem": "(3)",
+     "options": [
+      "That would be great. Thanks a lot!",
+      "No, photos are pictures.",
+      "Tonight comes later.",
+      "I never need any help."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขอบคุณเมื่อเพื่อนช่วย",
+     "blankNo": 3
+    }
+   ]
+  },
+  {
+   "id": "tgat-sc-010",
+   "title": "At the train ticket counter",
+   "text": "Clerk:     Next, please. Where would you like to go?\nPassenger: __(1)__\nClerk:     Single or return?\nPassenger: __(2)__\nClerk:     When would you like to travel back?\nPassenger: __(3)__\nClerk:     That'll be 850 baht in total.\nPassenger: __(4)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-sc-010-1",
+     "stem": "(1)",
+     "options": [
+      "I'd like a ticket to Chiang Mai, please.",
+      "No, I am the ticket clerk.",
+      "Going means moving.",
+      "Next is after this one."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกจุดหมายปลายทาง",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-sc-010-2",
+     "stem": "(2)",
+     "options": [
+      "A return ticket, please.",
+      "No, tickets are made of paper.",
+      "Single means only one.",
+      "I will never travel."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "เลือกประเภทตั๋ว",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-sc-010-3",
+     "stem": "(3)",
+     "options": [
+      "On Sunday evening, if possible.",
+      "Yes, travelling is fun.",
+      "Back is a direction.",
+      "Time goes on forever."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกวันเดินทางกลับ",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-sc-010-4",
+     "stem": "(4)",
+     "options": [
+      "Here you are. Which platform is it?",
+      "No, baht is money.",
+      "A total is a sum.",
+      "I don't have any hands."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "จ่ายเงินแล้วถามชานชาลา",
+     "blankNo": 4
+    }
+   ]
+  },
+  {
+   "id": "tgat-sc-011",
+   "title": "Inviting a friend over",
+   "text": "Ann: Hey, are you doing anything on Friday evening?\nTom: __(1)__\nAnn: I'm having a few friends over for dinner. Would you like to come?\nTom: __(2)__\nAnn: Just yourself! But a dessert would be nice if you like.\nTom: __(3)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-sc-011-1",
+     "stem": "(1)",
+     "options": [
+      "Not that I know of. Why?",
+      "No, Friday is a weekday.",
+      "Evenings are usually dark.",
+      "I always know everything."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบว่าว่าง แล้วถามเหตุผล",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-sc-011-2",
+     "stem": "(2)",
+     "options": [
+      "I'd love to! What can I bring?",
+      "No, dinner is a meal.",
+      "Friends are people we like.",
+      "I won't ever come."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบรับคำเชิญ แล้วถามว่าเอาอะไรไป",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-sc-011-3",
+     "stem": "(3)",
+     "options": [
+      "Perfect. I'll make a cake then.",
+      "No, desserts are sweet.",
+      "Bringing means carrying.",
+      "Cakes are round shapes."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตกลงจะทำของหวานไป",
+     "blankNo": 3
+    }
+   ]
+  },
+  {
+   "id": "tgat-sc-012",
+   "title": "A problem at a restaurant",
+   "text": "Waiter:   Is everything OK with your meal?\nCustomer: __(1)__\nWaiter:   Oh, I'm so sorry. I'll heat it up for you right away.\nCustomer: __(2)__\nWaiter:   Of course. I'll bring that as well.\nCustomer: __(3)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-sc-012-1",
+     "stem": "(1)",
+     "options": [
+      "Actually, my soup is a bit cold.",
+      "No, meals are for eating.",
+      "Yes, everything is a word.",
+      "I don't have any meal."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "แจ้งปัญหาอาหารอย่างสุภาพ",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-sc-012-2",
+     "stem": "(2)",
+     "options": [
+      "Thank you. Could I also have some bread?",
+      "No, soup is a liquid.",
+      "Heating makes things hot.",
+      "I won't eat any of it."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขอบคุณแล้วขอเพิ่มอีกอย่าง",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-sc-012-3",
+     "stem": "(3)",
+     "options": [
+      "That's very kind. Thank you.",
+      "No, bread is a food.",
+      "Kindness is a good thing.",
+      "I don't want anything."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขอบคุณเมื่อพนักงานช่วยเหลือ",
+     "blankNo": 3
+    }
+   ]
+  }
+ ],
+ "longConversations": [
+  {
+   "id": "tgat-lc-001",
+   "title": "At a travel agency",
+   "kind": "dialogue",
+   "text": "Agent:    Good morning. How can I help you today?\nCustomer: __(1)__\nAgent:    Certainly. Where would you like to go?\nCustomer: __(2)__\nAgent:    A beach holiday sounds lovely. How long are you planning to stay?\nCustomer: __(3)__\nAgent:    For a week, I'd recommend Krabi. It has beautiful beaches and good hotels.\nCustomer: __(4)__\nAgent:    The package starts at 8,000 baht per person, including flights and hotel.\nCustomer: __(5)__\nAgent:    Wonderful. I'll prepare the booking for you.",
+   "questions": [
+    {
+     "id": "tgat-lc-001-1",
+     "stem": "(1)",
+     "options": [
+      "I'd like to book a holiday, please.",
+      "No, I am just the agent.",
+      "The word 'help' is a noun.",
+      "Good morning is a greeting."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกจุดประสงค์ที่มา",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-lc-001-2",
+     "stem": "(2)",
+     "options": [
+      "Somewhere warm with a nice beach.",
+      "I don't want to go anywhere.",
+      "'Go' is an irregular verb.",
+      "You should go there instead."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกความต้องการเรื่องสถานที่",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-lc-001-3",
+     "stem": "(3)",
+     "options": [
+      "About a week, I think.",
+      "Time means nothing to me ever.",
+      "A week has exactly seven days.",
+      "I stayed there last year."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบระยะเวลาที่จะพัก",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-lc-001-4",
+     "stem": "(4)",
+     "options": [
+      "That sounds perfect. How much does it cost?",
+      "I really don't care about Krabi.",
+      "Krabi is a southern province.",
+      "No beaches for me, please."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "สนใจแล้วถามราคา",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-lc-001-5",
+     "stem": "(5)",
+     "options": [
+      "That's reasonable. I'll take it.",
+      "That is far too cheap for me.",
+      "Money is only printed paper.",
+      "I will never pay anything."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตัดสินใจจองหลังรู้ราคา",
+     "blankNo": 5
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "tgat-lc-002",
+   "title": "A student asks for advice",
+   "kind": "dialogue",
+   "text": "Teacher: Hi, come in. You wanted to talk about your project?\nStudent: __(1)__\nTeacher: Of course. What seems to be the problem?\nStudent: __(2)__\nTeacher: That's quite common. Have you tried narrowing your topic?\nStudent: __(3)__\nTeacher: Good idea. I'd suggest focusing on just one city.\nStudent: __(4)__\nTeacher: Yes, you can find plenty of sources online and in the library.\nStudent: __(5)__\nTeacher: You're welcome. Good luck with it.",
+   "questions": [
+    {
+     "id": "tgat-lc-002-1",
+     "stem": "(1)",
+     "options": [
+      "Yes, I'm having some trouble with it.",
+      "No, I have no project at all.",
+      "They say talk is cheap.",
+      "You wanted to talk to me."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ยืนยันว่ามาปรึกษาปัญหา",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-lc-002-2",
+     "stem": "(2)",
+     "options": [
+      "My topic feels too broad.",
+      "Everything is completely perfect.",
+      "'Broad' is an adjective word.",
+      "I have no topic, so it's fine."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อธิบายปัญหาของหัวข้อ",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-lc-002-3",
+     "stem": "(3)",
+     "options": [
+      "Not yet. How should I do that?",
+      "Yes, I narrowed nothing down.",
+      "A topic is just a word.",
+      "No, I refuse to try that."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ยังไม่ได้ทำ และถามวิธี",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-lc-002-4",
+     "stem": "(4)",
+     "options": [
+      "Do you think I can find enough information?",
+      "Information is totally useless.",
+      "I don't want any sources.",
+      "One city is far too many."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ถามต่อเรื่องแหล่งข้อมูล",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-lc-002-5",
+     "stem": "(5)",
+     "options": [
+      "Thank you so much for your advice.",
+      "No thanks for the bad advice.",
+      "'Advice' is an uncountable noun.",
+      "I will not thank you at all."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขอบคุณเมื่อจบการปรึกษา",
+     "blankNo": 5
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "tgat-lc-003",
+   "title": "At the doctor's office",
+   "text": "Doctor:  Good morning. What seems to be the problem today?\nPatient: __(1)__\nDoctor:  I'm sorry to hear that. Have you taken anything for it?\nPatient: __(2)__\nDoctor:  Are you sleeping and eating normally?\nPatient: __(3)__\nDoctor:  That could be the cause. I'd suggest more rest and plenty of water.\nPatient: __(4)__\nDoctor:  I don't think so, but come back if it gets worse.\nPatient: __(5)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-lc-003-1",
+     "stem": "(1)",
+     "options": [
+      "I've had a bad headache for three days.",
+      "No, you are the doctor.",
+      "Mornings can be busy.",
+      "Problems are difficult things."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกอาการเมื่อหมอถาม",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-lc-003-2",
+     "stem": "(2)",
+     "options": [
+      "Just some painkillers, but they didn't help much.",
+      "No, taking is an action.",
+      "Yes, I hear you are sorry.",
+      "Anything is just a word."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบว่ากินยาอะไรไปแล้ว",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-lc-003-3",
+     "stem": "(3)",
+     "options": [
+      "Not really. I've been very busy and stressed at work.",
+      "Yes, sleeping is for the night.",
+      "Eating uses your mouth.",
+      "Normal is the opposite of strange."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อธิบายพฤติกรรมการนอน/กิน",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-lc-003-4",
+     "stem": "(4)",
+     "options": [
+      "Should I be worried about anything serious?",
+      "No, water is always wet.",
+      "Rest is a very nice thing.",
+      "Suggesting is quite helpful."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ถามว่าควรกังวลไหม",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-lc-003-5",
+     "stem": "(5)",
+     "options": [
+      "Thank you, doctor. I will.",
+      "No, worse means better.",
+      "Coming back means returning.",
+      "Doctors often wear white coats."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขอบคุณและรับคำแนะนำ",
+     "blankNo": 5
+    }
+   ]
+  },
+  {
+   "id": "tgat-lc-004",
+   "title": "A job interview",
+   "text": "Interviewer: Thanks for coming in. Could you tell me a little about yourself?\nCandidate:   __(1)__\nInterviewer: Great. Why do you want to work for our company?\nCandidate:   __(2)__\nInterviewer: What would you say is your biggest strength?\nCandidate:   __(3)__\nInterviewer: And do you have any questions for us?\nCandidate:   __(4)__\nInterviewer: Good question. We'll be in touch by next week.\nCandidate:   __(5)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-lc-004-1",
+     "stem": "(1)",
+     "options": [
+      "Of course. I recently graduated in marketing and I enjoy working with people.",
+      "No, 'myself' is a pronoun.",
+      "Coming in means entering.",
+      "Telling is a form of speaking."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "แนะนำตัวเองสั้น ๆ",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-lc-004-2",
+     "stem": "(2)",
+     "options": [
+      "I admire your brand, and I think I could learn a lot here.",
+      "No, companies are buildings.",
+      "Work is the opposite of play.",
+      "Wanting is a kind of feeling."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกเหตุผลที่อยากร่วมงาน",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-lc-004-3",
+     "stem": "(3)",
+     "options": [
+      "I'm very organised and I work well under pressure.",
+      "No, strength means power.",
+      "'Biggest' is a superlative form.",
+      "Saying something uses words."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกจุดแข็งของตัวเอง",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-lc-004-4",
+     "stem": "(4)",
+     "options": [
+      "Yes, what would a typical day in this role look like?",
+      "No, questions need answers.",
+      "'Us' is the object of 'we'.",
+      "Having means owning."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ถามคำถามกลับผู้สัมภาษณ์",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-lc-004-5",
+     "stem": "(5)",
+     "options": [
+      "Thank you for your time. I look forward to hearing from you.",
+      "No, a week has seven days.",
+      "Touch is done with hands.",
+      "Time is often called money."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ปิดท้ายการสัมภาษณ์อย่างสุภาพ",
+     "blankNo": 5
+    }
+   ]
+  },
+  {
+   "id": "tgat-lc-005",
+   "title": "Renting an apartment",
+   "text": "Agent:  Hello, you're here about the apartment on Park Road?\nTenant: __(1)__\nAgent:  It is. It's a one-bedroom flat on the third floor.\nTenant: __(2)__\nAgent:  It's 9,000 baht a month, including water.\nTenant: __(3)__\nAgent:  No, electricity is separate. There's also a two-month deposit.\nTenant: __(4)__\nAgent:  Certainly. I can show you right now if you like.\nTenant: __(5)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-lc-005-1",
+     "stem": "(1)",
+     "options": [
+      "Yes, that's right. Is it still available?",
+      "No, I am the rental agent.",
+      "Roads are made for cars.",
+      "Apartments are kinds of homes."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ยืนยันและถามว่ายังว่างไหม",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-lc-005-2",
+     "stem": "(2)",
+     "options": [
+      "How much is the monthly rent?",
+      "No, bedrooms are for sleeping.",
+      "'Third' comes after 'second'.",
+      "A flat is usually flat."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ถามค่าเช่ารายเดือน",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-lc-005-3",
+     "stem": "(3)",
+     "options": [
+      "Does that include electricity as well?",
+      "No, water is a liquid.",
+      "Months contain several weeks.",
+      "9,000 is just a number."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ถามว่ารวมค่าไฟไหม",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-lc-005-4",
+     "stem": "(4)",
+     "options": [
+      "I see. Could I have a look at the flat today?",
+      "No, deposits are money.",
+      "'Separate' means kept apart.",
+      "Seeing is said to be believing."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขอเข้าชมห้อง",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-lc-005-5",
+     "stem": "(5)",
+     "options": [
+      "That would be perfect. Thank you.",
+      "No, 'now' means later.",
+      "Showing means displaying.",
+      "'Perfect' is an adjective."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบรับการเข้าชมทันที",
+     "blankNo": 5
+    }
+   ]
+  },
+  {
+   "id": "tgat-lc-006",
+   "title": "At the bank",
+   "text": "Clerk:    Good afternoon. How can I help you today?\nCustomer: __(1)__\nClerk:    Certainly. Do you have any identification with you?\nCustomer: __(2)__\nClerk:    Perfect. There's a minimum first deposit of 500 baht.\nCustomer: __(3)__\nClerk:    Yes, of course. It will arrive by post in about a week.\nCustomer: __(4)__\nClerk:    There's a small annual fee of 200 baht.\nCustomer: __(5)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-lc-006-1",
+     "stem": "(1)",
+     "options": [
+      "Hi, I'd like to open a savings account, please.",
+      "No, I am the bank clerk.",
+      "Afternoons are often warm.",
+      "Helping people is kind."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกจุดประสงค์: เปิดบัญชี",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-lc-006-2",
+     "stem": "(2)",
+     "options": [
+      "Yes, I have my ID card and passport.",
+      "No, identification is long.",
+      "'With' means together with.",
+      "Cards are made of plastic."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบเรื่องเอกสารยืนยันตัว",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-lc-006-3",
+     "stem": "(3)",
+     "options": [
+      "That's fine. Can I also get a debit card?",
+      "No, 500 is a huge number.",
+      "Deposits go into accounts.",
+      "'Minimum' means the most."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบรับแล้วขอบัตรเดบิต",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-lc-006-4",
+     "stem": "(4)",
+     "options": [
+      "Great. Is there a fee for the card?",
+      "No, post means mail.",
+      "Weeks tend to pass quickly.",
+      "Arriving means coming."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ถามเรื่องค่าธรรมเนียมบัตร",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-lc-006-5",
+     "stem": "(5)",
+     "options": [
+      "Okay, that sounds reasonable. Let's go ahead.",
+      "No, fees are always free.",
+      "'Annual' means yearly.",
+      "200 is an amount of money."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตัดสินใจดำเนินการต่อ",
+     "blankNo": 5
+    }
+   ]
+  },
+  {
+   "id": "tgat-lc-007",
+   "title": "Planning a trip with a friend",
+   "text": "Lek: I was thinking we should plan a trip during the holidays. Are you interested?\nJoy: __(1)__\nLek: Maybe the beach, or somewhere in the mountains. What do you prefer?\nJoy: __(2)__\nLek: Sounds good. How many days should we go for?\nJoy: __(3)__\nLek: Perfect. Should we drive or take the bus?\nJoy: __(4)__\nLek: Great. I'll start looking for places to stay.\nJoy: __(5)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-lc-007-1",
+     "stem": "(1)",
+     "options": [
+      "Definitely! Where were you thinking of going?",
+      "No, trips are journeys.",
+      "Holidays are for resting.",
+      "Interest is a kind of feeling."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบรับและถามจุดหมาย",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-lc-007-2",
+     "stem": "(2)",
+     "options": [
+      "I'd prefer the mountains. I love hiking.",
+      "No, beaches have soft sand.",
+      "Preferring means choosing.",
+      "Mountains are very tall."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกสิ่งที่ชอบมากกว่า",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-lc-007-3",
+     "stem": "(3)",
+     "options": [
+      "How about a long weekend, say three days?",
+      "No, days are full of hours.",
+      "Going somewhere means moving.",
+      "'Many' means a large number."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "เสนอจำนวนวัน",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-lc-007-4",
+     "stem": "(4)",
+     "options": [
+      "Let's drive. It'll be easier to get around.",
+      "No, buses are quite big.",
+      "Driving requires a car.",
+      "Taking means grabbing."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "เลือกวิธีเดินทาง",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-lc-007-5",
+     "stem": "(5)",
+     "options": [
+      "Awesome. Let me know if you need any help.",
+      "No, places are locations.",
+      "Staying means remaining.",
+      "Looking is done with eyes."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "เสนอช่วยเหลือเพื่อน",
+     "blankNo": 5
+    }
+   ]
+  },
+  {
+   "id": "tgat-lc-008",
+   "title": "Returning a product",
+   "text": "Clerk:    Hi there, how can I help you?\nCustomer: __(1)__\nClerk:    Sure. Is there something wrong with them?\nCustomer: __(2)__\nClerk:    I'm sorry about that. Do you have the receipt?\nCustomer: __(3)__\nClerk:    Thank you. Would you like a refund or an exchange?\nCustomer: __(4)__\nClerk:    We do. I'll get you a new one right away.\nCustomer: __(5)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-lc-008-1",
+     "stem": "(1)",
+     "options": [
+      "Hello, I'd like to return these headphones, please.",
+      "No, I am the shop clerk.",
+      "Helping is a kind act.",
+      "'Hi' is quite informal."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกว่าต้องการคืนสินค้า",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-lc-008-2",
+     "stem": "(2)",
+     "options": [
+      "Yes, the left earpiece doesn't work at all.",
+      "No, headphones play music.",
+      "'Wrong' is the opposite of 'right'.",
+      "'Something' is a thing."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกปัญหาของสินค้า",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-lc-008-3",
+     "stem": "(3)",
+     "options": [
+      "Yes, here it is. I bought them last Tuesday.",
+      "No, receipts are paper.",
+      "Having means owning.",
+      "Tuesday is a weekday."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ยื่นใบเสร็จ",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-lc-008-4",
+     "stem": "(4)",
+     "options": [
+      "I'd prefer an exchange, if you have another pair.",
+      "No, refunds are money.",
+      "Exchanging means swapping.",
+      "Pairs always come in twos."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "เลือกเปลี่ยนสินค้าแทนคืนเงิน",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-lc-008-5",
+     "stem": "(5)",
+     "options": [
+      "Thank you very much for your help.",
+      "No, 'new' means old.",
+      "Getting means receiving.",
+      "'Right away' means soon."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขอบคุณเมื่อได้รับการช่วยเหลือ",
+     "blankNo": 5
+    }
+   ]
+  },
+  {
+   "id": "tgat-lc-009",
+   "title": "Ordering at a restaurant",
+   "text": "Waiter:   Good evening. Have you decided what you'd like?\nCustomer: __(1)__\nWaiter:   Excellent choice. Would you like a starter with that?\nCustomer: __(2)__\nWaiter:   Of course. And anything to drink?\nCustomer: __(3)__\nWaiter:   Perfect. Would you like to see the dessert menu later?\nCustomer: __(4)__\nWaiter:   Wonderful. I'll bring your soup shortly.\nCustomer: __(5)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-lc-009-1",
+     "stem": "(1)",
+     "options": [
+      "Yes, I'll have the grilled salmon, please.",
+      "No, evenings are dark.",
+      "Deciding means choosing.",
+      "Liking means enjoying."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "สั่งอาหารจานหลัก",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-lc-009-2",
+     "stem": "(2)",
+     "options": [
+      "Yes, could I have the tomato soup to start?",
+      "No, starters are small.",
+      "Choices are decisions.",
+      "'Excellent' means very good."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "สั่งอาหารเรียกน้ำย่อย",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-lc-009-3",
+     "stem": "(3)",
+     "options": [
+      "Just a sparkling water, thanks.",
+      "No, drinks are liquids.",
+      "'Anything' means something.",
+      "Thirst is a feeling."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "สั่งเครื่องดื่ม",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-lc-009-4",
+     "stem": "(4)",
+     "options": [
+      "Yes, please. I might have something sweet.",
+      "No, desserts come last.",
+      "Menus list the food.",
+      "'Later' means soon."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบเรื่องเมนูของหวาน",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-lc-009-5",
+     "stem": "(5)",
+     "options": [
+      "Thank you. That sounds great.",
+      "No, soup is served hot.",
+      "Bringing means carrying.",
+      "'Shortly' means soon."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขอบคุณพนักงาน",
+     "blankNo": 5
+    }
+   ]
+  },
+  {
+   "id": "tgat-lc-010",
+   "title": "A tourist asks for directions",
+   "text": "Tourist: Excuse me, could you help me? I'm trying to get to the National Museum.\nLocal:   __(1)__\nTourist: __(2)__\nLocal:   Yes, the number 15 bus goes right past it.\nTourist: __(3)__\nLocal:   It's just across the street, next to the bakery.\nTourist: __(4)__\nLocal:   About twenty minutes, depending on traffic.\nTourist: __(5)__",
+   "kind": "dialogue",
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-lc-010-1",
+     "stem": "(1)",
+     "options": [
+      "Of course. It's a bit far to walk from here.",
+      "No, museums display art.",
+      "Helping someone is kind.",
+      "Trying means attempting."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตอบรับและบอกว่าไกลเกินกว่าจะเดิน",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-lc-010-2",
+     "stem": "(2)",
+     "options": [
+      "Oh, I see. Is there a bus I could take?",
+      "No, 'far' means near.",
+      "Walking is rather slow.",
+      "Seeing is believing."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ถามเรื่องรถเมล์",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-lc-010-3",
+     "stem": "(3)",
+     "options": [
+      "Great. Where's the nearest bus stop?",
+      "No, buses are vehicles.",
+      "Numbers are used to count.",
+      "'Past' means before."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ถามที่ป้ายรถเมล์",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-lc-010-4",
+     "stem": "(4)",
+     "options": [
+      "Thank you. How long does the journey take?",
+      "No, streets are roads.",
+      "Bakeries sell fresh bread.",
+      "'Across' means over."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ถามระยะเวลาเดินทาง",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-lc-010-5",
+     "stem": "(5)",
+     "options": [
+      "Perfect. Thanks so much for your help.",
+      "No, minutes are short.",
+      "Traffic is made of cars.",
+      "Twenty is a number."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขอบคุณเมื่อได้รับความช่วยเหลือ",
+     "blankNo": 5
+    }
+   ]
+  }
+ ],
+ "clozePassages": [
+  {
+   "id": "tgat-cz-001",
+   "title": "Community food fair",
+   "kind": "cloze",
+   "text": "The Greenfield Community Centre is holding its annual food fair next Saturday. The event __(1)__ at 10 a.m. and will continue until 6 p.m. This year, __(2)__ thirty local restaurants will take part, offering dishes __(3)__ all over the world. Visitors can enjoy live music __(4)__ they eat. There __(5)__ also be games and activities for children. Entry is free, __(6)__ some food and drinks must be paid for. The organisers advise people to arrive early, __(7)__ the fair becomes very crowded in the afternoon. If it rains, the event will be __(8)__ to the following weekend.",
+   "questions": [
+    {
+     "id": "tgat-cz-001-1",
+     "stem": "(1)",
+     "options": [
+      "begins",
+      "began",
+      "beginning",
+      "to begin"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "เหตุการณ์ในตารางอนาคต ใช้ present simple: begins",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-cz-001-2",
+     "stem": "(2)",
+     "options": [
+      "more than",
+      "more as",
+      "much than",
+      "many more as"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "เปรียบเทียบจำนวน 'มากกว่า' = more than",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-cz-001-3",
+     "stem": "(3)",
+     "options": [
+      "from",
+      "of",
+      "by",
+      "with"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "dishes from all over the world (มาจาก)",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-cz-001-4",
+     "stem": "(4)",
+     "options": [
+      "while",
+      "during",
+      "for",
+      "since"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ตามด้วยประโยค (they eat) ใช้ while",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-cz-001-5",
+     "stem": "(5)",
+     "options": [
+      "will",
+      "is",
+      "are",
+      "would"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "There ___ also be... อนาคต = There will be",
+     "blankNo": 5
+    },
+    {
+     "id": "tgat-cz-001-6",
+     "stem": "(6)",
+     "options": [
+      "although",
+      "because",
+      "so",
+      "unless"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขัดแย้งกัน (ฟรี แต่บางอย่างต้องจ่าย) = although",
+     "blankNo": 6
+    },
+    {
+     "id": "tgat-cz-001-7",
+     "stem": "(7)",
+     "options": [
+      "as",
+      "so",
+      "but",
+      "or"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกเหตุผล (เพราะงานแน่นช่วงบ่าย) = as",
+     "blankNo": 7
+    },
+    {
+     "id": "tgat-cz-001-8",
+     "stem": "(8)",
+     "options": [
+      "moved",
+      "move",
+      "moving",
+      "moves"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "passive อนาคต: will be moved",
+     "blankNo": 8
+    }
+   ],
+   "wordCount": 89,
+   "verified": true
+  },
+  {
+   "id": "tgat-cz-002",
+   "title": "New library app",
+   "kind": "cloze",
+   "text": "Our city library has just launched a new mobile app __(1)__ makes borrowing books easier than ever. With the app, you __(2)__ search the catalogue, reserve titles, and renew your loans from home. To get started, simply __(3)__ the app and create an account using your library card number. Once you __(4)__ logged in, you can browse thousands of e-books and audiobooks. The app also sends you a reminder __(5)__ a book is due. Best of all, it is completely free __(6)__ all members. If you need help, the staff at the front desk will be happy __(7)__ you.",
+   "questions": [
+    {
+     "id": "tgat-cz-002-1",
+     "stem": "(1)",
+     "options": [
+      "that",
+      "what",
+      "who",
+      "where"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขยายสิ่งของ (app) ใช้ that/which",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-cz-002-2",
+     "stem": "(2)",
+     "options": [
+      "can",
+      "must",
+      "should have",
+      "are"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "บอกความสามารถ = can search",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-cz-002-3",
+     "stem": "(3)",
+     "options": [
+      "download",
+      "downloads",
+      "downloaded",
+      "downloading"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ประโยคคำสั่ง (imperative) ใช้กริยาช่อง 1: download",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-cz-002-4",
+     "stem": "(4)",
+     "options": [
+      "have",
+      "has",
+      "having",
+      "had been"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "Once you have logged in (present perfect, ประธาน you)",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-cz-002-5",
+     "stem": "(5)",
+     "options": [
+      "when",
+      "while",
+      "during",
+      "until"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "เตือนเมื่อถึงกำหนด = when a book is due",
+     "blankNo": 5
+    },
+    {
+     "id": "tgat-cz-002-6",
+     "stem": "(6)",
+     "options": [
+      "for",
+      "to",
+      "with",
+      "of"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "free for all members (ฟรีสำหรับ)",
+     "blankNo": 6
+    },
+    {
+     "id": "tgat-cz-002-7",
+     "stem": "(7)",
+     "options": [
+      "to help",
+      "helping",
+      "help",
+      "helped"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "be happy to do something: happy to help you",
+     "blankNo": 7
+    }
+   ],
+   "wordCount": 93,
+   "verified": true
+  },
+  {
+   "id": "tgat-cz-003",
+   "title": "Photography club notice",
+   "text": "The school photography club is looking __(1)__ new members for this term. We meet every Wednesday __(2)__ 3:30 p.m. in Room 12. You don't need __(3)__ expensive camera to join — a smartphone is perfectly fine. During our sessions, experienced members will teach you __(4)__ to take better photos and edit them. We also organise trips to interesting places __(5)__ you can practise your skills. __(6)__ the end of the term, the best photographs __(7)__ be displayed in the main hall. If you are interested __(8)__ joining, please sign up on the noticeboard outside the office.",
+   "kind": "cloze",
+   "wordCount": 86,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-cz-003-1",
+     "stem": "(1)",
+     "options": [
+      "for",
+      "at",
+      "to",
+      "in"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "look for = มองหา",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-cz-003-2",
+     "stem": "(2)",
+     "options": [
+      "at",
+      "in",
+      "on",
+      "by"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "at + เวลานาฬิกา",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-cz-003-3",
+     "stem": "(3)",
+     "options": [
+      "an",
+      "a",
+      "the",
+      "any"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "an + เสียงสระ (expensive)",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-cz-003-4",
+     "stem": "(4)",
+     "options": [
+      "how",
+      "what",
+      "which",
+      "where"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "teach you how to = สอนวิธี",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-cz-003-5",
+     "stem": "(5)",
+     "options": [
+      "where",
+      "which",
+      "what",
+      "who"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "places where = สถานที่ซึ่ง (สถานที่)",
+     "blankNo": 5
+    },
+    {
+     "id": "tgat-cz-003-6",
+     "stem": "(6)",
+     "options": [
+      "At",
+      "In",
+      "On",
+      "By"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "At the end of = ตอนสิ้น",
+     "blankNo": 6
+    },
+    {
+     "id": "tgat-cz-003-7",
+     "stem": "(7)",
+     "options": [
+      "will",
+      "are",
+      "would",
+      "have"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อนาคต passive: will be displayed",
+     "blankNo": 7
+    },
+    {
+     "id": "tgat-cz-003-8",
+     "stem": "(8)",
+     "options": [
+      "in",
+      "on",
+      "for",
+      "with"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "interested in = สนใจใน",
+     "blankNo": 8
+    }
+   ]
+  },
+  {
+   "id": "tgat-cz-004",
+   "title": "Company picnic email",
+   "text": "Dear team,\nI am pleased __(1)__ announce that our annual company picnic will be held on Saturday, 15 June. We will gather at Riverside Park, __(2)__ is only ten minutes from the office. There will be plenty of food and games __(3)__ everyone to enjoy. Please let me know by Friday __(4)__ you are bringing any guests, __(5)__ we can prepare enough food. __(6)__ it rains, the event will be moved indoors. We look forward to __(7)__ you all there.\nBest wishes, Sarah",
+   "kind": "cloze",
+   "wordCount": 75,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-cz-004-1",
+     "stem": "(1)",
+     "options": [
+      "to",
+      "for",
+      "of",
+      "at"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "be pleased to do = ยินดีที่จะ",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-cz-004-2",
+     "stem": "(2)",
+     "options": [
+      "which",
+      "what",
+      "who",
+      "where"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขยายสถานที่ (Park) แบบไม่จำกัดความ = which",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-cz-004-3",
+     "stem": "(3)",
+     "options": [
+      "for",
+      "to",
+      "of",
+      "with"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "games for everyone = สำหรับทุกคน",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-cz-004-4",
+     "stem": "(4)",
+     "options": [
+      "whether",
+      "that",
+      "what",
+      "which"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "let me know whether = แจ้งว่า…หรือไม่",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-cz-004-5",
+     "stem": "(5)",
+     "options": [
+      "so",
+      "but",
+      "or",
+      "because"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "so (that) = เพื่อที่จะ",
+     "blankNo": 5
+    },
+    {
+     "id": "tgat-cz-004-6",
+     "stem": "(6)",
+     "options": [
+      "If",
+      "Unless",
+      "Although",
+      "Because"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "If it rains = ถ้าฝนตก",
+     "blankNo": 6
+    },
+    {
+     "id": "tgat-cz-004-7",
+     "stem": "(7)",
+     "options": [
+      "seeing",
+      "see",
+      "saw",
+      "seen"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "look forward to + V-ing",
+     "blankNo": 7
+    }
+   ]
+  },
+  {
+   "id": "tgat-cz-005",
+   "title": "Drinking enough water",
+   "text": "Most people know that drinking water is good __(1)__ them, but many of us still don't drink enough. Our bodies are made __(2)__ about 60% water, and we lose it throughout the day. __(3)__ we don't replace it, we can feel tired and find it hard __(4)__ concentrate. Experts suggest drinking around eight glasses a day, __(5)__ the exact amount depends on the person. One easy tip is __(6)__ carry a reusable bottle with you. __(7)__ you feel thirsty, you will always have water nearby. Drinking enough water can improve your mood, your skin, and __(8)__ your ability to think clearly.",
+   "kind": "cloze",
+   "wordCount": 92,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-cz-005-1",
+     "stem": "(1)",
+     "options": [
+      "for",
+      "to",
+      "at",
+      "with"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "good for = ดีต่อ",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-cz-005-2",
+     "stem": "(2)",
+     "options": [
+      "of",
+      "from",
+      "by",
+      "with"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "be made of = ประกอบด้วย",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-cz-005-3",
+     "stem": "(3)",
+     "options": [
+      "If",
+      "Although",
+      "So",
+      "Unless"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "If we don't... = ถ้าเราไม่",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-cz-005-4",
+     "stem": "(4)",
+     "options": [
+      "to",
+      "for",
+      "at",
+      "of"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "hard to concentrate = ยากที่จะ",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-cz-005-5",
+     "stem": "(5)",
+     "options": [
+      "although",
+      "because",
+      "so",
+      "unless"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขัดแย้ง: although = แม้ว่า",
+     "blankNo": 5
+    },
+    {
+     "id": "tgat-cz-005-6",
+     "stem": "(6)",
+     "options": [
+      "to",
+      "for",
+      "of",
+      "at"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "tip is to carry = เคล็ดลับคือ",
+     "blankNo": 6
+    },
+    {
+     "id": "tgat-cz-005-7",
+     "stem": "(7)",
+     "options": [
+      "When",
+      "Although",
+      "Unless",
+      "Despite"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "When you feel = เมื่อ",
+     "blankNo": 7
+    },
+    {
+     "id": "tgat-cz-005-8",
+     "stem": "(8)",
+     "options": [
+      "even",
+      "ever",
+      "yet",
+      "still"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "even = แม้กระทั่ง (เน้นย้ำ)",
+     "blankNo": 8
+    }
+   ]
+  },
+  {
+   "id": "tgat-cz-006",
+   "title": "A fitness app",
+   "text": "FitStart is a free app __(1)__ helps beginners get into exercise. When you first open it, you answer a few questions __(2)__ your goals and fitness level. The app then creates a plan __(3)__ especially for you. Each workout is short, so you can do it __(4)__ you are busy. The app also reminds you __(5)__ exercise and tracks your progress over time. __(6)__ you complete a workout, you earn points and badges. Thousands of users say FitStart has helped them become __(7)__ active and healthier.",
+   "kind": "cloze",
+   "wordCount": 79,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-cz-006-1",
+     "stem": "(1)",
+     "options": [
+      "that",
+      "what",
+      "who",
+      "where"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขยายสิ่งของ (app) = that/which",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-cz-006-2",
+     "stem": "(2)",
+     "options": [
+      "about",
+      "for",
+      "of",
+      "on"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "questions about = คำถามเกี่ยวกับ",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-cz-006-3",
+     "stem": "(3)",
+     "options": [
+      "designed",
+      "designs",
+      "design",
+      "to design"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "a plan designed = แผนที่ถูกออกแบบ (V3 ขยายนาม)",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-cz-006-4",
+     "stem": "(4)",
+     "options": [
+      "even when",
+      "because",
+      "unless",
+      "so that"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "even when = แม้ในตอนที่",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-cz-006-5",
+     "stem": "(5)",
+     "options": [
+      "to",
+      "for",
+      "of",
+      "about"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "remind someone to do = เตือนให้ทำ",
+     "blankNo": 5
+    },
+    {
+     "id": "tgat-cz-006-6",
+     "stem": "(6)",
+     "options": [
+      "Every time",
+      "Despite",
+      "However",
+      "Although"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "Every time = ทุกครั้งที่",
+     "blankNo": 6
+    },
+    {
+     "id": "tgat-cz-006-7",
+     "stem": "(7)",
+     "options": [
+      "more",
+      "most",
+      "much",
+      "many"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "become more active = comparative",
+     "blankNo": 7
+    }
+   ]
+  },
+  {
+   "id": "tgat-cz-007",
+   "title": "Visiting Pai",
+   "text": "Pai is a small town in northern Thailand __(1)__ is popular with travellers. Surrounded __(2)__ green mountains, it is famous for its relaxed atmosphere. Many visitors come here __(3)__ enjoy the cool weather and beautiful scenery. __(4)__ the day, you can explore waterfalls, hot springs, and local markets. __(5)__ the evening, the streets fill with music and food stalls. The town is __(6)__ smaller than Chiang Mai, so it is easy to get around __(7)__ bicycle or motorbike. If you are looking for a peaceful place __(8)__ relax, Pai is well worth a visit.",
+   "kind": "cloze",
+   "wordCount": 86,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-cz-007-1",
+     "stem": "(1)",
+     "options": [
+      "that",
+      "what",
+      "who",
+      "when"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "town that = เมืองซึ่ง",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-cz-007-2",
+     "stem": "(2)",
+     "options": [
+      "by",
+      "of",
+      "with",
+      "from"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "be surrounded by = ถูกล้อมรอบด้วย",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-cz-007-3",
+     "stem": "(3)",
+     "options": [
+      "to",
+      "for",
+      "of",
+      "at"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "come to enjoy = มาเพื่อ",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-cz-007-4",
+     "stem": "(4)",
+     "options": [
+      "During",
+      "While",
+      "Since",
+      "For"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "During the day = ระหว่างวัน",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-cz-007-5",
+     "stem": "(5)",
+     "options": [
+      "In",
+      "On",
+      "At",
+      "By"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "In the evening = ในตอนเย็น",
+     "blankNo": 5
+    },
+    {
+     "id": "tgat-cz-007-6",
+     "stem": "(6)",
+     "options": [
+      "much",
+      "more",
+      "very",
+      "too"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "much + comparative = …กว่ามาก",
+     "blankNo": 6
+    },
+    {
+     "id": "tgat-cz-007-7",
+     "stem": "(7)",
+     "options": [
+      "by",
+      "on",
+      "with",
+      "in"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "get around by + ยานพาหนะ",
+     "blankNo": 7
+    },
+    {
+     "id": "tgat-cz-007-8",
+     "stem": "(8)",
+     "options": [
+      "to",
+      "for",
+      "of",
+      "at"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "place to relax = ที่ที่จะพักผ่อน",
+     "blankNo": 8
+    }
+   ]
+  },
+  {
+   "id": "tgat-cz-008",
+   "title": "How to make tea",
+   "text": "Making a perfect cup of tea is simple __(1)__ you follow a few steps. First, fill a kettle with fresh water and __(2)__ it to boil. While you are waiting, put a tea bag __(3)__ your cup. __(4)__ the water has boiled, pour it over the tea bag and let it sit __(5)__ three to five minutes. The longer you wait, the __(6)__ the tea will be. Finally, remove the tea bag and add milk or sugar __(7)__ you like. Your tea is now ready to enjoy.",
+   "kind": "cloze",
+   "wordCount": 80,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-cz-008-1",
+     "stem": "(1)",
+     "options": [
+      "if",
+      "unless",
+      "although",
+      "despite"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "simple if = ง่ายถ้า",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-cz-008-2",
+     "stem": "(2)",
+     "options": [
+      "bring",
+      "brings",
+      "bringing",
+      "brought"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ประโยคคำสั่ง: bring (V1)",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-cz-008-3",
+     "stem": "(3)",
+     "options": [
+      "in",
+      "at",
+      "of",
+      "by"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "put ... in your cup = ใส่ในถ้วย",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-cz-008-4",
+     "stem": "(4)",
+     "options": [
+      "Once",
+      "Despite",
+      "Unless",
+      "However"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "Once = เมื่อ…เสร็จแล้ว",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-cz-008-5",
+     "stem": "(5)",
+     "options": [
+      "for",
+      "since",
+      "during",
+      "by"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "let it sit for + ช่วงเวลา",
+     "blankNo": 5
+    },
+    {
+     "id": "tgat-cz-008-6",
+     "stem": "(6)",
+     "options": [
+      "stronger",
+      "strong",
+      "strongest",
+      "more strong"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "The + er, the + er (ยิ่ง…ยิ่ง)",
+     "blankNo": 6
+    },
+    {
+     "id": "tgat-cz-008-7",
+     "stem": "(7)",
+     "options": [
+      "if",
+      "unless",
+      "although",
+      "despite"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "add ... if you like = ถ้าชอบ",
+     "blankNo": 7
+    }
+   ]
+  },
+  {
+   "id": "tgat-cz-009",
+   "title": "Library reopening",
+   "text": "The city's central library reopened last week __(1)__ six months of renovations. The building, __(2)__ was originally built in 1965, now has a modern reading room and a new children's area. Visitors __(3)__ also use free Wi-Fi and borrow e-books. \"We are very proud __(4)__ the new library,\" said the mayor __(5)__ the opening ceremony. The project cost over 20 million baht, __(6)__ many local residents helped raise the money. The library is now open seven days a week and __(7)__ free for everyone. Officials hope it __(8)__ encourage more young people to read.",
+   "kind": "cloze",
+   "wordCount": 86,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-cz-009-1",
+     "stem": "(1)",
+     "options": [
+      "after",
+      "during",
+      "while",
+      "since"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "reopened after = เปิดอีกครั้งหลังจาก",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-cz-009-2",
+     "stem": "(2)",
+     "options": [
+      "which",
+      "what",
+      "who",
+      "where"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ขยายสิ่งของ (building) = which",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-cz-009-3",
+     "stem": "(3)",
+     "options": [
+      "can",
+      "must",
+      "should",
+      "ought"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "can use = สามารถใช้",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-cz-009-4",
+     "stem": "(4)",
+     "options": [
+      "of",
+      "for",
+      "with",
+      "about"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "be proud of = ภูมิใจใน",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-cz-009-5",
+     "stem": "(5)",
+     "options": [
+      "at",
+      "in",
+      "on",
+      "by"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "at the ceremony = ในพิธี",
+     "blankNo": 5
+    },
+    {
+     "id": "tgat-cz-009-6",
+     "stem": "(6)",
+     "options": [
+      "and",
+      "but",
+      "or",
+      "so"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "เชื่อมข้อมูลเพิ่ม = and",
+     "blankNo": 6
+    },
+    {
+     "id": "tgat-cz-009-7",
+     "stem": "(7)",
+     "options": [
+      "is",
+      "are",
+      "be",
+      "being"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ประธาน it (the library) = is",
+     "blankNo": 7
+    },
+    {
+     "id": "tgat-cz-009-8",
+     "stem": "(8)",
+     "options": [
+      "will",
+      "is",
+      "would",
+      "has"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "hope (that) it will = หวังว่าจะ",
+     "blankNo": 8
+    }
+   ]
+  },
+  {
+   "id": "tgat-cz-010",
+   "title": "A thank-you letter",
+   "text": "Dear Aunt May,\nThank you so much __(1)__ letting me stay with you last weekend. I had a wonderful time, and it was lovely __(2)__ see you again. The food you cooked was delicious — I especially enjoyed the curry __(3)__ you made on Saturday. I'm sorry I couldn't stay __(4)__ because I had to get back for work. Next time, I hope you __(5)__ come and visit me instead. I would love __(6)__ show you around my new neighbourhood. Please give my love __(7)__ Uncle Tom.\nWith love, Nina",
+   "kind": "cloze",
+   "wordCount": 82,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-cz-010-1",
+     "stem": "(1)",
+     "options": [
+      "for",
+      "to",
+      "of",
+      "about"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "thank you for + V-ing",
+     "blankNo": 1
+    },
+    {
+     "id": "tgat-cz-010-2",
+     "stem": "(2)",
+     "options": [
+      "to",
+      "for",
+      "of",
+      "at"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "lovely to see = ดีใจที่ได้พบ",
+     "blankNo": 2
+    },
+    {
+     "id": "tgat-cz-010-3",
+     "stem": "(3)",
+     "options": [
+      "that",
+      "what",
+      "who",
+      "where"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "the curry that = แกงที่",
+     "blankNo": 3
+    },
+    {
+     "id": "tgat-cz-010-4",
+     "stem": "(4)",
+     "options": [
+      "longer",
+      "long",
+      "longest",
+      "more long"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "couldn't stay longer = comparative",
+     "blankNo": 4
+    },
+    {
+     "id": "tgat-cz-010-5",
+     "stem": "(5)",
+     "options": [
+      "will",
+      "would",
+      "are",
+      "have"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "hope you will = หวังว่าจะ",
+     "blankNo": 5
+    },
+    {
+     "id": "tgat-cz-010-6",
+     "stem": "(6)",
+     "options": [
+      "to",
+      "for",
+      "of",
+      "at"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "would love to show = อยากพาชม",
+     "blankNo": 6
+    },
+    {
+     "id": "tgat-cz-010-7",
+     "stem": "(7)",
+     "options": [
+      "to",
+      "for",
+      "of",
+      "with"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "give my love to = ฝากความคิดถึงถึง",
+     "blankNo": 7
+    }
+   ]
+  }
+ ],
+ "readingPassages": [
+  {
+   "id": "tgat-rc-001",
+   "title": "Swimming pool closure notice",
+   "kind": "reading",
+   "text": "NOTICE: Swimming Pool Closure\n\nThe community swimming pool will be closed from 1 to 5 March for its annual cleaning and repairs. During this time, our staff will replace the water filters and repaint the pool walls. We apologise for any inconvenience this may cause.\n\nMembers who have a monthly pass will have their membership extended by one week at no extra charge. The pool will reopen on 6 March at 7 a.m. with normal opening hours.\n\nWhile the pool is closed, members are welcome to use the gym and the fitness classes as usual. If you have any questions, please contact the reception desk or call 02-345-6789.\n\nThank you for your understanding.\nThe Management",
+   "questions": [
+    {
+     "id": "tgat-rc-001-1",
+     "stem": "What is the main purpose of this notice?",
+     "options": [
+      "To tell members the pool will be closed for cleaning.",
+      "To sell new pool memberships.",
+      "To announce a brand-new pool.",
+      "To advertise fitness classes."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ใจความหลัก: แจ้งปิดสระเพื่อทำความสะอาด",
+     "qtype": "MAIN_IDEA"
+    },
+    {
+     "id": "tgat-rc-001-2",
+     "stem": "What will the staff do during the closure?",
+     "options": [
+      "Replace the filters and repaint the walls.",
+      "Build a completely new pool.",
+      "Clean the gym equipment.",
+      "Teach swimming lessons."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุในย่อหน้าแรก: เปลี่ยนไส้กรอง+ทาสีผนัง",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-001-3",
+     "stem": "What will members with a monthly pass receive?",
+     "options": [
+      "A one-week extension of their membership.",
+      "A full cash refund.",
+      "A free personal trainer.",
+      "A new membership card."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุชัด: ต่ออายุให้ 1 สัปดาห์",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-001-4",
+     "stem": "What can members do while the pool is closed?",
+     "options": [
+      "Use the gym and the fitness classes.",
+      "Swim at a different branch.",
+      "Get all their money back.",
+      "Nothing at the centre."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อนุมานจากย่อหน้าที่ระบุให้ใช้ยิม/คลาสได้",
+     "qtype": "INFERENCE"
+    },
+    {
+     "id": "tgat-rc-001-5",
+     "stem": "The word \"inconvenience\" is closest in meaning to ___.",
+     "options": [
+      "trouble or difficulty",
+      "great happiness",
+      "a kind of repair",
+      "a special discount"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "inconvenience = ความไม่สะดวก/ความยุ่งยาก",
+     "qtype": "VOCAB"
+    }
+   ],
+   "wordCount": 111,
+   "verified": true
+  },
+  {
+   "id": "tgat-rc-002",
+   "title": "A morning walk",
+   "kind": "reading",
+   "text": "Many people drink a cup of coffee to wake up in the morning, but did you know that a short walk can be just as effective? When we walk, our heart beats faster and sends more oxygen to the brain. This helps us feel more awake and ready to think clearly.\n\nA morning walk has other benefits too. Spending a few minutes outdoors in natural light tells our body that the day has begun, which can improve our mood and help us sleep better at night. Walking is also gentle exercise that almost anyone can do, and it costs nothing.\n\nOf course, this does not mean you must give up your morning coffee. But next time you feel sleepy, you might try going for a short walk first. You may be surprised at how refreshed you feel.",
+   "questions": [
+    {
+     "id": "tgat-rc-002-1",
+     "stem": "What is the main idea of the article?",
+     "options": [
+      "A short morning walk can make you feel awake, much like coffee.",
+      "Coffee is bad for your health.",
+      "Everyone should stop drinking coffee.",
+      "Walking is an expensive hobby."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ใจความหลัก: เดินตอนเช้าช่วยให้ตื่นตัวเหมือนกาแฟ",
+     "qtype": "MAIN_IDEA"
+    },
+    {
+     "id": "tgat-rc-002-2",
+     "stem": "According to the text, what happens when we walk?",
+     "options": [
+      "The heart sends more oxygen to the brain.",
+      "The brain stops working for a while.",
+      "We immediately feel sleepy.",
+      "We drink much less water."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุชัดในย่อหน้าแรก",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-002-3",
+     "stem": "What is one other benefit of a morning walk?",
+     "options": [
+      "It can improve mood and help us sleep better.",
+      "It makes coffee taste better.",
+      "It always costs a lot of money.",
+      "It can replace breakfast."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ย่อหน้าสอง: อารมณ์ดีขึ้น+นอนหลับดีขึ้น",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-002-4",
+     "stem": "What does the writer suggest to the reader?",
+     "options": [
+      "Try walking when you feel sleepy, not only drinking coffee.",
+      "Never drink coffee again in your life.",
+      "Walk for several hours each day.",
+      "Always stay indoors in the morning."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อนุมานจากย่อหน้าสุดท้าย",
+     "qtype": "INFERENCE"
+    },
+    {
+     "id": "tgat-rc-002-5",
+     "stem": "The word \"refreshed\" is closest in meaning to ___.",
+     "options": [
+      "feeling new energy",
+      "extremely tired",
+      "very hungry",
+      "quite bored"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "refreshed = สดชื่น มีพลังใหม่",
+     "qtype": "VOCAB"
+    }
+   ],
+   "wordCount": 137,
+   "verified": true
+  },
+  {
+   "id": "tgat-rc-003",
+   "title": "Email about a wrong order",
+   "kind": "reading",
+   "text": "From: David Lee\nTo: Customer Service\nSubject: Problem with my online order\n\nDear Sir or Madam,\n\nI am writing about my recent order (number 48213), which I received yesterday. Unfortunately, the jacket I ordered is the wrong size. I asked for a medium, but a small was delivered instead.\n\nI have checked my order confirmation, and it clearly states that I selected a medium. The jacket itself is in perfect condition, so I would simply like to exchange it for the correct size.\n\nCould you please tell me how to return the small jacket and arrange for a medium to be sent? I would be grateful if this could be done soon, as I would like to wear it on holiday next week.\n\nI look forward to your reply.\n\nYours faithfully,\nDavid Lee",
+   "questions": [
+    {
+     "id": "tgat-rc-003-1",
+     "stem": "Why did David write this email?",
+     "options": [
+      "To exchange a jacket for the correct size.",
+      "To order a brand-new jacket.",
+      "To complain about a high price.",
+      "To cancel his whole order."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "จุดประสงค์: ขอเปลี่ยนไซซ์เสื้อ",
+     "qtype": "MAIN_IDEA"
+    },
+    {
+     "id": "tgat-rc-003-2",
+     "stem": "What is wrong with the jacket David received?",
+     "options": [
+      "It is the wrong size.",
+      "It is badly damaged.",
+      "It is the wrong colour.",
+      "It arrived very late."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุชัด: ส่งผิดไซซ์",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-003-3",
+     "stem": "What size did David originally order?",
+     "options": [
+      "Medium.",
+      "Small.",
+      "Large.",
+      "Extra small."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "เขายืนยันว่าเลือก medium",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-003-4",
+     "stem": "Why does David want the problem solved soon?",
+     "options": [
+      "He wants to wear the jacket on holiday next week.",
+      "The shop is closing down.",
+      "He urgently needs a refund.",
+      "He is moving to a new house."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อนุมานจากเหตุผลท้ายอีเมล",
+     "qtype": "INFERENCE"
+    },
+    {
+     "id": "tgat-rc-003-5",
+     "stem": "The word \"grateful\" is closest in meaning to ___.",
+     "options": [
+      "thankful",
+      "very angry",
+      "quite worried",
+      "greatly surprised"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "grateful = รู้สึกขอบคุณ",
+     "qtype": "VOCAB"
+    }
+   ],
+   "wordCount": 132,
+   "verified": true
+  },
+  {
+   "id": "tgat-rc-004",
+   "title": "Cooking class advertisement",
+   "text": "Learn to Cook with Chef Mai!\n\nHave you always wanted to cook delicious Thai food but never knew where to start? Join our weekend cooking classes at the Sukhumvit Cooking School and discover how easy it can be!\n\nOur friendly teacher, Chef Mai, has over fifteen years of experience and will guide you step by step. Each class is small, with no more than eight students, so everyone gets plenty of attention. You will learn to prepare three classic dishes, and best of all, you get to eat what you make!\n\nClasses run every Saturday and Sunday from 10 a.m. to 1 p.m. The price is 1,200 baht per class, which includes all ingredients and a recipe booklet to take home.\n\nSpaces fill up quickly, so book online today at www.maicooking.com. We can't wait to cook with you!",
+   "kind": "reading",
+   "wordCount": 139,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-rc-004-1",
+     "stem": "What is the main purpose of this text?",
+     "options": [
+      "To advertise a cooking class.",
+      "To sell a cookbook.",
+      "To open a new restaurant.",
+      "To find a new chef."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "จุดประสงค์: โฆษณาคลาสทำอาหาร",
+     "qtype": "MAIN_IDEA"
+    },
+    {
+     "id": "tgat-rc-004-2",
+     "stem": "How many students are in each class at most?",
+     "options": [
+      "Eight.",
+      "Fifteen.",
+      "Three.",
+      "Ten."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุ no more than eight",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-004-3",
+     "stem": "What is included in the price?",
+     "options": [
+      "All ingredients and a recipe booklet.",
+      "A free apron.",
+      "Free transport.",
+      "A certificate."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุชัดในย่อหน้าราคา",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-004-4",
+     "stem": "Why does the text say \"Spaces fill up quickly\"?",
+     "options": [
+      "To encourage people to book soon.",
+      "Because the school is small.",
+      "Because cooking is hard.",
+      "To explain the price."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "กระตุ้นให้รีบจอง",
+     "qtype": "INFERENCE"
+    },
+    {
+     "id": "tgat-rc-004-5",
+     "stem": "The word \"guide\" is closest in meaning to ___.",
+     "options": [
+      "lead or help",
+      "cook",
+      "pay",
+      "watch silently"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "guide = นำ/ช่วยแนะนำ",
+     "qtype": "VOCAB"
+    }
+   ]
+  },
+  {
+   "id": "tgat-rc-005",
+   "title": "Using less plastic",
+   "text": "These days, many people are trying to use less plastic, and small changes can make a big difference. One of the easiest steps is to carry a reusable shopping bag. Plastic bags are used for only a few minutes but can take hundreds of years to break down.\n\nAnother simple idea is to use a refillable water bottle instead of buying bottled water. Not only does this reduce waste, but it also saves money over time. Many public places now have free water stations where you can refill your bottle.\n\nSome people worry that living with less plastic is difficult or expensive. In fact, the opposite is often true. By reusing items and buying less, families can save money while helping the environment.\n\nOf course, no one can be perfect. But if everyone makes a few small changes, together we can reduce the amount of plastic waste enormously.",
+   "kind": "reading",
+   "wordCount": 148,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-rc-005-1",
+     "stem": "What is the main idea of the article?",
+     "options": [
+      "Small changes can help us use less plastic.",
+      "Plastic is impossible to avoid.",
+      "Bottled water is dangerous to drink.",
+      "Shopping bags are very expensive."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ใจความหลัก: การเปลี่ยนเล็ก ๆ ช่วยลดพลาสติก",
+     "qtype": "MAIN_IDEA"
+    },
+    {
+     "id": "tgat-rc-005-2",
+     "stem": "How long can a plastic bag take to break down?",
+     "options": [
+      "Hundreds of years.",
+      "A few minutes.",
+      "A few days.",
+      "About ten years."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุชัดในย่อหน้าแรก",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-005-3",
+     "stem": "Besides reducing waste, what is one benefit of a refillable bottle?",
+     "options": [
+      "It saves money over time.",
+      "It tastes much better.",
+      "It is very heavy.",
+      "It is given for free."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุ saves money over time",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-005-4",
+     "stem": "What does the writer believe about living with less plastic?",
+     "options": [
+      "It is usually easier and cheaper than people think.",
+      "It is always very expensive.",
+      "It is completely impossible.",
+      "It only helps big companies."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ผู้เขียนบอกว่าตรงข้ามกับที่คนกังวล",
+     "qtype": "INFERENCE"
+    },
+    {
+     "id": "tgat-rc-005-5",
+     "stem": "The word \"enormously\" is closest in meaning to ___.",
+     "options": [
+      "very greatly",
+      "only slightly",
+      "very slowly",
+      "quite rarely"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "enormously = อย่างมหาศาล",
+     "qtype": "VOCAB"
+    }
+   ]
+  },
+  {
+   "id": "tgat-rc-006",
+   "title": "Email: change of meeting time",
+   "text": "Subject: Change of meeting time\n\nHi everyone,\n\nI'm writing to let you know that our team meeting, originally planned for Tuesday at 2 p.m., has been moved to Wednesday at 10 a.m. I'm sorry for the short notice. Unfortunately, the meeting room was double-booked on Tuesday, and Wednesday morning was the only time that worked for everyone.\n\nThe meeting will now take place in Room B on the second floor, not in our usual room. Please bring your progress reports, as we will be discussing the new project schedule.\n\nIf you cannot attend at the new time, please let me know as soon as possible so we can arrange a call instead.\n\nThanks for your understanding, and see you on Wednesday.\nBest, Daniel",
+   "kind": "reading",
+   "wordCount": 124,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-rc-006-1",
+     "stem": "Why did Daniel write this email?",
+     "options": [
+      "To inform the team that the meeting time has changed.",
+      "To cancel the meeting completely.",
+      "To invite new members to the team.",
+      "To share a finished report."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "จุดประสงค์: แจ้งเปลี่ยนเวลาประชุม",
+     "qtype": "MAIN_IDEA"
+    },
+    {
+     "id": "tgat-rc-006-2",
+     "stem": "When will the meeting now take place?",
+     "options": [
+      "Wednesday at 10 a.m.",
+      "Tuesday at 2 p.m.",
+      "Wednesday at 2 p.m.",
+      "Tuesday morning."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุชัด",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-006-3",
+     "stem": "Why was the meeting moved?",
+     "options": [
+      "The original room was double-booked.",
+      "Daniel was feeling sick.",
+      "No one could come on Tuesday.",
+      "The project was cancelled."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "เหตุผล: ห้องถูกจองซ้อน",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-006-4",
+     "stem": "What should team members bring?",
+     "options": [
+      "Their progress reports.",
+      "Their laptops.",
+      "Some food to share.",
+      "Nothing at all."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุ bring your progress reports",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-006-5",
+     "stem": "What should you do if you cannot attend?",
+     "options": [
+      "Tell Daniel soon so a call can be arranged.",
+      "Come to the meeting anyway.",
+      "Cancel the whole project.",
+      "Simply ignore the email."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อนุมานจากย่อหน้าท้าย",
+     "qtype": "INFERENCE"
+    }
+   ]
+  },
+  {
+   "id": "tgat-rc-007",
+   "title": "Notice: gym schedule change",
+   "text": "NOTICE TO ALL MEMBERS\n\nPlease note that, starting next Monday, the gym will be opening one hour earlier, at 6 a.m., on weekdays. We are making this change because many members have asked for more time to exercise before work.\n\nAt the same time, the Saturday closing time will move from 8 p.m. to 6 p.m. The gym will remain closed on Sundays, as usual, for cleaning and maintenance.\n\nThe new group fitness timetable is now available at the reception desk and on our website. We have added two new classes: morning yoga and evening cycling.\n\nWe hope these changes make it easier for you to fit exercise into your busy schedule. If you have any feedback, please speak to a member of staff.\n\nThank you, The Management",
+   "kind": "reading",
+   "wordCount": 128,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-rc-007-1",
+     "stem": "What is the notice mainly about?",
+     "options": [
+      "Changes to the gym's opening hours and classes.",
+      "A brand-new gym opening soon.",
+      "An increase in membership prices.",
+      "A new cleaning service."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ใจความหลัก: แจ้งเปลี่ยนเวลา+คลาส",
+     "qtype": "MAIN_IDEA"
+    },
+    {
+     "id": "tgat-rc-007-2",
+     "stem": "What time will the gym open on weekdays from next Monday?",
+     "options": [
+      "6 a.m.",
+      "7 a.m.",
+      "8 a.m.",
+      "6 p.m."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุ opening at 6 a.m.",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-007-3",
+     "stem": "Why is the gym opening earlier?",
+     "options": [
+      "Members wanted more time to exercise before work.",
+      "To save electricity costs.",
+      "Because it now closes early.",
+      "For extra cleaning time."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "เหตุผลที่ระบุ",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-007-4",
+     "stem": "Which two new classes have been added?",
+     "options": [
+      "Morning yoga and evening cycling.",
+      "Swimming and boxing.",
+      "Dancing and running.",
+      "None have been added."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุชัด",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-007-5",
+     "stem": "What can we understand about Sundays?",
+     "options": [
+      "The gym stays closed for cleaning.",
+      "The gym opens very late.",
+      "All classes are free.",
+      "It is the busiest day."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อนุมานจาก remain closed on Sundays",
+     "qtype": "INFERENCE"
+    }
+   ]
+  },
+  {
+   "id": "tgat-rc-008",
+   "title": "A young inventor",
+   "text": "Somchai Pho is a young Thai inventor who has become well known for his clever, low-cost solutions to everyday problems. He grew up in a small village in the northeast, where his family farmed rice. As a child, he loved taking apart broken radios and toys to see how they worked.\n\nAfter studying engineering at university, Somchai decided to return to his hometown instead of working in the city. He wanted to help local farmers, many of whom struggled with the high cost of equipment. His first invention was a simple, solar-powered water pump that cost far less than the ones in shops.\n\nToday, Somchai runs a small workshop that trains young people in his community. He believes that good ideas do not need to be expensive. \"The best inventions,\" he often says, \"solve real problems for real people.\" His work has inspired many other young Thais to use their skills to help others.",
+   "kind": "reading",
+   "wordCount": 156,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-rc-008-1",
+     "stem": "What is the text mainly about?",
+     "options": [
+      "A young inventor who creates low-cost solutions.",
+      "A famous rice farmer.",
+      "A university professor.",
+      "A radio repair shop."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ใจความหลัก: นักประดิษฐ์รุ่นใหม่ราคาประหยัด",
+     "qtype": "MAIN_IDEA"
+    },
+    {
+     "id": "tgat-rc-008-2",
+     "stem": "What did Somchai enjoy doing as a child?",
+     "options": [
+      "Taking apart broken radios and toys.",
+      "Farming rice all day.",
+      "Studying in the big city.",
+      "Running a small shop."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุในย่อหน้าแรก",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-008-3",
+     "stem": "What was his first invention?",
+     "options": [
+      "A solar-powered water pump.",
+      "A new kind of radio.",
+      "A modern tractor.",
+      "A solar panel factory."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุชัด",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-008-4",
+     "stem": "What does Somchai do today?",
+     "options": [
+      "He runs a workshop that trains young people.",
+      "He farms rice with his family.",
+      "He works in a city office.",
+      "He sells radios in a shop."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุ runs a workshop",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-008-5",
+     "stem": "What does Somchai believe?",
+     "options": [
+      "Good ideas don't have to be expensive.",
+      "Only rich people can invent things.",
+      "City jobs are always the best.",
+      "Farming is very easy work."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อนุมานจากคำพูดของเขา",
+     "qtype": "INFERENCE"
+    }
+   ]
+  },
+  {
+   "id": "tgat-rc-009",
+   "title": "Product review: earphones",
+   "text": "I bought the SoundWave X earphones last month, and overall I'm very happy with them. The first thing I noticed was the sound quality, which is excellent for the price. The bass is strong without being too heavy, and voices are clear when I'm on a call.\n\nThe battery is another strong point. A single charge lasts about eight hours, which is more than enough for a day at work. The case charges them quickly too.\n\nThere are a few small downsides, however. The earphones don't fit my ears perfectly, so they can feel a little loose when I run. I also wish the app had more settings to adjust the sound.\n\nDespite these minor problems, I would still recommend the SoundWave X to anyone looking for affordable, good-quality earphones. For the price, they offer great value, and I use them every single day.",
+   "kind": "reading",
+   "wordCount": 145,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-rc-009-1",
+     "stem": "What is the purpose of this text?",
+     "options": [
+      "To review a pair of earphones.",
+      "To sell a new phone.",
+      "To advertise a music app.",
+      "To complain to a shop."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "จุดประสงค์: รีวิวหูฟัง",
+     "qtype": "MAIN_IDEA"
+    },
+    {
+     "id": "tgat-rc-009-2",
+     "stem": "How long does the battery last on one charge?",
+     "options": [
+      "About eight hours.",
+      "About two hours.",
+      "A whole week.",
+      "Only one hour."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุ about eight hours",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-009-3",
+     "stem": "What is one downside the writer mentions?",
+     "options": [
+      "The earphones can feel loose when running.",
+      "The sound quality is poor.",
+      "The battery is very weak.",
+      "They are extremely expensive."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุ feel a little loose",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-009-4",
+     "stem": "What is the writer's overall opinion?",
+     "options": [
+      "They are good value and worth recommending.",
+      "They are a complete waste of money.",
+      "They are the best in the whole world.",
+      "They are far too expensive."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อนุมานจากประโยคสรุป",
+     "qtype": "INFERENCE"
+    },
+    {
+     "id": "tgat-rc-009-5",
+     "stem": "The word \"downsides\" is closest in meaning to ___.",
+     "options": [
+      "disadvantages",
+      "advantages",
+      "prices",
+      "features"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "downsides = ข้อเสีย",
+     "qtype": "VOCAB"
+    }
+   ]
+  },
+  {
+   "id": "tgat-rc-010",
+   "title": "How to save money",
+   "text": "Saving money can feel difficult, but a few simple habits can help anyone build up their savings over time. The first step is to keep track of what you spend. Many people are surprised to find how much they spend on small things, like snacks or coffee, without noticing.\n\nOnce you know where your money goes, you can set a realistic budget. Experts suggest saving a small amount each month, even if it is just a little. The important thing is to do it regularly.\n\nAnother useful tip is to wait before making big purchases. If you still want something after a week, it is probably worth buying. If not, you have saved your money.\n\nFinally, try to set a clear goal, such as saving for a trip or an emergency fund. Having a goal makes it much easier to stay motivated and avoid spending on things you don't really need.",
+   "kind": "reading",
+   "wordCount": 151,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-rc-010-1",
+     "stem": "What is the article mainly about?",
+     "options": [
+      "Simple habits to help people save money.",
+      "How to earn a lot more money.",
+      "Why coffee is so expensive.",
+      "How to spend money quickly."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ใจความหลัก: นิสัยง่าย ๆ ในการออม",
+     "qtype": "MAIN_IDEA"
+    },
+    {
+     "id": "tgat-rc-010-2",
+     "stem": "What is the first step the writer suggests?",
+     "options": [
+      "Keeping track of what you spend.",
+      "Setting a long-term goal.",
+      "Buying less coffee.",
+      "Opening a bank account."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุ first step",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-010-3",
+     "stem": "What should you do before making a big purchase?",
+     "options": [
+      "Wait for a week to see if you still want it.",
+      "Buy it immediately.",
+      "Always ask a friend first.",
+      "Save for a whole year."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุ wait before big purchases",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-010-4",
+     "stem": "Why does the writer suggest setting a goal?",
+     "options": [
+      "It helps you stay motivated to save.",
+      "It makes you spend much more.",
+      "It is required by all banks.",
+      "It is the only way to earn money."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อนุมานจากย่อหน้าสุดท้าย",
+     "qtype": "INFERENCE"
+    },
+    {
+     "id": "tgat-rc-010-5",
+     "stem": "The word \"realistic\" is closest in meaning to ___.",
+     "options": [
+      "sensible and possible",
+      "completely impossible",
+      "very expensive",
+      "quite boring"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "realistic = สมเหตุสมผล/เป็นไปได้",
+     "qtype": "VOCAB"
+    }
+   ]
+  },
+  {
+   "id": "tgat-rc-011",
+   "title": "Why bees matter",
+   "text": "Bees are small insects that play a surprisingly important role in our lives. As they move from flower to flower collecting nectar, they also carry pollen, which helps plants produce fruit and seeds. This process, called pollination, is essential for growing many of the foods we eat every day.\n\nIn recent years, however, the number of bees in many parts of the world has fallen. Scientists believe this is partly due to the loss of wild flowers, the use of certain chemicals, and changes in the weather. If bee numbers continue to drop, it could become harder and more expensive to grow some crops.\n\nFortunately, there are simple things people can do to help. Planting flowers, avoiding harmful chemicals in gardens, and supporting local beekeepers can all make a difference. By protecting bees, we are also protecting the food supply that so many people depend on.",
+   "kind": "reading",
+   "wordCount": 146,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-rc-011-1",
+     "stem": "What is the article mainly about?",
+     "options": [
+      "Why bees are important and how to help them.",
+      "How to make honey at home.",
+      "Why bees are dangerous to people.",
+      "How flowers grow from seeds."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ใจความหลัก: ความสำคัญของผึ้ง+วิธีช่วย",
+     "qtype": "MAIN_IDEA"
+    },
+    {
+     "id": "tgat-rc-011-2",
+     "stem": "What is pollination?",
+     "options": [
+      "When bees carry pollen, helping plants make fruit and seeds.",
+      "When bees make honey in a hive.",
+      "When bees sting people in gardens.",
+      "When flowers slowly die."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "นิยามในย่อหน้าแรก",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-011-3",
+     "stem": "What is one reason bee numbers have fallen?",
+     "options": [
+      "The loss of wild flowers and use of chemicals.",
+      "Making too much honey.",
+      "Having too many gardens.",
+      "Cold ocean water."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุสาเหตุ",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-011-4",
+     "stem": "What might happen if bee numbers keep dropping?",
+     "options": [
+      "Some crops could be harder and more expensive to grow.",
+      "Honey would become much cheaper.",
+      "Flowers would grow far faster.",
+      "Nothing at all would change."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อนุมานจากย่อหน้าสอง",
+     "qtype": "INFERENCE"
+    },
+    {
+     "id": "tgat-rc-011-5",
+     "stem": "The word \"essential\" is closest in meaning to ___.",
+     "options": [
+      "very necessary",
+      "quite unnecessary",
+      "rather dangerous",
+      "very expensive"
+     ],
+     "answerIndex": 0,
+     "explanation_th": "essential = จำเป็นอย่างยิ่ง",
+     "qtype": "VOCAB"
+    }
+   ]
+  },
+  {
+   "id": "tgat-rc-012",
+   "title": "A small act of kindness",
+   "text": "When Lara moved to a new city for her job, she felt lonely at first. She didn't know anyone, and the busy streets felt strange and unfriendly. Every evening, she would go straight home and stay in her small flat.\n\nOne Saturday, feeling bored, she decided to visit a local market she had walked past many times. As she looked at the colourful fruit and handmade crafts, an elderly woman at one stall smiled and offered her a piece of mango to try. They began to chat, and the woman told Lara about a community art class held nearby.\n\nLara decided to give it a try. At the class, she met people who shared her interests, and slowly the city began to feel like home. Looking back, she realised that one small moment of kindness had changed everything. Now, she always tries to make newcomers feel welcome too.",
+   "kind": "reading",
+   "wordCount": 148,
+   "verified": true,
+   "questions": [
+    {
+     "id": "tgat-rc-012-1",
+     "stem": "What is the story mainly about?",
+     "options": [
+      "How a small act of kindness helped someone feel at home.",
+      "How to find a good job.",
+      "Why markets are so cheap.",
+      "How to paint pictures."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ใจความหลัก: น้ำใจเล็ก ๆ เปลี่ยนทุกอย่าง",
+     "qtype": "MAIN_IDEA"
+    },
+    {
+     "id": "tgat-rc-012-2",
+     "stem": "How did Lara feel when she first moved to the city?",
+     "options": [
+      "Lonely.",
+      "Very excited.",
+      "Quite angry.",
+      "Extremely proud."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุ felt lonely at first",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-012-3",
+     "stem": "Who offered Lara a piece of mango?",
+     "options": [
+      "An elderly woman at a market stall.",
+      "Her new boss at work.",
+      "A friendly neighbour.",
+      "An art teacher."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุชัด",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-012-4",
+     "stem": "What did Lara do after hearing about the art class?",
+     "options": [
+      "She decided to try it.",
+      "She completely ignored it.",
+      "She moved away again.",
+      "She opened her own stall."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "ระบุ decided to give it a try",
+     "qtype": "DETAIL"
+    },
+    {
+     "id": "tgat-rc-012-5",
+     "stem": "What does Lara do now?",
+     "options": [
+      "She tries to make newcomers feel welcome.",
+      "She avoids all markets.",
+      "She stays at home every day.",
+      "She has moved to another city."
+     ],
+     "answerIndex": 0,
+     "explanation_th": "อนุมานจากประโยคสุดท้าย",
+     "qtype": "INFERENCE"
+    }
+   ]
+  }
+ ]
+}
