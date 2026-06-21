@@ -7,10 +7,14 @@
 import { db } from "./firebase";
 import { doc, getDoc, collection, getDocs } from "firebase/firestore";
 import { emailToId, ymd } from "./season";
-import { TGAT_SEASON_ID, TGAT_ATTEMPTS_PER_DAY } from "./tgat-season";
+import { TGAT_SEASON_ID, TGAT_ATTEMPTS_PER_DAY, TGAT_SEASON_START, TGAT_SEASON_END } from "./tgat-season";
 
 const MOCK_COLLECTION = "mockResults";
 const STUDENTS = "students";
+
+// ช่วงแข่งจริง (มิลลิวินาที) — นับอันดับเฉพาะผลที่ทำในช่วงนี้
+const WINDOW_START = TGAT_SEASON_START.getTime();
+const WINDOW_END = TGAT_SEASON_END.getTime();
 
 export interface TgatRankEntry {
   email: string;
@@ -37,6 +41,9 @@ export async function loadTgatLeaderboard(): Promise<TgatRankEntry[]> {
       const score = d.score ?? d.percent ?? 0;
       const timeSec = d.timeSec ?? 0;
       const ms = d.createdAt?.toMillis?.() ?? 0;
+      // นับเฉพาะผลที่ทำในช่วงแข่งจริง (17 ส.ค. – 25 ก.ย. 2569)
+      // ก่อนเริ่ม = ซ้อม (ไม่นับ) · หลังปิด = แช่อันดับสุดท้ายไว้ (ผลใหม่ไม่นับ)
+      if (ms < WINDOW_START || ms > WINDOW_END) return;
       const cur = byEmail.get(email);
       if (!cur) {
         byEmail.set(email, { name: d.name || "(ไม่มีชื่อ)", nameAtMs: ms, bestScore: score, bestTimeSec: timeSec });
