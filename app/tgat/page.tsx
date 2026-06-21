@@ -9,7 +9,7 @@ import {
   TGAT_SECTION_LABEL,
   type TgatSection,
 } from "../lib/tgat";
-import { TGAT_ATTEMPTS_PER_DAY } from "../lib/tgat-season";
+import { TGAT_ATTEMPTS_PER_DAY, isTgatSeasonStarted, isTgatSeasonOver } from "../lib/tgat-season";
 
 type Phase = "intro" | "loading" | "taking" | "result";
 
@@ -286,6 +286,16 @@ export default function TgatPage() {
             <p className="font-black">📋 กติกาการแข่งขัน</p>
             <p>⏳ ส่งคำตอบได้หลังทำครบ <b>45 นาที</b> (ก่อนหน้านั้นทบทวน/แก้คำตอบได้)</p>
             <p>🔁 ทำได้ <b>{TGAT_ATTEMPTS_PER_DAY} ครั้ง/วัน</b> · จัดอันดับจาก <b>คะแนนครั้งที่ดีที่สุด</b></p>
+            <p>
+              🏆 ช่วงแข่ง <b>17 ส.ค. – 25 ก.ย. 2569</b>{" "}
+              {isTgatSeasonOver() ? (
+                <b className="text-red-600">· ปิดรอบแล้ว</b>
+              ) : !isTgatSeasonStarted() ? (
+                <b className="text-amber-700">· ตอนนี้ซ้อมได้ (ยังไม่นับอันดับ)</b>
+              ) : (
+                <b className="text-green-700">· กำลังแข่ง!</b>
+              )}
+            </p>
             <p>👀 อยู่ในหน้าจอตลอดการสอบ — ระบบบันทึกการออกจากหน้าจอ</p>
           </div>
           {error && <p className="mt-4 text-sm text-red-600 font-bold">{error}</p>}
