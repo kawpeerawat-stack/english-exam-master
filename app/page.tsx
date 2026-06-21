@@ -373,7 +373,7 @@ export default function HomePage() {
           {/* อันดับการแข่งขัน TGAT (แยกจาก NETSAT) */}
           <div className="rounded-2xl bg-white border-2 border-gray-200 p-5 mt-4">
             <h2 className="text-base font-black text-[#5b21b6] mb-1">🏆 TGAT1 Challenge</h2>
-            <p className="text-[11px] text-gray-500 mb-3">การสื่อสารภาษาอังกฤษ · จัดอันดับจากคะแนนดีที่สุด (เต็ม 100)</p>
+            <p className="text-[11px] text-gray-500 mb-3">การสื่อสารภาษาอังกฤษ · แข่ง 17 ส.ค. – 25 ก.ย. 2569 · คะแนนดีที่สุด</p>
             {loadingData ? (
               <p className="text-sm text-gray-400">กำลังโหลด…</p>
             ) : tgatRanked.length === 0 ? (
