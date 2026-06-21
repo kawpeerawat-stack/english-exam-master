@@ -10,6 +10,7 @@ import {
   type SeasonRankEntry,
 } from "./lib/cloud";
 import { fmtTime } from "./lib/netsat";
+import { loadTgatLeaderboard, type TgatRankEntry } from "./lib/tgat-cloud";
 
 // ── คีย์เก็บตัวตนผู้ใช้ใน localStorage (ใช้อีเมลเป็นกุญแจ เหมือนแอป vocab) ──
 const LS_EMAIL = "exam_user_email";
@@ -37,8 +38,8 @@ const EXAMS: ExamCard[] = [
     items: "60 ข้อ",
     time: "60 นาที",
     parts: "Speaking 30 · Reading 30",
-    href: null,
-    accent: "#003399",
+    href: "/tgat",
+    accent: "#5b21b6",
   },
   {
     key: "ALEVEL",
@@ -82,6 +83,7 @@ export default function HomePage() {
 
   const [profile, setProfile] = useState<StudentProfile | null>(null);
   const [board, setBoard] = useState<SeasonRankEntry[]>([]);
+  const [tgatBoard, setTgatBoard] = useState<TgatRankEntry[]>([]);
   const [loadingData, setLoadingData] = useState(false);
 
   // โหลดตัวตนจาก localStorage ตอนเปิดหน้า
@@ -103,10 +105,11 @@ export default function HomePage() {
     let alive = true;
     setLoadingData(true);
     (async () => {
-      const [p, b] = await Promise.all([loadStudent(email), loadSeasonLeaderboard()]);
+      const [p, b, tb] = await Promise.all([loadStudent(email), loadSeasonLeaderboard(), loadTgatLeaderboard()]);
       if (!alive) return;
       setProfile(p);
       setBoard(b);
+      setTgatBoard(tb);
       if (p?.name && !name) {
         setName(p.name);
         try {
@@ -151,6 +154,7 @@ export default function HomePage() {
     setName("");
     setProfile(null);
     setBoard([]);
+    setTgatBoard([]);
     setEmailInput("");
     setNameInput("");
   }
@@ -213,6 +217,7 @@ export default function HomePage() {
   // หมายเหตุ: ไม่กรอง timeSec อีกแล้ว — เดิมกรอง timeSec>0 ทำให้คนที่ "คะแนนดีสุด"
   // เป็นครั้งที่ไม่มีเวลาบันทึก (ข้อมูลเก่า) หายไปทั้งคน
   const ranked = board.filter((r) => r.bestPercent > 0);
+  const tgatRanked = tgatBoard.filter((r) => r.bestScore > 0);
 
   return (
     <main className="flex-1 bg-[#f4f6fb]">
@@ -297,7 +302,9 @@ export default function HomePage() {
                   {active ? (
                     <Link
                       href={ex.href!}
-                      className="mt-4 block text-center rounded-xl bg-[#003399] text-white font-black py-2.5 hover:bg-[#002266] transition"
+                      className={`mt-4 block text-center rounded-xl text-white font-black py-2.5 transition ${
+                        ex.key === "TGAT" ? "bg-[#5b21b6] hover:bg-[#4c1d95]" : "bg-[#003399] hover:bg-[#002266]"
+                      }`}
                     >
                       เริ่มสอบจำลอง
                     </Link>
@@ -361,6 +368,41 @@ export default function HomePage() {
             <p className="text-[11px] text-gray-400 mt-3">
               จัดอันดับจาก &quot;เปอร์เซ็นต์ครั้งที่ดีที่สุด&quot; เสมอกันตัดที่เวลาน้อยกว่า — ทำซ้ำได้ นับเฉพาะรอบที่ดีสุด
             </p>
+          </div>
+
+          {/* อันดับการแข่งขัน TGAT (แยกจาก NETSAT) */}
+          <div className="rounded-2xl bg-white border-2 border-gray-200 p-5 mt-4">
+            <h2 className="text-base font-black text-[#5b21b6] mb-1">🏆 TGAT1 Challenge</h2>
+            <p className="text-[11px] text-gray-500 mb-3">การสื่อสารภาษาอังกฤษ · จัดอันดับจากคะแนนดีที่สุด (เต็ม 100)</p>
+            {loadingData ? (
+              <p className="text-sm text-gray-400">กำลังโหลด…</p>
+            ) : tgatRanked.length === 0 ? (
+              <p className="text-sm text-gray-400">ยังไม่มีใครทำคะแนน — ลองทำ TGAT ให้จบเพื่อขึ้นอันดับ!</p>
+            ) : (
+              <ol className="space-y-2">
+                {tgatRanked.slice(0, 10).map((row, i) => {
+                  const me = row.email === email.toLowerCase();
+                  const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : `${i + 1}.`;
+                  return (
+                    <li
+                      key={row.email}
+                      className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm ${
+                        me ? "bg-[#5b21b6]/15 font-black" : "bg-gray-50"
+                      }`}
+                    >
+                      <span className="flex items-center gap-2 truncate">
+                        <span className="w-6 text-center">{medal}</span>
+                        <span className="truncate">{me ? "คุณ" : row.name}</span>
+                      </span>
+                      <span className="text-right shrink-0">
+                        <span className="font-bold text-[#5b21b6]">{row.bestScore}/100</span>
+                        <span className="block text-[10px] text-gray-400">{fmtTime(row.timeSec)}</span>
+                      </span>
+                    </li>
+                  );
+                })}
+              </ol>
+            )}
           </div>
         </aside>
       </div>
