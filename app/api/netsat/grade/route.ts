@@ -24,12 +24,14 @@ export async function POST(req: NextRequest) {
       answers?: Record<string, number>;
       tabSwitches?: number;
       awaySec?: number;
+      autoSubmit?: boolean;
     };
     const sessionId = (body.sessionId || "").trim();
     const email = (body.email || "").trim().toLowerCase();
     const answers = body.answers || {};
     const tabSwitches = Number(body.tabSwitches ?? 0);
     const awaySec = Number(body.awaySec ?? 0);
+    const autoSubmit = body.autoSubmit === true;
     if (!sessionId || !email) {
       return NextResponse.json({ error: "ข้อมูลไม่ครบ" }, { status: 400 });
     }
@@ -59,9 +61,10 @@ export async function POST(req: NextRequest) {
     }
 
     // บังคับเวลาขั้นต่ำ 40 นาที (อิงเวลาเซิร์ฟเวอร์ จาก createdAt)
+    // ข้ามได้เมื่อเป็นการส่งอัตโนมัติ (หมดเวลา หรือ ออกจากหน้าจอครบ 3 ครั้ง)
     const startedMs = sess.createdAt?.toMillis?.() ?? 0;
     const elapsedSec = startedMs > 0 ? Math.round((Date.now() - startedMs) / 1000) : EXAM_SECONDS;
-    if (elapsedSec < MIN_SUBMIT_SECONDS - TIME_TOLERANCE_SEC) {
+    if (!autoSubmit && elapsedSec < MIN_SUBMIT_SECONDS - TIME_TOLERANCE_SEC) {
       const wait = MIN_SUBMIT_SECONDS - elapsedSec;
       return NextResponse.json(
         { error: `ยังส่งไม่ได้ ต้องทำอย่างน้อย 40 นาที (เหลืออีกประมาณ ${Math.ceil(wait / 60)} นาที)`, tooEarly: true },
