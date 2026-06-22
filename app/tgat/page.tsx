@@ -116,6 +116,7 @@ export default function TgatPage() {
   const [error, setError] = useState("");
   const [saveMsg, setSaveMsg] = useState("");
   const [tabSwitches, setTabSwitches] = useState(0);
+  const [autoSubmitted, setAutoSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [oath, setOath] = useState(false);
   const [userName, setUserName] = useState("");
@@ -187,7 +188,7 @@ export default function TgatPage() {
     }
   }, []);
 
-  const submit = useCallback(async () => {
+  const submit = useCallback(async (autoSubmit = false) => {
     if (!sessionId || submitting) return;
     if (awayStartRef.current > 0) {
       awayMsRef.current += Date.now() - awayStartRef.current;
@@ -207,7 +208,7 @@ export default function TgatPage() {
       const res = await fetch("/api/tgat/grade", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sessionId, email, answers, tabSwitches: tabSw, awaySec }),
+        body: JSON.stringify({ sessionId, email, answers, tabSwitches: tabSw, awaySec, autoSubmit }),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -235,8 +236,16 @@ export default function TgatPage() {
 
   // หมดเวลา → ส่งอัตโนมัติ
   useEffect(() => {
-    if (phase === "taking" && secondsLeft === 0) submit();
+    if (phase === "taking" && secondsLeft === 0) submit(true);
   }, [phase, secondsLeft, submit]);
+
+  // ออกจากหน้าจอครบ 3 ครั้ง → ส่งข้อสอบอัตโนมัติทันที
+  useEffect(() => {
+    if (phase === "taking" && tabSwitches >= 3) {
+      setAutoSubmitted(true);
+      submit(true);
+    }
+  }, [phase, tabSwitches, submit]);
 
   // จับการออกจากหน้าจอ/สลับแท็บ
   useEffect(() => {
@@ -370,6 +379,11 @@ export default function TgatPage() {
       <main className="flex-1 bg-[#f5f3ff]">
         <div className="max-w-3xl mx-auto px-4 py-8">
           <div className="rounded-3xl bg-white border-2 border-[#7c3aed] shadow-lg p-6 text-center">
+            {autoSubmitted && (
+              <div className="mb-4 rounded-xl bg-red-50 border border-red-300 text-red-700 text-sm font-bold p-3">
+                ⛔ ระบบส่งข้อสอบให้อัตโนมัติ เพราะออกจากหน้าจอครบ 3 ครั้ง
+              </div>
+            )}
             <p className="text-gray-500 font-bold">คะแนนสอบจำลอง TGAT1</p>
             <p className="text-5xl font-black text-[#5b21b6] my-2">{result.score}/100</p>
             <p className="text-gray-600 font-bold">
@@ -527,8 +541,8 @@ export default function TgatPage() {
           </div>
         )}
         {tabSwitches > 0 && (
-          <div className="bg-amber-50 border-t border-amber-200 text-amber-800 text-xs text-center py-1.5 font-bold">
-            ⚠️ ออกจากหน้าสอบแล้ว {tabSwitches} ครั้ง — ระบบบันทึกไว้เพื่อความยุติธรรม กรุณาอยู่ในหน้าจอ
+          <div className="bg-red-50 border-t border-red-200 text-red-700 text-xs text-center py-1.5 font-bold">
+            ⚠️ ออกจากหน้าสอบแล้ว {tabSwitches}/3 ครั้ง — ครบ 3 ครั้ง ระบบจะส่งข้อสอบให้อัตโนมัติทันที! กรุณาอยู่ในหน้าจอ
           </div>
         )}
       </div>
