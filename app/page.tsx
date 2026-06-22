@@ -80,6 +80,8 @@ export default function HomePage() {
   // ฟอร์มล็อกอิน
   const [emailInput, setEmailInput] = useState("");
   const [nameInput, setNameInput] = useState("");
+  const [numberInput, setNumberInput] = useState("");
+  const [roomInput, setRoomInput] = useState("");
 
   const [profile, setProfile] = useState<StudentProfile | null>(null);
   const [board, setBoard] = useState<SeasonRankEntry[]>([]);
@@ -132,15 +134,30 @@ export default function HomePage() {
       alert("กรุณากรอกอีเมลให้ถูกต้อง");
       return;
     }
-    const n = nameInput.trim();
+    const fullName = nameInput.trim();
+    const no = numberInput.trim();
+    const room = roomInput.trim();
+    if (!fullName) {
+      alert("กรุณากรอกชื่อ-นามสกุล");
+      return;
+    }
+    if (!no) {
+      alert("กรุณากรอกเลขที่");
+      return;
+    }
+    if (!room) {
+      alert("กรุณากรอกห้อง (พิมพ์เฉพาะเลขหลัง 6/ เช่น 1)");
+      return;
+    }
+    const display = `${fullName} (เลขที่ ${no} ห้อง 6/${room})`;
     try {
       window.localStorage.setItem(LS_EMAIL, e);
-      if (n) window.localStorage.setItem(LS_NAME, n);
+      window.localStorage.setItem(LS_NAME, display);
     } catch {
       /* ignore */
     }
     setEmail(e);
-    setName(n);
+    setName(display);
   }
 
   function handleLogout() {
@@ -157,6 +174,8 @@ export default function HomePage() {
     setTgatBoard([]);
     setEmailInput("");
     setNameInput("");
+    setNumberInput("");
+    setRoomInput("");
   }
 
   if (!ready) return null;
@@ -180,15 +199,44 @@ export default function HomePage() {
             placeholder="you@example.com"
             className="w-full rounded-xl border-2 border-gray-200 px-4 py-3 mb-4 outline-none focus:border-[#003399]"
           />
-          <label className="block text-sm font-bold text-gray-700 mb-1">ชื่อที่แสดง (ถ้ามีในระบบแล้วเว้นว่างได้)</label>
+          <label className="block text-sm font-bold text-gray-700 mb-1">ชื่อ-นามสกุล</label>
           <input
             type="text"
             value={nameInput}
             onChange={(e) => setNameInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleLogin()}
-            placeholder="เช่น น้องสมชาย"
-            className="w-full rounded-xl border-2 border-gray-200 px-4 py-3 mb-6 outline-none focus:border-[#003399]"
+            placeholder="เช่น สมชาย ใจดี"
+            className="w-full rounded-xl border-2 border-gray-200 px-4 py-3 mb-4 outline-none focus:border-[#003399]"
           />
+          <div className="grid grid-cols-2 gap-3 mb-6">
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">เลขที่</label>
+              <input
+                type="text"
+                inputMode="numeric"
+                value={numberInput}
+                onChange={(e) => setNumberInput(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && handleLogin()}
+                placeholder="เช่น 12"
+                className="w-full rounded-xl border-2 border-gray-200 px-4 py-3 outline-none focus:border-[#003399]"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">ห้อง</label>
+              <div className="flex items-center rounded-xl border-2 border-gray-200 pl-3 focus-within:border-[#003399]">
+                <span className="font-bold text-gray-500 shrink-0">6/</span>
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  value={roomInput}
+                  onChange={(e) => setRoomInput(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleLogin()}
+                  placeholder="1"
+                  className="w-full px-2 py-3 outline-none bg-transparent rounded-r-xl"
+                />
+              </div>
+            </div>
+          </div>
           <button
             onClick={handleLogin}
             className="w-full rounded-xl bg-[#003399] text-white font-black py-3 text-lg hover:bg-[#002266] transition"
