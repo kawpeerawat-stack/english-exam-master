@@ -9,7 +9,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { FieldValue } from "firebase-admin/firestore";
 import { adminDb } from "@/app/lib/firebaseAdmin";
-import { assembleMock, splitAssembled, EXAM_SECONDS, type NetsatBank } from "@/app/lib/netsat";
+import { assembleMock, splitAssembled, EXAM_SECONDS, type NetsatBank, type NetsatLevel } from "@/app/lib/netsat";
 import { SEASON_ID, ATTEMPTS_PER_DAY, emailToId, ymd, isSeasonOver } from "@/app/lib/season";
 import bankData from "@/app/lib/netsat-bank-full.json";
 
@@ -20,11 +20,16 @@ const bank = bankData as unknown as NetsatBank;
 
 export async function POST(req: NextRequest) {
   try {
-    const body = (await req.json()) as { email?: string; name?: string };
+    const body = (await req.json()) as { email?: string; name?: string; level?: string };
     const email = (body.email || "").trim().toLowerCase();
     const name = (body.name || "").trim();
     if (!email || !email.includes("@")) {
       return NextResponse.json({ error: "กรุณาเข้าสู่ระบบก่อนเริ่มสอบ" }, { status: 400 });
+    }
+    const level: NetsatLevel | undefined =
+      body.level === "B1-B2" || body.level === "B2-C1" ? body.level : undefined;
+    if (!level) {
+      return NextResponse.json({ error: "กรุณาเลือกระดับความยากก่อนเริ่มสอบ" }, { status: 400 });
     }
 
     const db = adminDb();
@@ -54,12 +59,13 @@ export async function POST(req: NextRequest) {
     }
 
     // 3) ประกอบชุด + แยกเฉลยเก็บฝั่งเซิร์ฟเวอร์
-    const mock = assembleMock(bank, hidden);
+    const mock = assembleMock(bank, hidden, level);
     const split = splitAssembled(mock);
 
     const sessionRef = await db.collection("mockSessions").add({
       email: id,
       name,
+      level,
       seasonId: SEASON_ID,
       graded: false,
       countsForSeason: !isSeasonOver(),
