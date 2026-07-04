@@ -10366,6 +10366,196 @@
    "explanation_th": "ตัด of ออก : comprise เป็นกริยาสกรรม (transitive) ตามด้วยกรรมได้ทันที ห้ามมี of ต่อท้าย",
    "verified": true,
    "level": "B2-C1"
+  },
+  {
+   "id": "b1b2b1-err-01",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "The young boy in the blue shirt (A)[always] (B)[play] football in the (C)[park] after (D)[school].",
+   "options": [
+    "(A) always",
+    "(B) play",
+    "(C) park",
+    "(D) school"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "play → plays : ประธาน (the young boy) เอกพจน์ กริยาต้องเติม s",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-err-02",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Articles",
+   "stem": "My sister bought (A)[a expensive] computer yesterday because (B)[she needs] to use (C)[it] for her (D)[university project].",
+   "options": [
+    "(A) a expensive",
+    "(B) she needs",
+    "(C) it",
+    "(D) university project"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "a → an : expensive ขึ้นต้นด้วยเสียงสระ ต้องใช้ an",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-err-03",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "Last year, we (A)[go] to Japan for a holiday and (B)[visited] many (C)[beautiful] temples in (D)[Kyoto].",
+   "options": [
+    "(A) go",
+    "(B) visited",
+    "(C) beautiful",
+    "(D) Kyoto"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "go → went : มีคำว่า Last year (อดีต) ต้องใช้ Past Simple",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-err-04",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Quantifiers",
+   "stem": "Because there are (A)[currently] so (B)[much] cars on the road, we will probably (C)[be late] for our (D)[meeting].",
+   "options": [
+    "(A) currently",
+    "(B) much",
+    "(C) be late",
+    "(D) meeting"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "much → many : cars เป็นนามนับได้พหูพจน์ ต้องใช้ many",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-err-05",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The young girl sings (A)[beautiful] in the (B)[school choir], and everyone (C)[enjoys] listening to (D)[her voice].",
+   "options": [
+    "(A) beautiful",
+    "(B) school choir",
+    "(C) enjoys",
+    "(D) her voice"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "beautiful → beautifully : ต้องใช้ Adverb ขยายกริยา sings",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-err-06",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Prepositions",
+   "stem": "I like to (A)[read] a good book (B)[on] the evening before I (C)[go to sleep] in my (D)[bedroom].",
+   "options": [
+    "(A) read",
+    "(B) on",
+    "(C) go to sleep",
+    "(D) bedroom"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "on → in : ช่วงเวลาของวัน (the evening) ต้องใช้ in",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-err-07",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Gerund Infinitive",
+   "stem": "Because her old bicycle is (A)[broken] and cannot be (B)[fixed], she really wants (C)[buying] a (D)[new one].",
+   "options": [
+    "(A) broken",
+    "(B) fixed",
+    "(C) buying",
+    "(D) new one"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "buying → to buy : want ต้องตามด้วย infinitive (to V)",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-err-08",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "Today is (A)[very hot], but I think (B)[tomorrow will be] (C)[much] (D)[hottest] than today.",
+   "options": [
+    "(A) very hot",
+    "(B) tomorrow will be",
+    "(C) much",
+    "(D) hottest"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "hottest → hotter : มี than แสดงการเปรียบเทียบขั้นกว่า ไม่ใช่ขั้นสุด",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-err-09",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Passive Voice",
+   "stem": "My grandmother (A)[baked] a delicious cake (B)[this morning], and it (C)[was] quickly (D)[eat] by the children.",
+   "options": [
+    "(A) baked",
+    "(B) this morning",
+    "(C) was",
+    "(D) eat"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "eat → eaten : Passive Voice (was + V3) ต้องใช้ eaten",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-err-10",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "My mother and father (A)[like to watch] television (B)[together] because (C)[it help] them relax after (D)[working hard].",
+   "options": [
+    "(A) like to watch",
+    "(B) together",
+    "(C) it help",
+    "(D) working hard"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "help → helps : ประธาน it เอกพจน์ กริยาต้องเติม s",
+   "verified": true,
+   "level": "B1-B2"
   }
  ],
  "writingSC": [
@@ -24979,6 +25169,196 @@
    "explanation_th": "By the time + ปัจจุบัน(อนาคต) ต้องคู่กับ Future Perfect (will have ratified) แสดงว่าเสร็จก่อนจุดอ้างอิง",
    "verified": true,
    "level": "B2-C1"
+  },
+  {
+   "id": "b1b2b1-sc-01",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "She ______ in this city since she was a little girl.",
+   "options": [
+    "has lived",
+    "is living",
+    "lives",
+    "will live"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Present Perfect คู่กับ since (เหตุการณ์เริ่มอดีต ต่อเนื่องถึงปัจจุบัน)",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-sc-02",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Modals",
+   "stem": "You ______ wear a helmet when you ride a bicycle for your own safety.",
+   "options": [
+    "can",
+    "should",
+    "might",
+    "would"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "should ให้คำแนะนำ (ควรทำเพื่อความปลอดภัย)",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-sc-03",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "If it rains heavily tomorrow, we ______ the picnic.",
+   "options": [
+    "canceled",
+    "are canceling",
+    "will cancel",
+    "cancel"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Conditional Type 1: If+Present Simple, will+V.infinitive",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-sc-04",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Passive Voice",
+   "stem": "The famous painting ______ by a French artist in 1889.",
+   "options": [
+    "paints",
+    "has painted",
+    "is painting",
+    "was painted"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "Past Simple Passive เพราะมีปีระบุชัดเจน (1889) และประธานถูกกระทำ",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-sc-05",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Gerund Infinitive",
+   "stem": "My brother really enjoys ______ books in his free time.",
+   "options": [
+    "read",
+    "reading",
+    "to read",
+    "to reading"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "enjoy ต้องตามด้วย Gerund (V-ing) เสมอ",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-sc-06",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "This new smartphone is ______ than the old model we had last year.",
+   "options": [
+    "fast",
+    "fastest",
+    "faster",
+    "more fast"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Comparative -er สำหรับคำพยางค์เดียว (fast→faster)",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-sc-07",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Relative Clauses",
+   "stem": "The teacher ______ teaches us mathematics is very kind and patient.",
+   "options": [
+    "who",
+    "which",
+    "whose",
+    "whom"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "who แทนคน (teacher) ที่ทำหน้าที่ประธานของ teaches",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-sc-08",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Vocabulary",
+   "stem": "Eating fresh fruits and vegetables can help to ______ your overall health.",
+   "options": [
+    "damage",
+    "prevent",
+    "require",
+    "improve"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "improve (ทำให้ดีขึ้น) เข้ากับบริบทดูแลสุขภาพ",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-sc-09",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "I ______ TV when the phone rang suddenly.",
+   "options": [
+    "was watching",
+    "watched",
+    "am watching",
+    "have watched"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Past Continuous ถูกขัดจังหวะด้วย Past Simple (rang)",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b1-sc-10",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "Look at those dark clouds! It ______ rain very soon.",
+   "options": [
+    "will be",
+    "is going to",
+    "has to",
+    "ought to"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "going to ใช้คาดเดาอนาคตจากหลักฐานที่เห็น (dark clouds)",
+   "verified": true,
+   "level": "B1-B2"
   }
  ],
  "readingShort": [
@@ -27348,6 +27728,212 @@
      "answerIndex": 0,
      "points": 3,
      "explanation_th": "น้ำเสียงสุภาพตลอดทั้งฉบับ แต่ก็ตั้งคำถามอย่างต่อเนื่องเพื่อขอความกระจ่าง"
+    }
+   ]
+  },
+  {
+   "id": "rd-b1b2-501",
+   "title": "Community Swimming Pool Rules",
+   "genre": "notice (correspondence)",
+   "category": "other",
+   "wordCount": 106,
+   "level": "B1",
+   "targetVocab": [
+    "prohibited",
+    "supervised",
+    "slippery",
+    "lifeguard"
+   ],
+   "verified": true,
+   "tier": "B1-B2",
+   "passage": "Welcome to the Community Swimming Pool!\n\nTo ensure a safe and enjoyable experience for everyone, please follow these simple rules. First, all guests must take a quick shower before entering the pool. Second, running or pushing near the pool edge is strictly prohibited because the floor is very slippery. Third, children under 12 years old must be supervised by an adult at all times. Also, food and drinks are not allowed in the pool area; you can use the picnic tables outside. Finally, please listen to the lifeguards. They are here for your safety.\n\nThe pool is open daily from 8:00 AM to 8:00 PM. Have a great time!",
+   "questions": [
+    {
+     "id": "rd-b1b2-501-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main purpose of this text?",
+     "options": [
+      "To inform guests about safety rules",
+      "To sell tickets for the pool",
+      "To teach people how to swim",
+      "To advertise a new picnic area"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ประกาศแจ้งกฎความปลอดภัยสำหรับผู้ใช้สระ"
+    },
+    {
+     "id": "rd-b1b2-501-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What must guests do before they get into the water?",
+     "options": [
+      "Take a shower",
+      "Buy some food",
+      "Talk to the lifeguard",
+      "Put on a swimming hat"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุตรง ๆ ว่าต้องอาบน้ำก่อนลงสระ"
+    },
+    {
+     "id": "rd-b1b2-501-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why is running near the pool not allowed?",
+     "options": [
+      "The floor is slippery.",
+      "It is too noisy.",
+      "It scares the children.",
+      "The lifeguards are sleeping."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุเหตุผลตรง ๆ (พื้นลื่น)"
+    },
+    {
+     "id": "rd-b1b2-501-q4",
+     "qtype": "INFERENCE",
+     "stem": "What is the rule for a 10-year-old child?",
+     "options": [
+      "They must be with an adult.",
+      "They must swim in the small pool.",
+      "They cannot use the pool.",
+      "They must bring their own food."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "10 ขวบ ต่ำกว่า 12 ปี จึงต้องมีผู้ใหญ่ดูแลตามกฎ"
+    },
+    {
+     "id": "rd-b1b2-501-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Where can you eat your lunch?",
+     "options": [
+      "At the picnic tables outside",
+      "Next to the pool edge",
+      "In the shower room",
+      "In the lifeguard office"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุตรง ๆ ว่ากินได้ที่โต๊ะปิกนิกด้านนอก"
+    },
+    {
+     "id": "rd-b1b2-501-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What time does the swimming pool close?",
+     "options": [
+      "8:00 PM",
+      "12:00 PM",
+      "5:00 PM",
+      "6:00 PM"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุตรง ๆ ในประโยคสุดท้าย"
+    }
+   ]
+  },
+  {
+   "id": "rd-b1b2-502",
+   "title": "Email: Hotel Room Reservation",
+   "genre": "email (correspondence)",
+   "category": "other",
+   "wordCount": 153,
+   "level": "B1",
+   "targetVocab": [
+    "reservation",
+    "vegetarian",
+    "shuttle bus",
+    "confirm"
+   ],
+   "verified": true,
+   "tier": "B1-B2",
+   "passage": "From: sarah.jones@email.com\nTo: reservations@sunnysidehotel.com\nSubject: Room Reservation for October\n\nDear Sunnyside Hotel Team,\n\nI would like to book a double room for two nights, checking in on Friday, October 15th, and checking out on Sunday, October 17th. There will be two adults staying in the room. We would prefer a room on a high floor with a view of the ocean, if possible.\n\nCould you please confirm if breakfast is included in the room price? Also, my husband is vegetarian, so we want to know if your restaurant offers any meat-free options for the morning meal.\n\nWe will be arriving by train at around 3:00 PM. Do you provide a shuttle bus service from the main train station to your hotel? If not, please advise us on the best way to travel there.\n\nI look forward to hearing from you soon to confirm this booking.\n\nBest regards,\nSarah Jones",
+   "questions": [
+    {
+     "id": "rd-b1b2-502-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main purpose of Sarah's email?",
+     "options": [
+      "To book a hotel room",
+      "To complain about the service",
+      "To apply for a job",
+      "To cancel a reservation"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "อีเมลเขียนเพื่อจองห้องพัก"
+    },
+    {
+     "id": "rd-b1b2-502-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How many nights does Sarah want to stay at the hotel?",
+     "options": [
+      "Two",
+      "One",
+      "Three",
+      "Four"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุตรง ๆ ในประโยคแรก (two nights)"
+    },
+    {
+     "id": "rd-b1b2-502-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What kind of room does Sarah prefer?",
+     "options": [
+      "A room on a high floor with an ocean view",
+      "A room on the first floor near the restaurant",
+      "A large room with three beds",
+      "A cheap room with no windows"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุตรง ๆ ในย่อหน้าแรก"
+    },
+    {
+     "id": "rd-b1b2-502-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What does Sarah ask about the breakfast?",
+     "options": [
+      "If it is included and has vegetarian food",
+      "If they serve coffee",
+      "What time it starts",
+      "If she can eat in her room"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ถามว่ารวมอยู่ในราคาไหม และมีมังสวิรัติหรือไม่"
+    },
+    {
+     "id": "rd-b1b2-502-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How will Sarah and her husband travel to the city?",
+     "options": [
+      "By train",
+      "By airplane",
+      "By car",
+      "By bus"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุตรง ๆ ว่าจะมาถึงโดยรถไฟ"
+    },
+    {
+     "id": "rd-b1b2-502-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What information does Sarah need at the end of the email?",
+     "options": [
+      "How to get from the station to the hotel",
+      "The phone number of the hotel",
+      "The names of the hotel staff",
+      "The price of the train ticket"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ถามวิธีเดินทางจากสถานีมาโรงแรมถ้าไม่มีรถรับส่ง"
     }
    ]
   }
@@ -31479,6 +32065,137 @@
      "answerIndex": 0,
      "points": 4,
      "explanation_th": "ผู้เขียนยอมรับข้อดีแต่เน้นย้ำความเสี่ยงที่ยังไม่ได้รับการแก้ไข ไม่ได้เชียร์สุดโต่งฝั่งใดฝั่งหนึ่ง"
+    }
+   ]
+  },
+  {
+   "id": "rd-b1b2-601",
+   "title": "The Benefits of Walking Every Day",
+   "genre": "informational article",
+   "category": "article",
+   "wordCount": 318,
+   "level": "B1",
+   "targetVocab": [
+    "endorphins",
+    "weight-bearing",
+    "pace",
+    "stroll"
+   ],
+   "verified": true,
+   "tier": "B1-B2",
+   "passage": "Walking is one of the simplest and most effective ways to improve your health. You do not need any special equipment, except for a good pair of comfortable shoes, and you can do it almost anywhere. Despite its simplicity, walking regularly provides numerous benefits for both your body and your mind.\n\nFirstly, walking is great for your physical health. It helps to strengthen your heart and lower your blood pressure. Medical experts say that if you walk at a fast pace for just 30 minutes a day, you can significantly reduce the risk of heart disease. Furthermore, walking is a weight-bearing exercise, which means it helps to build strong bones and muscles. It is also an excellent way to maintain a healthy body weight because it burns a good amount of calories.\n\nSecondly, walking has a highly positive impact on mental health. When you engage in physical activity, your brain releases natural chemicals called endorphins. These chemicals naturally make you feel happier and help to reduce feelings of stress and anxiety. Many people find that taking a walk in a local park or surrounded by nature helps them to clear their minds and relax after a long, difficult day at work or school. It can even help you sleep better at night.\n\nFinally, walking is very environmentally friendly. If more people chose to walk short distances instead of driving their cars or riding motorcycles, there would be much less air pollution and fewer traffic jams on the roads. This simple choice makes our cities cleaner, safer, and quieter for everyone who lives there.\n\nIn conclusion, adding a daily walk to your normal routine is a small change that can make a very big difference. Whether you choose to walk to school, take a short stroll during your lunch break, or walk your dog in the evening, you are doing something wonderful for your personal health and the global environment.",
+   "questions": [
+    {
+     "id": "rd-b1b2-601-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main idea of this passage?",
+     "options": [
+      "Walking is simple and brings many health and environmental benefits.",
+      "Walking is the only way to lose weight.",
+      "Driving cars is bad for the environment.",
+      "You need expensive shoes to start walking."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ใจความหลัก: เดินง่ายและมีประโยชน์ต่อสุขภาพและสิ่งแวดล้อม"
+    },
+    {
+     "id": "rd-b1b2-601-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to paragraph 1, what equipment do you need for walking?",
+     "options": [
+      "Good comfortable shoes",
+      "A special uniform",
+      "A fitness tracker",
+      "A water bottle"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุตรง ๆ ว่าต้องการแค่รองเท้าที่สบาย"
+    },
+    {
+     "id": "rd-b1b2-601-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Which physical benefit of walking is mentioned in the passage?",
+     "options": [
+      "It strengthens the heart.",
+      "It improves your eyesight.",
+      "It helps you grow taller.",
+      "It cures common colds."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุตรง ๆ ในย่อหน้าที่ 2"
+    },
+    {
+     "id": "rd-b1b2-601-q4",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "What are endorphins?",
+     "options": [
+      "Natural chemicals that make you feel happy",
+      "Types of weight-bearing exercises",
+      "Special shoes for walking",
+      "Diseases that affect the heart"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "นิยามไว้ตรง ๆ ในบท"
+    },
+    {
+     "id": "rd-b1b2-601-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is a benefit of walking in a park, according to the passage?",
+     "options": [
+      "It helps you relax and clear your mind.",
+      "You can meet new friends.",
+      "You can pick beautiful flowers.",
+      "You can avoid wild animals."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุตรง ๆ ในย่อหน้าที่ 3"
+    },
+    {
+     "id": "rd-b1b2-601-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How does walking help the environment?",
+     "options": [
+      "It reduces air pollution.",
+      "It plants more trees.",
+      "It uses more electricity.",
+      "It cleans the ocean."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุตรง ๆ ในย่อหน้าที่ 4"
+    },
+    {
+     "id": "rd-b1b2-601-q7",
+     "qtype": "PURPOSE_TONE",
+     "stem": "What is the tone of the passage?",
+     "options": [
+      "Encouraging and positive",
+      "Angry and negative",
+      "Funny and joking",
+      "Sad and hopeless"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "น้ำเสียงชักชวนในเชิงบวกตลอดทั้งบท"
+    },
+    {
+     "id": "rd-b1b2-601-q8",
+     "qtype": "MAIN_IDEA",
+     "stem": "What would be the best title for this passage?",
+     "options": [
+      "Why You Should Walk Every Day",
+      "How to Buy Good Shoes",
+      "The Dangers of Heart Disease",
+      "Traffic Jams in the City"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "สรุปใจความรวมของทั้งบท (ประโยชน์ของการเดินทุกวัน)"
     }
    ]
   }
