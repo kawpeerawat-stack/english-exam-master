@@ -9986,6 +9986,196 @@
    "explanation_th": "หนังสือถูกบริจาค (Passive) → will be donated to it",
    "verified": true,
    "level": "B1-B2"
+  },
+  {
+   "id": "b2c1-err-01",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "Dr. Harrison is one of the few (A)[biologists] who (B)[have] consistently warned that the number of endangered sea turtles (C)[are] declining at an (D)[alarming] rate.",
+   "options": [
+    "(A) biologists",
+    "(B) have",
+    "(C) are",
+    "(D) alarming"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "are → is : 'the number of + นามพหูพจน์' เป็นประธานเอกพจน์เสมอ กริยาต้องเป็น is",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-err-02",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Parallel Structure",
+   "stem": "The new software update requires users (A)[to not only] restart their computers but also to manually configure the network settings, (B)[which] has caused (C)[considerable] frustration among (D)[employees].",
+   "options": [
+    "(A) to not only",
+    "(B) which",
+    "(C) considerable",
+    "(D) employees"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "to not only → not only to : ต้องขนานกับ 'but also to' คือ (not only to V1... but also to V2...)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-err-03",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "Although the proposed urban development project promises to (A)[revitalize] the downtown economy, many local residents remain (B)[deeply] skeptical about its (C)[long-term] environmental (D)[sustain].",
+   "options": [
+    "(A) revitalize",
+    "(B) deeply",
+    "(C) long-term",
+    "(D) sustain"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "sustain → sustainability : ตำแหน่งนี้ต้องการคำนาม (กรรมของ about) ไม่ใช่กริยา",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-err-04",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "Recent statistical analyses indicate that the newly implemented marketing strategy is (A)[undoubtedly] (B)[more superior] to the previous one, (C)[especially] concerning customer engagement in (D)[rural] demographics.",
+   "options": [
+    "(A) undoubtedly",
+    "(B) more superior",
+    "(C) especially",
+    "(D) rural"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "more superior → superior : superior เป็นคำเปรียบเทียบสมบูรณ์ในตัวอยู่แล้ว ห้ามเติม more ซ้ำ",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-err-05",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "Ever since the university (A)[established] the comprehensive scholarship program last year, the overall enrollment rate (B)[of] underprivileged students (C)[increased] by nearly (D)[twenty] percent.",
+   "options": [
+    "(A) established",
+    "(B) of",
+    "(C) increased",
+    "(D) twenty"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "increased → has increased : Ever since + เหตุการณ์อดีต ต้องตามด้วย Present Perfect ในประโยคหลัก",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-err-06",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Pronouns",
+   "stem": "The human resources department must carefully evaluate (A)[whomever] is applying for the managerial position, (B)[ensuring] that candidates possess (C)[both] technical expertise and strong (D)[leadership] skills.",
+   "options": [
+    "(A) whomever",
+    "(B) ensuring",
+    "(C) both",
+    "(D) leadership"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "whomever → whoever : ทำหน้าที่เป็นประธานของ is applying ต้องใช้รูปประธาน (whoever)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-err-07",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Prepositions",
+   "stem": "The international committee (A)[tasked] with monitoring global climate initiatives is primarily (B)[composed] of independent scientists who (C)[specialize] in atmospheric research and are capable (D)[for] objective analysis.",
+   "options": [
+    "(A) tasked",
+    "(B) composed",
+    "(C) specialize",
+    "(D) for"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "for → of : บุพบทที่ถูกต้องคือ capable of เสมอ",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-err-08",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "According to the official investigation report, neither the site supervisor nor the construction workers (A)[involved] in the incident (B)[was] aware of the (C)[hazardous] materials stored (D)[underground].",
+   "options": [
+    "(A) involved",
+    "(B) was",
+    "(C) hazardous",
+    "(D) underground"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "was → were : neither...nor กริยาผันตามประธานตัวที่อยู่ใกล้ที่สุด (workers เป็นพหูพจน์)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-err-09",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "The municipal government has boldly decided to (A)[proceed] with the highway expansion project (B)[despite] overwhelming opposition from environmental activists who (C)[advocates] for (D)[public] transportation.",
+   "options": [
+    "(A) proceed",
+    "(B) despite",
+    "(C) advocates",
+    "(D) public"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "advocates → advocate : who แทน activists (พหูพจน์) กริยาจึงไม่เติม -s",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-err-10",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Sentence Structure",
+   "stem": "(A)[Until the time] the rescue team finally reached the stranded hikers, the severe snowstorm (B)[had already buried] most of the essential supplies (C)[that] they (D)[had] carefully packed.",
+   "options": [
+    "(A) Until the time",
+    "(B) had already buried",
+    "(C) that",
+    "(D) had"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Until the time → By the time : By the time + อดีต คู่กับ Past Perfect (had already buried) แสดงเหตุการณ์เสร็จก่อน",
+   "verified": true,
+   "level": "B2-C1"
   }
  ],
  "writingSC": [
@@ -24219,6 +24409,196 @@
    "explanation_th": "ตอบข้อ B — mind + V-ing → don't mind helping",
    "verified": true,
    "level": "B1-B2"
+  },
+  {
+   "id": "b2c1-sc-01",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Inversion",
+   "stem": "Not until the stringent new regulations were fully implemented ______ a significant decline in industrial emissions across the region.",
+   "options": [
+    "did the agency observe",
+    "the agency observed",
+    "had the agency observed",
+    "the agency had observed"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "โครงสร้าง Inversion หลัง Not until ต้องสลับกริยาช่วยไว้หน้าประธาน (did the agency observe)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-sc-02",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Subjunctive",
+   "stem": "Given the volatile nature of the chemical compound, it is imperative that the storage temperature ______ rigorously monitored at all times.",
+   "options": [
+    "is",
+    "must be",
+    "be",
+    "to be"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Subjunctive หลัง it is imperative that ต้องใช้ V. infinitive ไม่ผันรูป (be)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-sc-03",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "If the executive board had invested more heavily in renewable energy research a decade ago, the corporation ______ the industry leader today.",
+   "options": [
+    "will be",
+    "would be",
+    "would have been",
+    "had been"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "Mixed conditional: เงื่อนไขสมมติอดีต (had invested) ส่งผลถึงปัจจุบัน (would be) สังเกตคำว่า today",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-sc-04",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Modal Perfect",
+   "stem": "The architect ______ the structural flaws during the initial inspection, but the oversight wasn't discovered until the foundation cracked.",
+   "options": [
+    "must notice",
+    "could notice",
+    "must have noticed",
+    "should have noticed"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "should have + V3 (ควรทำแต่ไม่ได้ทำ) สอดคล้องกับคำว่า oversight (ความผิดพลาดที่ไม่ถูกพบ)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-sc-05",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Cleft Sentences",
+   "stem": "It was the unprecedented combination of severe drought and exceptionally high winds ______ the devastating spread of the wildfires.",
+   "options": [
+    "that exacerbated",
+    "which exacerbating",
+    "where they exacerbated",
+    "what exacerbated"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "โครงสร้าง Cleft sentence: It was + X + that + กริยา เน้นสาเหตุ",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-sc-06",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "Despite facing numerous setbacks, the research team remained absolutely ______ in their pursuit of a groundbreaking cure for the disease.",
+   "options": [
+    "stubborn",
+    "resolute",
+    "inflexible",
+    "compliant"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "resolute (แน่วแน่) เข้ากับ pursuit of a cure ในเชิงบวก ส่วน stubborn/inflexible มีนัยเชิงลบ ไม่เข้ากับบริบทชื่นชม",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-sc-07",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Concession",
+   "stem": "______ the severe financial constraints of the project, the engineering team managed to design a remarkably efficient filtration system.",
+   "options": [
+    "Provided that",
+    "Instead of",
+    "Notwithstanding",
+    "In accordance with"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Notwithstanding (แม้ว่า) เป็นบุพบทแสดงการขัดแย้ง ตรงกับใจความ 'แม้มีข้อจำกัด แต่ยังทำสำเร็จ'",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-sc-08",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "The professor's argument was so ______ that even his most vocal critics were eventually forced to concede the validity of his main points.",
+   "options": [
+    "ambiguous",
+    "redundant",
+    "superficial",
+    "compelling"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "compelling (น่าเชื่อถือ/มีน้ำหนัก) สอดคล้องกับการที่นักวิจารณ์ต้องยอมรับ (concede)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-sc-09",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Inversion",
+   "stem": "Hardly ______ the ambitious restructuring plan when a sudden economic downturn forced them to reconsider their entire strategy.",
+   "options": [
+    "the company announced",
+    "did the company announce",
+    "had the company announced",
+    "the company had announced"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "โครงสร้าง Hardly had + S + V3 + when ต้องใช้ Past Perfect แบบสลับที่",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1-sc-10",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch1",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "The more meticulously the archaeologists excavated the ancient ruins, ______ they uncovered about the civilization's complex trade networks.",
+   "options": [
+    "the more evidence",
+    "more evidence",
+    "as much evidence",
+    "the most evidence"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "โครงสร้าง The more..., the more... ต้องมี the นำหน้า comparative เสมอทั้งสองประโยค",
+   "verified": true,
+   "level": "B2-C1"
   }
  ],
  "readingShort": [
@@ -26168,6 +26548,218 @@
     }
    ],
    "tier": "B1-B2"
+  },
+  {
+   "id": "rd-c1-501",
+   "title": "Notice: Updated Chemical Storage Protocol",
+   "genre": "notice (correspondence)",
+   "category": "other",
+   "wordCount": 143,
+   "level": "C1",
+   "targetVocab": [
+    "adhere",
+    "mandatory",
+    "containment",
+    "suspension",
+    "concurrently",
+    "abolished",
+    "neutralizer",
+    "evacuate"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "Effective October 1st, all research personnel must strictly adhere to the revised guidelines for handling volatile organic compounds (VOCs).\n\nFirstly, secondary containment trays are now mandatory for all liquid VOCs stored outside the primary fume hoods. Failure to utilize these trays will result in an immediate suspension of laboratory privileges.\n\nSecondly, the digital inventory log must be updated concurrently with any chemical withdrawal. The previous grace period of 24 hours for logging usage has been abolished to ensure real-time tracking of hazardous materials.\n\nFinally, in the event of a minor spill (under 50 ml), personnel should deploy the neutralizer kits located adjacent to the emergency showers before contacting the hazardous materials team. For spills exceeding this volume, evacuate the vicinity immediately and trigger the central alarm.\n\nThese measures are implemented not to hinder your research, but to foster a secure environment for all facility occupants.",
+   "questions": [
+    {
+     "id": "rd-c1-501-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main purpose of this notice?",
+     "options": [
+      "To enforce stricter regulations for handling dangerous chemicals.",
+      "To introduce a new hazardous materials team.",
+      "To ban the use of volatile organic compounds in the lab.",
+      "To explain how to use the emergency showers properly."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ประกาศนี้ออกมาเพื่อบังคับใช้กฎการจัดเก็บ/ใช้งานสารเคมีที่เข้มงวดขึ้น ('must strictly adhere to the revised guidelines')"
+    },
+    {
+     "id": "rd-c1-501-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What consequence awaits those who do not use secondary containment trays?",
+     "options": [
+      "A temporary loss of their right to use the lab.",
+      "A financial penalty.",
+      "Confiscation of their chemicals.",
+      "A mandatory retraining session."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "'immediate suspension of laboratory privileges' = ถูกพักสิทธิใช้ห้องแล็บชั่วคราว"
+    },
+    {
+     "id": "rd-c1-501-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to the updated protocol, when must the digital inventory log be updated?",
+     "options": [
+      "At the exact moment chemicals are taken out.",
+      "Within 24 hours of chemical usage.",
+      "At the end of the working day.",
+      "Before bringing new chemicals into the building."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "'updated concurrently with any chemical withdrawal' = ต้องลงบันทึกทันทีที่นำสารเคมีออกมา (24 ชม.เป็นกฎเก่าที่ถูกยกเลิกแล้ว — ตัวลวง)"
+    },
+    {
+     "id": "rd-c1-501-q4",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word is closest in meaning to \"abolished\" in the third paragraph?",
+     "options": [
+      "Eliminated",
+      "Extended",
+      "Modified",
+      "Authorized"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "abolished แปลว่า ยกเลิก/กำจัดโดยสิ้นเชิง ตรงกับ Eliminated"
+    },
+    {
+     "id": "rd-c1-501-q5",
+     "qtype": "INFERENCE",
+     "stem": "What should a researcher do FIRST if 30 ml of a VOC is spilled?",
+     "options": [
+      "Use the neutralizer kit near the shower.",
+      "Evacuate the laboratory immediately.",
+      "Contact the hazardous materials team.",
+      "Trigger the central fire alarm."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "30 ml < 50 ml (สารหกปริมาณน้อย) ต้องใช้ neutralizer kit ก่อนแจ้งทีมกู้ภัย"
+    },
+    {
+     "id": "rd-c1-501-q6",
+     "qtype": "INFERENCE",
+     "stem": "What can be inferred about the previous laboratory rules?",
+     "options": [
+      "They allowed researchers to delay recording their chemical usage.",
+      "They did not require the use of any fume hoods.",
+      "They were designed to intentionally slow down research.",
+      "They required the evacuation of the lab for any size of spill."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "กฎเดิมมี 'grace period of 24 hours for logging' = เคยผ่อนผันให้ลงบันทึกช้าได้"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-502",
+   "title": "Email: Registration Fee Discrepancy",
+   "genre": "email (correspondence)",
+   "category": "other",
+   "wordCount": 215,
+   "level": "C1",
+   "targetVocab": [
+    "discrepancy",
+    "promotional",
+    "perusal",
+    "rectify",
+    "overcharge",
+    "glitch"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "From: Dr. Arisara Thongkum\nTo: Registration Department, Global Tech Symposium\nSubject: Discrepancy in Registration Invoice #GTS-4092\n\nDear Registration Team,\n\nI am writing to formally address a billing discrepancy regarding my registration for the upcoming Global Tech Symposium scheduled for November 12th.\n\nUpon reviewing my corporate credit card statement this morning, I noticed a charge of $850. However, I registered on August 15th, which fell well within the \"Early Bird\" promotional window that guaranteed a discounted rate of $600. Furthermore, my colleague, Dr. Smith, registered on the exact same day and was correctly billed the lower amount.\n\nI suspect this error might have occurred because I briefly navigated away from the payment portal to verify my institutional billing address, which may have caused the system to process my application under the standard pricing tier. Regardless of the technical glitch, I possess the automated confirmation email dated August 15th that explicitly quotes the $600 fee.\n\nI have attached a PDF copy of this confirmation email and an excerpt from my credit card statement for your perusal. I kindly request that you rectify this overcharge by issuing a refund of $250 to my original payment method at your earliest convenience.\n\nI look forward to a prompt resolution so I can focus my attention on preparing my keynote presentation.\n\nSincerely,\nDr. Arisara Thongkum",
+   "questions": [
+    {
+     "id": "rd-c1-502-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "Why is Dr. Arisara writing this email?",
+     "options": [
+      "To request a refund for an incorrect registration fee.",
+      "To cancel her registration for the symposium.",
+      "To confirm the date of her keynote presentation.",
+      "To complain about the symposium's confusing website."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "เธอเขียนเพื่อขอเงินคืนจากการถูกคิดค่าลงทะเบียนผิด ('rectify this overcharge by issuing a refund')"
+    },
+    {
+     "id": "rd-c1-502-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How much was Dr. Arisara supposed to pay?",
+     "options": [
+      "$600",
+      "$250",
+      "$4092",
+      "$850"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ราคาช่วง Early Bird ที่เธอควรได้จ่ายคือ $600 ($250 คือยอดที่ขอคืน ไม่ใช่ราคาที่ควรจ่าย — ตัวลวง)"
+    },
+    {
+     "id": "rd-c1-502-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What does Dr. Arisara mention to strengthen her claim?",
+     "options": [
+      "A coworker who registered on the same day got the discount.",
+      "She has attended the symposium many times before.",
+      "She is a keynote speaker at the event.",
+      "Her institution has a special partnership with the symposium."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "อ้างถึง Dr. Smith เพื่อนร่วมงานที่สมัครวันเดียวกันแต่ได้ราคาที่ถูกต้อง"
+    },
+    {
+     "id": "rd-c1-502-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What does Dr. Arisara believe caused the billing error?",
+     "options": [
+      "Leaving the payment page temporarily to check her details.",
+      "Entering her credit card number incorrectly.",
+      "Registering after the early bird deadline had passed.",
+      "A deliberate attempt by the organizers to overcharge her."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "เธอเชื่อว่าระบบรวนเพราะกดออกจากหน้าชำระเงินไปเช็กที่อยู่ชั่วคราว"
+    },
+    {
+     "id": "rd-c1-502-q5",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word best replaces \"rectify\" in the fourth paragraph?",
+     "options": [
+      "Correct",
+      "Investigate",
+      "Document",
+      "Process"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "rectify แปลว่า แก้ไขให้ถูกต้อง ตรงกับ Correct"
+    },
+    {
+     "id": "rd-c1-502-q6",
+     "qtype": "PURPOSE_TONE",
+     "stem": "What is the tone of Dr. Arisara's email?",
+     "options": [
+      "Professional and assertive",
+      "Apologetic and submissive",
+      "Aggressive and threatening",
+      "Casual and friendly"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "น้ำเสียงเป็นทางการ มีหลักฐานชัดเจน ทวงสิทธิ์อย่างหนักแน่นแต่สุภาพ ('I kindly request... at your earliest convenience')"
+    }
+   ]
   }
  ],
  "readingLong": [
@@ -30027,6 +30619,144 @@
     }
    ],
    "tier": "B2-C1"
+  },
+  {
+   "id": "rd-c1-601",
+   "title": "The Hidden Cost of Fast Fashion",
+   "genre": "argumentative article",
+   "category": "article",
+   "wordCount": 430,
+   "level": "C1",
+   "targetVocab": [
+    "paradigm",
+    "predicated",
+    "democratized",
+    "ramifications",
+    "facade",
+    "exorbitant",
+    "degrade",
+    "traction",
+    "mandated",
+    "internalize",
+    "gratification"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "The contemporary apparel industry has undergone a paradigm shift over the past two decades, dominated largely by the phenomenon known as \"fast fashion.\" This business model is predicated on rapidly translating high fashion design trends into low-priced garments, allowing consumers to purchase trendy clothing at a fraction of traditional costs. While this approach has democratized fashion, enabling individuals across various socioeconomic backgrounds to participate in global trends, its underlying economic and environmental ramifications are drawing intense scrutiny from economists and environmentalists alike.\n\nProponents of fast fashion frequently highlight its economic contributions. The industry generates billions of dollars in revenue annually and provides employment for millions of workers in developing nations. By keeping production costs minimal, fast fashion brands stimulate continuous consumer spending, which theoretically bolsters the global retail economy. However, critics argue that this economic boom is largely a facade built upon unsustainable practices. The relentless drive to minimize costs often results in depressed wages and hazardous working conditions in manufacturing hubs. Consequently, the apparent economic benefit to the consumer is subsidized by the exploitation of laborers overseas.\n\nFurthermore, the environmental footprint of fast fashion represents a massive deferred economic cost. The industry is responsible for nearly ten percent of global carbon emissions and is the second-largest consumer of the world's water supply. The synthetic fibers commonly used, such as polyester, do not easily degrade, leading to millions of tons of textile waste languishing in landfills each year. Eventually, governments—and by extension, taxpayers—must bear the exorbitant costs of managing this waste and mitigating the associated environmental degradation.\n\nIn response, a counter-movement advocating for \"sustainable fashion\" has gained traction. Sustainable brands prioritize ethical labor practices and environmentally friendly materials. Admittedly, the initial retail price of sustainable garments is significantly higher, deterring price-sensitive consumers. Nevertheless, advocates emphasize the concept of \"cost per wear.\" A durable, sustainably made shirt may cost three times as much as its fast fashion counterpart, but it is designed to last exponentially longer.\n\nSome policymakers are now proposing \"extended producer responsibility\" (EPR) legislation. Under such laws, clothing manufacturers would be legally mandated to fund the recycling or safe disposal of their products at the end of their lifecycle. If implemented, these regulations would inherently force fast fashion brands to internalize their waste management costs, inevitably driving up the retail prices of their garments and making sustainable options comparatively more competitive. Transitioning the global market requires moving away from the gratification of disposable clothing toward valuing longevity. Until then, the true cost of a five-dollar t-shirt will remain hidden, paid for by the planet and future generations.",
+   "questions": [
+    {
+     "id": "rd-c1-601-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the primary purpose of the passage?",
+     "options": [
+      "To analyze the hidden costs and impacts of the fast fashion industry.",
+      "To persuade readers to completely boycott all fast fashion brands.",
+      "To explain the manufacturing process of synthetic clothing fibers.",
+      "To praise the economic benefits that fast fashion brings to developing nations."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "บทความวิเคราะห์ทั้งผลกระทบทางเศรษฐกิจแฝงและสิ่งแวดล้อมของ fast fashion อย่างสมดุล ไม่ได้เชียร์ฝ่ายใดฝ่ายหนึ่งสุดโต่ง"
+    },
+    {
+     "id": "rd-c1-601-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to paragraph 1, how has fast fashion \"democratized\" the industry?",
+     "options": [
+      "By making trendy clothing affordable for people of different income levels.",
+      "By giving factory workers the right to vote on their wages.",
+      "By forcing high-end designers to lower their prices.",
+      "By allowing consumers to design their own cheap garments."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "'enabling individuals across various socioeconomic backgrounds to participate' + 'purchase trendy clothing at a fraction of traditional costs' = คนทุกระดับฐานะเข้าถึงแฟชั่นได้"
+    },
+    {
+     "id": "rd-c1-601-q3",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "The author uses the word \"facade\" in paragraph 2 to suggest that the economic success of fast fashion is ________.",
+     "options": [
+      "misleading or deceptive",
+      "slowly declining",
+      "well-deserved",
+      "visually appealing"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "facade แปลว่า ฉากหน้า/สิ่งลวงตา สื่อว่าความสำเร็จทางเศรษฐกิจนี้ไม่ใช่เรื่องจริงทั้งหมด"
+    },
+    {
+     "id": "rd-c1-601-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Who ultimately pays the environmental costs of textile waste, according to the passage?",
+     "options": [
+      "The taxpayers and governments",
+      "The fast fashion conglomerates",
+      "The retail store owners",
+      "The factory workers in developing nations"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "'governments—and by extension, taxpayers—must bear the exorbitant costs'"
+    },
+    {
+     "id": "rd-c1-601-q5",
+     "qtype": "INFERENCE",
+     "stem": "What does the concept of \"cost per wear\" imply?",
+     "options": [
+      "An expensive but durable item might be a better financial choice in the long run.",
+      "Consumers should only buy clothes that they wear on a daily basis.",
+      "Sustainable brands overcharge customers for basic items.",
+      "Fast fashion is actually cheaper no matter how long the clothes last."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "เสื้อที่แพงกว่าแต่ทนกว่า ('designed to last exponentially longer') อาจคุ้มค่ากว่าในระยะยาว"
+    },
+    {
+     "id": "rd-c1-601-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the main goal of \"extended producer responsibility\" (EPR) legislation?",
+     "options": [
+      "To make manufacturers financially responsible for the disposal of their garments.",
+      "To force companies to pay their overseas workers a higher minimum wage.",
+      "To ban the use of synthetic materials like polyester in clothing.",
+      "To give consumers a tax break for purchasing sustainable clothing."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "'legally mandated to fund the recycling or safe disposal of their products'"
+    },
+    {
+     "id": "rd-c1-601-q7",
+     "qtype": "INFERENCE",
+     "stem": "Which of the following best describes the author's attitude toward the five-dollar t-shirt?",
+     "options": [
+      "Critical",
+      "Enthusiastic",
+      "Indifferent",
+      "Optimistic"
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "ผู้เขียนวิจารณ์ว่าต้นทุนที่แท้จริงถูกผลักภาระให้ 'the planet and future generations' โดยไม่เปิดเผย"
+    },
+    {
+     "id": "rd-c1-601-q8",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "The word \"internalize\" in the final paragraph is closest in meaning to ________.",
+     "options": [
+      "to absorb and take direct responsibility for something",
+      "to publicly announce something",
+      "to transfer the cost to someone else",
+      "to ignore or overlook a problem"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "internalize = รับภาระ/ทำให้เป็นต้นทุนของตนเอง (ตรงข้ามกับ externalize ที่แปลว่าผลักภาระให้ผู้อื่น) — บริบท 'force fast fashion brands to internalize their waste management costs' คือบังคับให้แบรนด์รับผิดชอบต้นทุนกำจัดขยะเอง"
+    }
+   ]
   }
  ]
 }
