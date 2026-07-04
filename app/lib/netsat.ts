@@ -8,6 +8,7 @@
 // ─────────────────────────────────────────────────────────────
 
 export type Section = "WRITING_ERROR" | "WRITING_SC" | "READING_SHORT" | "READING_LONG";
+export type NetsatLevel = "B1-B2" | "B2-C1";
 
 export const SECTION_LABEL: Record<Section, string> = {
   WRITING_ERROR: "Part 1 — Error Identification (หาจุดผิด)",
@@ -27,6 +28,7 @@ export interface BankWritingItem {
   points: number;
   explanation_th: string;
   verified: boolean;
+  level?: NetsatLevel;
 }
 export interface BankReadingQuestion {
   id: string;
@@ -44,6 +46,7 @@ export interface BankReadingPassage {
   category: string;
   wordCount: number;
   level: string;
+  tier?: NetsatLevel;
   targetVocab: string[];
   verified: boolean;
   passage: string;
@@ -118,16 +121,26 @@ function shuffleOptions(options: string[], correctIndex: number): { options: str
   };
 }
 
-// เลือกข้อ Writing: เอาแนว NETSAT ก่อน ถ้าไม่พอเติมจากที่เหลือ
-function pickWriting(pool: BankWritingItem[], n: number): BankWritingItem[] {
+// เลือกข้อ Writing: กรองตามระดับที่เลือกก่อน (ถ้ามี) → เอาแนว NETSAT ทั้งหมด → เติมจากที่เหลือถ้ายังไม่พอ
+function pickWriting(pool: BankWritingItem[], n: number, level?: NetsatLevel): BankWritingItem[] {
   const netsat = pool.filter((x) => x.exam_type === "NETSAT");
   const others = pool.filter((x) => x.exam_type !== "NETSAT");
-  const chosen = sample(netsat, Math.min(n, netsat.length));
-  if (chosen.length < n) chosen.push(...sample(others, n - chosen.length));
+  const primary = level ? netsat.filter((x) => x.level === level) : netsat;
+  const chosen = sample(primary, Math.min(n, primary.length));
+  if (chosen.length < n) {
+    const chosenIds = new Set(chosen.map((x) => x.id));
+    const fallback1 = netsat.filter((x) => !chosenIds.has(x.id));
+    chosen.push(...sample(fallback1, Math.min(n - chosen.length, fallback1.length)));
+  }
+  if (chosen.length < n) {
+    const chosenIds = new Set(chosen.map((x) => x.id));
+    const fallback2 = others.filter((x) => !chosenIds.has(x.id));
+    chosen.push(...sample(fallback2, n - chosen.length));
+  }
   return shuffle(chosen);
 }
 
-export function assembleMock(bank: NetsatBank, hiddenIds: Set<string> = new Set()): AssembledMock {
+export function assembleMock(bank: NetsatBank, hiddenIds: Set<string> = new Set(), level?: NetsatLevel): AssembledMock {
   const questions: MockQuestion[] = [];
   const passages: Record<string, MockPassage> = {};
   let uid = 0;
@@ -135,8 +148,8 @@ export function assembleMock(bank: NetsatBank, hiddenIds: Set<string> = new Set(
 
   // Writing — Error 10 + SC 10 (สลับตัวเลือก) — ตัดข้อที่ครูซ่อนออกก่อน
   const writing: { items: BankWritingItem[]; section: Section }[] = [
-    { items: pickWriting(bank.writingError.filter((x) => !hiddenIds.has(x.id)), 10), section: "WRITING_ERROR" },
-    { items: pickWriting(bank.writingSC.filter((x) => !hiddenIds.has(x.id)), 10), section: "WRITING_SC" },
+    { items: pickWriting(bank.writingError.filter((x) => !hiddenIds.has(x.id)), 10, level), section: "WRITING_ERROR" },
+    { items: pickWriting(bank.writingSC.filter((x) => !hiddenIds.has(x.id)), 10, level), section: "WRITING_SC" },
   ];
   for (const grp of writing) {
     for (const it of grp.items) {
@@ -181,9 +194,12 @@ export function assembleMock(bank: NetsatBank, hiddenIds: Set<string> = new Set(
     }
   };
 
-  const shortP = sample(bank.readingShort, 1)[0];
+  // กรองบทอ่านตามระดับที่เลือก (ถ้ามี) — ถ้ากรองแล้วว่างเปล่า (ไม่ควรเกิด) ใช้คลังทั้งหมดแทน
+  const shortPool = level ? bank.readingShort.filter((p) => p.tier === level) : bank.readingShort;
+  const longPool = level ? bank.readingLong.filter((p) => p.tier === level) : bank.readingLong;
+  const shortP = sample(shortPool.length ? shortPool : bank.readingShort, 1)[0];
   if (shortP) addPassage(shortP, "READING_SHORT", 9);
-  for (const p of shuffle(bank.readingLong)) {
+  for (const p of shuffle(longPool.length ? longPool : bank.readingLong)) {
     if (readingCount >= TARGET_READING) break;
     addPassage(p, "READING_LONG", 11);
   }
