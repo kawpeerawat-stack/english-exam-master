@@ -129,10 +129,11 @@ export default function NetsatPage() {
   const [error, setError] = useState("");
   const [saveMsg, setSaveMsg] = useState("");
   const [tabSwitches, setTabSwitches] = useState(0);
-  const [autoSubmitted, setAutoSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [oath, setOath] = useState(false);
   const [userName, setUserName] = useState("");
+  const [autoSubmitted, setAutoSubmitted] = useState(false);
+  const [level, setLevel] = useState<"B1-B2" | "B2-C1" | null>(null);
 
   const secondsLeftRef = useRef(EXAM_SECONDS);
   const tabSwitchesRef = useRef(0);
@@ -170,7 +171,7 @@ export default function NetsatPage() {
       const res = await fetch("/api/netsat/start", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, name }),
+        body: JSON.stringify({ email, name, level }),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -258,7 +259,7 @@ export default function NetsatPage() {
       setAutoSubmitted(true);
       submit(true);
     }
-  }, [phase, tabSwitches, submit]);
+  }, [phase, secondsLeft, submit]);
 
   // จับการออกจากหน้าจอ/สลับแท็บ
   useEffect(() => {
@@ -316,9 +317,40 @@ export default function NetsatPage() {
           <div className="mt-3 rounded-xl bg-amber-50 border border-amber-200 p-4 text-sm text-amber-800 space-y-1">
             <p className="font-black">📋 กติกาการแข่งขัน</p>
             <p>⏳ ส่งคำตอบได้หลังทำครบ <b>40 นาที</b> (ก่อนหน้านั้นทบทวน/แก้คำตอบได้)</p>
-            <p>🔁 ทำได้ <b>{ATTEMPTS_PER_DAY} ครั้ง/วัน</b> · จัดอันดับจาก <b>เปอร์เซ็นต์ครั้งที่ดีที่สุด</b></p>
+            <p>🔁 ทำได้ <b>{ATTEMPTS_PER_DAY} ครั้ง/วัน</b> (รวมทั้ง 2 ระดับ) · จัดอันดับจาก <b>เปอร์เซ็นต์ครั้งที่ดีที่สุด</b></p>
             <p>👀 อยู่ในหน้าจอตลอดการสอบ — ระบบบันทึกการออกจากหน้าจอ</p>
           </div>
+
+          <div className="mt-3">
+            <p className="font-black text-[#003399] text-center mb-2">🎯 เลือกระดับความยาก</p>
+            <div className="grid grid-cols-2 gap-3">
+              <button
+                type="button"
+                onClick={() => setLevel("B1-B2")}
+                className={`rounded-xl border-2 p-3 text-left transition ${
+                  level === "B1-B2"
+                    ? "border-[#0F6E56] bg-[#E1F5EE]"
+                    : "border-gray-200 bg-white hover:border-[#5DCAA5]"
+                }`}
+              >
+                <span className="inline-flex items-center gap-1 text-[#04342C] font-black text-sm">🌿 B1-B2</span>
+                <p className="text-xs text-gray-600 mt-1">ระดับพื้นฐาน · เหมาะกับการฝึกซ้อม</p>
+              </button>
+              <button
+                type="button"
+                onClick={() => setLevel("B2-C1")}
+                className={`rounded-xl border-2 p-3 text-left transition ${
+                  level === "B2-C1"
+                    ? "border-[#534AB7] bg-[#EEEDFE]"
+                    : "border-gray-200 bg-white hover:border-[#7F77DD]"
+                }`}
+              >
+                <span className="inline-flex items-center gap-1 text-[#26215C] font-black text-sm">👑 B2-C1</span>
+                <p className="text-xs text-gray-600 mt-1">ระดับขั้นสูง · ใกล้เคียงข้อสอบจริง</p>
+              </button>
+            </div>
+          </div>
+
           <div className="mt-3 rounded-xl border-2 border-[#003399]/30 bg-[#003399]/[0.04] p-4">
             <p className="font-black text-[#003399] text-center mb-2">📜 คำปฏิญาณก่อนเริ่มสอบ</p>
             <div className="text-[13px] leading-relaxed text-gray-700 space-y-1 text-center">
@@ -329,7 +361,7 @@ export default function NetsatPage() {
               </p>
               <p>ข้าพเจ้าจะสู้ด้วย<b>สมองและสองมือของข้าพเจ้าเอง</b> ไม่พึ่ง AI ไม่หาทางลัด</p>
               <p>
-                ทุกครั้งที่ข้าพเจ้า<b>ซื่อสัตย์</b> ข้าพเจ้ากำลังสร้าง “ตัวจริง” ที่แข็งแกร่งขึ้น
+                ทุกครั้งที่ข้าพเจ้า<b>ซื่อสัตย์</b> ข้าพเจ้ากำลังสร้าง "ตัวจริง" ที่แข็งแกร่งขึ้น
                 และเดินเข้าใกล้<b className="text-[#003399]">มหาวิทยาลัยในฝัน</b>ทีละก้าว
               </p>
               <p>
@@ -355,10 +387,16 @@ export default function NetsatPage() {
           {error && <p className="mt-4 text-sm text-red-600 font-bold">{error}</p>}
           <button
             onClick={start}
-            disabled={phase === "loading" || !oath}
+            disabled={phase === "loading" || !oath || !level}
             className="mt-4 w-full rounded-xl bg-[#003399] text-white font-black py-3 text-lg hover:bg-[#002266] transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {phase === "loading" ? "กำลังเตรียมข้อสอบ…" : oath ? "เริ่มทำข้อสอบ" : "กรุณายอมรับคำปฏิญาณก่อน"}
+            {phase === "loading"
+              ? "กำลังเตรียมข้อสอบ…"
+              : !level
+              ? "กรุณาเลือกระดับความยากก่อน"
+              : !oath
+              ? "กรุณายอมรับคำปฏิญาณก่อน"
+              : "เริ่มทำข้อสอบ"}
           </button>
           <Link href="/" className="mt-3 block text-center text-sm text-gray-500 underline">
             ← กลับหน้าหลัก
