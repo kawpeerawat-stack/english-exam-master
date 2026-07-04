@@ -317,7 +317,7 @@ export default function NetsatPage() {
           <div className="mt-3 rounded-xl bg-amber-50 border border-amber-200 p-4 text-sm text-amber-800 space-y-1">
             <p className="font-black">📋 กติกาการแข่งขัน</p>
             <p>⏳ ส่งคำตอบได้หลังทำครบ <b>40 นาที</b> (ก่อนหน้านั้นทบทวน/แก้คำตอบได้)</p>
-            <p>🔁 ทำได้ <b>{ATTEMPTS_PER_DAY} ครั้ง/วัน</b> (รวมทั้ง 2 ระดับ) · จัดอันดับจาก <b>เปอร์เซ็นต์ครั้งที่ดีที่สุด</b></p>
+            <p>🔁 ทำได้ <b>{ATTEMPTS_PER_DAY} ครั้ง/วัน ต่อระดับ</b> (รวมสูงสุด {ATTEMPTS_PER_DAY * 2} ครั้ง/วัน) · จัดอันดับจาก <b>เปอร์เซ็นต์ครั้งที่ดีที่สุด</b></p>
             <p>👀 อยู่ในหน้าจอตลอดการสอบ — ระบบบันทึกการออกจากหน้าจอ</p>
           </div>
 
