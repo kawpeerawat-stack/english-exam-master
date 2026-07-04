@@ -10556,6 +10556,196 @@
    "explanation_th": "help → helps : ประธาน it เอกพจน์ กริยาต้องเติม s",
    "verified": true,
    "level": "B1-B2"
+  },
+  {
+   "id": "b2c1b3-err-01",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Prepositions",
+   "stem": "(A)[Despite of] the harsh weather conditions, the determined archaeological team (B)[successfully excavated] a series of undisturbed artifacts that (C)[could potentially] alter our understanding of early (D)[human civilization].",
+   "options": [
+    "(A) Despite of",
+    "(B) successfully excavated",
+    "(C) could potentially",
+    "(D) human civilization"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Despite of → Despite : Despite ห้ามตามด้วย of เด็ดขาด",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-err-02",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The sudden resignation of the company's visionary founder was a (A)[deeply] (B)[shocked] announcement that immediately caused the corporate stock value to (C)[plummet] by more than twenty (D)[percent].",
+   "options": [
+    "(A) deeply",
+    "(B) shocked",
+    "(C) plummet",
+    "(D) percent"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "shocked → shocking : announcement (สิ่งของ) เป็นตัวทำให้ตกใจ ต้องใช้ -ing",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-err-03",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "Dr. Peterson is undoubtedly one of those (A)[dedicated] professors who (B)[always] (C)[prioritizes] the intellectual growth of the students over his own (D)[personal] research ambitions.",
+   "options": [
+    "(A) dedicated",
+    "(B) always",
+    "(C) prioritizes",
+    "(D) personal"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "prioritizes → prioritize : who แทน professors (พหูพจน์) กริยาจึงไม่เติม s",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-err-04",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Double Negative",
+   "stem": "According to the latest meteorological data, the devastating hurricane was (A)[significantly more destructive] (B)[than] expected, leaving the coastal residents with (C)[hardly] (D)[no] time to evacuate.",
+   "options": [
+    "(A) significantly more destructive",
+    "(B) than",
+    "(C) hardly",
+    "(D) no"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "no → any : hardly เป็นปฏิเสธอยู่แล้ว ห้ามใช้คู่กับ no ซ้อน (double negative)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-err-05",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Parallel Structure",
+   "stem": "(A)[Both] the ambitious project proposal must be comprehensively revised to meet the strict budget constraints, (B)[or] it will be (C)[categorically] rejected by the senior (D)[executive] board.",
+   "options": [
+    "(A) Both",
+    "(B) or",
+    "(C) categorically",
+    "(D) executive"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Both → Either : ด้านหลังมี or จึงต้องขนานกับ Either...or",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-err-06",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The brilliant software engineer (A)[could have easily fixed] the critical security vulnerability if the management (B)[had granted] her the (C)[appropriately] authorization (D)[during] the initial testing phase.",
+   "options": [
+    "(A) could have easily fixed",
+    "(B) had granted",
+    "(C) appropriately",
+    "(D) during"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "appropriately → appropriate : ต้องการ Adjective ขยายคำนาม authorization",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-err-07",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Causative",
+   "stem": "In an effort to boost employee morale, the progressive human resources director (A)[let] the staff members (B)[to leave] the office two hours (C)[early] on the day before the (D)[national] holiday.",
+   "options": [
+    "(A) let",
+    "(B) to leave",
+    "(C) early",
+    "(D) national"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "to leave → leave : Causative verb 'let' ต้องตามด้วย bare infinitive (ไม่มี to)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-err-08",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The recently published scientific journal features an extensive article about the indigenous Amazonian tribes, (A)[many of] (B)[whom] have managed to preserve their ancestral traditions (C)[despite] the rapidly (D)[modernize] world.",
+   "options": [
+    "(A) many of",
+    "(B) whom",
+    "(C) despite",
+    "(D) modernize"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "modernize → modernizing : ต้องการ V-ing ทำหน้าที่ adjective ขยายนาม world",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-err-09",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "(A)[There has] been several compelling arguments presented by the defense attorney, yet the jury remains (B)[unconvinced] that the prime suspect is (C)[truly innocent] of the (D)[alleged] corporate fraud.",
+   "options": [
+    "(A) There has",
+    "(B) unconvinced",
+    "(C) truly innocent",
+    "(D) alleged"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "There has → There have : ประธานแท้จริงคือ arguments (พหูพจน์)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-err-10",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Relative Clauses",
+   "stem": "Throughout his illustrious academic career, the distinguished historian (A)[would often travel] to remote European villages to interview elderly residents who (B)[still] (C)[possessing] firsthand knowledge of the (D)[devastating] post-war era.",
+   "options": [
+    "(A) would often travel",
+    "(B) still",
+    "(C) possessing",
+    "(D) devastating"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "possessing → possessed : กริยาในอนุประโยค (who) ต้องเป็นกริยาแท้ ไม่ใช่ -ing ลอย ๆ",
+   "verified": true,
+   "level": "B2-C1"
   }
  ],
  "writingSC": [
@@ -25359,6 +25549,196 @@
    "explanation_th": "going to ใช้คาดเดาอนาคตจากหลักฐานที่เห็น (dark clouds)",
    "verified": true,
    "level": "B1-B2"
+  },
+  {
+   "id": "b2c1b3-sc-01",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Inversion",
+   "stem": "Only by rigorously enforcing the newly established safety protocols ______ a catastrophic failure in the assembly line.",
+   "options": [
+    "can the management prevent",
+    "the management can prevent",
+    "can prevent the management",
+    "the management prevents"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Inversion หลัง Only by + V-ing ต้องสลับกริยาช่วย (can) มาไว้หน้าประธาน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-sc-02",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Subjunctive",
+   "stem": "It is absolutely imperative that the chief financial officer ______ all budget proposals thoroughly before they are presented to the board.",
+   "options": [
+    "reviews",
+    "review",
+    "must review",
+    "reviewed"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "Mandative subjunctive หลัง it is imperative that ต้องใช้ V.พื้นฐาน (review)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-sc-03",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "If the marketing team had conducted a more comprehensive demographic analysis last quarter, the upcoming product launch ______ much more successful right now.",
+   "options": [
+    "will be",
+    "had been",
+    "would be",
+    "would have been"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Mixed conditional: เหตุอดีต (had conducted) ส่งผลถึงปัจจุบัน (would be) สังเกตคำว่า right now",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-sc-04",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Modal Perfect",
+   "stem": "The laboratory assistant ______ the volatile chemicals in the incorrect storage cabinet; otherwise, the spontaneous combustion would not have occurred.",
+   "options": [
+    "should have stored",
+    "could store",
+    "needn't have stored",
+    "must have stored"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "must have + V3 = ข้อสรุปเชิงตรรกะจากหลักฐาน (ยืนยันด้วยประโยค otherwise)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-sc-05",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Cleft Sentences",
+   "stem": "It was the committee's blatant disregard for environmental sustainability ______ the unprecedented backlash from the local community.",
+   "options": [
+    "that provoked",
+    "what provoked",
+    "which provoking",
+    "where it provoked"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Cleft sentence: It was + X + that + กริยา เน้นสาเหตุ",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-sc-06",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "Despite being presented with overwhelming empirical evidence, the executive board remained ______ in their refusal to update the obsolete policy.",
+   "options": [
+    "compliant",
+    "obstinate",
+    "meticulous",
+    "tentative"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "obstinate (ดื้อรั้น) เข้ากับการปฏิเสธที่จะเปลี่ยนแปลงแม้มีหลักฐาน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-sc-07",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Connectors",
+   "stem": "______ the severe logistical challenges caused by the unprecedented blizzard, the global supply chain remained surprisingly resilient.",
+   "options": [
+    "As a result of",
+    "On behalf of",
+    "Notwithstanding",
+    "Provided that"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Notwithstanding (แม้จะมี) ให้ความหมายขัดแย้งที่ถูกต้อง",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-sc-08",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Participle Phrases",
+   "stem": "______ all the necessary ethical approvals from the medical board, the researchers immediately began recruiting human volunteers for the clinical trial.",
+   "options": [
+    "To secure",
+    "Secure",
+    "Have secured",
+    "Having secured"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "Having secured = perfect participle แสดงเหตุการณ์ที่เสร็จก่อนกริยาหลัก",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-sc-09",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "The visiting professor's lecture on quantum mechanics was so ______ that only a handful of graduate students could grasp the fundamental concepts.",
+   "options": [
+    "esoteric",
+    "lucid",
+    "rudimentary",
+    "pragmatic"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "esoteric (เข้าใจยาก รู้เฉพาะกลุ่ม) เข้ากับ 'only a handful could grasp'",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b3-sc-10",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch3",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "______ the structural integrity of the main dam be compromised during the monsoon season, the entire downstream valley would face immediate evacuation.",
+   "options": [
+    "If",
+    "Should",
+    "Were",
+    "Had"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "Should + S + V พื้นฐาน เป็น Inverted conditional ที่ถูกต้อง (Were จะต้องไม่มี be ซ้อน, Had ต้องใช้ V3)",
+   "verified": true,
+   "level": "B2-C1"
   }
  ],
  "readingShort": [
@@ -27934,6 +28314,214 @@
      "answerIndex": 0,
      "points": 2,
      "explanation_th": "ถามวิธีเดินทางจากสถานีมาโรงแรมถ้าไม่มีรถรับส่ง"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-505",
+   "title": "Notice: AI Usage in Academic Submissions",
+   "genre": "notice (correspondence)",
+   "category": "other",
+   "wordCount": 169,
+   "level": "C1",
+   "targetVocab": [
+    "generative",
+    "prohibited",
+    "misconduct",
+    "over-reliance",
+    "stifle"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "Notice: Artificial Intelligence Usage in Academic Submissions\n\nEffective the upcoming spring semester, the University Senate has instituted a comprehensive policy regarding the utilization of generative Artificial Intelligence (AI) tools in student assignments.\n\nFirst, the complete generation of essays, code, or research papers by AI platforms remains strictly prohibited and will be classified as severe academic misconduct. Violators will face an immediate disciplinary hearing.\n\nHowever, students are permitted to employ AI for brainstorming, outlining, and grammatical proofreading. If an AI tool is used in any capacity, it must be explicitly cited in the bibliography. The citation must include the name of the software, the version, and the date of access.\n\nFurthermore, professors reserve the right to require an oral defense of any submitted work if they suspect over-reliance on automated assistance. In such cases, the student must demonstrate a profound understanding of the submitted material.\n\nThis policy is designed not to stifle technological innovation, but to ensure that the core cognitive skills of critical thinking and original analysis are preserved.",
+   "questions": [
+    {
+     "id": "rd-c1-505-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main purpose of this notice?",
+     "options": [
+      "To establish official guidelines for using AI in coursework.",
+      "To completely ban AI tools from the university campus.",
+      "To advertise a newly developed AI tool for students.",
+      "To announce a disciplinary hearing for academic misconduct."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ประกาศนี้ออกมาเพื่อวางแนวปฏิบัติการใช้ AI ในงานที่ส่ง"
+    },
+    {
+     "id": "rd-c1-505-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Which of the following actions is strictly forbidden according to the policy?",
+     "options": [
+      "Generating a complete research paper using AI.",
+      "Using AI to brainstorm essay ideas.",
+      "Having an AI check for grammatical errors.",
+      "Creating a project outline with AI assistance."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบุตรง ๆ ว่าการสร้างงานทั้งชิ้นด้วย AI ถูกแบน"
+    },
+    {
+     "id": "rd-c1-505-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is required if a student uses AI to help outline their assignment?",
+     "options": [
+      "They must cite the AI software in their bibliography.",
+      "They must ask for the professor's written permission beforehand.",
+      "They must write an additional essay explaining their process.",
+      "They must pay a licensing fee to the software company."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ต้องอ้างอิงซอฟต์แวร์ AI ในบรรณานุกรม"
+    },
+    {
+     "id": "rd-c1-505-q4",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word is closest in meaning to \"misconduct\" in the second paragraph?",
+     "options": [
+      "Offense",
+      "Achievement",
+      "Coincidence",
+      "Obligation"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "misconduct แปลว่า การประพฤติผิด/ความผิด"
+    },
+    {
+     "id": "rd-c1-505-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Under what circumstance might a professor demand an oral defense?",
+     "options": [
+      "When a professor suspects a student relied too heavily on AI.",
+      "When a student forgets to submit their assignment on time.",
+      "When a student receives a perfect score on their paper.",
+      "When a student wishes to officially challenge their final grade."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบุตรง ๆ ในย่อหน้าที่ 4"
+    },
+    {
+     "id": "rd-c1-505-q6",
+     "qtype": "INFERENCE",
+     "stem": "What is the ultimate goal of implementing this new policy?",
+     "options": [
+      "To protect and maintain students' critical thinking abilities.",
+      "To make the grading process easier and faster for professors.",
+      "To force students to purchase new educational software.",
+      "To permanently halt technological progress at the university."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "สรุปจากย่อหน้าสุดท้ายว่าต้องการรักษาทักษะคิดวิเคราะห์ไว้"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-506",
+   "title": "Email: Convention Hall Setup Complaint",
+   "genre": "formal letter (correspondence)",
+   "category": "other",
+   "wordCount": 238,
+   "level": "C1",
+   "targetVocab": [
+    "deficiencies",
+    "alarmingly",
+    "imminent",
+    "rectified",
+    "compel"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "From: Eleanor Vance, Director of Operations\nTo: Apex Venue Management\nSubject: Urgent: Critical Deficiencies in Convention Hall Setup\n\nDear Apex Management Team,\n\nI am writing to formally express my profound disappointment regarding the substandard preparation of the Grand Pavilion for our upcoming International Medical Symposium, scheduled to commence tomorrow morning.\n\nDuring my preliminary walk-through this afternoon, I discovered several critical deficiencies that directly violate our signed contract. Most alarmingly, the high-speed fiber-optic internet connection, which we explicitly requested to facilitate live surgical broadcasts, has not been installed. Instead, the hall is only equipped with standard Wi-Fi, which possesses neither the bandwidth nor the stability required for our keynote demonstrations.\n\nAdditionally, the seating arrangement in the primary auditorium accommodates only 300 attendees, despite our finalized layout clearly specifying a capacity of 500. This oversight is unacceptable, as we have already issued 450 confirmed tickets. It appears your floor staff utilized an outdated version of our schematic rather than the revised document I submitted on October 12th.\n\nGiven the imminent start of the symposium, these issues must be rectified immediately. I expect a dedicated technical crew to be dispatched tonight to upgrade the network infrastructure, along with additional personnel to reconfigure the seating layout.\n\nPlease contact my mobile phone instantly upon receiving this correspondence to confirm that these corrective measures are actively underway. A failure to resolve these matters before 7:00 AM tomorrow will compel us to seek substantial financial compensation.\n\nSincerely,\nEleanor Vance",
+   "questions": [
+    {
+     "id": "rd-c1-506-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "Why is Eleanor Vance writing this email?",
+     "options": [
+      "To report major problems with a venue's event preparation.",
+      "To officially cancel the International Medical Symposium.",
+      "To invite the venue management to a surgical broadcast.",
+      "To praise the floor staff for their hard work and dedication."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "เธอเขียนเพื่อรายงานและตำหนิความบกพร่องของการจัดเตรียมสถานที่"
+    },
+    {
+     "id": "rd-c1-506-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the primary issue regarding the internet connection?",
+     "options": [
+      "It lacks the speed and stability needed for live broadcasts.",
+      "It has been completely disconnected due to unpaid bills.",
+      "It is far too expensive for the symposium's budget.",
+      "It requires a complicated password that was not provided."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "Wi-Fi ธรรมดาขาดแบนด์วิดท์และความเสถียรที่ต้องการ"
+    },
+    {
+     "id": "rd-c1-506-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How many seats were actually set up in the primary auditorium?",
+     "options": [
+      "300",
+      "500",
+      "450",
+      "October 12th"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบุตรง ๆ ว่าจัดไว้แค่ 300 ที่นั่ง"
+    },
+    {
+     "id": "rd-c1-506-q4",
+     "qtype": "INFERENCE",
+     "stem": "What does Eleanor believe caused the error with the seating arrangement?",
+     "options": [
+      "The floor staff used an old version of the floor plan.",
+      "The venue did not own enough chairs to meet the demand.",
+      "The attendees unexpectedly bought too many tickets.",
+      "The management intentionally ignored her layout requests."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "เธอเชื่อว่าพนักงานใช้แผนผังเวอร์ชันเก่าที่ยังไม่อัปเดต"
+    },
+    {
+     "id": "rd-c1-506-q5",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word best replaces \"rectified\" in the fourth paragraph?",
+     "options": [
+      "Corrected",
+      "Abandoned",
+      "Investigated",
+      "Postponed"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "rectified แปลว่า ได้รับการแก้ไขให้ถูกต้อง"
+    },
+    {
+     "id": "rd-c1-506-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What will happen if the venue fails to fix the issues by tomorrow morning?",
+     "options": [
+      "Eleanor's organization will demand financial compensation.",
+      "Eleanor will host the symposium outdoors instead.",
+      "The attendees will receive a full refund for their tickets.",
+      "The management team will be immediately fired."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบุตรง ๆ ในย่อหน้าสุดท้าย"
     }
    ]
   }
@@ -32196,6 +32784,138 @@
      "answerIndex": 0,
      "points": 2,
      "explanation_th": "สรุปใจความรวมของทั้งบท (ประโยชน์ของการเดินทุกวัน)"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-603",
+   "title": "The Promise and Peril of Seawater Desalination",
+   "genre": "argumentative article",
+   "category": "article",
+   "wordCount": 461,
+   "level": "C1",
+   "targetVocab": [
+    "exacerbates",
+    "panacea",
+    "inexhaustible",
+    "exorbitant",
+    "externalities"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "As the global population continues to expand and climate change exacerbates prolonged droughts, freshwater scarcity has emerged as one of the most pressing crises of the twenty-first century. In response, many coastal nations have turned to seawater desalination as a seemingly miraculous panacea. By extracting salt and minerals from the ocean, desalination plants can transform an inexhaustible resource into potable water. However, while the technology offers a vital lifeline for arid regions, its widespread adoption is heavily contested due to severe environmental and economic drawbacks that cannot be easily dismissed.\n\nThe primary argument in favor of desalination is undeniably its reliability. Unlike traditional water sources such as lakes, rivers, and underground aquifers, which are heavily dependent on unpredictable rainfall, the ocean provides a constant supply. Countries in the Middle East, such as Saudi Arabia and Israel, have successfully utilized this technology for decades, effectively decoupling their water security from erratic weather patterns. For these nations, the ability to generate freshwater on demand has not only sustained their populations but also allowed agricultural sectors to flourish in otherwise inhospitable desert environments.\n\nDespite these undeniable benefits, critics are quick to point out the staggering energy consumption required to operate modern desalination facilities. The most common method, reverse osmosis, forces seawater through incredibly fine membranes at extraordinarily high pressures. This process is profoundly energy-intensive. Currently, the vast majority of desalination plants are powered by fossil fuels, meaning that the quest to solve the water crisis is inadvertently accelerating the very climate change that causes droughts in the first place. Unless the industry transitions rapidly to renewable energy sources, the long-term ecological cost may outweigh the immediate benefits.\n\nFurthermore, the environmental degradation extends beyond greenhouse gas emissions. The desalination process produces a highly concentrated, toxic byproduct known as brine. This hyper-saline sludge, often laced with chemical anti-scalants and heavy metals from the plumbing infrastructure, is typically discharged directly back into the ocean. When dumped into shallow coastal waters, the dense brine sinks to the seafloor, suffocating marine ecosystems and creating vast dead zones where no aquatic life can survive.\n\nEconomically, the water produced by desalination remains prohibitively expensive for many developing nations. The exorbitant costs of constructing the plants, coupled with the ongoing expenses of massive energy consumption and membrane replacement, mean that desalinated water is often several times more expensive than treated river water.\n\nUltimately, while desalination is a crucial tool in the arsenal against water scarcity, it is not a silver bullet. Governments must prioritize comprehensive water conservation strategies, invest heavily in wastewater recycling, and mandate that new desalination plants be strictly coupled with solar or wind power. Only by acknowledging and mitigating its profound externalities can we ensure that the pursuit of freshwater does not irreparably damage the planet's broader ecological balance.",
+   "questions": [
+    {
+     "id": "rd-c1-603-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the primary purpose of the passage?",
+     "options": [
+      "To analyze the advantages and severe drawbacks of desalination.",
+      "To explain the complex physics behind reverse osmosis.",
+      "To persuade countries to immediately shut down all desalination plants.",
+      "To argue that the Middle East possesses the best agricultural systems."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "บทความวิเคราะห์ทั้งข้อดีและข้อเสียรุนแรงของการแยกเกลือออกจากน้ำทะเล"
+    },
+    {
+     "id": "rd-c1-603-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to paragraph 2, what is the main advantage of seawater desalination?",
+     "options": [
+      "It provides a reliable water source independent of rainfall.",
+      "It requires very little electricity to operate effectively.",
+      "It helps clean up existing pollution in the oceans.",
+      "It makes the resulting water taste significantly better."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "แหล่งน้ำที่พึ่งพาไม่ได้ขึ้นกับสภาพอากาศ/ฝนตก"
+    },
+    {
+     "id": "rd-c1-603-q3",
+     "qtype": "INFERENCE",
+     "stem": "What does the author imply by the phrase \"inadvertently accelerating the very climate change\" in paragraph 3?",
+     "options": [
+      "The fossil fuels burned to power the plants worsen global warming.",
+      "Desalination plants cause more unpredictable rain to fall.",
+      "The water produced is dangerously hot for human consumption.",
+      "Environmentalists are secretly funded by fossil fuel companies."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "โรงงานใช้เชื้อเพลิงฟอสซิลปล่อยก๊าซเรือนกระจก ยิ่งซ้ำเติมภาวะโลกร้อน"
+    },
+    {
+     "id": "rd-c1-603-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is \"brine\" as described in the passage?",
+     "options": [
+      "A highly concentrated and toxic salty byproduct.",
+      "A type of renewable energy used to power factories.",
+      "The fine membrane used during the reverse osmosis process.",
+      "A cleaning chemical used to purify the ocean water."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "นิยามไว้ตรง ๆ ในย่อหน้าที่ 4"
+    },
+    {
+     "id": "rd-c1-603-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why does brine create \"dead zones\" in the ocean?",
+     "options": [
+      "It sinks to the bottom and suffocates marine ecosystems.",
+      "It floats on the surface and blocks out all sunlight.",
+      "It causes marine animals to mutate and attack each other.",
+      "It raises the temperature of the water to boiling point."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "brine หนาแน่นจึงจมและทำให้ระบบนิเวศพื้นทะเลขาดออกซิเจน"
+    },
+    {
+     "id": "rd-c1-603-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why is desalination considered a challenge for developing nations?",
+     "options": [
+      "The technology and the resulting water are prohibitively expensive.",
+      "They do not have access to any oceans or seas.",
+      "Their citizens refuse to drink artificially created water.",
+      "They lack the political willpower to build large infrastructure."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ต้นทุนก่อสร้างและผลิตน้ำแพงมากสำหรับประเทศกำลังพัฒนา"
+    },
+    {
+     "id": "rd-c1-603-q7",
+     "qtype": "INFERENCE",
+     "stem": "Which of the following is NOT suggested by the author as a solution in the final paragraph?",
+     "options": [
+      "Banning the use of desalinated water for agricultural purposes.",
+      "Mandating the use of renewable energy for new plants.",
+      "Investing heavily in wastewater recycling programs.",
+      "Prioritizing comprehensive water conservation strategies."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "ย่อหน้าสุดท้ายไม่ได้เสนอให้แบนการใช้น้ำแยกเกลือในภาคเกษตรเลย"
+    },
+    {
+     "id": "rd-c1-603-q8",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "What is the closest meaning of the word \"externalities\" in the final sentence?",
+     "options": [
+      "Unintended negative consequences",
+      "International border disputes",
+      "Physical appearances of the plants",
+      "Foreign economic investments"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "externalities แปลว่า ผลกระทบภายนอกที่ไม่ได้ตั้งใจ"
     }
    ]
   }
