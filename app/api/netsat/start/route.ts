@@ -35,15 +35,20 @@ export async function POST(req: NextRequest) {
     const db = adminDb();
     const id = emailToId(email);
 
-    // 1) ลิมิตจำนวนครั้ง/วัน (อ่านจากโปรไฟล์นักเรียน)
+    // 1) ลิมิตจำนวนครั้ง/วัน — นับแยกต่อระดับ (B1-B2 และ B2-C1 คนละโควตา คนละ ATTEMPTS_PER_DAY ครั้ง)
     const stuRef = db.collection("students").doc(id);
     const stuSnap = await stuRef.get();
-    const stu = (stuSnap.exists ? stuSnap.data() : {}) as { lastStudyDate?: string; todayCount?: number };
+    const stu = (stuSnap.exists ? stuSnap.data() : {}) as {
+      netsatB1B2Date?: string; netsatB1B2Count?: number;
+      netsatB2C1Date?: string; netsatB2C1Count?: number;
+    };
     const today = ymd(new Date());
-    const doneToday = stu.lastStudyDate === today ? stu.todayCount ?? 0 : 0;
+    const dateField = level === "B1-B2" ? "netsatB1B2Date" : "netsatB2C1Date";
+    const countField = level === "B1-B2" ? "netsatB1B2Count" : "netsatB2C1Count";
+    const doneToday = stu[dateField] === today ? stu[countField] ?? 0 : 0;
     if (doneToday >= ATTEMPTS_PER_DAY) {
       return NextResponse.json(
-        { error: `วันนี้ทำสอบครบ ${ATTEMPTS_PER_DAY} ครั้งแล้ว 🎯 พรุ่งนี้ค่อยมาต่อนะครับ` },
+        { error: `วันนี้ทำสอบระดับ ${level} ครบ ${ATTEMPTS_PER_DAY} ครั้งแล้ว 🎯 พรุ่งนี้ค่อยมาต่อ หรือลองอีกระดับได้ครับ` },
         { status: 429 }
       );
     }
