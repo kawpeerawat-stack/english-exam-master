@@ -200,7 +200,7 @@ export default function NetsatPage() {
       setError("เชื่อมต่อเซิร์ฟเวอร์ไม่สำเร็จ ลองใหม่อีกครั้ง");
       setPhase("intro");
     }
-  }, []);
+  }, [level]);
 
   const submit = useCallback(async (autoSubmit = false) => {
     if (!sessionId || submitting) return;
