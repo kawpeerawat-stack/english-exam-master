@@ -10176,6 +10176,196 @@
    "explanation_th": "Until the time → By the time : By the time + อดีต คู่กับ Past Perfect (had already buried) แสดงเหตุการณ์เสร็จก่อน",
    "verified": true,
    "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-err-01",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "The newly appointed director, along with several experienced senior executives, (A)[is scheduled] to announce the (B)[revised] corporate policies that (C)[aims] to enhance (D)[overall] employee productivity.",
+   "options": [
+    "(A) is scheduled",
+    "(B) revised",
+    "(C) aims",
+    "(D) overall"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "aims → aim : that แทน policies (พหูพจน์) กริยาจึงไม่เติม s",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-err-02",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Pronouns",
+   "stem": "The scholarship committee will thoroughly evaluate (A)[whoever] the professors strongly recommend, (B)[provided that] the candidate has (C)[consistently maintained] an outstanding (D)[academic] record.",
+   "options": [
+    "(A) whoever",
+    "(B) provided that",
+    "(C) consistently maintained",
+    "(D) academic"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "whoever → whomever : เป็นกรรม (Object) ของกริยา recommend (the professors recommend whomever)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-err-03",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Double Negative",
+   "stem": "To guarantee maximum operational efficiency, the new software system must (A)[reliably process] large datasets, (B)[securely store] user information, and (C)[automatically generate] reports (D)[without hardly any] manual intervention.",
+   "options": [
+    "(A) reliably process",
+    "(B) securely store",
+    "(C) automatically generate",
+    "(D) without hardly any"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "without hardly any → with hardly any : without และ hardly เป็นปฏิเสธซ้อนกัน (double negative) ห้ามใช้คู่กัน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-err-04",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The (A)[findings] of the recent sociological study were so (B)[fascinated] that several (C)[prominent] scholars immediately requested (D)[access] to the raw statistical data.",
+   "options": [
+    "(A) findings",
+    "(B) fascinated",
+    "(C) prominent",
+    "(D) access"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "fascinated → fascinating : findings (สิ่งของ) เป็นตัวทำให้เกิดความรู้สึก ต้องใช้ -ing ไม่ใช่ -ed",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-err-05",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Prepositions",
+   "stem": "Despite the (A)[unprecedented] challenges posed by the pandemic, the dedicated medical team (B)[remained fully capable] (C)[to handle] the sudden and massive influx of (D)[critically ill] patients.",
+   "options": [
+    "(A) unprecedented",
+    "(B) remained fully capable",
+    "(C) to handle",
+    "(D) critically ill"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "to handle → of handling : capable ต้องตามด้วย of เสมอ (capable of + V-ing/Noun)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-err-06",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The (A)[considerable] higher temperatures recorded this summer have (B)[directly contributed] to the (C)[accelerated] melting of the polar ice caps, (D)[alarming] environmental scientists globally.",
+   "options": [
+    "(A) considerable",
+    "(B) directly contributed",
+    "(C) accelerated",
+    "(D) alarming"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "considerable → considerably : ต้องใช้ Adverb ขยายคำคุณศัพท์ขั้นกว่า (higher) ไม่ใช่ Adjective",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-err-07",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "(A)[Had] the central bank not (B)[raised] interest rates so aggressively last year, the national economy (C)[might have experienced] a period of severe, economically (D)[damage] inflation that eroded household savings nationwide.",
+   "options": [
+    "(A) Had",
+    "(B) raised",
+    "(C) might have experienced",
+    "(D) damage"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "damage → damaging : ต้องการ Adjective (damaging) ขยายคำนาม inflation คู่กับ severe",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-err-08",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "When the chief engineer (A)[inspected] the newly constructed suspension bridge, he (B)[has discovered] multiple micro-fractures (C)[that] could potentially (D)[compromise] its structural integrity.",
+   "options": [
+    "(A) inspected",
+    "(B) has discovered",
+    "(C) that",
+    "(D) compromise"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "has discovered → discovered : ประโยคนำเป็น Past Simple (inspected) กริยาตามต้องเป็น Past Simple เช่นกัน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-err-09",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Quantifiers",
+   "stem": "Because the modern cafeteria offers (A)[much less] vegetarian options than it (B)[used to], many health-conscious students have (C)[started] bringing their own (D)[packed] lunches.",
+   "options": [
+    "(A) much less",
+    "(B) used to",
+    "(C) started",
+    "(D) packed"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "much less → far fewer : options เป็นนามนับได้พหูพจน์ ต้องใช้ fewer ไม่ใช่ less",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-err-10",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Prepositions",
+   "stem": "The (A)[comprehensive] training curriculum designed for the new marketing recruits (B)[currently comprises] (C)[of] six interactive modules (D)[focusing on] digital advertising strategies.",
+   "options": [
+    "(A) comprehensive",
+    "(B) currently comprises",
+    "(C) of",
+    "(D) focusing on"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "ตัด of ออก : comprise เป็นกริยาสกรรม (transitive) ตามด้วยกรรมได้ทันที ห้ามมี of ต่อท้าย",
+   "verified": true,
+   "level": "B2-C1"
   }
  ],
  "writingSC": [
@@ -24599,6 +24789,196 @@
    "explanation_th": "โครงสร้าง The more..., the more... ต้องมี the นำหน้า comparative เสมอทั้งสองประโยค",
    "verified": true,
    "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-sc-01",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Inversion",
+   "stem": "Rarely ______ such a meticulously designed algorithm that can accurately predict unpredictable market fluctuations.",
+   "options": [
+    "has the committee encountered",
+    "the committee has encountered",
+    "encountered the committee",
+    "did the committee encountered"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Inversion หลัง Rarely (negative adverbial) ต้องนำกริยาช่วยมาไว้หน้าประธาน (has the committee)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-sc-02",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Subjunctive",
+   "stem": "Given the unprecedented severity of the data breach, it is crucial that the chief security officer ______ immediately to prevent further damage.",
+   "options": [
+    "is replaced",
+    "must be replaced",
+    "be replaced",
+    "replaces"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Mandative subjunctive หลัง it is crucial that ต้องใช้ V.พื้นฐาน (be replaced)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-sc-03",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "If the pharmaceutical company had secured the international patent earlier, they ______ the dominant market leader right now.",
+   "options": [
+    "will be",
+    "would have been",
+    "had been",
+    "would be"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "Mixed conditional: เงื่อนไขสมมติอดีต (had secured) ส่งผลถึงปัจจุบัน (would be) สังเกตคำว่า right now",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-sc-04",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Modal Perfect",
+   "stem": "The lead architect ______ the structural vulnerabilities during the blueprint phase, but the oversight was completely ignored until the foundation cracked.",
+   "options": [
+    "must have identified",
+    "should have identified",
+    "could identify",
+    "might identify"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "should have + V3 (ควรทำแต่ไม่ได้ทำ) สอดคล้องกับ oversight ที่ถูกมองข้าม",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-sc-05",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Participle Phrases",
+   "stem": "______ comprehensive empirical data from various ecosystems, the researchers were finally able to publish their groundbreaking findings.",
+   "options": [
+    "Having gathered",
+    "Gathered",
+    "To be gathering",
+    "Have gathered"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Perfect participle (Having + V3) แสดงเหตุการณ์ที่เสร็จก่อนประธานหลัก (the researchers) ทำอีกอย่าง",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-sc-06",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "The municipal government implemented stricter zoning laws in a desperate attempt to ______ the negative impacts of rapid urban sprawl.",
+   "options": [
+    "aggravate",
+    "instigate",
+    "mitigate",
+    "validate"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "mitigate (บรรเทา/ลดผลกระทบ) เข้ากับบริบทพยายามลด negative impacts",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-sc-07",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Connectors",
+   "stem": "______ the unexpected economic downturn, the board of directors firmly decided to freeze all hiring indefinitely.",
+   "options": [
+    "Regardless of",
+    "Subsequent",
+    "On behalf of",
+    "In light of"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "In light of (เมื่อพิจารณาถึง) ให้ความหมายเชิงเหตุผลที่ถูกต้อง",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-sc-08",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Cleft Sentences",
+   "stem": "It was not merely his technical expertise but his profound emotional intelligence ______ him an exceptionally effective leader.",
+   "options": [
+    "that made",
+    "which making",
+    "what made",
+    "who making"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "โครงสร้าง Cleft sentence It was...that + กริยา เน้นย้ำส่วนที่อยู่หน้า that",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-sc-09",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "Patients with severely compromised immune systems are highly ______ to opportunistic infections that would normally be harmless.",
+   "options": [
+    "resilient",
+    "susceptible",
+    "impervious",
+    "oblivious"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "susceptible to (อ่อนแอ/ติดเชื้อง่าย) เข้ากับ compromised immune systems",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b2-sc-10",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "By the time the international summit concludes next week, the delegates ______ a comprehensive and legally binding climate treaty.",
+   "options": [
+    "will ratify",
+    "are ratifying",
+    "will have ratified",
+    "have ratified"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "By the time + ปัจจุบัน(อนาคต) ต้องคู่กับ Future Perfect (will have ratified) แสดงว่าเสร็จก่อนจุดอ้างอิง",
+   "verified": true,
+   "level": "B2-C1"
   }
  ],
  "readingShort": [
@@ -26758,6 +27138,216 @@
      "answerIndex": 0,
      "points": 3,
      "explanation_th": "น้ำเสียงเป็นทางการ มีหลักฐานชัดเจน ทวงสิทธิ์อย่างหนักแน่นแต่สุภาพ ('I kindly request... at your earliest convenience')"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-503",
+   "title": "Notice: Mandatory Cybersecurity Protocol Update",
+   "genre": "notice (correspondence)",
+   "category": "other",
+   "wordCount": 173,
+   "level": "C1",
+   "targetVocab": [
+    "phishing",
+    "mandatory",
+    "authentication",
+    "prohibited",
+    "stipulated",
+    "reinstate"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "NOTICE: Mandatory Cybersecurity Protocol Update\n\nIn response to recent sophisticated phishing attempts targeting our corporate network, the IT Department is rolling out a mandatory security upgrade. Effective this Friday at 5:00 PM, all employees must configure Multi-Factor Authentication (MFA) on their primary workstation accounts.\n\nTo initiate the setup, download the approved Authenticator application from the company intranet portal. During the configuration, you will be prompted to update your current password. The new password must be at least twelve characters long, incorporating a mix of uppercase letters, numbers, and special symbols. Reusing any of your previous five passwords is strictly prohibited.\n\nFurthermore, should you receive any suspicious emails requesting sensitive data, do not interact with any enclosed links. Instead, immediately forward the correspondence to the cybersecurity desk using the dedicated ‘Phish-Alert’ button on your email client toolbar.\n\nFailure to complete the MFA enrollment by the stipulated deadline will result in an automatic network lockout on Monday morning, requiring a formal managerial request to reinstate access. We appreciate your prompt cooperation in safeguarding our digital infrastructure.",
+   "questions": [
+    {
+     "id": "rd-c1-503-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main purpose of this announcement?",
+     "options": [
+      "To enforce a mandatory security procedure.",
+      "To introduce a new IT manager.",
+      "To warn about a recent data breach.",
+      "To offer optional software upgrades."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ประกาศบังคับให้พนักงานทุกคนติดตั้งระบบยืนยันตัวตนใหม่ (MFA)"
+    },
+    {
+     "id": "rd-c1-503-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "When is the deadline for setting up Multi-Factor Authentication?",
+     "options": [
+      "By Friday at 5:00 PM.",
+      "On Monday morning.",
+      "Within five days of reading the email.",
+      "Immediately after downloading the app."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบุตรง ๆ ในย่อหน้าแรก"
+    },
+    {
+     "id": "rd-c1-503-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to the policy, which of the following is a requirement for the new password?",
+     "options": [
+      "It must contain at least twelve characters.",
+      "It must be changed every month.",
+      "It can be the same as the last one used.",
+      "It should only consist of lowercase letters."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบุตรง ๆ ในย่อหน้าที่ 2"
+    },
+    {
+     "id": "rd-c1-503-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the correct action if an employee receives a suspicious email?",
+     "options": [
+      "Forward it via a specific button on the toolbar.",
+      "Reply to the sender and ask for their identity.",
+      "Click the link to verify if it is safe.",
+      "Delete the email permanently from the inbox."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบุตรง ๆ ในย่อหน้าที่ 3"
+    },
+    {
+     "id": "rd-c1-503-q5",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "What does \"stipulated\" mean in the final paragraph?",
+     "options": [
+      "Specified",
+      "Delayed",
+      "Unreasonable",
+      "Recommended"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "stipulated แปลว่า กำหนดไว้/ระบุไว้"
+    },
+    {
+     "id": "rd-c1-503-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What will happen to employees who fail to comply with the deadline?",
+     "options": [
+      "They will lose access to the company network.",
+      "They will face a reduction in their salary.",
+      "They will be forced to take an IT training course.",
+      "They will be fired immediately."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบุตรง ๆ ในย่อหน้าสุดท้าย"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-504",
+   "title": "Email: Manuscript Rejection Inquiry",
+   "genre": "formal letter (correspondence)",
+   "category": "other",
+   "wordCount": 242,
+   "level": "C1",
+   "targetVocab": [
+    "purportedly",
+    "perplexed",
+    "oversight",
+    "warrants",
+    "compelled",
+    "forthcoming"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "From: Dr. Julian Vance\nTo: Editorial Board, Journal of Advanced Botanics\nSubject: Inquiry regarding Manuscript Submission #JB-8842\n\nDear Editorial Board,\n\nI am writing to respectfully request a clarification regarding the recent decision to reject my manuscript, titled “Drought Resistance Mechanisms in Desert Flora,” submission reference #JB-8842.\n\nAccording to the automated email I received yesterday, the paper was declined because it purportedly did not align with the journal’s current thematic scope. However, I noticed in your recent quarterly newsletter that the upcoming autumn issue will be specifically dedicated to “Climate Adaptations in Arid Ecosystems.” Given this upcoming special issue, I am somewhat perplexed as to why my research—which directly examines how desert plants survive prolonged water scarcity—was deemed unsuitable.\n\nI suspect there may have been an administrative oversight during the preliminary screening process, as my paper was rejected within merely four hours of submission, suggesting it might not have undergone a full peer review. My co-authors and I have spent three years compiling this field data, and we believe it perfectly complements your upcoming publication goals.\n\nWould it be possible for the senior editor to manually review the abstract to determine if the manuscript warrants a formal evaluation? If it is definitively outside your scope, I will promptly submit it elsewhere. However, I felt compelled to reach out given the stark alignment between my topic and your forthcoming issue.\n\nThank you for your time and guidance.\n\nSincerely,\nDr. Julian Vance",
+   "questions": [
+    {
+     "id": "rd-c1-504-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main reason Dr. Vance is writing this email?",
+     "options": [
+      "To ask for an explanation of his paper's rejection.",
+      "To complain about the long peer-review process.",
+      "To suggest a new theme for the upcoming journal issue.",
+      "To submit a revised version of his manuscript."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "เขาเขียนเพื่อขอความกระจ่างว่าทำไมบทความถูกปฏิเสธ"
+    },
+    {
+     "id": "rd-c1-504-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why was the manuscript officially rejected, according to the journal's email?",
+     "options": [
+      "The topic did not fit the journal's focus.",
+      "The research data was outdated.",
+      "The paper contained too many grammatical errors.",
+      "The authors lacked sufficient credentials."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "อีเมลอัตโนมัติแจ้งว่าบทความไม่ตรงกับหัวข้อ/ขอบเขตของวารสาร"
+    },
+    {
+     "id": "rd-c1-504-q3",
+     "qtype": "INFERENCE",
+     "stem": "Why does Dr. Vance find the rejection confusing?",
+     "options": [
+      "The journal is planning a special issue that matches his research topic.",
+      "He has published numerous papers in this journal before.",
+      "The editors had previously invited him to submit his findings.",
+      "His co-authors guaranteed that the paper would be accepted."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "เขาสับสนเพราะวารสารกำลังจะออกฉบับพิเศษที่ตรงกับงานวิจัยของเขาพอดี"
+    },
+    {
+     "id": "rd-c1-504-q4",
+     "qtype": "INFERENCE",
+     "stem": "What evidence suggests to Dr. Vance that his paper was not fully reviewed?",
+     "options": [
+      "The rejection occurred very shortly after the submission.",
+      "The rejection email was sent to the wrong address.",
+      "The reviewers provided contradictory feedback.",
+      "The editor's name was missing from the response."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ถูกปฏิเสธภายในเวลาแค่ 4 ชั่วโมง เร็วเกินกว่าจะผ่านการพิจารณาเต็มรูปแบบ"
+    },
+    {
+     "id": "rd-c1-504-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What does Dr. Vance propose as a next step?",
+     "options": [
+      "He wants the senior editor to read the abstract personally.",
+      "He wants a full refund of his submission fee.",
+      "He wants to rewrite the entire manuscript.",
+      "He wants to formally withdraw his submission."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "เขาเสนอให้บรรณาธิการอาวุโสอ่านบทคัดย่อด้วยตนเองเพื่อประเมินอีกครั้ง"
+    },
+    {
+     "id": "rd-c1-504-q6",
+     "qtype": "PURPOSE_TONE",
+     "stem": "Which word best describes the tone of Dr. Vance's email?",
+     "options": [
+      "Polite but inquisitive",
+      "Furious and demanding",
+      "Sarcastic and bitter",
+      "Apologetic and insecure"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "น้ำเสียงสุภาพตลอดทั้งฉบับ แต่ก็ตั้งคำถามอย่างต่อเนื่องเพื่อขอความกระจ่าง"
     }
    ]
   }
@@ -30755,6 +31345,140 @@
      "answerIndex": 0,
      "points": 3,
      "explanation_th": "internalize = รับภาระ/ทำให้เป็นต้นทุนของตนเอง (ตรงข้ามกับ externalize ที่แปลว่าผลักภาระให้ผู้อื่น) — บริบท 'force fast fashion brands to internalize their waste management costs' คือบังคับให้แบรนด์รับผิดชอบต้นทุนกำจัดขยะเอง"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-602",
+   "title": "The Cashless Society Debate",
+   "genre": "argumentative article",
+   "category": "article",
+   "wordCount": 455,
+   "level": "C1",
+   "targetVocab": [
+    "paradigm",
+    "curtail",
+    "illicit",
+    "disenfranchising",
+    "sovereignty",
+    "premature",
+    "mandated"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "Over the past decade, the global financial landscape has been steadily migrating toward a cashless society, a paradigm where physical currency—banknotes and coins—is entirely replaced by digital transactions. Driven by rapid advancements in mobile payment technology and the widespread adoption of contactless credit cards, this transition promises unprecedented convenience and efficiency. However, while proponents celebrate the modernization of commerce, critics caution that the rush to eliminate cash introduces profound socioeconomic and privacy concerns that remain largely unaddressed.\n\nFrom an economic standpoint, the advantages of a cashless system are compelling. Digital transactions significantly reduce the logistical costs associated with printing, transporting, and securing physical money. Furthermore, proponents argue that eliminating cash can severely curtail illicit activities, such as tax evasion, money laundering, and the black-market drug trade, because digital footprints are inherently traceable by law enforcement agencies. For the average consumer, the appeal lies in frictionless commerce; purchasing goods requires merely a tap of a smartphone, streamlining the retail experience and eliminating the need to carry cumbersome wallets.\n\nDespite these benefits, the complete eradication of physical currency poses a severe threat to marginalized populations. A fully digital economy operates on the assumption that every citizen has reliable access to banking services, smartphones, and stable internet connections. In reality, millions of low-income individuals, elderly citizens, and rural residents remain \"unbanked.\" For these demographic groups, cash is not merely a preference but a vital necessity for day-to-day survival. Transitioning to an exclusively digital framework risks financially disenfranchising these vulnerable populations, effectively locking them out of the modern economy.\n\nMoreover, privacy advocates raise substantial ethical questions regarding data sovereignty. In a cashless society, every financial transaction—from buying a morning coffee to purchasing medical supplies—is recorded, analyzed, and stored by third-party financial institutions. This wealth of personal data can be monetized by corporations for targeted advertising or, more alarmingly, monitored by authoritarian governments to track the behavior of their citizens. The anonymity that physical cash provides is entirely stripped away in a digital ecosystem, leaving individuals vulnerable to surveillance and data breaches. Instances of widespread identity theft and centralized system outages further highlight the fragility of relying solely on digital networks.\n\nUltimately, while the technological momentum toward digital payments is undeniable, completely abandoning cash is a premature endeavor. Policymakers must implement robust regulatory safeguards to protect consumer privacy and ensure that alternative, non-digital payment methods remain legally mandated for essential services. Furthermore, educational campaigns must be funded to bridge the digital literacy gap among older generations. A truly progressive financial system should leverage the efficiency of digital innovation without sacrificing the inclusivity and autonomy historically afforded by physical currency. Until a universally accessible digital infrastructure is guaranteed, cash must remain an integral pillar of the economy.",
+   "questions": [
+    {
+     "id": "rd-c1-602-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the primary purpose of the passage?",
+     "options": [
+      "To evaluate the benefits and drawbacks of moving toward a cashless society.",
+      "To persuade readers to stop using credit cards immediately.",
+      "To explain the technical mechanisms of mobile payment apps.",
+      "To argue that physical cash is the only secure way to manage finances."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "บทความประเมินทั้งข้อดีและข้อเสียของสังคมไร้เงินสดอย่างสมดุล"
+    },
+    {
+     "id": "rd-c1-602-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to paragraph 2, how does a cashless society help combat crime?",
+     "options": [
+      "By creating trackable digital records of all financial activities.",
+      "By automatically freezing the bank accounts of suspected criminals.",
+      "By making it impossible to buy illegal drugs online.",
+      "By hiring more law enforcement officers to monitor transactions."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "digital footprints ที่ตรวจสอบได้ช่วยลดอาชญากรรมทางการเงิน"
+    },
+    {
+     "id": "rd-c1-602-q3",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "What does the author mean by \"frictionless commerce\" in the second paragraph?",
+     "options": [
+      "Easy and seamless buying processes without physical delays.",
+      "Shopping experiences that involve heavy negotiations.",
+      "Transactions that are completely free of tax and extra fees.",
+      "The physical exchange of goods without using any currency."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "frictionless commerce หมายถึงการซื้อขายที่ราบรื่น รวดเร็ว ไม่ติดขัด"
+    },
+    {
+     "id": "rd-c1-602-q4",
+     "qtype": "INFERENCE",
+     "stem": "Who would be most negatively affected by a purely digital economy?",
+     "options": [
+      "The unbanked and elderly populations",
+      "Tech-savvy teenagers",
+      "Law enforcement agencies",
+      "Corporate marketing executives"
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "กลุ่มที่ไม่มีบัญชีธนาคารและผู้สูงอายุจะได้รับผลกระทบหนักที่สุด"
+    },
+    {
+     "id": "rd-c1-602-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why do privacy advocates oppose the elimination of cash?",
+     "options": [
+      "It forces citizens to surrender their transactional anonymity.",
+      "It makes it easier for people to evade their annual taxes.",
+      "It increases the cost of printing physical banknotes.",
+      "It requires everyone to purchase expensive smartphones."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "การไม่เปิดเผยตัวตนที่เงินสดให้ไว้จะหายไปในระบบดิจิทัล"
+    },
+    {
+     "id": "rd-c1-602-q6",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word is closest in meaning to \"disenfranchising\" in paragraph 3?",
+     "options": [
+      "Marginalizing",
+      "Empowering",
+      "Accommodating",
+      "Interrogating"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "disenfranchising แปลว่า ลิดรอนสิทธิ์/ผลักให้เป็นชายขอบ"
+    },
+    {
+     "id": "rd-c1-602-q7",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What does the author suggest policymakers should do?",
+     "options": [
+      "Ensure physical cash is still accepted for essential services.",
+      "Completely ban the use of mobile payment technologies.",
+      "Force all citizens to open digital bank accounts immediately.",
+      "Tax digital transactions heavily to discourage their use."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ผู้เขียนเสนอให้รับรองว่าบริการที่จำเป็นยังคงรับเงินสดได้"
+    },
+    {
+     "id": "rd-c1-602-q8",
+     "qtype": "INFERENCE",
+     "stem": "What is the author's overall stance on the transition to a cashless society?",
+     "options": [
+      "Cautious, acknowledging its benefits but emphasizing its severe risks.",
+      "Fully supportive, as it represents inevitable progress.",
+      "Completely opposed, viewing it as a technological failure.",
+      "Indifferent, believing it will not affect the average person."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "ผู้เขียนยอมรับข้อดีแต่เน้นย้ำความเสี่ยงที่ยังไม่ได้รับการแก้ไข ไม่ได้เชียร์สุดโต่งฝั่งใดฝั่งหนึ่ง"
     }
    ]
   }
