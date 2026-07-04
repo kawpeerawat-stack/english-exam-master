@@ -24,14 +24,12 @@ export async function POST(req: NextRequest) {
       answers?: Record<string, number>;
       tabSwitches?: number;
       awaySec?: number;
-      autoSubmit?: boolean;
     };
     const sessionId = (body.sessionId || "").trim();
     const email = (body.email || "").trim().toLowerCase();
     const answers = body.answers || {};
     const tabSwitches = Number(body.tabSwitches ?? 0);
     const awaySec = Number(body.awaySec ?? 0);
-    const autoSubmit = body.autoSubmit === true;
     if (!sessionId || !email) {
       return NextResponse.json({ error: "ข้อมูลไม่ครบ" }, { status: 400 });
     }
@@ -47,9 +45,11 @@ export async function POST(req: NextRequest) {
       name?: string;
       graded?: boolean;
       seasonId?: string;
+      level?: "B1-B2" | "B2-C1";
       answerKey: Record<string, AnswerKeyEntry>;
       createdAt?: { toMillis?: () => number };
     };
+    const level: "B1-B2" | "B2-C1" = sess.level === "B1-B2" ? "B1-B2" : "B2-C1";
 
     // เจ้าของรอบต้องตรงกัน
     if (sess.email !== email) {
@@ -61,10 +61,9 @@ export async function POST(req: NextRequest) {
     }
 
     // บังคับเวลาขั้นต่ำ 40 นาที (อิงเวลาเซิร์ฟเวอร์ จาก createdAt)
-    // ข้ามได้เมื่อเป็นการส่งอัตโนมัติ (หมดเวลา หรือ ออกจากหน้าจอครบ 3 ครั้ง)
     const startedMs = sess.createdAt?.toMillis?.() ?? 0;
     const elapsedSec = startedMs > 0 ? Math.round((Date.now() - startedMs) / 1000) : EXAM_SECONDS;
-    if (!autoSubmit && elapsedSec < MIN_SUBMIT_SECONDS - TIME_TOLERANCE_SEC) {
+    if (elapsedSec < MIN_SUBMIT_SECONDS - TIME_TOLERANCE_SEC) {
       const wait = MIN_SUBMIT_SECONDS - elapsedSec;
       return NextResponse.json(
         { error: `ยังส่งไม่ได้ ต้องทำอย่างน้อย 40 นาที (เหลืออีกประมาณ ${Math.ceil(wait / 60)} นาที)`, tooEarly: true },
@@ -92,6 +91,8 @@ export async function POST(req: NextRequest) {
       seasonBestPercent?: number; seasonBestTimeSec?: number;
       streak?: number; bestStreak?: number; lastStudyDate?: string;
       todayCount?: number; netsatAttempts?: number; netsatBestPercent?: number;
+      netsatB1B2Date?: string; netsatB1B2Count?: number;
+      netsatB2C1Date?: string; netsatB2C1Count?: number;
     };
 
     const today = ymd(new Date());
@@ -106,6 +107,13 @@ export async function POST(req: NextRequest) {
     }
     const bestStreak = Math.max(cur.bestStreak ?? 0, streak);
     const todayCount = last === today ? (cur.todayCount ?? 0) + 1 : 1;
+
+    // ตัวนับจำนวนครั้ง/วัน แยกต่อระดับ B1-B2 / B2-C1 (คนละโควตา)
+    const dateField = level === "B1-B2" ? "netsatB1B2Date" : "netsatB2C1Date";
+    const countField = level === "B1-B2" ? "netsatB1B2Count" : "netsatB2C1Count";
+    const prevLevelDate = cur[dateField] || "";
+    const prevLevelCount = cur[countField] ?? 0;
+    const newLevelCount = prevLevelDate === today ? prevLevelCount + 1 : 1;
 
     const thisWeek = currentWeekId();
     const prevWeekly = cur.weekId === thisWeek ? (cur.weeklyXp ?? 0) : 0;
@@ -173,6 +181,8 @@ export async function POST(req: NextRequest) {
         netsatAttempts: (cur.netsatAttempts ?? 0) + 1,
         netsatBestPercent: Math.max(cur.netsatBestPercent ?? 0, result.percent),
         netsatLastPercent: result.percent,
+        [dateField]: today,
+        [countField]: newLevelCount,
         updatedAt: FieldValue.serverTimestamp(),
       },
       { merge: true }
