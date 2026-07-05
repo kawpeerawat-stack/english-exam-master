@@ -10746,6 +10746,196 @@
    "explanation_th": "possessing → possessed : กริยาในอนุประโยค (who) ต้องเป็นกริยาแท้ ไม่ใช่ -ing ลอย ๆ",
    "verified": true,
    "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-err-01",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "Dr. Evans is one of those brilliant (A)[astrophysicists] who (B)[believes] that humanity will eventually (C)[colonize] other planets within the next (D)[few] centuries.",
+   "options": [
+    "(A) astrophysicists",
+    "(B) believes",
+    "(C) colonize",
+    "(D) few"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "believes → believe : who แทน astrophysicists (พหูพจน์) กริยาจึงไม่เติม s",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-err-02",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The extensive renovations to the historical museum have made the exhibition halls (A)[significantly more accessible] to visitors (B)[who require] wheelchairs, ensuring a (C)[truly inclusive] and (D)[comfortably] experience.",
+   "options": [
+    "(A) significantly more accessible",
+    "(B) who require",
+    "(C) truly inclusive",
+    "(D) comfortably"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "comfortably → comfortable : ต้องการ Adjective ขยายคำนาม experience",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-err-03",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Pronouns",
+   "stem": "The board of directors will ultimately promote (A)[whomever] demonstrates the most innovative problem-solving skills, (B)[regardless of] their previous tenure (C)[within] the highly competitive (D)[marketing] department.",
+   "options": [
+    "(A) whomever",
+    "(B) regardless of",
+    "(C) within",
+    "(D) marketing"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "whomever → whoever : ทำหน้าที่เป็นประธานของ demonstrates ต้องใช้รูปประธาน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-err-04",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Parallel Structure",
+   "stem": "To successfully navigate the severe economic recession, the troubled manufacturing corporation must (A)[either drastically reduce] its operational expenses (B)[or] completely (C)[liquidating] its underperforming (D)[overseas] assets.",
+   "options": [
+    "(A) either drastically reduce",
+    "(B) or",
+    "(C) liquidating",
+    "(D) overseas"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "liquidating → liquidate : ต้องขนานกับ reduce (V.พื้นฐาน) หลัง must either...or",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-err-05",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "During the intense press conference, the embattled politician emphatically denied the allegations and firmly stated that she (A)[had never] (B)[accepts] any illicit campaign contributions from (C)[anonymous corporate] (D)[donors].",
+   "options": [
+    "(A) had never",
+    "(B) accepts",
+    "(C) anonymous corporate",
+    "(D) donors"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "accepts → accepted : had ต้องตามด้วย V3 (Past Perfect) สอดคล้องกับการ backshift ใน reported speech",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-err-06",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "The recently synthesized pharmaceutical compound proved to be (A)[much more safer] for prolonged human consumption (B)[than] the previous iteration, (C)[which had caused] severe (D)[gastrointestinal] distress.",
+   "options": [
+    "(A) much more safer",
+    "(B) than",
+    "(C) which had caused",
+    "(D) gastrointestinal"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "much more safer → much safer : safer เป็นขั้นกว่าอยู่แล้ว ห้ามเติม more ซ้อน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-err-07",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Quantifiers",
+   "stem": "Before the widespread adoption of automated assembly lines, factory managers (A)[would regularly hire] hundreds of skilled artisans, resulting in significantly (B)[higher] production costs and (C)[far] (D)[less] completed products.",
+   "options": [
+    "(A) would regularly hire",
+    "(B) higher",
+    "(C) far",
+    "(D) less"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "less → fewer : products เป็นนามนับได้พหูพจน์ ต้องใช้ fewer",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-err-08",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The ambitious infrastructure project, (A)[which aimed] to connect the three major metropolitan areas, was abruptly halted due to rapidly (B)[escalating] material costs and severely (C)[depleting] (D)[national] funds.",
+   "options": [
+    "(A) which aimed",
+    "(B) escalating",
+    "(C) depleting",
+    "(D) national"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "depleting → depleted : fund ถูกทำให้ร่อยหรอ (passive) ต้องใช้ V3 ไม่ใช่ -ing (active)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-err-09",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "(A)[There has] been several unprecedented technological breakthroughs in renewable energy storage recently, providing scientists with (B)[renewed optimism] about (C)[combatting] the severe impacts of global (D)[climate change].",
+   "options": [
+    "(A) There has",
+    "(B) renewed optimism",
+    "(C) combatting",
+    "(D) climate change"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "There has → There have : ประธานแท้จริงคือ breakthroughs (พหูพจน์)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-err-10",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "Ever since the controversial tax reform policy (A)[was implemented] last spring, the national unemployment rate (B)[steadily] (C)[decreases], defying the extremely pessimistic forecasts of (D)[leading] economists.",
+   "options": [
+    "(A) was implemented",
+    "(B) steadily",
+    "(C) decreases",
+    "(D) leading"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "decreases → has decreased : Ever since + อดีต ต้องคู่กับ Present Perfect ในประโยคหลัก",
+   "verified": true,
+   "level": "B2-C1"
   }
  ],
  "writingSC": [
@@ -25739,6 +25929,196 @@
    "explanation_th": "Should + S + V พื้นฐาน เป็น Inverted conditional ที่ถูกต้อง (Were จะต้องไม่มี be ซ้อน, Had ต้องใช้ V3)",
    "verified": true,
    "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-sc-01",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Inversion",
+   "stem": "Under no circumstances ______ to access the highly classified database without prior written authorization from the director.",
+   "options": [
+    "are unauthorized personnel permitted",
+    "unauthorized personnel are permitted",
+    "are permitted unauthorized personnel",
+    "do unauthorized personnel permit"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Inversion หลัง Under no circumstances (negative fronting) ด้วย be-verb: are + ประธาน + permitted",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-sc-02",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Subjunctive",
+   "stem": "The medical board strongly insisted that the revolutionary genetic treatment ______ rigorously tested on animal models before human trials begin.",
+   "options": [
+    "was",
+    "be",
+    "is",
+    "must be"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "Mandative subjunctive หลัง insisted that ต้องใช้ V.พื้นฐาน (be)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-sc-03",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "If the city council had invested heavily in coastal flood defenses last decade, the downtown commercial district ______ underwater right now.",
+   "options": [
+    "will not be",
+    "won't have been",
+    "would not be",
+    "wouldn't have been"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Mixed conditional: เหตุอดีต (had invested) ส่งผลถึงปัจจุบัน (would not be) สังเกต right now",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-sc-04",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Modal Perfect",
+   "stem": "The project manager ______ the deadline extension, but she completely forgot to submit the official paperwork to the client.",
+   "options": [
+    "should request",
+    "must have requested",
+    "might have requested",
+    "should have requested"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "should have + V3 = ควรทำแต่ไม่สำเร็จ สอดคล้องกับ 'ลืมส่งเอกสาร'",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-sc-05",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Cleft Sentences",
+   "stem": "It was the unprecedented combination of high inflation and severe supply chain disruptions ______ the manufacturing company into bankruptcy.",
+   "options": [
+    "that forced",
+    "what forced",
+    "which forcing",
+    "where it forced"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Cleft sentence: It was + X + that + กริยา เน้นสาเหตุ",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-sc-06",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "Given the intense scrutiny from the press, the embattled CEO decided to ______ any questions regarding the ongoing embezzlement investigation.",
+   "options": [
+    "mitigate",
+    "alleviate",
+    "evade",
+    "concede"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "evade questions (หลบเลี่ยงคำถาม) เป็น collocation ที่ถูกต้อง",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-sc-07",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Connectors",
+   "stem": "______ the overwhelming empirical evidence supporting the new evolutionary theory, a small faction of orthodox scientists stubbornly refused to accept it.",
+   "options": [
+    "Assuming that",
+    "On behalf of",
+    "In accordance with",
+    "Notwithstanding"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "Notwithstanding (แม้จะมี) ให้ความหมายขัดแย้งที่ถูกต้อง",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-sc-08",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Participle Phrases",
+   "stem": "______ exclusively from recycled aeronautical-grade aluminum, the new bicycle frame is both remarkably lightweight and incredibly durable.",
+   "options": [
+    "Constructing",
+    "Constructed",
+    "To construct",
+    "Having constructed"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "Constructed = reduced passive participle (เฟรมถูกสร้างจาก...)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-sc-09",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "The lead negotiator's approach was highly ______, as she carefully adapted her tone and strategic demands to the shifting mood of the room.",
+   "options": [
+    "astute",
+    "impetuous",
+    "redundant",
+    "archaic"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "astute (ฉลาดเฉียบแหลม) เข้ากับการปรับตัวตามสถานการณ์",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1b4-sc-10",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch4",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "The more complex the neurological puzzle became, ______ the research team was to unravel its underlying biological mechanisms.",
+   "options": [
+    "the more determination",
+    "most determined",
+    "the more determined",
+    "more determined"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "โครงสร้าง The more..., the more... ต้องมี the นำหน้า comparative ทั้งสองฝั่งเสมอ",
+   "verified": true,
+   "level": "B2-C1"
   }
  ],
  "readingShort": [
@@ -28522,6 +28902,213 @@
      "answerIndex": 0,
      "points": 3,
      "explanation_th": "ระบุตรง ๆ ในย่อหน้าสุดท้าย"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-507",
+   "title": "Notice: Revised Data Server Access Protocol",
+   "genre": "notice (correspondence)",
+   "category": "other",
+   "wordCount": 160,
+   "level": "C1",
+   "targetVocab": [
+    "stringent",
+    "biometric",
+    "vulnerability",
+    "fortifying"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "Notice: Revised Data Server Access Protocol\n\nEffective Monday, November 4th, the IT Department is implementing a stringent two-tier authentication protocol for all employees accessing the central data servers. This measure is imperative to mitigate recent external cybersecurity threats.\n\nFirstly, all personnel must surrender their current magnetic swipe cards to the security desk by Friday afternoon. These will be replaced with biometric access badges. Any employee who fails to obtain the new badge will be temporarily denied entry to the server rooms.\n\nSecondly, remote access to the main database will now require a dynamic token generated by the official company application, which must be installed on your registered mobile device. The former method of using static passwords has been completely prohibited due to its vulnerability.\n\nShould you encounter technical difficulties during the transition, please refrain from submitting multiple IT tickets. Instead, directly contact the dedicated Helpdesk hotline at extension 4099. We appreciate your cooperation in fortifying our digital infrastructure against potential breaches.",
+   "questions": [
+    {
+     "id": "rd-c1-507-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the primary purpose of this notice?",
+     "options": [
+      "To outline a new security procedure for server access.",
+      "To announce a reduction in IT department staff.",
+      "To warn employees about an ongoing virus infection.",
+      "To advertise a new mobile application for personal use."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ประกาศแจ้งขั้นตอนความปลอดภัยใหม่ในการเข้าถึงเซิร์ฟเวอร์"
+    },
+    {
+     "id": "rd-c1-507-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What will happen if an employee does not get a new biometric badge?",
+     "options": [
+      "They will not be allowed to enter the server rooms.",
+      "They will be fired immediately.",
+      "They must pay a fine to the security desk.",
+      "They will have their remote access revoked."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบุตรง ๆ ในย่อหน้าที่ 2"
+    },
+    {
+     "id": "rd-c1-507-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How must employees authenticate their remote access under the new protocol?",
+     "options": [
+      "By using a changing code from a mobile app.",
+      "By swiping a magnetic card on their home computer.",
+      "By calling the Helpdesk hotline for a password.",
+      "By using their previously assigned static password."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ต้องใช้ dynamic token จากแอปมือถือ"
+    },
+    {
+     "id": "rd-c1-507-q4",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word is closest in meaning to \"prohibited\" in the third paragraph?",
+     "options": [
+      "Forbidden",
+      "Encouraged",
+      "Authorized",
+      "Modified"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "prohibited แปลว่า ถูกสั่งห้าม"
+    },
+    {
+     "id": "rd-c1-507-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What should an employee do FIRST if they face a problem with the new system?",
+     "options": [
+      "Call the specific Helpdesk extension.",
+      "Submit a ticket to the IT department online.",
+      "Surrender their magnetic swipe card.",
+      "Ignore the issue until the system updates."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ให้ติดต่อสายด่วน Helpdesk โดยตรงเป็นอันดับแรก"
+    },
+    {
+     "id": "rd-c1-507-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why was the static password method discontinued?",
+     "options": [
+      "It was considered too weak against security threats.",
+      "It was too difficult for employees to remember.",
+      "The company could no longer afford the licensing fees.",
+      "It was causing the servers to run too slowly."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ถูกยกเลิกเพราะมีช่องโหว่ (อ่อนแอ) ต่อภัยคุกคาม"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-508",
+   "title": "Email: Textbook Proof Correction Request",
+   "genre": "formal letter (correspondence)",
+   "category": "other",
+   "wordCount": 227,
+   "level": "C1",
+   "targetVocab": [
+    "galley proofs",
+    "impeccably",
+    "inexplicably",
+    "undermine",
+    "rectified"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "From: Dr. Arisara Montree\nTo: Horizon Academic Press\nSubject: Urgent Correction Needed: Manuscript #4492 Proofs\n\nDear Editorial Team,\n\nI am writing to formally address a critical error I discovered in the final galley proofs of my upcoming textbook, Advanced Microeconomics. I received the PDF proofs yesterday evening and thoroughly reviewed the document.\n\nWhile the majority of the text is impeccably formatted, Chapter 7 contains a catastrophic mistake. Specifically, the graphs depicting the “Price Elasticity of Demand” (Figures 7.2 and 7.3) have been inexplicably swapped with the charts illustrating “Marginal Utility” from Chapter 4. If the textbook goes to print with this error, it will severely confuse the students and undermine the academic integrity of the entire publication.\n\nI suspect this misalignment occurred during the final typesetting phase last week when I requested a minor font adjustment to the image captions. Whatever the cause, it is imperative that these figures are reverted to their correct positions immediately.\n\nI have attached an annotated version of the proofs with the specific pages highlighted in red. Please confirm receipt of this email and assure me that the printing process will be paused until this flaw is fully rectified. I expect a revised proof sent to me by Wednesday morning so that we do not miss the ultimate publication deadline of October 15th.\n\nThank you for your prompt attention to this pressing matter.\n\nSincerely,\nDr. Arisara Montree",
+   "questions": [
+    {
+     "id": "rd-c1-508-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "Why is Dr. Arisara sending this email?",
+     "options": [
+      "To demand the fixing of misplaced illustrations.",
+      "To submit a new manuscript for a textbook.",
+      "To compliment the formatting of her new book.",
+      "To request an extension on the publication deadline."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "เธอเขียนเพื่อเรียกร้องให้แก้ไขรูปภาพที่สลับตำแหน่งกัน"
+    },
+    {
+     "id": "rd-c1-508-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What specific error did Dr. Arisara find in the proofs?",
+     "options": [
+      "Graphs in one chapter were replaced by charts from another.",
+      "The font size of the captions was entirely unreadable.",
+      "Chapter 4 and Chapter 7 were printed in the wrong order.",
+      "The title of the textbook was misspelled on the cover."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "กราฟบทที่ 7 ถูกสลับกับตารางจากบทที่ 4"
+    },
+    {
+     "id": "rd-c1-508-q3",
+     "qtype": "INFERENCE",
+     "stem": "What does Dr. Arisara fear will happen if the error is not corrected?",
+     "options": [
+      "Readers will be misled and the book's credibility will suffer.",
+      "She will be forced to pay extra printing fees.",
+      "The publisher will cancel her book contract entirely.",
+      "The students will demand refunds from the university."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "เธอเกรงว่ามันจะทำให้นักศึกษาสับสนและทำลายความน่าเชื่อถือทางวิชาการ"
+    },
+    {
+     "id": "rd-c1-508-q4",
+     "qtype": "INFERENCE",
+     "stem": "When does Dr. Arisara think the mistake was introduced?",
+     "options": [
+      "When the text was being laid out and captions were altered.",
+      "When she originally drafted the manuscript last year.",
+      "During the initial peer-review process of the text.",
+      "When the publisher first accepted the book for printing."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "เธอเชื่อว่าข้อผิดพลาดเกิดตอนจัดหน้าและมีการขอแก้ฟอนต์คำบรรยายภาพ"
+    },
+    {
+     "id": "rd-c1-508-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What action does Dr. Arisara want the publisher to take FIRST?",
+     "options": [
+      "Acknowledge her message and halt the printing press.",
+      "Fire the typesetter responsible for the error.",
+      "Send her a printed copy of the flawed textbook.",
+      "Delay the final publication date until November."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ต้องการให้ตอบรับอีเมลและระงับกระบวนการพิมพ์ไว้ก่อน"
+    },
+    {
+     "id": "rd-c1-508-q6",
+     "qtype": "PURPOSE_TONE",
+     "stem": "Which word best describes the tone of the email?",
+     "options": [
+      "Firm and urgent",
+      "Apologetic and hesitant",
+      "Casual and friendly",
+      "Sarcastic and bitter"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "น้ำเสียงเด็ดขาดและเร่งด่วน สะท้อนจากคำว่า catastrophic, imperative, expect"
     }
    ]
   }
@@ -32916,6 +33503,138 @@
      "answerIndex": 0,
      "points": 3,
      "explanation_th": "externalities แปลว่า ผลกระทบภายนอกที่ไม่ได้ตั้งใจ"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-604",
+   "title": "The Promise and Limits of Vertical Farming",
+   "genre": "argumentative article",
+   "category": "article",
+   "wordCount": 455,
+   "level": "C1",
+   "targetVocab": [
+    "paradigm",
+    "heralded",
+    "exorbitant",
+    "unviable",
+    "panacea"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "The modern agricultural landscape is currently undergoing a profound paradigm shift, driven by the rapid adoption of vertical farming. This innovative method involves cultivating crops in stacked layers, typically within controlled indoor environments such as abandoned warehouses or customized skyscrapers. As global populations soar and arable land becomes increasingly scarce, vertical farming has been heralded by many as the ultimate solution to looming food security crises. However, a closer examination reveals that while this technology offers remarkable benefits, it is fraught with severe economic and environmental limitations that temper its utopian promises.\n\nThe primary advantage of vertical farming lies in its phenomenal spatial efficiency and resource conservation. Traditional agriculture consumes vast tracts of land and accounts for roughly 70 percent of global freshwater usage. In contrast, vertical farms utilize advanced hydroponic and aeroponic systems that recycle water constantly, reducing consumption by up to 95 percent compared to conventional open-field farming. Furthermore, because these facilities are entirely enclosed, they are impervious to erratic weather patterns, devastating droughts, and seasonal limitations. Crops can be grown year-round in urban centers, drastically cutting the carbon emissions associated with transporting food from rural farms to city supermarkets.\n\nDespite these compelling benefits, skeptics correctly point out that vertical farming is hindered by exorbitant energy requirements. While natural sunlight is free, indoor farms must rely exclusively on artificial LED lighting to stimulate photosynthesis. The electrical demand to illuminate thousands of plants for up to sixteen hours a day is staggering. Consequently, unless a vertical farm is powered entirely by renewable energy sources, its overall carbon footprint can actually exceed that of traditional agriculture. Currently, the high cost of electricity means that vertical farms can only profitably produce high-yield, fast-growing crops like leafy greens and herbs. Staple crops that provide the bulk of global caloric intake, such as wheat, rice, and corn, are entirely economically unviable in a vertical setup due to their massive energy-to-yield ratios.\n\nMoreover, the initial capital expenditure required to establish a vertical farm is astronomically high. The complex infrastructure—comprising automated climate control systems, sophisticated sensors, and specialized lighting—creates a massive barrier to entry. This financial reality means that vertical farming is largely confined to wealthy developed nations, offering little immediate relief to developing countries where food insecurity is most acute.\n\nIn conclusion, vertical farming is undeniably a brilliant feat of agricultural engineering, but it is not a standalone panacea for world hunger. It is best viewed as a supplementary technology that can alleviate pressure on local supply chains for specific produce. To ensure global food security, policymakers must not abandon traditional farming; rather, they should focus on integrating sustainable practices across all agricultural sectors while aggressively transitioning national power grids toward renewable energy sources for a more secure future.",
+   "questions": [
+    {
+     "id": "rd-c1-604-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the primary purpose of the passage?",
+     "options": [
+      "To analyze the advantages and significant limitations of vertical farming.",
+      "To explain the specific mechanics of hydroponic systems.",
+      "To persuade traditional farmers to abandon their outdoor fields.",
+      "To argue that vertical farming uses too much freshwater."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "บทความวิเคราะห์ทั้งข้อดีและข้อจำกัดสำคัญของ vertical farming"
+    },
+    {
+     "id": "rd-c1-604-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to paragraph 2, how does vertical farming conserve water?",
+     "options": [
+      "By using closed systems that continuously recycle water.",
+      "By only growing crops that do not require moisture.",
+      "By collecting natural rainwater on the roofs of skyscrapers.",
+      "By genetically modifying plants to survive droughts."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ใช้ระบบปิดที่หมุนเวียนน้ำกลับมาใช้ใหม่ตลอด"
+    },
+    {
+     "id": "rd-c1-604-q3",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "What does the word \"impervious\" in paragraph 2 most closely mean?",
+     "options": [
+      "Unaffected by",
+      "Dependent on",
+      "Vulnerable to",
+      "Responsible for"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "impervious แปลว่า ไม่ได้รับผลกระทบ/ไม่หวั่นไหว"
+    },
+    {
+     "id": "rd-c1-604-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why is the carbon footprint of a vertical farm sometimes higher than a traditional farm?",
+     "options": [
+      "Because they require massive amounts of electricity for artificial lighting.",
+      "Because they transport food across much longer distances.",
+      "Because the fertilizers they use emit greenhouse gases.",
+      "Because the skyscrapers they use are made of concrete."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ต้องใช้ไฟฟ้ามหาศาลสำหรับหลอดไฟประดิษฐ์"
+    },
+    {
+     "id": "rd-c1-604-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why are crops like wheat and rice NOT grown in vertical farms?",
+     "options": [
+      "The cost of the energy needed to grow them far exceeds their market value.",
+      "They grow too quickly and overwhelm the automated systems.",
+      "They require natural soil, which is banned in hydroponic farming.",
+      "There is no demand for staple crops in modern urban centers."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "พลังงานที่ใช้ปลูกสูงมากจนไม่คุ้มกับราคาตลาด"
+    },
+    {
+     "id": "rd-c1-604-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How does the author view the financial aspect of starting a vertical farm?",
+     "options": [
+      "It is so expensive that it excludes developing countries from participating.",
+      "It is highly subsidized by most governments.",
+      "It is incredibly cheap due to the use of abandoned buildings.",
+      "It is a minor expense that can be easily recovered in a month."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ค่าใช้จ่ายเริ่มต้นสูงมากจนกีดกันประเทศกำลังพัฒนา"
+    },
+    {
+     "id": "rd-c1-604-q7",
+     "qtype": "INFERENCE",
+     "stem": "Which of the following is NOT mentioned as a benefit of vertical farming?",
+     "options": [
+      "It provides jobs for rural communities.",
+      "It can operate regardless of seasonal weather changes.",
+      "It reduces transportation-related emissions.",
+      "It saves a significant amount of space."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "บทความไม่ได้พูดถึงการสร้างงานให้ชุมชนชนบทเลย"
+    },
+    {
+     "id": "rd-c1-604-q8",
+     "qtype": "INFERENCE",
+     "stem": "What is the author's final conclusion regarding vertical farming?",
+     "options": [
+      "It is a useful addition but not a total cure for global food shortages.",
+      "It will completely replace traditional agriculture within a decade.",
+      "It is a failed experiment that should be immediately defunded.",
+      "It is only useful for producing food for wealthy individuals."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "สรุปว่าเป็นเทคโนโลยีเสริมที่ดี แต่ไม่ใช่ยาวิเศษที่แก้ปัญหาได้ทั้งหมด"
     }
    ]
   }
