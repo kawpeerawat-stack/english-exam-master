@@ -10936,6 +10936,196 @@
    "explanation_th": "decreases → has decreased : Ever since + อดีต ต้องคู่กับ Present Perfect ในประโยคหลัก",
    "verified": true,
    "level": "B2-C1"
+  },
+  {
+   "id": "b1b2b2-err-01",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "The (A)[new] students (B)[usually arrives] at the (C)[main hall] before the (D)[morning bell] rings.",
+   "options": [
+    "(A) new",
+    "(B) usually arrives",
+    "(C) main hall",
+    "(D) morning bell"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "arrives → arrive : ประธาน students เป็นพหูพจน์ กริยาไม่เติม s",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-err-02",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Prepositions",
+   "stem": "My (A)[parents are going] (B)[to travel] to (C)[northern] Japan for a vacation (D)[at October].",
+   "options": [
+    "(A) parents are going",
+    "(B) to travel",
+    "(C) northern",
+    "(D) at October"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "at → in : หน้าชื่อเดือนต้องใช้ in",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-err-03",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "I (A)[go] to the supermarket (B)[yesterday] because we (C)[did not] have any (D)[fresh] vegetables.",
+   "options": [
+    "(A) go",
+    "(B) yesterday",
+    "(C) did not",
+    "(D) fresh"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "go → went : มีคำว่า yesterday ต้องใช้ Past Simple",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-err-04",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The young (A)[children] played (B)[their favorite] games very (C)[happy] in the (D)[sunny] garden all afternoon.",
+   "options": [
+    "(A) children",
+    "(B) their favorite",
+    "(C) happy",
+    "(D) sunny"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "happy → happily : ต้องใช้ Adverb ขยายกริยา played",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-err-05",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Gerund Infinitive",
+   "stem": "My older (A)[sister] enjoys (B)[to cook] traditional Thai (C)[food] for our family (D)[on the weekends].",
+   "options": [
+    "(A) sister",
+    "(B) to cook",
+    "(C) food",
+    "(D) on the weekends"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "to cook → cooking : enjoy ต้องตามด้วย Gerund (V-ing)",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-err-06",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "This (A)[new] smartphone is (B)[much] (C)[more cheaper] than the (D)[older model] in the store.",
+   "options": [
+    "(A) new",
+    "(B) much",
+    "(C) more cheaper",
+    "(D) older model"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "more cheaper → cheaper : ห้ามเติม more ซ้อนกับขั้นกว่า -er",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-err-07",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Articles",
+   "stem": "We stayed at (A)[an beautiful] hotel (B)[near] the beach (C)[during] our summer holiday (D)[last year].",
+   "options": [
+    "(A) an beautiful",
+    "(B) near",
+    "(C) during",
+    "(D) last year"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "an → a : beautiful ขึ้นต้นด้วยเสียงพยัญชนะ (b)",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-err-08",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Passive Voice",
+   "stem": "The (A)[glass windows] in the (B)[science classroom] were (C)[completely] (D)[break] by the strong wind yesterday.",
+   "options": [
+    "(A) glass windows",
+    "(B) science classroom",
+    "(C) completely",
+    "(D) break"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "break → broken : Passive Voice ต้องใช้ was/were + V3",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-err-09",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Quantifiers",
+   "stem": "We do (A)[not have] (B)[many] time left (C)[to finish] this important (D)[project] before tomorrow.",
+   "options": [
+    "(A) not have",
+    "(B) many",
+    "(C) to finish",
+    "(D) project"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "many → much : time เป็นนามนับไม่ได้",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-err-10",
+   "part": "WRITING_ERROR",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "Mr. Smith (A)[is a very] (B)[popular] English teacher, and he (C)[works] at this school (D)[for ten years].",
+   "options": [
+    "(A) is a very",
+    "(B) popular",
+    "(C) works",
+    "(D) for ten years"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "works → has worked : มี for ten years ต้องใช้ Present Perfect",
+   "verified": true,
+   "level": "B1-B2"
   }
  ],
  "writingSC": [
@@ -26119,6 +26309,196 @@
    "explanation_th": "โครงสร้าง The more..., the more... ต้องมี the นำหน้า comparative ทั้งสองฝั่งเสมอ",
    "verified": true,
    "level": "B2-C1"
+  },
+  {
+   "id": "b1b2b2-sc-01",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "My brother _____ to London three times this year.",
+   "options": [
+    "has traveled",
+    "travels",
+    "is traveling",
+    "traveled"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Present Perfect กับ three times this year (ประสบการณ์ที่ยังไม่จบปี)",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-sc-02",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Modals",
+   "stem": "Students _____ submit their science projects before Friday afternoon.",
+   "options": [
+    "might",
+    "must",
+    "could",
+    "ought"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "must บอกความจำเป็น/กฎบังคับ",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-sc-03",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Passive Voice",
+   "stem": "Coffee _____ in many countries around the world today.",
+   "options": [
+    "grows",
+    "grew",
+    "is grown",
+    "has grown"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Passive Voice ปัจจุบัน (is grown) เพราะ Coffee ถูกปลูก (ถูกกระทำ)",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-sc-04",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Gerund Infinitive",
+   "stem": "We finally decided _____ a new car because the old one was broken.",
+   "options": [
+    "buying",
+    "buy",
+    "bought",
+    "to buy"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "decide ต้องตามด้วย to + V เสมอ",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-sc-05",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "If I won the lottery, I _____ a big house for my parents.",
+   "options": [
+    "would buy",
+    "will buy",
+    "buy",
+    "bought"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Conditional Type 2: If+Past Simple, would+V.พื้นฐาน",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-sc-06",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Quantifiers",
+   "stem": "There are _____ students in the library today than yesterday.",
+   "options": [
+    "less",
+    "fewer",
+    "much",
+    "little"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "fewer ใช้กับนามนับได้พหูพจน์ (students)",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-sc-07",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Relative Clauses",
+   "stem": "The book _____ I borrowed from the library is very interesting.",
+   "options": [
+    "who",
+    "whom",
+    "which",
+    "whose"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "which ใช้แทนสิ่งของ (the book)",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-sc-08",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Vocabulary",
+   "stem": "Wearing a seatbelt can _____ serious injuries during a car accident.",
+   "options": [
+    "increase",
+    "damage",
+    "encourage",
+    "prevent"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "prevent (ป้องกัน) เข้ากับบริบทลดการบาดเจ็บ",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-sc-09",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "I was walking to school when I _____ my best friend.",
+   "options": [
+    "saw",
+    "see",
+    "was seeing",
+    "have seen"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Past Continuous ถูกขัดจังหวะด้วย Past Simple (saw)",
+   "verified": true,
+   "level": "B1-B2"
+  },
+  {
+   "id": "b1b2b2-sc-10",
+   "part": "WRITING_SC",
+   "source": "b1b2Batch2",
+   "exam_type": "NETSAT",
+   "topic": "Reported Speech",
+   "stem": "Mary said that she _____ to visit her grandmother the next day.",
+   "options": [
+    "want",
+    "will want",
+    "wanted",
+    "is wanting"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Reported speech: ถอย tense กลับ (want → wanted)",
+   "verified": true,
+   "level": "B1-B2"
   }
  ],
  "readingShort": [
@@ -29109,6 +29489,212 @@
      "answerIndex": 0,
      "points": 3,
      "explanation_th": "น้ำเสียงเด็ดขาดและเร่งด่วน สะท้อนจากคำว่า catastrophic, imperative, expect"
+    }
+   ]
+  },
+  {
+   "id": "rd-b1b2-503",
+   "title": "Annual Science Fair Notice",
+   "genre": "notice (correspondence)",
+   "category": "other",
+   "wordCount": 112,
+   "level": "B1",
+   "targetVocab": [
+    "participate",
+    "register",
+    "gymnasium",
+    "certificate"
+   ],
+   "verified": true,
+   "tier": "B1-B2",
+   "passage": "Attention all high school students! The Annual Science Fair will take place on November 12th in the school gymnasium. If you want to participate, you must register your team online by October 30th. Each team can have a maximum of three students.\n\nOn the day of the fair, please arrive at 8:00 AM to set up your project. Your display board must not be taller than 150 centimeters. Please remember that dangerous chemicals and live animals are strictly not allowed inside the hall for safety reasons.\n\nThe judges will start reviewing the projects at 10:00 AM. The winners will receive a special certificate and a gift card for a local bookstore. Good luck to everyone!",
+   "questions": [
+    {
+     "id": "rd-b1b2-503-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main purpose of this text?",
+     "options": [
+      "To give instructions for a school event",
+      "To sell tickets to a science museum",
+      "To explain how to use chemicals safely",
+      "To advertise a local bookstore"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "แจ้งรายละเอียด/กฎของงานวิทยาศาสตร์ประจำปี"
+    },
+    {
+     "id": "rd-b1b2-503-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "When is the deadline to register a team?",
+     "options": [
+      "October 30th",
+      "November 12th",
+      "8:00 AM",
+      "10:00 AM"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุตรง ๆ ว่าต้องลงทะเบียนก่อน October 30th"
+    },
+    {
+     "id": "rd-b1b2-503-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the maximum number of students in one team?",
+     "options": [
+      "Three",
+      "Four",
+      "Five",
+      "Unlimited"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุตรง ๆ ว่าทีมละไม่เกิน 3 คน"
+    },
+    {
+     "id": "rd-b1b2-503-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What rule must students follow for their project?",
+     "options": [
+      "The display board must be 150 centimeters or shorter.",
+      "They must use dangerous chemicals.",
+      "They must bring a live animal.",
+      "They must set up the project outside the hall."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ป้ายต้องไม่สูงเกิน 150 ซม."
+    },
+    {
+     "id": "rd-b1b2-503-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What time will the judges begin looking at the projects?",
+     "options": [
+      "10:00 AM",
+      "8:00 AM",
+      "12:00 PM",
+      "October 30th"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "กรรมการเริ่มตรวจ 10:00 น."
+    },
+    {
+     "id": "rd-b1b2-503-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the prize for the winners?",
+     "options": [
+      "A certificate and a gift card",
+      "A new display board",
+      "Free tickets to a museum",
+      "A science textbook"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "รางวัลคือใบประกาศเกียรติคุณและบัตรของขวัญ"
+    }
+   ]
+  },
+  {
+   "id": "rd-b1b2-504",
+   "title": "Email: Lost Backpack Report",
+   "genre": "email (correspondence)",
+   "category": "other",
+   "wordCount": 174,
+   "level": "B1",
+   "targetVocab": [
+    "unfortunately",
+    "nylon",
+    "logo",
+    "collect"
+   ],
+   "verified": true,
+   "tier": "B1-B2",
+   "passage": "From: david.miller@email.com\nTo: lostandfound@cityrailway.com\nSubject: Lost Black Backpack on Train 452\n\nDear City Railway Customer Service,\n\nI am writing to report a lost item. Yesterday afternoon, I took Train 452 from Central Station to Northville. I got off the train at Northville Station at exactly 4:15 PM, but unfortunately, I left my backpack on the seat.\n\nThe backpack is black and made of nylon. It has a small red logo on the front pocket. Inside the bag, there is my laptop, a blue notebook, and a pair of reading glasses. I am very worried because my laptop contains important work documents that I need for a meeting this Friday.\n\nCould you please check if anyone has found and returned my backpack to your office? If it is there, please let me know when your office is open so I can come and collect it. You can contact me by replying to this email or by calling my mobile phone at 081-555-4321.\n\nThank you very much for your help.\n\nSincerely,\nDavid Miller",
+   "questions": [
+    {
+     "id": "rd-b1b2-504-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "Why did David Miller write this email?",
+     "options": [
+      "To look for his missing bag",
+      "To buy a train ticket",
+      "To apply for a job at the railway",
+      "To complain about a late train"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "เขียนเพื่อตามหากระเป๋าที่หายไป"
+    },
+    {
+     "id": "rd-b1b2-504-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Where did David get off the train?",
+     "options": [
+      "At Northville Station",
+      "At Central Station",
+      "At his office",
+      "At the customer service center"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ระบุตรง ๆ ว่าลงที่สถานี Northville"
+    },
+    {
+     "id": "rd-b1b2-504-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What does the lost backpack look like?",
+     "options": [
+      "It is black with a red logo on the front.",
+      "It is blue with a black logo.",
+      "It is red and made of leather.",
+      "It is small and made of plastic."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "สีดำ มีโลโก้สีแดงเล็ก ๆ ด้านหน้า"
+    },
+    {
+     "id": "rd-b1b2-504-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the most important item inside the bag for David?",
+     "options": [
+      "The laptop with work documents",
+      "The red logo",
+      "The blue notebook",
+      "The reading glasses"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ลูกค้าเป็นห่วงแล็ปท็อปที่มีเอกสารงานมากที่สุด"
+    },
+    {
+     "id": "rd-b1b2-504-q5",
+     "qtype": "INFERENCE",
+     "stem": "Why is David very worried?",
+     "options": [
+      "He needs his documents for a meeting.",
+      "He missed his train.",
+      "His reading glasses are broken.",
+      "He cannot remember his phone number."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "กังวลเพราะต้องใช้เอกสารในแล็ปท็อปสำหรับประชุมวันศุกร์"
+    },
+    {
+     "id": "rd-b1b2-504-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How can the customer service team contact David?",
+     "options": [
+      "By email or by phone",
+      "By sending a letter to his house",
+      "By visiting his office",
+      "By waiting at Northville Station"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ติดต่อได้ทางอีเมลหรือโทรศัพท์"
     }
    ]
   }
@@ -33635,6 +34221,137 @@
      "answerIndex": 0,
      "points": 4,
      "explanation_th": "สรุปว่าเป็นเทคโนโลยีเสริมที่ดี แต่ไม่ใช่ยาวิเศษที่แก้ปัญหาได้ทั้งหมด"
+    }
+   ]
+  },
+  {
+   "id": "rd-b1b2-602",
+   "title": "Why Physical Books Still Matter",
+   "genre": "informational article",
+   "category": "article",
+   "wordCount": 311,
+   "level": "B1",
+   "targetVocab": [
+    "eye strain",
+    "distracted",
+    "concentration",
+    "sensory"
+   ],
+   "verified": true,
+   "tier": "B1-B2",
+   "passage": "In today's modern world, people spend many hours looking at digital screens. We use smartphones, tablets, and computers for work, communication, and entertainment. Because of this, many people now prefer to read e-books instead of traditional paper books. However, reading physical books still offers several unique benefits that digital devices cannot provide.\n\nFirst, reading a physical book is much better for your eyes. Digital screens produce blue light, which can cause eye strain and headaches if you stare at them for too long. When you read a paper book, there is no harsh light shining directly into your eyes. This makes it a much more comfortable experience, especially before bedtime. In fact, doctors often suggest reading a real book at night because it helps your brain relax and prepares you for a good night's sleep.\n\nSecond, physical books can help improve your focus and concentration. When you read on a tablet or smartphone, you are easily distracted by notifications, messages, and social media updates. It is very tempting to stop reading and check the internet. On the other hand, a printed book offers no digital distractions. It allows you to deeply connect with the story or the information, which improves your memory and understanding of the text.\n\nFinally, many people simply enjoy the physical feeling of a real book. They love the smell of the paper, the sound of the pages turning, and the feeling of holding a solid object in their hands. A bookshelf full of books also makes a beautiful display in any room, showing a person's interests and personality.\n\nIn conclusion, while digital reading is fast and convenient, physical books are still highly valuable. They protect our eye health, increase our ability to concentrate, and provide a pleasant sensory experience. Therefore, it is a great idea to turn off our screens sometimes and enjoy a good printed book.",
+   "questions": [
+    {
+     "id": "rd-b1b2-602-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main idea of this passage?",
+     "options": [
+      "Physical books offer several benefits over digital reading.",
+      "E-books are the best way to learn new things.",
+      "Digital screens are completely bad for your health.",
+      "Everyone should throw away their smartphones."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "หนังสือกระดาษมีข้อดีหลายอย่างเหนือกว่าการอ่านดิจิทัล"
+    },
+    {
+     "id": "rd-b1b2-602-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why do many people prefer e-books today?",
+     "options": [
+      "Because people already use digital devices for many things.",
+      "Because paper books are too heavy.",
+      "Because e-books do not cost any money.",
+      "Because there are no bookstores left in the city."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "เพราะใช้อุปกรณ์ดิจิทัลอยู่แล้วในชีวิตประจำวัน"
+    },
+    {
+     "id": "rd-b1b2-602-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to the passage, how do digital screens affect your eyes?",
+     "options": [
+      "They produce blue light that can cause eye strain.",
+      "They make your eyesight much sharper and stronger.",
+      "They help you to see better in the dark.",
+      "They protect your eyes from the sun."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "จอดิจิทัลปล่อยแสงสีฟ้าที่ทำให้ตาล้า"
+    },
+    {
+     "id": "rd-b1b2-602-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why do doctors recommend reading a paper book before bed?",
+     "options": [
+      "It helps your brain relax and prepares you for sleep.",
+      "It helps you wake up early in the morning.",
+      "It makes you have exciting dreams.",
+      "It gives you energy to work late at night."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ช่วยให้สมองผ่อนคลายและเตรียมพร้อมสำหรับการนอน"
+    },
+    {
+     "id": "rd-b1b2-602-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is a major problem with reading on a smartphone?",
+     "options": [
+      "You can be distracted by notifications and messages.",
+      "The screen is too small to see the words.",
+      "The battery dies very quickly.",
+      "You cannot carry it everywhere you go."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ถูกรบกวนด้วยการแจ้งเตือนและข้อความ"
+    },
+    {
+     "id": "rd-b1b2-602-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How does a printed book help with learning?",
+     "options": [
+      "It has no distractions, which improves focus and memory.",
+      "It connects to the internet to check facts.",
+      "It reads the story aloud to you automatically.",
+      "It contains more pictures than an e-book."
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "ไม่มีสิ่งรบกวน ช่วยให้จดจ่อและจดจำได้ดีขึ้น"
+    },
+    {
+     "id": "rd-b1b2-602-q7",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is mentioned as a physical pleasure of a real book?",
+     "options": [
+      "The smell of the paper and the sound of pages turning",
+      "The bright colors of the digital screen",
+      "The lightweight feel of the tablet",
+      "The soft music playing in the background"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "กลิ่นกระดาษและเสียงพลิกหน้าหนังสือ"
+    },
+    {
+     "id": "rd-b1b2-602-q8",
+     "qtype": "PURPOSE_TONE",
+     "stem": "What is the author's tone in the final paragraph?",
+     "options": [
+      "Positive and encouraging",
+      "Angry and disappointed",
+      "Worried and nervous",
+      "Funny and joking"
+     ],
+     "answerIndex": 0,
+     "points": 2,
+     "explanation_th": "น้ำเสียงเชิงบวก ชักชวนให้ลองอ่านหนังสือกระดาษ"
     }
    ]
   }
