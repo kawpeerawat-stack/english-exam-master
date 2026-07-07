@@ -11126,6 +11126,956 @@
    "explanation_th": "works → has worked : มี for ten years ต้องใช้ Present Perfect",
    "verified": true,
    "level": "B1-B2"
+  },
+  {
+   "id": "b2c1Batch5-err-01",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "The recently implemented environmental policy, along with several other local initiatives, (A)[have successfully] (B)[reduced] the amount of industrial (C)[waste] flowing into the (D)[main river].",
+   "options": [
+    "(A) have successfully",
+    "(B) reduced",
+    "(C) waste",
+    "(D) main river"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "have → has : ประธานหลักคือ policy (เอกพจน์) วลี along with ไม่กระทบประธาน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-err-02",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Parallel Structure",
+   "stem": "To maintain international competitiveness, the factory must (A)[not only upgrade] its outdated machinery (B)[and also] provide comprehensive (C)[technical] training for its (D)[current] employees.",
+   "options": [
+    "(A) not only upgrade",
+    "(B) and also",
+    "(C) technical",
+    "(D) current"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "and also → but also : correlative not only ต้องคู่กับ but also",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-err-03",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Dependent Preposition",
+   "stem": "The senior scientists were incredibly (A)[dedicated] to their research, yet they were completely (B)[incapable] (C)[to find] a permanent solution to the (D)[widespread] viral outbreak.",
+   "options": [
+    "(A) dedicated",
+    "(B) incapable",
+    "(C) to find",
+    "(D) widespread"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "to find → of finding : incapable ต้องตามด้วย of + V-ing",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-err-04",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "The newly appointed project supervisor proved to be (A)[significantly more meticulous] (B)[than] her predecessor, ultimately (C)[creating] a (D)[much more smoother] operational workflow.",
+   "options": [
+    "(A) significantly more meticulous",
+    "(B) than",
+    "(C) creating",
+    "(D) much more smoother"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "much more smoother → much smoother : smoother เป็นขั้นกว่าอยู่แล้ว ห้ามเติม more",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-err-05",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The (A)[considerable] higher interest rates imposed by the central bank have (B)[severely impacted] the ability of small businesses to (C)[secure] affordable (D)[long-term] loans.",
+   "options": [
+    "(A) considerable",
+    "(B) severely impacted",
+    "(C) secure",
+    "(D) long-term"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "considerable → considerably : ต้องใช้ Adverb ขยาย higher",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-err-06",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Pronouns",
+   "stem": "During the intensive seminar, the visiting professor addressed several complex theories, (A)[many of] (B)[which] were difficult for the undergraduate students (C)[whom] attended the (D)[optional] lecture.",
+   "options": [
+    "(A) many of",
+    "(B) which",
+    "(C) whom",
+    "(D) optional"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "whom → who : ทำหน้าที่เป็นประธานของ attended",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-err-07",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "(A)[By the time] the specialized rescue team finally (B)[reached] the stranded mountaineers, the severe blizzard (C)[had already] (D)[buries] their essential supplies.",
+   "options": [
+    "(A) By the time",
+    "(B) reached",
+    "(C) had already",
+    "(D) buries"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "buries → buried : By the time+อดีต ต้องคู่กับ Past Perfect",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-err-08",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Double Negative",
+   "stem": "(A)[Hardly no] students in the advanced physics class (B)[could fully comprehend] the convoluted mathematical formulas (C)[that] the eccentric professor (D)[presented] on the whiteboard.",
+   "options": [
+    "(A) Hardly no",
+    "(B) could fully comprehend",
+    "(C) that",
+    "(D) presented"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Hardly no → Hardly any : hardly เป็นปฏิเสธอยู่แล้ว ห้ามคู่กับ no",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-err-09",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "(A)[Had] the corporation conducted a more thorough market analysis, it (B)[will not have experienced] such a (C)[devastating] financial loss during the (D)[previous] economic quarter.",
+   "options": [
+    "(A) Had",
+    "(B) will not have experienced",
+    "(C) devastating",
+    "(D) previous"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "will not have → would not have : Had+V3 (inverted 3rd conditional) ต้องคู่กับ would have",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-err-10",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The progressive local government strongly encourages its (A)[citizens] to actively participate in community service, (B)[thereby] fostering a profound sense of (C)[belong] among the (D)[diverse] population.",
+   "options": [
+    "(A) citizens",
+    "(B) thereby",
+    "(C) belong",
+    "(D) diverse"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "belong → belonging : หลังบุพบท of ต้องตามด้วย Noun/V-ing",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-err-01",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "Professor Higgins is one of the very few (A)[historian] who (B)[argue] that the devastating conflict was (C)[entirely preventable] through sustained (D)[diplomacy].",
+   "options": [
+    "(A) historian",
+    "(B) argue",
+    "(C) entirely preventable",
+    "(D) diplomacy"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "historian → historians : one of the + คำนามพหูพจน์เสมอ",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-err-02",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Parallel Structure",
+   "stem": "To address the severe economic downturn, the central bank must (A)[either drastically lower] the current interest rates (B)[or] (C)[implementing] comprehensive quantitative (D)[easing] policies.",
+   "options": [
+    "(A) either drastically lower",
+    "(B) or",
+    "(C) implementing",
+    "(D) easing"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "implementing → implement : ขนานกับ lower (V.พื้นฐาน) หลัง must either...or",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-err-03",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "The newly developed aerospace alloy is (A)[undeniably much stronger] (B)[than] traditional steel, which makes it (C)[ideal] for manufacturing (D)[more lighter] commercial aircraft.",
+   "options": [
+    "(A) undeniably much stronger",
+    "(B) than",
+    "(C) ideal",
+    "(D) more lighter"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "more lighter → lighter : ห้ามเติม more ซ้อนกับขั้นกว่า",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-err-04",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "(A)[By the time] the international regulatory commission finally published its safety guidelines, the controversial pharmaceutical company (B)[has already] (C)[distributed] millions of the (D)[untested] pills.",
+   "options": [
+    "(A) By the time",
+    "(B) has already",
+    "(C) distributed",
+    "(D) untested"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "has already → had already : By the time+อดีต ต้องคู่กับ Past Perfect",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-err-05",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The (A)[rapidly expanding] tech conglomerate is aggressively recruiting software engineers who are (B)[highly proficient] in artificial intelligence and can work (C)[independent] on (D)[innovative] projects.",
+   "options": [
+    "(A) rapidly expanding",
+    "(B) highly proficient",
+    "(C) independent",
+    "(D) innovative"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "independent → independently : ต้องใช้ Adverb ขยายกริยา work",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-err-06",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Dependent Preposition",
+   "stem": "Despite the manager's explicit instructions, the inexperienced technicians were completely (A)[incapable] (B)[to resolve] the complex software malfunction that (C)[had disrupted] the entire (D)[corporate] network.",
+   "options": [
+    "(A) incapable",
+    "(B) to resolve",
+    "(C) had disrupted",
+    "(D) corporate"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "to resolve → of resolving : incapable ต้องตามด้วย of + V-ing",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-err-07",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Pronoun Reference",
+   "stem": "The local government has recently launched an ambitious public health initiative, (A)[which aims] to encourage all (B)[citizens] to strictly monitor (C)[its] daily nutritional (D)[intake].",
+   "options": [
+    "(A) which aims",
+    "(B) citizens",
+    "(C) its",
+    "(D) intake"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "its → their : สรรพนามต้องสอดคล้องกับ citizens (พหูพจน์)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-err-08",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "According to the chief financial officer, neither the majority shareholders nor the executive director (A)[were] (B)[fully aware] of the (C)[imminent] bankruptcy facing the (D)[organization].",
+   "options": [
+    "(A) were",
+    "(B) fully aware",
+    "(C) imminent",
+    "(D) organization"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "were → was : neither...nor ผันตามประธานตัวใกล้ (director เอกพจน์)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-err-09",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The controversial legislation, (A)[which was initially proposed] to reduce carbon emissions, has faced (B)[unprecedented] opposition from manufacturing companies (C)[concerned about] (D)[soars] production costs.",
+   "options": [
+    "(A) which was initially proposed",
+    "(B) unprecedented",
+    "(C) concerned about",
+    "(D) soars"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "soars → soaring : ต้องการ V-ing ทำหน้าที่ adjective ขยาย costs",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-err-10",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "Ever since the prestigious university (A)[introduced] the mandatory online learning modules last semester, student engagement in virtual classrooms (B)[declines] (C)[steadily] across all (D)[departments].",
+   "options": [
+    "(A) introduced",
+    "(B) declines",
+    "(C) steadily",
+    "(D) departments"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "declines → has declined : Ever since+อดีต ต้องคู่กับ Present Perfect",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-err-01",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "The committee's final report, (A)[compiled] over several months by independent auditors, (B)[reveal] that nearly a quarter of the allocated (C)[funds] had been (D)[misused].",
+   "options": [
+    "(A) compiled",
+    "(B) reveal",
+    "(C) funds",
+    "(D) misused"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "reveal → reveals : ประธานแท้จริงคือ report (เอกพจน์)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-err-02",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Parallel Structure",
+   "stem": "The updated policy dictates that employees must either (A)[attend] the seminar in person or (B)[complete] an equivalent online module to (C)[fulfilling] their annual (D)[training] requirements.",
+   "options": [
+    "(A) attend",
+    "(B) complete",
+    "(C) fulfilling",
+    "(D) training"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "fulfilling → fulfill : to + V.พื้นฐาน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-err-03",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Double Negative",
+   "stem": "The updated immigration policy leaves recent applicants with (A)[hardly no] legal recourse (B)[to appeal] a (C)[rejected] visa (D)[application].",
+   "options": [
+    "(A) hardly no",
+    "(B) to appeal",
+    "(C) rejected",
+    "(D) application"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "hardly no → hardly any : hardly เป็นปฏิเสธอยู่แล้ว ห้ามคู่กับ no ซ้อน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-err-04",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The quarterly earnings report was so (A)[surprised] that the entire board immediately (B)[requested] a (C)[detailed] explanation from the (D)[finance] director.",
+   "options": [
+    "(A) surprised",
+    "(B) requested",
+    "(C) detailed",
+    "(D) finance"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "surprised → surprising : report (สิ่งของ) เป็นตัวทำให้เกิดความประหลาดใจ ต้องใช้ -ing",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-err-05",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Dependent Preposition",
+   "stem": "The updated shipping manifest must (A)[strictly] (B)[comply] (C)[to] all customs regulations before the cargo can (D)[legally] depart the harbor.",
+   "options": [
+    "(A) strictly",
+    "(B) comply",
+    "(C) to",
+    "(D) legally"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "to → with : บุพบทที่ถูกต้องคือ comply with เสมอ",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-err-06",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Pronouns",
+   "stem": "The talent scout will eventually recruit (A)[whomever] displays the greatest natural aptitude for the sport, (B)[irrespective of] their previous (C)[competitive] (D)[experience].",
+   "options": [
+    "(A) whomever",
+    "(B) irrespective of",
+    "(C) competitive",
+    "(D) experience"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "whomever → whoever : ทำหน้าที่เป็นประธานของ displays",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-err-07",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "(A)[By the time] the negotiators finally (B)[reached] a consensus, three separate rounds of talks (C)[have already collapsed] over disputes that neither side was willing (D)[to compromise] on.",
+   "options": [
+    "(A) By the time",
+    "(B) reached",
+    "(C) have already collapsed",
+    "(D) to compromise"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "have already collapsed → had already collapsed",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-err-08",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "(A)[Recovered] from the archive after decades of neglect, (B)[a series] of handwritten letters, long (C)[believed] to be lost, ultimately (D)[reveal] previously unknown details about the negotiations.",
+   "options": [
+    "(A) Recovered",
+    "(B) a series",
+    "(C) believed",
+    "(D) reveal"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "reveal → reveals : 'a series of' เป็นประธานเอกพจน์เสมอ",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-err-09",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Parallel Structure",
+   "stem": "Environmental economists argue that the carbon tax will either (A)[incentivize] cleaner technologies or (B)[forcing] companies to relocate production abroad, (C)[a trade-off] that (D)[remains] fiercely debated.",
+   "options": [
+    "(A) incentivize",
+    "(B) forcing",
+    "(C) a trade-off",
+    "(D) remains"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "forcing → force : ขนานกับ incentivize",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-err-10",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "The committee's final proposal was (A)[just] as controversial (B)[than] the initial draft, prompting several board members to (C)[demand] a full public hearing before any (D)[further] decisions were made.",
+   "options": [
+    "(A) just",
+    "(B) than",
+    "(C) demand",
+    "(D) further"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "than → as : as...as ต้องใช้ as ทั้งสองฝั่ง",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-err-01",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "Scattered throughout the newly excavated tomb (A)[was] dozens of ceremonial artifacts that (B)[historians] believe (C)[date back] over three (D)[millennia].",
+   "options": [
+    "(A) was",
+    "(B) historians",
+    "(C) date back",
+    "(D) millennia"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "was → were : ประธานแท้จริงคือ dozens of artifacts (พหูพจน์)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-err-02",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The company's revamped onboarding program has made the training process (A)[considerably more efficient] for new hires (B)[who join] remotely, fostering a (C)[genuinely collaborative] and (D)[productively] environment.",
+   "options": [
+    "(A) considerably more efficient",
+    "(B) who join",
+    "(C) genuinely collaborative",
+    "(D) productively"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "productively → productive : ต้องการ Adjective ขนานกับ collaborative",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-err-03",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Pronouns",
+   "stem": "The senior researcher will ultimately select (A)[whomever] presents the most rigorous methodology, (B)[regardless of] their prior publication (C)[record] in this highly competitive (D)[field].",
+   "options": [
+    "(A) whomever",
+    "(B) regardless of",
+    "(C) record",
+    "(D) field"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "whomever → whoever : ประธานของ presents",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-err-04",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Parallel Structure",
+   "stem": "The revised policy requires every subcontractor to (A)[either submit] quarterly compliance reports (B)[or] face (C)[immediately] termination of their (D)[existing] contract.",
+   "options": [
+    "(A) either submit",
+    "(B) or",
+    "(C) immediately",
+    "(D) existing"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "immediately → immediate",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-err-05",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Dependent Preposition",
+   "stem": "Despite facing severe budget cuts, the dedicated engineering team was entirely (A)[capable] (B)[to complete] the complex infrastructure project before the (C)[strict] (D)[deadline].",
+   "options": [
+    "(A) capable",
+    "(B) to complete",
+    "(C) strict",
+    "(D) deadline"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "to complete → of completing",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-err-06",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The marketing department launched a (A)[highly aggressive] campaign to promote the (B)[newly developed] smartphone, which features a (C)[revolutionary] and (D)[customization] user interface.",
+   "options": [
+    "(A) highly aggressive",
+    "(B) newly developed",
+    "(C) revolutionary",
+    "(D) customization"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "customization → customizable",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-err-07",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "(A)[By the time] the rescue team (B)[has arrived] at the remote mountain cabin, the stranded hikers (C)[had already managed] to build a makeshift (D)[shelter].",
+   "options": [
+    "(A) By the time",
+    "(B) has arrived",
+    "(C) had already managed",
+    "(D) shelter"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "has arrived → arrived",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-err-08",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "The financial analyst confidently predicted that the upcoming fiscal quarter would be (A)[much more better] than the (B)[previous] one, assuming (C)[inflation] rates remain relatively (D)[stable].",
+   "options": [
+    "(A) much more better",
+    "(B) previous",
+    "(C) inflation",
+    "(D) stable"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "much more better → much better",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-err-09",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "Whenever the notoriously strict professor (A)[noticed] students losing focus during the lengthy afternoon lecture, she (B)[would abruptly] (C)[pauses] and demand their immediate (D)[attention].",
+   "options": [
+    "(A) noticed",
+    "(B) would abruptly",
+    "(C) pauses",
+    "(D) attention"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "pauses → pause",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-err-10",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Quantifiers",
+   "stem": "Because the modern cafeteria offers significantly (A)[more expensive] meals and (B)[much less] vegetarian options, many health-conscious students have (C)[started bringing] their own (D)[packed] lunches.",
+   "options": [
+    "(A) more expensive",
+    "(B) much less",
+    "(C) started bringing",
+    "(D) packed"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "much less → far fewer",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-err-01",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "Dr. Miller is undeniably one of the very few (A)[researcher] who (B)[consistently advocate] for (C)[stricter] regulations regarding the (D)[commercial extraction] of deep-sea minerals.",
+   "options": [
+    "(A) researcher",
+    "(B) consistently advocate",
+    "(C) stricter",
+    "(D) commercial extraction"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "researcher → researchers",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-err-02",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Parallel Structure",
+   "stem": "The revised curriculum requires undergraduate students (A)[not only to complete] a rigorous capstone project (B)[and also] to pass a comprehensive (C)[written] examination before (D)[graduating].",
+   "options": [
+    "(A) not only to complete",
+    "(B) and also",
+    "(C) written",
+    "(D) graduating"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "and also → but also",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-err-03",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Dependent Preposition",
+   "stem": "Despite facing (A)[unprecedented] budget cuts, the dedicated research team was entirely (B)[capable] (C)[to develop] a viable alternative fuel source within the (D)[strict] timeframe.",
+   "options": [
+    "(A) unprecedented",
+    "(B) capable",
+    "(C) to develop",
+    "(D) strict"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "to develop → of developing",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-err-04",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "The newly synthesized carbon fiber material is (A)[undeniably much stronger] (B)[than] traditional aluminum, which makes it (C)[highly suitable] for manufacturing (D)[more lighter] racing bicycles.",
+   "options": [
+    "(A) undeniably much stronger",
+    "(B) than",
+    "(C) highly suitable",
+    "(D) more lighter"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "more lighter → lighter",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-err-05",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The (A)[considerable] higher maintenance costs (B)[associated with] electric commercial vehicles have (C)[forced] the logistics company to drastically (D)[increase] its delivery fees this year.",
+   "options": [
+    "(A) considerable",
+    "(B) associated with",
+    "(C) forced",
+    "(D) increase"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "considerable → considerably",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-err-06",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Pronouns",
+   "stem": "The prestigious university awards generous scholarships to (A)[those ambitious] students (B)[whom] demonstrate exceptional academic proficiency and actively (C)[participate] in extensive (D)[extracurricular] activities.",
+   "options": [
+    "(A) those ambitious",
+    "(B) whom",
+    "(C) participate",
+    "(D) extracurricular"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "whom → who",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-err-07",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "(A)[By the time] the specialized medical team finally (B)[arrived] at the remote village, the contagious viral outbreak (C)[has already] (D)[infected] hundreds of vulnerable residents.",
+   "options": [
+    "(A) By the time",
+    "(B) arrived",
+    "(C) has already",
+    "(D) infected"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "has already → had already",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-err-08",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Quantifiers",
+   "stem": "Because the university cafeteria now offers significantly (A)[more expensive] meals, many health-conscious students have (B)[started packing] their own lunches to avoid having (C)[far] (D)[less] vegetarian options.",
+   "options": [
+    "(A) more expensive",
+    "(B) started packing",
+    "(C) far",
+    "(D) less"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "less → fewer",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-err-09",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "The spokesperson confirmed that neither the marketing director nor the two regional sales managers (A)[was] (B)[willing] to comment publicly (C)[on] the sudden drop in quarterly (D)[revenue].",
+   "options": [
+    "(A) was",
+    "(B) willing",
+    "(C) on",
+    "(D) revenue"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "was → were : neither...nor ผันตามประธานตัวใกล้ (managers พหูพจน์)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-err-10",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Double Negative",
+   "stem": "(A)[With hardly any] hesitation, the brave firefighter (B)[rushed] into the burning warehouse (C)[without hardly any] protective gear on his (D)[face].",
+   "options": [
+    "(A) With hardly any",
+    "(B) rushed",
+    "(C) without hardly any",
+    "(D) face"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "without hardly any → with hardly any",
+   "verified": true,
+   "level": "B2-C1"
   }
  ],
  "writingSC": [
@@ -19761,7 +20711,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Word Order",
-   "stem": "Choose the sentence with correct academic word order and connector.",
+   "stem": "Choose the sentence with correct academic word order and connector. (Topic: missing lecture)",
    "options": [
     "Because he was sick, therefore he did not attend the lecture.",
     "Because he was sick, he did not attend the lecture.",
@@ -19875,7 +20825,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Word Order",
-   "stem": "Choose the sentence with correct academic syntax and connector.",
+   "stem": "Choose the sentence with correct academic syntax and connector. (Topic: unreliable data)",
    "options": [
     "Because the data was unreliable, therefore the results were not accepted.",
     "Because the data was unreliable, the results were not accepted.",
@@ -19913,7 +20863,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Word Order",
-   "stem": "Choose the sentence with correct noun clause as subject.",
+   "stem": "Choose the sentence with correct noun clause as subject. (Topic: solving a problem)",
    "options": [
     "How the students will solve the problem is still unknown.",
     "How the students will solve is still unknown the problem.",
@@ -19932,7 +20882,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Word Order",
-   "stem": "Which sentence has correct relative clause structure?",
+   "stem": "Which sentence has correct relative clause structure? (Topic: comfortable hotel)",
    "options": [
     "The hotel which we stayed in was very comfortable.",
     "The hotel which we in stayed was very comfortable.",
@@ -20027,7 +20977,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Word Order",
-   "stem": "Choose the sentence with correct noun clause structure.",
+   "stem": "Choose the sentence with correct noun clause structure. (Topic: postponed test)",
    "options": [
     "The teacher informed us that will the test be postponed.",
     "The teacher informed us that the test would be postponed.",
@@ -20065,7 +21015,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Word Order",
-   "stem": "Choose the sentence with correct academic syntax and connector.",
+   "stem": "Choose the sentence with correct academic syntax and connector. (Topic: journal acceptance)",
    "options": [
     "As the evidence strongly supports the theory, therefore the journal accepted the paper.",
     "As the evidence strongly supports the theory, the journal accepted the paper.",
@@ -20103,7 +21053,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Word Order",
-   "stem": "Choose the sentence with correct noun clause as subject.",
+   "stem": "Choose the sentence with correct noun clause as subject. (Topic: what students need to learn)",
    "options": [
     "What the students need to learn is clearly explained.",
     "What the students need to learn explained clearly is.",
@@ -20122,7 +21072,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Word Order",
-   "stem": "Which sentence has correct relative clause structure?",
+   "stem": "Which sentence has correct relative clause structure? (Topic: rejected proposal)",
    "options": [
     "The proposal which the committee rejected was very ambitious.",
     "The proposal which the committee rejected was very ambitious that.",
@@ -20179,7 +21129,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Word Order",
-   "stem": "Choose the sentence with correct academic word order and connector.",
+   "stem": "Choose the sentence with correct academic word order and connector. (Topic: publishing inconclusive findings)",
    "options": [
     "Since the findings were inconclusive, however the study was published.",
     "Since the findings were inconclusive, the study was published.",
@@ -20217,7 +21167,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Word Order",
-   "stem": "Choose the sentence with correct noun clause structure.",
+   "stem": "Choose the sentence with correct noun clause structure. (Topic: supporting a hypothesis)",
    "options": [
     "The researcher explained how did the data support the hypothesis.",
     "The researcher explained how the data supported the hypothesis.",
@@ -20255,7 +21205,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Word Order",
-   "stem": "Choose the sentence with correct academic syntax and connector.",
+   "stem": "Choose the sentence with correct academic syntax and connector. (Topic: reduced funding)",
    "options": [
     "Because the funding was reduced, the project was cancelled, however.",
     "Because the funding was reduced, the project was cancelled.",
@@ -20293,7 +21243,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Word Order",
-   "stem": "Choose the sentence with correct noun clause as subject.",
+   "stem": "Choose the sentence with correct noun clause as subject. (Topic: exam failure)",
    "options": [
     "Why the students failed the exam is not clear.",
     "Why the students failed is not clear the exam.",
@@ -22896,7 +23846,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the structurally correct sentence.",
+   "stem": "Choose the structurally correct sentence. (Topic: published article)",
    "options": [
     "The article that was published yesterday received attention.",
     "The article published yesterday, received attention.",
@@ -22934,7 +23884,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the correct sentence.",
+   "stem": "Choose the correct sentence. (Topic: experiment results)",
    "options": [
     "Although the experiment was simple, the results were surprising.",
     "Although the experiment was simple the results were surprising.",
@@ -22991,7 +23941,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the correct sentence.",
+   "stem": "Choose the correct sentence. (Topic: revising a draft)",
    "options": [
     "Because the researcher revised the draft, it became clearer.",
     "Because the researcher revised the draft it became clearer.",
@@ -23048,7 +23998,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the correct sentence.",
+   "stem": "Choose the correct sentence. (Topic: researcher who found an error)",
    "options": [
     "The researcher who discovered the error was praised.",
     "The researcher, who discovered the error was praised.",
@@ -23105,7 +24055,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the correct sentence.",
+   "stem": "Choose the correct sentence. (Topic: submitted report)",
    "options": [
     "The report, which was submitted yesterday, contains several errors.",
     "The report which was submitted yesterday contains, several errors.",
@@ -23143,7 +24093,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the correct sentence.",
+   "stem": "Choose the correct sentence. (Topic: defective equipment)",
    "options": [
     "The experiment failed because the equipment was defective.",
     "Because the experiment failed the equipment was defective.",
@@ -23200,7 +24150,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the correct sentence.",
+   "stem": "Choose the correct sentence. (Topic: author's translated book)",
    "options": [
     "The author whose book was translated into Thai visited the university.",
     "The author, whose book was translated into Thai visited the university.",
@@ -23238,7 +24188,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the sentence with correct adverb clause usage.",
+   "stem": "Choose the sentence with correct adverb clause usage. (Topic: dismissed court claim)",
    "options": [
     "Since the evidence was weak, the court dismissed the claim.",
     "Since the evidence was weak the court dismissed the claim, however.",
@@ -23257,7 +24207,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the correct sentence.",
+   "stem": "Choose the correct sentence. (Topic: approved plan)",
    "options": [
     "The plan that the committee approved will start next month.",
     "The plan, that the committee approved, will start next month.",
@@ -23314,7 +24264,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the correct sentence.",
+   "stem": "Choose the correct sentence. (Topic: flight departure)",
    "options": [
     "Although the weather was bad, the flight departed on time.",
     "Although the weather was bad the flight departed on time, nevertheless.",
@@ -23333,7 +24283,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the structurally correct sentence.",
+   "stem": "Choose the structurally correct sentence. (Topic: improved methodology)",
    "options": [
     "The study was improved, furthermore the methodology was clearer.",
     "The study was improved; furthermore, the methodology was clearer.",
@@ -23371,7 +24321,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the correct sentence.",
+   "stem": "Choose the correct sentence. (Topic: accepted paper)",
    "options": [
     "The paper that was accepted yesterday will appear next month.",
     "The paper, that was accepted yesterday, will appear next month.",
@@ -23409,7 +24359,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the sentence with correct adverb clause usage.",
+   "stem": "Choose the sentence with correct adverb clause usage. (Topic: committee meeting)",
    "options": [
     "When the committee meets, the chair will present the plan.",
     "When the committee meets the chair will present the plan.",
@@ -23428,7 +24378,7 @@
    "source": "grammar",
    "exam_type": "NETSAT",
    "topic": "Sentence Structure",
-   "stem": "Choose the correct sentence.",
+   "stem": "Choose the correct sentence. (Topic: overnight trial)",
    "options": [
     "The scientists, who worked overnight, completed the trial.",
     "The scientists who worked overnight completed, the trial.",
@@ -26499,6 +27449,956 @@
    "explanation_th": "Reported speech: ถอย tense กลับ (want → wanted)",
    "verified": true,
    "level": "B1-B2"
+  },
+  {
+   "id": "b2c1Batch5-sc-01",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Inversion",
+   "stem": "Scarcely ______ the comprehensive financial report when the CEO demanded an immediate revision of the budget.",
+   "options": [
+    "had the auditor submitted",
+    "the auditor had submitted",
+    "did the auditor submit",
+    "the auditor submitted"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Inversion หลัง Scarcely ต้องใช้ had+S+V3 (Scarcely...when)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-sc-02",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Subjunctive",
+   "stem": "Due to the volatile nature of the market, it is essential that the investment portfolio ______ diversified across multiple asset classes.",
+   "options": [
+    "is",
+    "be",
+    "to be",
+    "must be"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "Mandative subjunctive หลัง essential that ต้องใช้ V.พื้นฐาน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-sc-03",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "If the pharmaceutical corporation had allocated more funds to research and development last year, they ______ at the forefront of the industry today.",
+   "options": [
+    "will be",
+    "would have been",
+    "would be",
+    "are"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Mixed conditional: เหตุอดีตส่งผลถึงปัจจุบัน (would be) สังเกต today",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-sc-04",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Modal Perfect",
+   "stem": "The security breach was devastating; the IT department ______ the outdated firewall protocols weeks before the hackers attacked.",
+   "options": [
+    "must upgrade",
+    "could upgrade",
+    "must have upgraded",
+    "should have upgraded"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "should have + V3 = ควรทำแต่ไม่ได้ทำ (ตำหนิ)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-sc-05",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Cleft Sentences",
+   "stem": "It was the unprecedented shift in global climate patterns ______ the sudden collapse of the regional agricultural sector.",
+   "options": [
+    "that triggered",
+    "what triggered",
+    "which triggering",
+    "who triggered"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Cleft sentence: It was...that + กริยา",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-sc-06",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "Despite facing intense criticism from the media, the mayor remained absolutely ______ in her decision to implement the controversial tax reform.",
+   "options": [
+    "hesitant",
+    "resolute",
+    "ambivalent",
+    "arbitrary"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "resolute (แน่วแน่) เข้ากับการยืนหยัดแม้ถูกวิจารณ์",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-sc-07",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Connectors",
+   "stem": "______ the severe lack of empirical evidence, the controversial hypothesis continued to gain traction among amateur scientists.",
+   "options": [
+    "Provided that",
+    "In addition to",
+    "Notwithstanding",
+    "On behalf of"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Notwithstanding (แม้จะมี) ให้ความหมายขัดแย้งที่ถูกต้อง",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-sc-08",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Participle Phrases",
+   "stem": "______ the extensive background check, the candidate was finally granted high-level security clearance to access the classified files.",
+   "options": [
+    "Passing",
+    "Passed",
+    "Have passed",
+    "Having passed"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "Having passed = perfect participle แสดงเหตุการณ์เสร็จก่อนกริยาหลัก",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-sc-09",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "The professor's explanation of quantum entanglement was so ______ that even the graduate students struggled to comprehend the underlying principles.",
+   "options": [
+    "obscure",
+    "explicit",
+    "transparent",
+    "concise"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "obscure (เข้าใจยาก) เข้ากับ 'struggled to comprehend'",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch5-sc-10",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch5",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "The more intricately the urban planner designed the public transit system, ______ it became for the daily commuters to navigate the city.",
+   "options": [
+    "the most efficient",
+    "the more efficient",
+    "more efficiently",
+    "as efficient"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "The more..., the more... ต้องมี the นำหน้า comparative ทั้งสองฝั่ง",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-sc-01",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Inversion",
+   "stem": "Not only ______ our daily workflow, but it also significantly reduced our operational costs across all departments.",
+   "options": [
+    "the new software streamlined",
+    "streamlined the new software",
+    "did the new software streamline",
+    "the new software did streamline"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Inversion หลัง Not only ต้องสลับ did+S+V",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-sc-02",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Subjunctive",
+   "stem": "The updated municipal building code demands that every newly constructed commercial facility ______ equipped with an advanced fire suppression system.",
+   "options": [
+    "is",
+    "be",
+    "must be",
+    "to be"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "Mandative subjunctive หลัง demands that",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-sc-03",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "If the city council had not drastically cut the public transportation budget three years ago, the current traffic congestion ______ nearly as severe today.",
+   "options": [
+    "would not be",
+    "will not be",
+    "would not have been",
+    "had not been"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Mixed conditional: อดีต (had not cut) ส่งผลถึงปัจจุบัน (would not be...today)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-sc-04",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Modal Perfect",
+   "stem": "The lead investigator discovered a crucial piece of evidence at the crime scene, which the local police ______ during their initial search.",
+   "options": [
+    "must overlook",
+    "should overlook",
+    "couldn't overlook",
+    "must have overlooked"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "must have + V3 = ข้อสรุปมั่นใจจากหลักฐาน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-sc-05",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Participle Phrases",
+   "stem": "______ the severe long-term consequences of the experimental drug, the ethical review board immediately suspended the clinical trials.",
+   "options": [
+    "Having recognized",
+    "Recognized",
+    "To have recognized",
+    "Have recognized"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Having recognized = perfect participle เสร็จก่อนกริยาหลัก",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-sc-06",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "Despite his initial enthusiasm for the startup, the investor grew increasingly ______ as the CEO continuously failed to meet the projected quarterly revenue targets.",
+   "options": [
+    "credulous",
+    "indifferent",
+    "apprehensive",
+    "resolute"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "apprehensive (วิตกกังวล) เข้ากับบริบทไม่บรรลุเป้าหมายซ้ำ ๆ",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-sc-07",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Connectors",
+   "stem": "______ the fierce opposition from local environmental activists, the multinational corporation proceeded with the controversial mining project.",
+   "options": [
+    "Regardless",
+    "In spite",
+    "As a result of",
+    "Notwithstanding"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "Notwithstanding เป็นบุพบทตามด้วยนามวลีได้ (Regardless/In spite ต้อง +of)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-sc-08",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Cleft Sentences",
+   "stem": "It was the chief engineer's relentless dedication to structural integrity ______ the suspension bridge from collapsing during the unprecedented earthquake.",
+   "options": [
+    "what prevented",
+    "that prevented",
+    "which preventing",
+    "whom prevented"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "Cleft sentence: It was...that prevented",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-sc-09",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "The prestigious university is globally renowned for its ______ academic standards, which ensure that only the most exceptionally talented students manage to graduate.",
+   "options": [
+    "rigorous",
+    "stagnant",
+    "subjective",
+    "tentative"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "rigorous (เข้มงวด) เป็น collocation ที่ถูกต้องกับ academic standards",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch6-sc-10",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch6",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "______ a major mechanical failure occur during the transatlantic flight, the pilot is fully trained to execute an emergency landing procedure.",
+   "options": [
+    "If",
+    "Were",
+    "Had",
+    "Should"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "Should + S + V พื้นฐาน = Inverted conditional Type 1",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-sc-01",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Inversion",
+   "stem": "Only after the comprehensive financial audit had concluded ______ clear that the corporation was facing imminent bankruptcy.",
+   "options": [
+    "it became",
+    "did it become",
+    "had it become",
+    "it had become"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Only after + clause (past perfect) แล้วประโยคหลักใช้ Past Simple ธรรมดา",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-sc-02",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Subjunctive",
+   "stem": "The safety inspector highly recommends that the faulty electrical wiring in the warehouse ______ immediately before the facility reopens.",
+   "options": [
+    "is replaced",
+    "has been replaced",
+    "must be replaced",
+    "be replaced"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "Mandative subjunctive หลัง recommends that",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-sc-03",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "If the multinational tech giant had accurately anticipated the sudden shift in consumer preferences, they ______ so much market share right now.",
+   "options": [
+    "will not lose",
+    "did not lose",
+    "would not have lost",
+    "would not be losing"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "Mixed conditional: อดีตส่งผลถึงปัจจุบัน สังเกต right now → would not be + V-ing",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-sc-04",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Modal Perfect",
+   "stem": "The internal review revealed glaring discrepancies; the lead accountant ______ the unauthorized transactions much earlier.",
+   "options": [
+    "should have reported",
+    "must report",
+    "couldn't have reported",
+    "ought to report"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "should have + V3 = ควรทำแต่ไม่ได้ทำ",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-sc-05",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Cleft Sentences",
+   "stem": "It was the unexpected resignation of the three senior board members ______ the sharp decline in the company's stock price.",
+   "options": [
+    "what accelerated",
+    "who accelerating",
+    "that accelerated",
+    "whom accelerated"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Cleft sentence: It was...that accelerated",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-sc-06",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "Despite the overwhelming complexity of the high-profile legal case, the defense attorney remained completely ______ in her pursuit of the truth.",
+   "options": [
+    "complacent",
+    "steadfast",
+    "ambiguous",
+    "arbitrary"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "steadfast (มั่นคง) เข้ากับการยืนหยัดในการหาความจริง",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-sc-07",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Connectors",
+   "stem": "______ the steep and sudden increase in raw material costs, the manufacturer surprisingly managed to keep its retail prices completely stable.",
+   "options": [
+    "Notwithstanding",
+    "Provided that",
+    "As a result of",
+    "Furthermore"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Notwithstanding (แม้จะมี) ให้ความหมายขัดแย้งที่ถูกต้อง",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-sc-08",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Participle Phrases",
+   "stem": "______ with highly classified government information, the intelligence officer was required to undergo rigorous polygraph tests every six months.",
+   "options": [
+    "To entrust",
+    "Entrusting",
+    "Entrusted",
+    "Having entrust"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Entrusted = reduced passive participle",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-sc-09",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "The author's latest sociological novel provides a highly ______ analysis of modern society, offering deep insights that provoke careful reflection.",
+   "options": [
+    "profound",
+    "superficial",
+    "redundant",
+    "spontaneous"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "profound (ลึกซึ้ง) เข้ากับ deep insights",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch7-sc-10",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch7",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "The more frequently the lithium-ion battery is charged using a high-voltage adapter, ______ its overall operational lifespan becomes.",
+   "options": [
+    "shorter",
+    "the shorter",
+    "the shortest",
+    "shortest"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "The more..., the shorter... ต้องมี the นำหน้า comparative",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-sc-01",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Inversion",
+   "stem": "Only after the meticulous safety inspection was fully completed ______ the true extent of the structural damage.",
+   "options": [
+    "did the engineering team realize",
+    "the engineering team realized",
+    "had the engineering team realized",
+    "the engineering team had realized"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Inversion หลัง Only after",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-sc-02",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Subjunctive",
+   "stem": "The international committee strongly recommends that the newly proposed environmental regulation ______ strictly enforced across all member states.",
+   "options": [
+    "is",
+    "be",
+    "to be",
+    "must be"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "Mandative subjunctive หลัง recommends that",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-sc-03",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "If the pharmaceutical company had invested in sustainable packaging earlier, their overall manufacturing costs ______ considerably lower today.",
+   "options": [
+    "will be",
+    "had been",
+    "would be",
+    "would have been"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Mixed conditional: อดีตส่งผลถึงปัจจุบัน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-sc-04",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Modal Perfect",
+   "stem": "Given that the building had already passed every fire code inspection twice that year, the sudden electrical fire ______ from faulty wiring the inspectors had somehow missed.",
+   "options": [
+    "shouldn't have started",
+    "couldn't have started",
+    "must have started",
+    "needn't have started"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "must have + V3 = ข้อสรุปมั่นใจจากหลักฐาน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-sc-05",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Cleft Sentences",
+   "stem": "It was the unprecedented surge in global fuel prices, rather than domestic inflation, ______ the sudden collapse of the logistics firm.",
+   "options": [
+    "that triggered",
+    "what triggered",
+    "which triggering",
+    "who triggered"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Cleft sentence: It was...that triggered",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-sc-06",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "Despite facing overwhelming criticism from the press, the embattled politician remained absolutely ______ in her refusal to resign.",
+   "options": [
+    "ambiguous",
+    "arbitrary",
+    "resolute",
+    "tentative"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "resolute (แน่วแน่)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-sc-07",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Participle Phrases",
+   "stem": "______ comprehensive empirical data from various tropical ecosystems, the biologists were finally prepared to publish their groundbreaking hypothesis.",
+   "options": [
+    "Have gathered",
+    "Having gathered",
+    "Gathered",
+    "To gather"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "Having gathered = perfect participle",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-sc-08",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Connectors",
+   "stem": "______ the severe logistical constraints caused by the unexpected blizzard, the humanitarian aid was delivered to the remote village on schedule.",
+   "options": [
+    "As a result of",
+    "Given that",
+    "Furthermore",
+    "Notwithstanding"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "Notwithstanding (แม้จะมี)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-sc-09",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "The philosopher's treatise on consciousness was so ______ that most readers abandoned it after the first chapter.",
+   "options": [
+    "impenetrable",
+    "accessible",
+    "redundant",
+    "mundane"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "impenetrable (เข้าใจยากจนแทบทะลุผ่านไม่ได้) เข้ากับการที่ผู้อ่านเลิกอ่านกลางคัน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch8-sc-10",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch8",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "The more aggressively the fishing fleet expanded its operations, ______ the regional cod population became.",
+   "options": [
+    "most depleted",
+    "the most depleted",
+    "the more depleted",
+    "more depleted"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "The more..., the more depleted... ต้องมี the นำหน้า comparative ทั้งสองฝั่ง",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-sc-01",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Inversion",
+   "stem": "Little ______ the catastrophic environmental impact that their proposed dam project would ultimately unleash upon the valley.",
+   "options": [
+    "did the developers anticipate",
+    "the developers anticipated",
+    "had the developers anticipated",
+    "the developers had anticipated"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Inversion หลัง Little",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-sc-02",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Subjunctive",
+   "stem": "Given the volatile nature of the experimental chemicals, it is absolutely essential that the laboratory technician ______ the temperature gauge every fifteen minutes.",
+   "options": [
+    "monitors",
+    "monitor",
+    "must monitor",
+    "monitored"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "Mandative subjunctive หลัง essential that",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-sc-03",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "If the urban planning committee had prioritized public transportation infrastructure a decade ago, the metropolitan area ______ such severe traffic gridlock today.",
+   "options": [
+    "will not experience",
+    "had not experienced",
+    "would not be experiencing",
+    "would not have experienced"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Mixed conditional: อดีตส่งผลถึงปัจจุบัน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-sc-04",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Modal Perfect",
+   "stem": "The structural flaw in the bridge was so glaringly obvious that the senior civil engineer ______ it during the preliminary blueprint review.",
+   "options": [
+    "might notice",
+    "must notice",
+    "couldn't have noticed",
+    "should have noticed"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "should have + V3 = ควรสังเกตเห็นแต่พลาดไป",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-sc-05",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Cleft Sentences",
+   "stem": "It was the unprecedented collaboration between rival pharmaceutical companies, rather than increased government funding, ______ the rapid development of the vaccine.",
+   "options": [
+    "that facilitated",
+    "what facilitated",
+    "which facilitating",
+    "whom facilitated"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Cleft sentence: It was...that facilitated",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-sc-06",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "Despite the overwhelming pressure from the board of directors, the embattled CEO remained absolutely ______ in her refusal to authorize the mass layoffs.",
+   "options": [
+    "submissive",
+    "intransigent",
+    "superficial",
+    "arbitrary"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "intransigent (ดื้อรั้น/ไม่ประนีประนอม)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-sc-07",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Connectors",
+   "stem": "______ the severe logistical disruptions caused by the global supply chain crisis, the manufacturing plant managed to exceed its quarterly production targets.",
+   "options": [
+    "Provided that",
+    "Instead of",
+    "Notwithstanding",
+    "As a result of"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Notwithstanding (แม้จะมี)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-sc-08",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Participle Phrases",
+   "stem": "______ the comprehensive financial data from the past three fiscal years, the independent auditor confidently issued a clean bill of health for the corporation.",
+   "options": [
+    "To review",
+    "Reviewed",
+    "Have reviewed",
+    "Having reviewed"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "Having reviewed = perfect participle",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-sc-09",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Collocations",
+   "stem": "The politician's response regarding the new tax legislation was highly ______, carefully designed to appease both her wealthy donors and working-class constituents.",
+   "options": [
+    "explicit",
+    "equivocal",
+    "lucid",
+    "redundant"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "equivocal (กำกวม/ตีความได้หลายทาง)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch9-sc-10",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch9",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "The more aggressively the central bank raised interest rates to combat inflation, ______ the housing market became for first-time buyers.",
+   "options": [
+    "most inaccessible",
+    "the most inaccessible",
+    "the more inaccessible",
+    "more inaccessible"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "The more..., the more inaccessible...",
+   "verified": true,
+   "level": "B2-C1"
   }
  ],
  "readingShort": [
@@ -29695,6 +31595,1038 @@
      "answerIndex": 0,
      "points": 2,
      "explanation_th": "ติดต่อได้ทางอีเมลหรือโทรศัพท์"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-509",
+   "title": "Notice: Updated Centrifuge Operating Protocol",
+   "genre": "notice (correspondence)",
+   "category": "other",
+   "wordCount": 167,
+   "level": "C1",
+   "targetVocab": [
+    "ultracentrifuge",
+    "discrepancy",
+    "archaic",
+    "directives"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "Notice: Updated Centrifuge Operating Protocol\n\nEffective March 15th, all laboratory personnel must adhere to the revised guidelines for operating the high-speed ultracentrifuges in Room 4B. This update is mandatory to prevent equipment malfunction and ensure a secure working environment.\n\nFirst, all researchers must balance the sample tubes with unprecedented precision. A mass discrepancy exceeding 0.1 grams will trigger the machine's automatic fail-safe, instantly aborting the spin cycle and locking the rotor for 24 hours.\n\nSecond, the usage logbook is now entirely digitized. Before activating the centrifuge, you must scan your personalized RFID badge and input the exact duration and velocity of your run into the central terminal. The archaic paper logbook has been discarded.\n\nFinally, if the centrifuge emits an unusual high-pitched vibration during acceleration, do not attempt to pause the machine manually. Instead, immediately press the red emergency cutoff switch located on the adjacent wall and notify the maintenance supervisor.\n\nFailure to comply with these updated directives will result in a temporary suspension of your laboratory access privileges.",
+   "questions": [
+    {
+     "id": "rd-c1-509-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main purpose of this notice?",
+     "options": [
+      "To outline new operational rules for specific equipment.",
+      "To introduce a new maintenance supervisor.",
+      "To warn about a recent laboratory explosion.",
+      "To request funding for a new digital logbook."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "แจ้งกฎใหม่ในการใช้งานเครื่องหมุนเหวี่ยงความเร็วสูง"
+    },
+    {
+     "id": "rd-c1-509-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What will happen if the sample tubes are not perfectly balanced?",
+     "options": [
+      "The machine will stop and lock itself for a day.",
+      "The tubes will shatter inside the machine.",
+      "The researcher will be fired immediately.",
+      "The machine will continue at a slower speed."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "น้ำหนักต่างกันเกิน 0.1 กรัม เครื่องจะหยุดและล็อค 24 ชม."
+    },
+    {
+     "id": "rd-c1-509-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to the protocol, how should researchers record their machine usage?",
+     "options": [
+      "By scanning their badge and typing details into a computer.",
+      "By writing their name and time in the paper logbook.",
+      "By calling the maintenance supervisor before starting.",
+      "By submitting a digital form after the spin cycle ends."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "สแกนบัตรและกรอกข้อมูลลง terminal กลาง"
+    },
+    {
+     "id": "rd-c1-509-q4",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word is closest in meaning to \"archaic\" in the third paragraph?",
+     "options": [
+      "Outdated",
+      "Complicated",
+      "Expensive",
+      "Essential"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "archaic แปลว่า เก่า/ล้าสมัย"
+    },
+    {
+     "id": "rd-c1-509-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the correct action if the machine makes a strange noise while speeding up?",
+     "options": [
+      "Push the emergency button on the wall.",
+      "Attempt to manually pause the spin cycle.",
+      "Run out of the laboratory immediately.",
+      "Unplug the centrifuge from the power outlet."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "กดปุ่มฉุกเฉินสีแดงที่ผนัง"
+    },
+    {
+     "id": "rd-c1-509-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the penalty for violating these new directives?",
+     "options": [
+      "A temporary loss of permission to use the lab.",
+      "A permanent ban from the university.",
+      "A financial fine of 100 dollars.",
+      "A requirement to retake safety training."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ถูกพักสิทธิเข้าห้องแล็บชั่วคราว"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-510",
+   "title": "Email: Silver Creek Dam Environmental Concerns",
+   "genre": "formal letter (correspondence)",
+   "category": "other",
+   "wordCount": 242,
+   "level": "C1",
+   "targetVocab": [
+    "decimate",
+    "mitigation",
+    "carbon sink",
+    "seismic",
+    "flashpoints"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "From: Dr. Elias Thorne, Lead Environmental Consultant\nTo: Board of Directors, Horizon Infrastructure Group\nSubject: Critical Concerns Regarding the Silver Creek Dam Project\n\nDear Members of the Board,\n\nI am writing to formally present preliminary findings from the comprehensive environmental impact assessment for the proposed Silver Creek Dam project. After concluding our intensive three-week field study, my team has uncovered several critical issues demanding your immediate attention.\n\nPrimarily, the construction site intersects the migratory path of the Silver Creek Salmon, a federally protected endangered species. Constructing a barrier here would decimate the population by blocking their spawning grounds. While engineers suggested “fish ladders” as a mitigation strategy, our empirical data indicates these structures are historically ineffective for this species, boasting a success rate of barely fifteen percent.\n\nFurthermore, flooding the upper valley to create the reservoir will submerge 400 acres of old-growth forest, a crucial regional carbon sink. Destroying it would release substantial carbon dioxide and violate the sustainability pledges this corporation made last quarter. Independent surveyors have also flagged that the reservoir basin sits above a known seismic fault line, a risk the original feasibility study never addressed.\n\nI strongly urge the board to reconsider the alternative site twelve miles downstream. Although relocating increases initial logistical costs by approximately eight percent, it entirely bypasses these ecological flashpoints and the seismic risk. I have attached the comprehensive report for your review and look forward to discussing it next Tuesday.\n\nSincerely,\nDr. Elias Thorne",
+   "questions": [
+    {
+     "id": "rd-c1-510-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "Why is Dr. Thorne writing this email?",
+     "options": [
+      "To warn the board about the ecological damages of a proposed project.",
+      "To demand an increase in funding for his environmental team.",
+      "To resign from his position as Lead Environmental Consultant.",
+      "To praise the engineering team for their innovative fish ladders."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "เตือนบอร์ดบริหารเรื่องผลกระทบต่อสิ่งแวดล้อมจากโครงการเขื่อน"
+    },
+    {
+     "id": "rd-c1-510-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the main problem with the current location of the dam?",
+     "options": [
+      "It blocks the natural migration route of an endangered fish.",
+      "It is too far away from the city's power grid.",
+      "It is situated on unstable ground that could easily collapse.",
+      "It requires tearing down a historic residential neighborhood."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ทับเส้นทางอพยพของปลาแซลมอนใกล้สูญพันธุ์"
+    },
+    {
+     "id": "rd-c1-510-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How does Dr. Thorne feel about the use of \"fish ladders\"?",
+     "options": [
+      "He argues that they will likely fail to help this specific fish.",
+      "He believes they are the perfect solution to the problem.",
+      "He thinks they are far too expensive to build.",
+      "He is angry that the engineering team stole his idea."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ค้านว่าบันไดปลาโจนมีโอกาสสำเร็จต่ำมากสำหรับปลาชนิดนี้"
+    },
+    {
+     "id": "rd-c1-510-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What would be a consequence of flooding the upper valley?",
+     "options": [
+      "The release of carbon dioxide and a breach of corporate promises.",
+      "A massive increase in the local salmon population.",
+      "The creation of a new, highly profitable tourist attraction.",
+      "A severe shortage of drinking water for the nearby town."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ปล่อยก๊าซคาร์บอนที่กักเก็บไว้และทำลายคำสัญญาด้านความยั่งยืน"
+    },
+    {
+     "id": "rd-c1-510-q5",
+     "qtype": "INFERENCE",
+     "stem": "What does Dr. Thorne recommend the board do?",
+     "options": [
+      "Move the dam project to a different location further down the river.",
+      "Cancel the dam project entirely and build solar panels instead.",
+      "Ignore the federal laws and proceed with the original plan.",
+      "Fire the engineering team for making a terrible suggestion."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "แนะนำให้ย้ายทำเลไปสร้างที่อื่นซึ่งอยู่ห่างลงไป 12 ไมล์"
+    },
+    {
+     "id": "rd-c1-510-q6",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word best replaces \"decimate\" in the second paragraph?",
+     "options": [
+      "Destroy",
+      "Support",
+      "Relocate",
+      "Measure"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "decimate แปลว่า ทำลายล้าง/ทำให้ลดจำนวนลงอย่างรุนแรง"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-511",
+   "title": "Notice: Drone Campus Policy",
+   "genre": "notice (correspondence)",
+   "category": "other",
+   "wordCount": 167,
+   "level": "C1",
+   "targetVocab": [
+    "confiscated",
+    "affixed",
+    "revocation",
+    "directives"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "Notice: Unmanned Aerial Vehicle (Drone) Campus Policy\n\nEffective September 1st, the University Administration is implementing strict regulations regarding the operation of drones on campus grounds. These rules aim to ensure student safety and protect privacy.\n\nFirstly, all drones must be officially registered with the Campus Security Office. Upon registration, operators will receive a visible identification sticker that must be affixed to the drone's hull. Unregistered drones will be immediately confiscated.\n\nSecondly, drone flights are strictly prohibited near the residential dormitories and the outdoor athletic stadium during sporting events. Operators must maintain a minimum distance of 50 meters from these restricted zones.\n\nFurthermore, drones are only permitted to fly between the hours of 8:00 AM and 5:00 PM. Nighttime flying is explicitly forbidden due to the increased risk of collisions.\n\nIf a drone accidentally crashes and causes property damage, the operator must report the incident to the Security Office within two hours. Failure to comply with any of these directives will result in a permanent revocation of flying privileges on campus.",
+   "questions": [
+    {
+     "id": "rd-c1-511-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main purpose of this notice?",
+     "options": [
+      "To outline mandatory rules for flying drones on campus.",
+      "To ban all drones from the university entirely.",
+      "To advertise a new campus drone racing club.",
+      "To explain how to repair a crashed drone."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "แจ้งกฎบังคับสำหรับการบินโดรนในวิทยาเขต"
+    },
+    {
+     "id": "rd-c1-511-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is required after registering a drone?",
+     "options": [
+      "Attaching an identification sticker to the drone.",
+      "Paying an annual registration fee.",
+      "Passing a practical flying test.",
+      "Upgrading the drone's camera software."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ต้องนำสติกเกอร์ยืนยันไปติดที่ตัวโดรน"
+    },
+    {
+     "id": "rd-c1-511-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Where is flying absolutely forbidden during games?",
+     "options": [
+      "Near the outdoor athletic stadium.",
+      "Inside the main university library.",
+      "Over the student parking lots.",
+      "Outside the Campus Security Office."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ห้ามบินใกล้สนามกีฬาในช่วงที่มีการแข่งขัน"
+    },
+    {
+     "id": "rd-c1-511-q4",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "What does the word \"explicitly\" in the third paragraph most likely mean?",
+     "options": [
+      "Clearly and directly",
+      "Secretly",
+      "Hesitantly",
+      "Partially"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "explicitly แปลว่า อย่างชัดเจน/ตรงไปตรงมา"
+    },
+    {
+     "id": "rd-c1-511-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What must an operator do if their drone breaks a window?",
+     "options": [
+      "Report the crash within two hours.",
+      "Fix the window themselves.",
+      "Pay for the window in cash immediately.",
+      "Run away from the scene immediately."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ต้องรายงานเหตุการณ์ภายใน 2 ชั่วโมง"
+    },
+    {
+     "id": "rd-c1-511-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What happens if a student violates these rules?",
+     "options": [
+      "They will permanently lose the right to fly drones on campus.",
+      "They will be expelled from the university.",
+      "They will be heavily fined by the local police.",
+      "They will have to take a safety course."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ถูกเพิกถอนสิทธิบินโดรนในวิทยาเขตอย่างถาวร"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-512",
+   "title": "Email: Catering Complaint at the Tech Innovators Gala",
+   "genre": "formal letter (correspondence)",
+   "category": "other",
+   "wordCount": 237,
+   "level": "C1",
+   "targetVocab": [
+    "substandard",
+    "commenced",
+    "truncate",
+    "egregious"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "From: Marcus Thorne, Logistics Coordinator\nTo: Stellar Catering Services\nSubject: Significant Issues at the Annual Tech Innovators Gala\n\nDear Stellar Catering Management,\n\nI am writing to formally lodge a complaint regarding the substandard service provided at our Annual Tech Innovators Gala last Saturday evening. Given your esteemed reputation in the hospitality industry, we expected a flawless execution, but unfortunately, the reality fell drastically short of our contractual agreement.\n\nFirst and foremost, the dinner service commenced forty-five minutes late. This unexpected delay severely disrupted our tightly scheduled awards ceremony, forcing our keynote speaker to truncate his presentation.\n\nFurthermore, the dietary accommodations were grossly mismanaged. We had explicitly requested twenty vegan meals and provided a detailed seating chart indicating where those guests were located. However, your serving staff seemed completely uninformed about this arrangement. Several vegan attendees were initially served the standard chicken entrée, causing considerable embarrassment and frustration for our organizing committee.\n\nFinally, the quality of the main course was universally criticized. Multiple guests reported that the salmon was overcooked and served lukewarm.\n\nWe paid a premium rate of $150 per plate with the expectation of top-tier culinary excellence and professional service. Consequently, we are requesting a partial refund of 30% of the total invoice to compensate for these egregious service failures.\n\nI have attached a copy of the finalized contract and the detailed dietary schedule for your reference. I anticipate a prompt and satisfactory resolution to this matter.",
+   "questions": [
+    {
+     "id": "rd-c1-512-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main purpose of Marcus's email?",
+     "options": [
+      "To express dissatisfaction and demand a partial refund.",
+      "To book Stellar Catering for next year's gala.",
+      "To apologize for the disorganized seating chart.",
+      "To praise the quality of the vegan meals provided."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "แสดงความไม่พอใจและขอเงินคืนบางส่วน"
+    },
+    {
+     "id": "rd-c1-512-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How did the late dinner service affect the event?",
+     "options": [
+      "The keynote speaker had to shorten his speech.",
+      "The guests got angry and left the venue early.",
+      "The award ceremony had to be completely cancelled.",
+      "The food became excessively cold and inedible."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "วิทยากรหลักต้องรวบรัดการนำเสนอเพราะเวลาถูกบีบ"
+    },
+    {
+     "id": "rd-c1-512-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What went wrong with the dietary accommodations?",
+     "options": [
+      "The servers did not know where the vegan guests were seated.",
+      "There were not enough vegan meals prepared in the kitchen.",
+      "The vegan meals were accidentally dropped by the staff.",
+      "The vegan guests decided they wanted the chicken instead."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "พนักงานเสิร์ฟไม่ทราบตำแหน่งที่นั่งของแขกวีแกน"
+    },
+    {
+     "id": "rd-c1-512-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What was the guests' complaint about the main course?",
+     "options": [
+      "It was overcooked and not hot enough.",
+      "It was too spicy and portions were extremely small.",
+      "It lacked flavor and was served far too salty.",
+      "It was entirely raw and unsafe for consumption."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ปลาแซลมอนสุกเกินไปและเสิร์ฟแบบอุ่น ๆ ไม่ร้อน"
+    },
+    {
+     "id": "rd-c1-512-q5",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "What does the word \"truncate\" in the second paragraph most likely mean?",
+     "options": [
+      "Shorten",
+      "Lengthen",
+      "Memorize",
+      "Cancel"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "truncate แปลว่า ตัดให้สั้นลง/รวบรัด"
+    },
+    {
+     "id": "rd-c1-512-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What evidence did Marcus provide to support his claims?",
+     "options": [
+      "A copy of the contract and the seating chart.",
+      "A signed petition from angry gala attendees.",
+      "Photographs of the overcooked salmon dish.",
+      "A video recording of the delayed dinner service."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "แนบสำเนาสัญญาและแผนผังการนั่งเป็นหลักฐาน"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-513",
+   "title": "Notice: Revised Biohazardous Waste Disposal Protocol",
+   "genre": "notice (correspondence)",
+   "category": "other",
+   "wordCount": 165,
+   "level": "C1",
+   "targetVocab": [
+    "biohazardous",
+    "autoclave",
+    "vicinity",
+    "revocation"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "Notice: Revised Biohazardous Waste Disposal Protocol\n\nEffective October 1st, all research personnel must strictly adhere to the updated guidelines for disposing of biohazardous waste in Laboratory 3B. This measure is imperative to ensure environmental safety and comply with federal regulations.\n\nFirstly, all liquid biological waste must be treated with a 10% bleach solution and left to sit for a minimum of 30 minutes before being poured down the designated chemical sink. Do not use the standard washing sinks under any circumstances.\n\nSecondly, solid waste, including contaminated gloves and petri dishes, must be placed inside the red biohazard bags. Once a bag is three-quarters full, it must be sealed with autoclave tape and transported to the sterilization chamber on the ground floor.\n\nFinally, if a spill exceeding 50 ml occurs, personnel must immediately evacuate the immediate vicinity and contact the Hazardous Materials Team. Attempting to clean a large spill independently is strictly forbidden.\n\nFailure to observe these protocols will result in the immediate revocation of your laboratory access privileges.",
+   "questions": [
+    {
+     "id": "rd-c1-513-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the primary purpose of this notice?",
+     "options": [
+      "To outline new rules for throwing away dangerous waste.",
+      "To introduce a new Hazardous Materials Team.",
+      "To warn about a recent virus outbreak in the lab.",
+      "To request additional funding for safety equipment."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบุข้อบังคับใหม่เกี่ยวกับการทิ้งขยะอันตรายทางชีวภาพ"
+    },
+    {
+     "id": "rd-c1-513-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What must be done with liquid biological waste before it is poured away?",
+     "options": [
+      "It must be mixed with bleach and left for half an hour.",
+      "It must be boiled for 30 minutes.",
+      "It must be placed in a red biohazard bag.",
+      "It must be poured down the standard washing sink."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ผสมน้ำยาฟอกขาว 10% และทิ้งไว้ 30 นาทีก่อนเททิ้ง"
+    },
+    {
+     "id": "rd-c1-513-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "When should a red biohazard bag be sealed?",
+     "options": [
+      "When it reaches seventy-five percent capacity.",
+      "At the end of every working day.",
+      "As soon as one item is placed inside it.",
+      "When it is completely full and overflowing."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ต้องซีลปิดเมื่อใส่ขยะไปจนถึงสามในสี่ของความจุถุง"
+    },
+    {
+     "id": "rd-c1-513-q4",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word is closest in meaning to \"imperative\" in the first paragraph?",
+     "options": [
+      "Crucial",
+      "Optional",
+      "Complicated",
+      "Temporary"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "imperative แปลว่า สำคัญมาก/จำเป็นอย่างยิ่ง"
+    },
+    {
+     "id": "rd-c1-513-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the correct action if 100 ml of biological liquid is spilled?",
+     "options": [
+      "Leave the area and call the specialized cleanup team.",
+      "Clean it up independently using the bleach solution.",
+      "Press the red emergency button on the wall.",
+      "Seal the room with autoclave tape."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "100 มล. เกิน 50 มล. ต้องออกจากพื้นที่และโทรเรียกทีมเฉพาะทาง"
+    },
+    {
+     "id": "rd-c1-513-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the penalty for ignoring these new rules?",
+     "options": [
+      "A loss of permission to use the laboratory.",
+      "A massive financial fine.",
+      "An automatic failure of the research project.",
+      "A mandatory safety retraining course."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ถูกเพิกถอนสิทธิเข้าใช้ห้องปฏิบัติการ"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-514",
+   "title": "Email: Nighttime Construction Noise Complaint",
+   "genre": "formal letter (correspondence)",
+   "category": "other",
+   "wordCount": 239,
+   "level": "C1",
+   "targetVocab": [
+    "ordinances",
+    "relentless",
+    "exemption",
+    "cease-and-desist"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "From: Sarah Jenkins, Resident of Maplewood District\nTo: City Council Planning Department\nSubject: Urgent Complaint: Nighttime Construction Violations at Sector 4\n\nDear City Council Members,\n\nI am writing on behalf of the Maplewood Neighborhood Association to formally lodge a complaint regarding the ongoing construction at the Sector 4 commercial development. While we generally support urban revitalization, the current practices of the Apex Construction Group are blatantly violating municipal noise ordinances.\n\nAccording to City Bylaw 104-B, heavy machinery operation and loud construction activities are strictly prohibited between the hours of 8:00 PM and 7:00 AM in residential zones. However, for the past three weeks, bulldozers and jackhammers have been operating well past midnight. This relentless noise has severely disrupted the sleep schedules of dozens of families, negatively impacting our health and daily productivity.\n\nI attempted to resolve this issue directly by speaking with the site foreman last Thursday. Unfortunately, my concerns were entirely dismissed, with the foreman claiming they had a “special accelerated permit.” I have reviewed the public registry and found no evidence of such an exemption being granted for this specific project.\n\nI have attached a video recording with timestamped audio evidence of the disturbances. We urgently request that the City Council dispatch a bylaw enforcement officer to inspect the site and issue a formal cease-and-desist order for nighttime operations. If this matter is not resolved promptly, our association is prepared to pursue legal action.\n\nI look forward to your immediate intervention.",
+   "questions": [
+    {
+     "id": "rd-c1-514-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "Why is Sarah Jenkins writing this email?",
+     "options": [
+      "To complain about a construction crew working during illegal hours.",
+      "To apply for a special accelerated construction permit.",
+      "To praise the Apex Construction Group for their fast work.",
+      "To suggest a new urban revitalization project for her district."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ร้องเรียนการก่อสร้างที่ส่งเสียงดังในช่วงเวลาที่ผิดกฎหมาย"
+    },
+    {
+     "id": "rd-c1-514-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What does City Bylaw 104-B state?",
+     "options": [
+      "Loud construction work is not allowed overnight in residential areas.",
+      "Construction is entirely banned in the Maplewood District.",
+      "Residents must wear earplugs if they live near construction sites.",
+      "Companies can work at night if they pay an extra fee."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ห้ามใช้เครื่องจักรหนักหรือทำเสียงดังตอนกลางคืนในเขตที่อยู่อาศัย"
+    },
+    {
+     "id": "rd-c1-514-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What was the site foreman's response to Sarah's complaint?",
+     "options": [
+      "He ignored her concerns and claimed they had a special permission.",
+      "He apologized and promised to stop the noise immediately.",
+      "He offered to pay the neighborhood association for the inconvenience.",
+      "He threatened to call the police if she did not leave the site."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "หัวหน้าคนงานเพิกเฉยและอ้างว่ามีใบอนุญาตเร่งด่วนพิเศษ"
+    },
+    {
+     "id": "rd-c1-514-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What did Sarah find when she checked the public registry?",
+     "options": [
+      "There was no record of the special permit the foreman mentioned.",
+      "The construction company had been sued multiple times before.",
+      "The city council had secretly changed the noise bylaws.",
+      "The project was scheduled to be completed in three weeks."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ไม่พบหลักฐานว่ามีใบอนุญาตพิเศษดังกล่าวอยู่จริง"
+    },
+    {
+     "id": "rd-c1-514-q5",
+     "qtype": "INFERENCE",
+     "stem": "What is Sarah demanding the City Council do?",
+     "options": [
+      "Send an officer to stop the construction work at night.",
+      "Revoke the construction company's business license entirely.",
+      "Provide free soundproofing materials for all nearby houses.",
+      "Arrest the site foreman for lying about the permit."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "เรียกร้องให้ส่งเจ้าหน้าที่มาตรวจสอบและสั่งระงับการทำงานตอนกลางคืน"
+    },
+    {
+     "id": "rd-c1-514-q6",
+     "qtype": "PURPOSE_TONE",
+     "stem": "Which word best describes the tone of Sarah's email?",
+     "options": [
+      "Assertive and demanding",
+      "Apologetic and submissive",
+      "Sarcastic and humorous",
+      "Casual and friendly"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "น้ำเสียงหนักแน่น เด็ดขาด และเรียกร้องสิทธิ"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-515",
+   "title": "Notice: 3D Bioprinter Operating Protocol",
+   "genre": "notice (correspondence)",
+   "category": "other",
+   "wordCount": 162,
+   "level": "C1",
+   "targetVocab": [
+    "extrusion",
+    "procurement",
+    "hydrogels",
+    "abort"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "Notice: 3D Bioprinter Operating Protocol\n\nEffective October 1st, all research personnel must strictly adhere to the updated guidelines for operating the Genesis-X 3D Bioprinter in Laboratory 4A. This measure is imperative to ensure biological safety and prevent costly equipment malfunction.\n\nFirstly, researchers must sterilize the printing chamber using the approved UV-C light cycle for exactly 15 minutes before any cellular extrusion begins. Attempting to bypass this step will trigger an automatic system lockout.\n\nSecondly, only certified bio-ink cartridges purchased directly from the university's procurement office may be utilized. The use of third-party or homemade biological hydrogels is explicitly forbidden, as they frequently clog the microscopic nozzle arrays.\n\nFinally, in the event of a print failure or nozzle jam, do not attempt to manually disassemble the extruder head. You must immediately press the red emergency abort button on the digital interface and notify the chief biomedical technician.\n\nFailure to observe these protocols will result in the immediate revocation of your advanced laboratory access privileges.",
+   "questions": [
+    {
+     "id": "rd-c1-515-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the primary purpose of this notice?",
+     "options": [
+      "To outline mandatory rules for using specific lab equipment.",
+      "To introduce a new biomedical technician to the team.",
+      "To warn about a recent biological contamination in the lab.",
+      "To request additional funding for a new 3D bioprinter."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบุกฎบังคับในการใช้งานเครื่องพิมพ์ 3D ชีวภาพ"
+    },
+    {
+     "id": "rd-c1-515-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What happens if a researcher skips the UV-C sterilization process?",
+     "options": [
+      "The machine will automatically prevent them from proceeding.",
+      "The printer will overheat and explode.",
+      "The bio-ink inside the printer will expire.",
+      "They will be fired from the university immediately."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบบจะล็อคการทำงานโดยอัตโนมัติหากข้ามขั้นตอนฆ่าเชื้อ"
+    },
+    {
+     "id": "rd-c1-515-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the policy regarding the use of bio-ink?",
+     "options": [
+      "Only official cartridges from the university are allowed.",
+      "Researchers must make their own hydrogels for experiments.",
+      "Third-party inks are highly recommended for better results.",
+      "Bio-inks must be sterilized with UV-C light before use."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "อนุญาตให้ใช้เฉพาะหมึกพิมพ์ชีวภาพของแท้จากมหาวิทยาลัย"
+    },
+    {
+     "id": "rd-c1-515-q4",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word is closest in meaning to \"explicitly\" in the third paragraph?",
+     "options": [
+      "Clearly and directly",
+      "Accidentally",
+      "Temporarily",
+      "Hesitantly"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "explicitly แปลว่า อย่างชัดเจน/ตรงไปตรงมา"
+    },
+    {
+     "id": "rd-c1-515-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What should a researcher do FIRST if the printer nozzle jams?",
+     "options": [
+      "Press the emergency abort button on the digital screen.",
+      "Disassemble the extruder head manually and carefully.",
+      "Clean the nozzle using homemade biological hydrogels.",
+      "Order a new bio-ink cartridge from the procurement office."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "กดปุ่มฉุกเฉินสีแดงบนหน้าจอดิจิทัลเป็นอันดับแรก"
+    },
+    {
+     "id": "rd-c1-515-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the penalty for violating these operating rules?",
+     "options": [
+      "The loss of permission to use the advanced laboratory.",
+      "A massive financial fine deducted from the salary.",
+      "A mandatory and unpaid safety retraining course.",
+      "An automatic failure of the current research project."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ถูกเพิกถอนสิทธิเข้าใช้ห้องปฏิบัติการขั้นสูง"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-516",
+   "title": "Email: Landscaping Damage and Contract Violation",
+   "genre": "formal letter (correspondence)",
+   "category": "other",
+   "wordCount": 244,
+   "level": "C1",
+   "targetVocab": [
+    "substandard",
+    "stipulates",
+    "negligent",
+    "rectified"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "From: Jonathan Vance, President of Oakridge Homeowners Association\nTo: Apex Landscape Management\nSubject: Urgent: Unacceptable Damage and Contract Violations\n\nDear Apex Management Team,\n\nI am writing on behalf of the Oakridge Homeowners Association to formally lodge a serious complaint regarding the substandard landscaping services provided to our community over the past three weeks. Given your company's esteemed reputation, we anticipated professional execution; however, your recent work has blatantly violated our municipal contract.\n\nMost alarmingly, your crews have been utilizing heavy riding mowers on the pedestrian walkways and decorative green spaces. This improper machinery use has severely damaged the historical brick pathways and completely uprooted two newly planted flower beds near the central fountain. Our contract explicitly stipulates that only push mowers and manual trimmers are to be used in these fragile designated zones.\n\nFurthermore, the debris cleanup has been highly negligent. Massive piles of grass clippings and severed branches have been left abandoned in the residential gutters. This negligence directly clogged the storm drains during last Tuesday's heavy rainfall, causing minor flooding in several residents' driveways.\n\nWe expect a dedicated restoration crew to be dispatched by this Friday to repair the brick pathways and clear the storm drains at no additional cost. Furthermore, we require a written guarantee that your staff will strictly adhere to the equipment restrictions moving forward.\n\nIf these issues are not promptly rectified, we will be forced to terminate our annual contract and pursue financial compensation for the property damages.",
+   "questions": [
+    {
+     "id": "rd-c1-516-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "Why is Jonathan Vance writing this email?",
+     "options": [
+      "To complain about poor service and property damage.",
+      "To renew the annual landscaping contract for another year.",
+      "To praise the company for their historical restoration work.",
+      "To request the installation of a new fountain for the community."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ร้องเรียนบริการจัดสวนที่ไม่ได้มาตรฐานและทำให้ทรัพย์สินเสียหาย"
+    },
+    {
+     "id": "rd-c1-516-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What caused the damage to the historical brick pathways?",
+     "options": [
+      "The use of heavy riding mowers in fragile areas.",
+      "A severe and unexpected rainstorm last Tuesday.",
+      "The planting of several new flower beds nearby.",
+      "A major flaw in the original historical construction."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "การใช้รถตัดหญ้าขนาดใหญ่ในพื้นที่บอบบาง"
+    },
+    {
+     "id": "rd-c1-516-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to the contract, what equipment should be used near the central fountain?",
+     "options": [
+      "Push mowers and manual trimmers.",
+      "Heavy riding mowers and tractors.",
+      "Chemical weed killers and sprays.",
+      "Specialized brick cleaning machines."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "สัญญาระบุให้ใช้ได้แค่รถเข็นตัดหญ้าและเครื่องเล็มหญ้าแบบใช้คน"
+    },
+    {
+     "id": "rd-c1-516-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What was the consequence of the abandoned grass clippings?",
+     "options": [
+      "They blocked the drains and caused minor flooding.",
+      "They attracted a swarm of dangerous insects to the area.",
+      "They ruined the aesthetic appeal of the new flower beds.",
+      "They created an awful and persistent smell in the neighborhood."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "เศษหญ้าที่ทิ้งไว้ไปอุดตันท่อระบายน้ำ ทำให้เกิดน้ำท่วมขัง"
+    },
+    {
+     "id": "rd-c1-516-q5",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word best replaces \"rectified\" in the final paragraph?",
+     "options": [
+      "Corrected",
+      "Postponed",
+      "Investigated",
+      "Abandoned"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "rectified แปลว่า ได้รับการแก้ไขให้ถูกต้อง"
+    },
+    {
+     "id": "rd-c1-516-q6",
+     "qtype": "INFERENCE",
+     "stem": "What will happen if the landscaping company fails to fix the issues?",
+     "options": [
+      "The association will cancel the contract and seek compensation.",
+      "The homeowners will fix the brick pathways themselves.",
+      "The company workers will be reported to the local police.",
+      "The residents will stop paying their municipal taxes."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "สมาคมจะยกเลิกสัญญาและฟ้องร้องเรียกค่าเสียหาย"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-517",
+   "title": "Notice: Mandatory Cloud Storage Migration Protocol",
+   "genre": "notice (correspondence)",
+   "category": "other",
+   "wordCount": 182,
+   "level": "C1",
+   "targetVocab": [
+    "fortify",
+    "encrypted",
+    "passphrase",
+    "stringent",
+    "synchronization"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "Notice: Mandatory Cloud Storage Migration Protocol\n\nEffective Monday, August 10th, the IT Department is initiating a comprehensive migration of all employee data from the localized physical servers to the new Enterprise Cloud Platform. This transition is essential to fortify our cybersecurity framework against escalating external threats.\n\nFirstly, all staff members must manually back up their highly sensitive documents to the provided encrypted USB drives before Friday afternoon. The automated migration script will only transfer standard operational files; it will intentionally bypass any folders marked as 'Confidential'.\n\nSecondly, upon logging into the new cloud platform on Monday morning, you will be prompted to establish a new passphrase. This passphrase must exceed fourteen characters and contain no recognizable dictionary words. The previous requirement for monthly password resets has been permanently abolished, provided your new passphrase meets these stringent criteria.\n\nIf you encounter any synchronization errors during the initial rollout, do not repeatedly restart your workstation. Instead, immediately submit a 'High Priority' ticket through the internal IT portal. Failure to adhere to these migration procedures may result in temporary suspension of your network access privileges.",
+   "questions": [
+    {
+     "id": "rd-c1-517-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main purpose of this notice?",
+     "options": [
+      "To instruct employees on the upcoming data migration process.",
+      "To announce the immediate termination of the IT department.",
+      "To warn staff about a recent physical theft of USB drives.",
+      "To request feedback on the new Enterprise Cloud Platform."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "สั่งการและอธิบายขั้นตอนการโอนย้ายข้อมูลพนักงานไปยังคลาวด์"
+    },
+    {
+     "id": "rd-c1-517-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What must employees do with their highly sensitive documents?",
+     "options": [
+      "Save them onto secure USB drives before the weekend.",
+      "Delete them completely before the automated script runs.",
+      "Leave them in the localized servers for the IT team to handle.",
+      "Email them directly to the IT Department's manager."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ต้องสำรองข้อมูลใส่ USB drive ที่เตรียมไว้ก่อนวันศุกร์"
+    },
+    {
+     "id": "rd-c1-517-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why will the automated script NOT transfer 'Confidential' folders?",
+     "options": [
+      "Because it is specifically programmed to skip them.",
+      "Because the physical servers are too damaged to read them.",
+      "Because the cloud platform does not have enough storage space.",
+      "Because the IT department does not have the administrative passwords."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบบถูกโปรแกรมไว้ให้จงใจข้ามโฟลเดอร์ Confidential"
+    },
+    {
+     "id": "rd-c1-517-q4",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word is closest in meaning to \"abolished\" in the third paragraph?",
+     "options": [
+      "Eliminated",
+      "Established",
+      "Modified",
+      "Postponed"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "abolished แปลว่า ถูกยกเลิก/ถูกกำจัดทิ้ง"
+    },
+    {
+     "id": "rd-c1-517-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the correct action if a computer fails to sync properly on Monday?",
+     "options": [
+      "Send a high-priority report through the IT website.",
+      "Restart the computer multiple times until it works.",
+      "Unplug the workstation from the main power supply.",
+      "Call the IT manager's personal mobile phone directly."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ส่งตั๋วด่วนผ่านระบบ IT portal แทนการรีสตาร์ทซ้ำ ๆ"
+    },
+    {
+     "id": "rd-c1-517-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the consequence of ignoring these instructions?",
+     "options": [
+      "A temporary loss of the ability to use the company network.",
+      "A permanent ban from working at the company.",
+      "A massive financial fine deducted from the next paycheck.",
+      "A mandatory retraining course on basic cybersecurity."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ถูกพักสิทธิชั่วคราวในการเข้าถึงเครือข่ายของบริษัท"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-518",
+   "title": "Email: Defective Submersible Sensor Array Complaint",
+   "genre": "formal letter (correspondence)",
+   "category": "other",
+   "wordCount": 245,
+   "level": "C1",
+   "targetVocab": [
+    "submersible",
+    "fractured",
+    "substandard",
+    "litigation"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "From: Dr. Elias Thorne, Head of Marine Biology, Oceania Institute\nTo: Customer Support, AquaTech Instruments\nSubject: Critical Failure of Submersible Sensor Array (Order #AQ-7742)\n\nDear AquaTech Support Team,\n\nI am writing to formally lodge a severe complaint regarding the Submersible Sensor Array (Model X-90) we recently purchased from your company. As a research institute conducting time-sensitive studies on deep-sea coral bleaching, we rely heavily on the precision and durability of our equipment. Unfortunately, your product has failed drastically on both fronts.\n\nOur contract explicitly guaranteed that the X-90 model could withstand pressures at depths of up to 2,000 meters. However, during our deployment yesterday, the primary pressure housing fractured at merely 800 meters. This catastrophic structural failure allowed saltwater to flood the internal circuitry, instantly destroying the main motherboard and erasing three weeks of irreplaceable baseline data.\n\nFurthermore, when my technicians attempted to retrieve the emergency backup drive, we discovered that the manual release valve was securely jammed. It appears the valve was manufactured using substandard aluminum instead of the marine-grade titanium advertised in your technical brochure. This blatant substitution of materials is entirely unacceptable and constitutes a clear breach of our purchase agreement.\n\nWe urgently require a replacement unit shipped via overnight courier at your expense, plus a full refund for the malfunctioning unit to compensate for the disruption to our federally funded project. If this matter is not rectified immediately, our legal department is fully prepared to pursue litigation for breach of contract and damages.",
+   "questions": [
+    {
+     "id": "rd-c1-518-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "Why is Dr. Thorne writing this email?",
+     "options": [
+      "To complain about a defective piece of scientific equipment.",
+      "To order another Submersible Sensor Array for his team.",
+      "To invite AquaTech to sponsor his coral bleaching research.",
+      "To apply for a job as a technician at AquaTech Instruments."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ร้องเรียนเรื่องอุปกรณ์วิทยาศาสตร์ที่ซื้อมาพังและไม่ได้มาตรฐาน"
+    },
+    {
+     "id": "rd-c1-518-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What was the specific failure of the sensor array?",
+     "options": [
+      "Its outer casing broke at a much shallower depth than promised.",
+      "It sank to 2,000 meters and could not be pulled back up.",
+      "Its battery died after only three weeks of underwater use.",
+      "It recorded the data accurately but refused to transmit it."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "กรอบรับแรงดันแตกที่ความลึกแค่ 800 เมตร ทั้งที่สัญญาบอกว่าทนได้ 2,000 เมตร"
+    },
+    {
+     "id": "rd-c1-518-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What was the consequence of the saltwater flooding the circuitry?",
+     "options": [
+      "It ruined the motherboard and wiped out crucial research data.",
+      "It caused the equipment to suddenly explode underwater.",
+      "It permanently blinded the deep-sea corals in the area.",
+      "It shocked the technicians who were trying to retrieve it."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "น้ำเกลือทำให้เมนบอร์ดพังและลบข้อมูลวิจัยที่สำคัญไป"
+    },
+    {
+     "id": "rd-c1-518-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What problem did the technicians find with the backup drive's release valve?",
+     "options": [
+      "It was stuck and made from a cheaper metal than advertised.",
+      "It was missing completely from the outer casing.",
+      "It had been installed upside down by mistake.",
+      "It was overly sensitive and opened much too easily."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "วาล์วติดขัดและทำจากอะลูมิเนียมราคาถูกแทนไทเทเนียมตามโฆษณา"
+    },
+    {
+     "id": "rd-c1-518-q5",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word best replaces \"rectified\" in the final paragraph?",
+     "options": [
+      "Corrected",
+      "Ignored",
+      "Postponed",
+      "Complicated"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "rectified แปลว่า ได้รับการแก้ไขให้ถูกต้อง"
+    },
+    {
+     "id": "rd-c1-518-q6",
+     "qtype": "INFERENCE",
+     "stem": "What will the Oceania Institute do if their demands are not met?",
+     "options": [
+      "They will take formal legal action against the company.",
+      "They will write a negative review on a science blog.",
+      "They will physically protest outside AquaTech's headquarters.",
+      "They will permanently shut down their coral bleaching project."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "ฝ่ายกฎหมายจะฟ้องร้องเรียกค่าเสียหายจากการละเมิดสัญญา"
     }
    ]
   }
@@ -34352,6 +37284,666 @@
      "answerIndex": 0,
      "points": 2,
      "explanation_th": "น้ำเสียงเชิงบวก ชักชวนให้ลองอ่านหนังสือกระดาษ"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-605",
+   "title": "The Ethics and Economics of Planned Obsolescence",
+   "genre": "argumentative article",
+   "category": "article",
+   "wordCount": 460,
+   "level": "C1",
+   "targetVocab": [
+    "obsolescence",
+    "ramifications",
+    "proprietary",
+    "e-waste",
+    "paradigm"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "The phenomenon of \"planned obsolescence\" has become a cornerstone of modern manufacturing, profoundly shaping global consumer habits and corporate profit margins. This industrial strategy involves designing products with an artificially limited useful life, ensuring they become obsolete, unfashionable, or non-functional after a certain period. By forcing consumers to repeatedly purchase replacements, manufacturers guarantee a continuous stream of revenue. While this approach undeniably fuels economic growth and technological innovation, it carries severe ethical and environmental ramifications that are increasingly drawing the ire of consumer advocacy groups.\n\nProponents of planned obsolescence argue from a macroeconomic perspective. They assert that the continuous cycle of consumption stimulates the economy by keeping factories operational and millions of people employed. If consumer electronics or household appliances were built to last a lifetime, the demand for new products would plummet, leading to massive layoffs and economic stagnation. Furthermore, the drive to convince consumers to upgrade fosters rapid technological advancement. Tech giants are incentivized to pour billions of dollars into research and development to create lighter smartphones, faster processors, and higher-resolution displays, thereby accelerating the pace of human innovation.\n\nHowever, the ethical foundations of this practice are highly questionable. Critics argue that planned obsolescence is fundamentally deceptive. Consumers purchase items under the assumption of durability, only to find that repair costs often exceed the price of buying a brand-new device. This is largely because manufacturers deliberately restrict access to spare parts and utilize proprietary screws that prevent independent repairs. Such tactics essentially trap the consumer in a perpetual cycle of spending, disproportionately affecting lower-income households who can ill afford to replace essential electronics every few years.\n\nThe most devastating consequence, however, is environmental. The relentless production and disposal of short-lived goods have led to an unprecedented crisis in electronic waste (e-waste). Millions of tons of discarded smartphones, laptops, and batteries end up in landfills annually. These devices contain hazardous materials such as lead, mercury, and cadmium, which leach into the soil and groundwater, posing severe threats to both human health and delicate ecosystems. Moreover, the manufacturing process itself consumes immense quantities of rare earth metals and fossil fuels, exacerbating the global climate crisis.\n\nIn response to these growing concerns, the \"Right to Repair\" movement has gained significant legislative traction across Europe and parts of North America. This initiative demands that manufacturers design products that are easily repairable and legally mandates the public availability of spare parts and diagnostic manuals. By shifting the paradigm from a \"throwaway culture\" to a circular economy, advocates hope to mitigate the ecological damage. Ultimately, while planned obsolescence may inflate short-term corporate profits, the long-term cost paid by the planet and the consumer is demonstrably unsustainable. Transitioning toward durable, repairable goods is no longer just an economic choice; it is a global ecological imperative.",
+   "questions": [
+    {
+     "id": "rd-c1-605-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the primary purpose of the passage?",
+     "options": [
+      "To analyze the economic logic and negative impacts of a manufacturing strategy.",
+      "To explain how to repair broken household appliances.",
+      "To defend tech companies against unfair consumer lawsuits.",
+      "To persuade readers to stop buying any new electronic devices."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "วิเคราะห์เหตุผลทางเศรษฐกิจและผลกระทบด้านลบของกลยุทธ์การผลิต"
+    },
+    {
+     "id": "rd-c1-605-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to the passage, how does planned obsolescence benefit the economy?",
+     "options": [
+      "It maintains continuous product demand, keeping factories running and people employed.",
+      "It allows consumers to save money for long-term investments.",
+      "It reduces the amount of taxes that manufacturing companies have to pay.",
+      "It encourages governments to provide subsidies for rare earth metals."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "รักษาความต้องการสินค้าต่อเนื่อง ทำให้โรงงานเดินสายพานและจ้างงานได้"
+    },
+    {
+     "id": "rd-c1-605-q3",
+     "qtype": "INFERENCE",
+     "stem": "What does the author mean by stating the practice is \"fundamentally deceptive\" in paragraph 3?",
+     "options": [
+      "Companies trick buyers into thinking products will last longer than they actually do.",
+      "Advertising campaigns often lie about the screen resolution of smartphones.",
+      "Store clerks overcharge customers for basic electronic repairs.",
+      "Tech companies secretly monitor users through their device microphones."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "หลอกลวงตรงที่ผู้บริโภคซื้อโดยคิดว่ามันจะทนทาน แต่กลับพบว่าซ่อมแพงกว่าซื้อใหม่"
+    },
+    {
+     "id": "rd-c1-605-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How do manufacturers discourage people from repairing their own devices?",
+     "options": [
+      "By using special screws and limiting the availability of replacement parts.",
+      "By voiding the warranties of customers who complain online.",
+      "By spreading false rumors that repairing electronics is incredibly dangerous.",
+      "By making the internal wiring too hot to touch safely."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ใช้สกรูเฉพาะกิจและจำกัดการเข้าถึงอะไหล่"
+    },
+    {
+     "id": "rd-c1-605-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the environmental impact of electronic waste mentioned in the text?",
+     "options": [
+      "Toxic chemicals from discarded devices leak into the ground and water supply.",
+      "It releases massive amounts of carbon dioxide into the upper atmosphere.",
+      "It causes rare earth metals to completely run out within the next decade.",
+      "It destroys the natural habitats of endangered animals in North America."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "สารพิษจากขยะอิเล็กทรอนิกส์รั่วซึมลงสู่ดินและน้ำใต้ดิน"
+    },
+    {
+     "id": "rd-c1-605-q6",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word is closest in meaning to \"ramifications\" in the first paragraph?",
+     "options": [
+      "Consequences",
+      "Benefits",
+      "Explanations",
+      "Ingredients"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ramifications แปลว่า ผลกระทบ/ผลที่ตามมา"
+    },
+    {
+     "id": "rd-c1-605-q7",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the main goal of the \"Right to Repair\" movement?",
+     "options": [
+      "To legally compel manufacturers to make repairing products easier and accessible.",
+      "To force companies to lower the retail prices of their newest smartphones.",
+      "To provide free, government-funded repair services for low-income families.",
+      "To ban the mining of rare earth metals used in modern technology."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "บังคับให้ผู้ผลิตทำสินค้าที่ซ่อมง่ายและหาอะไหล่ได้"
+    },
+    {
+     "id": "rd-c1-605-q8",
+     "qtype": "INFERENCE",
+     "stem": "What is the author's ultimate attitude toward planned obsolescence?",
+     "options": [
+      "Deeply critical and warning",
+      "Highly supportive and optimistic",
+      "Completely indifferent and objective",
+      "Mildly annoyed but accepting"
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "วิพากษ์วิจารณ์อย่างหนักและเตือนว่าเป็นสิ่งที่ทำลายโลก"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-606",
+   "title": "The Promise and Peril of Asteroid Mining",
+   "genre": "argumentative article",
+   "category": "article",
+   "wordCount": 475,
+   "level": "C1",
+   "targetVocab": [
+    "burgeoning",
+    "exorbitant",
+    "antiquated",
+    "sovereignty",
+    "impoverished"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "As Earth's natural resources are increasingly depleted by rapid industrialization and a booming global population, scientists and economists are turning their gaze toward the cosmos. Asteroid mining, once confined to the realm of science fiction, is rapidly emerging as a plausible and highly lucrative industry. Near-Earth asteroids are composed of vast quantities of precious resources, including platinum-group metals, iron, nickel, and most importantly, water. While the potential economic windfalls are astronomical, the burgeoning field of space extraction is fraught with monumental technical, legal, and ethical hurdles.\n\nThe primary driver of asteroid mining is the staggering abundance of rare earth metals in space. Platinum, for example, is heavily utilized in manufacturing catalytic converters, electronics, and renewable energy technologies. On Earth, mining these metals is notoriously environmentally destructive, heavily reliant on exploitative labor practices, and geographically limited to a few politically volatile regions. Proponents argue that harvesting these materials from lifeless space rocks could halt terrestrial environmental degradation. Furthermore, water extracted from asteroids could be split into hydrogen and oxygen to create rocket fuel in space. This would establish “interplanetary gas stations,” drastically reducing the exorbitant costs of launching fuel from Earth's deep gravity well and thereby facilitating deeper solar system exploration.\n\nDespite these theoretical benefits, the engineering challenges are formidable. Navigating a spacecraft to intercept a speeding asteroid, securing it in a microgravity environment, and effectively extracting materials requires unprecedented robotics and autonomous AI systems. The harsh radiation and extreme temperatures of space present relentless obstacles to equipment durability. Currently, the initial capital required to merely launch an exploratory probe is in the billions, making the return on investment highly speculative and largely restricted to a few billionaire-backed corporations. A single mission failure could result in the total loss of decades of technological development and immense financial capital.\n\nMoreover, the legal framework governing outer space is antiquated and ambiguous. The 1967 Outer Space Treaty, signed during the Cold War, dictates that no nation can claim sovereignty over celestial bodies. However, it remains conspicuously vague regarding the commercial extraction and ownership of space resources by private entities. Recently, a few nations have unilaterally passed domestic laws granting their citizens the right to own mined asteroid materials. This legislative fractured landscape threatens to ignite an aggressive “gold rush” mentality, potentially leading to geopolitical conflicts over the most resource-rich orbital bodies.\n\nFinally, ethicists warn against exporting humanity's exploitative capitalist tendencies into the pristine vacuum of space. Without comprehensive international regulations, corporations might irresponsibly alter the orbits of asteroids, posing catastrophic collision risks to Earth. Furthermore, flooding the terrestrial market with infinite supplies of precious metals could crash the global economy, rendering earthly mining nations instantly impoverished. Ultimately, while the stars offer a limitless reservoir of wealth, humanity must collectively negotiate a robust, equitable, and strictly enforced international treaty before the first robotic drill penetrates the surface of a near-Earth object.",
+   "questions": [
+    {
+     "id": "rd-c1-606-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the primary purpose of the passage?",
+     "options": [
+      "To analyze the economic drivers and environmental risks of deep-sea mining.",
+      "To persuade governments to immediately ban all commercial space exploration.",
+      "To explain the specific chemical process of making rocket fuel in space.",
+      "To criticize the 1967 Outer Space Treaty as a useless historical document."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "วิเคราะห์แรงจูงใจทางเศรษฐกิจและความเสี่ยงของการทำเหมืองดาวเคราะห์น้อย"
+    },
+    {
+     "id": "rd-c1-606-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to paragraph 2, why is water on asteroids so important?",
+     "options": [
+      "It can be converted into rocket fuel for further space exploration.",
+      "It can be brought back to Earth to permanently solve global droughts.",
+      "It helps cool down the overheated robotic drilling equipment.",
+      "It contains rare earth metals that are highly valuable on Earth."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "สกัดเป็นเชื้อเพลิงจรวดสำหรับการสำรวจอวกาศที่ไกลขึ้น"
+    },
+    {
+     "id": "rd-c1-606-q3",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "What does the word \"burgeoning\" in paragraph 1 most closely mean?",
+     "options": [
+      "Rapidly growing",
+      "Completely forgotten",
+      "Heavily regulated",
+      "Extremely dangerous"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "burgeoning แปลว่า ที่กำลังเติบโตอย่างรวดเร็ว"
+    },
+    {
+     "id": "rd-c1-606-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is one of the engineering challenges mentioned in the text?",
+     "options": [
+      "Operating robotic equipment in extreme temperatures and microgravity.",
+      "Astronauts cannot survive the long physical journey to the asteroids.",
+      "The asteroids move too slowly to be intercepted safely.",
+      "There is too much space debris blocking the spacecraft flight paths."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ใช้งานหุ่นยนต์ในสภาวะไร้น้ำหนักและอุณหภูมิรุนแรง"
+    },
+    {
+     "id": "rd-c1-606-q5",
+     "qtype": "INFERENCE",
+     "stem": "Why does the author mention the 1967 Outer Space Treaty?",
+     "options": [
+      "To highlight that current international law lacks clear rules for commercial mining.",
+      "To prove that space mining has been strictly illegal for decades.",
+      "To show that the United States legally owns all near-Earth asteroids.",
+      "To praise the international community for their early foresight."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "ชี้ให้เห็นว่ากฎหมายอวกาศในปัจจุบันยังคลุมเครือและไม่มีกฎรองรับเอกชน"
+    },
+    {
+     "id": "rd-c1-606-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is a potential economic danger of asteroid mining mentioned in the passage?",
+     "options": [
+      "Flooding the market with metals could destroy the global economy.",
+      "The cost of platinum will rise so high that no one can afford it.",
+      "Billionaires will stop investing in Earth-based renewable energy entirely.",
+      "Governments will place massive taxes on all space-derived resources."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "การขุดแร่แบบไม่จำกัดอาจทำให้เศรษฐกิจโลกพังทลาย"
+    },
+    {
+     "id": "rd-c1-606-q7",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How have some nations reacted to the vague international space laws?",
+     "options": [
+      "They passed local laws giving citizens the right to own space resources.",
+      "They have signed a brand new, updated treaty at the United Nations.",
+      "They have threatened to shoot down the exploratory probes of rival countries.",
+      "They formed a single global corporation to share all the profits equally."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ออกกฎหมายภายในประเทศให้ประชาชนมีสิทธิเป็นเจ้าของแร่จากอวกาศ"
+    },
+    {
+     "id": "rd-c1-606-q8",
+     "qtype": "INFERENCE",
+     "stem": "What is the author's overall attitude toward asteroid mining?",
+     "options": [
+      "Cautious, acknowledging its immense promise but insisting on strict regulations.",
+      "Highly enthusiastic, believing it should begin without any delay.",
+      "Completely pessimistic, viewing it as an impossible science fiction dream.",
+      "Indifferent, stating that it will not affect the average person on Earth."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "ระมัดระวัง ยอมรับศักยภาพแต่ย้ำว่าต้องมีกฎเกณฑ์ที่เข้มงวด"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-607",
+   "title": "Deep-Sea Mining: Frontier of Green Energy or Ecological Risk",
+   "genre": "argumentative article",
+   "category": "article",
+   "wordCount": 468,
+   "level": "C1",
+   "targetVocab": [
+    "polymetallic",
+    "abyssal",
+    "nascent",
+    "moratorium",
+    "paradox"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "As terrestrial reserves of crucial minerals rapidly deplete, governments and multinational corporations are increasingly turning their attention to a vast, untouched frontier: the ocean floor. Deep-sea mining involves extracting polymetallic nodules—potato-sized rocks scattered across the abyssal plain that are rich in cobalt, nickel, copper, and manganese. These elements are essential for manufacturing electric vehicle (EV) batteries, wind turbines, and solar panels. While proponents argue that deep-sea mining is necessary to fuel the global transition toward green energy, marine biologists and environmentalists warn that this nascent industry could trigger irreversible ecological catastrophes.\n\nFrom an economic perspective, the allure of the deep ocean is undeniable. The Clarion-Clipperton Zone (CCZ), a massive expanse of the Pacific Ocean, is estimated to contain more unmined cobalt and nickel than all terrestrial deposits combined. Advocates assert that harvesting these nodules is significantly less environmentally destructive than land-based mining. Terrestrial mining often requires clear-cutting rainforests, displacing indigenous communities, and utilizing toxic chemicals that pollute local watersheds. In contrast, deep-sea mining operations do not require blasting or human relocation; robotic vehicles simply vacuum the nodules from the seafloor. Consequently, supporters frame ocean extraction as a vital, “cleaner” stepping stone to achieving global carbon neutrality.\n\nHowever, this optimistic narrative faces fierce opposition from the scientific community. The abyssal plain, situated thousands of meters below the surface, is a delicate and poorly understood ecosystem. Critics highlight that the robotic harvesting machines do not merely pick up rocks; they scrape the top layer of the sediment, effectively destroying the habitat of thousands of unique, slow-growing benthic organisms. Because the deep sea operates at near-freezing temperatures and extreme pressure, biological recovery from such disturbances could take millennia.\n\nFurthermore, the mining process generates massive underwater sediment plumes. When the robotic vacuums pump the nodules to the surface ships, the excess mud and waste water are dumped back into the ocean. These vast, cloudy plumes can drift for hundreds of miles, suffocating coral reefs and clogging the gills of pelagic fish. This pollution poses a direct threat to global commercial fisheries and the food security of coastal nations.\n\nCurrently, the International Seabed Authority (ISA), a UN-affiliated body, is tasked with regulating this impending industry. However, the ISA faces intense criticism for lacking a comprehensive regulatory framework and for prioritizing corporate mining contracts over marine conservation. Environmental advocacy groups are vehemently calling for a global moratorium on deep-sea mining until independent, peer-reviewed research can definitively assess its ecological impact.\n\nUltimately, the debate over deep-sea mining represents a profound modern paradox. Humanity is rushing to extract resources from a fragile ecosystem in order to build the very technologies needed to save the terrestrial environment. Navigating this complex dilemma will require policymakers to meticulously weigh the urgent demands of the green energy transition against the moral obligation to protect the Earth's last pristine wilderness.",
+   "questions": [
+    {
+     "id": "rd-c1-607-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the primary purpose of the passage?",
+     "options": [
+      "To analyze the economic drivers and environmental risks of deep-sea mining.",
+      "To persuade consumers to stop buying electric vehicles.",
+      "To explain how robotic vacuums are manufactured.",
+      "To criticize the United Nations for completely ignoring marine biology."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "วิเคราะห์แรงจูงใจทางเศรษฐกิจและความเสี่ยงด้านสิ่งแวดล้อมของเหมืองใต้ทะเลลึก"
+    },
+    {
+     "id": "rd-c1-607-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to paragraph 2, what is one major argument IN FAVOR of deep-sea mining?",
+     "options": [
+      "It avoids the deforestation and human displacement associated with land mining.",
+      "It is entirely free of any costs because the ocean belongs to no one.",
+      "It provides a limitless supply of fresh drinking water for coastal cities.",
+      "It helps to rebuild coral reefs that have been damaged by climate change."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ไม่ต้องตัดไม้ทำลายป่าหรือไล่ที่คนเหมือนเหมืองบนบก"
+    },
+    {
+     "id": "rd-c1-607-q3",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "What does the word \"nascent\" in paragraph 1 most closely mean?",
+     "options": [
+      "Just beginning to develop",
+      "Completely obsolete",
+      "Extremely dangerous",
+      "Highly profitable"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "nascent แปลว่า ที่เพิ่งเกิดใหม่/อยู่ในช่วงเริ่มต้น"
+    },
+    {
+     "id": "rd-c1-607-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why is the destruction of the abyssal plain particularly concerning to scientists?",
+     "options": [
+      "The ecosystem there grows very slowly and could take thousands of years to recover.",
+      "It is the primary location where commercial fishermen catch their seafood.",
+      "It will cause the ocean's temperature to rise to boiling point.",
+      "It is the only place on Earth where cobalt and nickel can be found."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ระบบนิเวศที่นั่นโตช้ามาก อาจใช้เวลาฟื้นฟูเป็นพันปี"
+    },
+    {
+     "id": "rd-c1-607-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How do sediment plumes threaten marine life?",
+     "options": [
+      "They spread across large areas, suffocating reefs and clogging fish gills.",
+      "They make the ocean water highly acidic and dissolve fish scales.",
+      "They emit radiation that causes genetic mutations in deep-sea creatures.",
+      "They absorb all the oxygen in the water, causing immediate mass extinction."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ฝุ่นตะกอนลอยไปไกล ปกคลุมปะการังและไปอุดตันเหงือกปลา"
+    },
+    {
+     "id": "rd-c1-607-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is a major criticism directed at the International Seabed Authority (ISA)?",
+     "options": [
+      "It seems to favor corporate mining interests over protecting the marine environment.",
+      "It is secretly funded by terrestrial mining corporations.",
+      "It has banned all forms of ocean exploration without scientific reason.",
+      "It charges too much money for countries to join its organization."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ถูกวิจารณ์ว่าเอื้อประโยชน์ให้บริษัททำเหมืองมากกว่าปกป้องสิ่งแวดล้อม"
+    },
+    {
+     "id": "rd-c1-607-q7",
+     "qtype": "INFERENCE",
+     "stem": "What is the \"profound modern paradox\" mentioned in the final paragraph?",
+     "options": [
+      "We are destroying a delicate ecosystem to get materials meant to save the environment.",
+      "We are mining the ocean to build ships that will eventually sink.",
+      "Environmentalists use electronics that are made from mined metals.",
+      "We have explored more of outer space than we have of our own oceans."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "ความย้อนแย้งคือเรากำลังทำลายทะเลเพื่อเอาแร่ไปทำเทคโนโลยีที่หวังจะช่วยธรรมชาติบนบก"
+    },
+    {
+     "id": "rd-c1-607-q8",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What action are environmental advocacy groups currently demanding?",
+     "options": [
+      "A temporary halt on deep-sea mining until more scientific research is conducted.",
+      "The immediate dissolution of the International Seabed Authority.",
+      "A complete ban on the manufacturing of electric vehicles.",
+      "Heavy financial taxes placed on any company operating in the Pacific Ocean."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "เรียกร้องให้ระงับการทำเหมืองไว้ก่อนจนกว่าจะมีงานวิจัยที่ชัดเจน"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-608",
+   "title": "The Hidden Crisis of the World's Sand Supply",
+   "genre": "argumentative article",
+   "category": "article",
+   "wordCount": 465,
+   "level": "C1",
+   "targetVocab": [
+    "insatiable",
+    "salinization",
+    "impunity",
+    "multifaceted",
+    "imperative"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "As global urbanization accelerates at an unprecedented pace, the demand for construction materials has skyrocketed. While resources like timber and steel frequently dominate environmental discussions, the world is quietly facing a severe shortage of another foundational commodity: sand. Sand is the primary ingredient in concrete, asphalt, and glass, making it the most consumed natural resource on the planet after water. However, the relentless extraction of this seemingly infinite material is triggering a profound ecological and economic crisis that policymakers can no longer afford to ignore.\n\nThe crux of the problem lies in the specific type of sand required for construction. Desert sand, though spectacularly abundant, is completely useless for making concrete. Its grains have been rounded and polished by centuries of wind erosion, meaning they cannot interlock to form a stable, rigid structure. Consequently, the construction industry relies exclusively on marine and river sand, whose angular grains bind perfectly together. The insatiable global appetite for this specific sand has spawned a massive, often illicit, extraction industry that aggressively targets the world's most vulnerable aquatic ecosystems.\n\nThe environmental ramifications of river and coastal sand mining are devastating. When massive dredging ships vacuum millions of tons of sediment from riverbeds, they fundamentally alter the water's natural flow and depth. This aggressive alteration destroys the breeding grounds of benthic fish, exacerbates coastal erosion, and drastically increases the frequency and severity of inland flooding. In Southeast Asia, extensive sand mining in the Mekong Delta has caused the riverbed to sink, allowing salty ocean water to intrude miles inland. This salinization is actively destroying vast tracts of fertile agricultural land, directly threatening the food security of millions of local farmers who have depended on predictable seasonal harvests for generations.\n\nFurthermore, the economic desperation surrounding this resource has given rise to violent “sand mafias” in several developing nations. These organized criminal syndicates illegally excavate protected beaches and rivers, operating with near impunity due to rampant political corruption and a lack of regulatory oversight. The black market for sand not only deprives governments of vital tax revenue but also fuels regional instability and violence, occasionally turning deadly when local communities attempt to resist the illegal dredging operations near their homes.\n\nAddressing the global sand crisis requires a multifaceted approach. The construction industry must urgently transition toward sustainable alternatives, such as manufacturing “crushed sand” from recycled concrete and industrial slag. Simultaneously, international governing bodies must establish and strictly enforce comprehensive regulations to monitor and limit marine extraction. Furthermore, architects and urban planners must prioritize designing buildings that utilize fewer raw materials. Ultimately, humanity must abandon the perilous illusion that sand is an inexhaustible resource. Transitioning to a circular construction economy is no longer merely an innovative ideal; it is an absolute ecological imperative to prevent the irreversible collapse of the world's aquatic ecosystems.",
+   "questions": [
+    {
+     "id": "rd-c1-608-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the primary purpose of the passage?",
+     "options": [
+      "To analyze the causes and severe impacts of the global sand shortage.",
+      "To persuade readers to move out of rapidly urbanizing cities.",
+      "To explain the detailed chemical composition of modern concrete.",
+      "To criticize the traditional agricultural practices in the Mekong Delta."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "วิเคราะห์สาเหตุที่ทรายขาดแคลนและผลกระทบที่รุนแรง"
+    },
+    {
+     "id": "rd-c1-608-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why can't desert sand be used for construction?",
+     "options": [
+      "Its grains are too smooth and round to bind tightly together.",
+      "It is far too expensive to transport from remote desert areas.",
+      "It contains too much natural salt, which destroys the concrete.",
+      "It melts and loses its shape when exposed to manufacturing heat."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "เม็ดทรายทะเลทรายกลมมนและเรียบเกินไปจนเกาะตัวกันไม่ได้"
+    },
+    {
+     "id": "rd-c1-608-q3",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is a major environmental consequence of dredging riverbeds?",
+     "options": [
+      "It worsens coastal erosion and increases the risk of inland flooding.",
+      "It causes the rivers to completely dry up in the summer months.",
+      "It creates massive and dangerous sandstorms in nearby urban centers.",
+      "It poisons the drinking water with heavy metals and toxic chemicals."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ทำให้ตลิ่งพังทลายและเพิ่มความเสี่ยงน้ำท่วมในแผ่นดิน"
+    },
+    {
+     "id": "rd-c1-608-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How has sand mining specifically affected the Mekong Delta?",
+     "options": [
+      "It has allowed saltwater to ruin agricultural land by sinking the riverbed.",
+      "It has created new artificial islands used for luxury resorts.",
+      "It has caused the river to flow backward into the surrounding mountains.",
+      "It has killed all the native fish, forcing local farmers to eat insects."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ท้องแม่น้ำโขงทรุด น้ำเค็มจึงทะลักเข้ามาทำลายพื้นที่เกษตรกรรม"
+    },
+    {
+     "id": "rd-c1-608-q5",
+     "qtype": "INFERENCE",
+     "stem": "Why do \"sand mafias\" exist?",
+     "options": [
+      "Because the extremely high demand for sand creates lucrative illegal opportunities.",
+      "Because local governments legally hired them to clean up the polluted beaches.",
+      "Because local farmers pay them heavily to protect their agricultural land.",
+      "Because they want to stop construction companies from building new cities."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "ความต้องการทรายสูงมากจนทำให้การลักลอบขุดเป็นอาชีพที่ทำเงินมหาศาล"
+    },
+    {
+     "id": "rd-c1-608-q6",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word is closest in meaning to \"impunity\" in paragraph 4?",
+     "options": [
+      "Exemption from punishment",
+      "Imprisonment",
+      "Transparency",
+      "Extreme poverty"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "impunity แปลว่า การลอยนวลพ้นผิด"
+    },
+    {
+     "id": "rd-c1-608-q7",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is one solution to the sand crisis proposed in the final paragraph?",
+     "options": [
+      "Creating artificial sand by recycling old concrete and slag.",
+      "Banning the construction of all new urban buildings entirely.",
+      "Moving all sand mining operations directly to the Sahara Desert.",
+      "Forcing farmers to grow specific crops that do not require fresh water."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ทางออกหนึ่งคือหันไปใช้ทรายบดที่ทำจากการรีไซเคิลคอนกรีตเก่า"
+    },
+    {
+     "id": "rd-c1-608-q8",
+     "qtype": "INFERENCE",
+     "stem": "What is the author's overall attitude toward the consumption of sand?",
+     "options": [
+      "Deeply concerned, warning that our current usage is unsustainable.",
+      "Highly optimistic, believing technology will easily solve the issue.",
+      "Indifferent, as sand is still the second most abundant resource on Earth.",
+      "Mildly annoyed by the noise pollution created by dredging ships."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "กังวลอย่างยิ่งและเตือนว่าพฤติกรรมการใช้ทรายแบบนี้ไม่ยั่งยืน"
+    }
+   ]
+  },
+  {
+   "id": "rd-c1-609",
+   "title": "The Hidden Cost of the Lithium Boom",
+   "genre": "argumentative article",
+   "category": "article",
+   "wordCount": 460,
+   "level": "C1",
+   "targetVocab": [
+    "heralded",
+    "paradox",
+    "aquifers",
+    "unviable",
+    "externalities"
+   ],
+   "verified": true,
+   "tier": "B2-C1",
+   "passage": "The global transition toward renewable energy is universally heralded as a crucial step in combating catastrophic climate change. As nations scramble to replace fossil fuel-powered vehicles with electric vehicles (EVs), the demand for high-capacity energy storage has skyrocketed. At the heart of this green revolution lies lithium, a highly reactive alkali metal essential for manufacturing the lightweight, rechargeable batteries that power modern EVs. However, while the end product promises a zero-emission future, the extraction process of this \"white gold\" presents a profound environmental paradox that policymakers are struggling to reconcile.\n\nLithium extraction predominantly occurs in two vastly different geographical settings: the hard-rock mines of Australia and the expansive salt flats of South America, known as the \"Lithium Triangle\" spanning Chile, Argentina, and Bolivia. While hard-rock mining is notorious for its massive carbon footprint and ecological scarring, the extraction process in South America is uniquely devastating to local water supplies. In these arid highland deserts, companies pump lithium-rich brine from deep underground aquifers into massive surface ponds, allowing the sun to evaporate the water over several months. This technique is incredibly water-intensive, requiring approximately 500,000 gallons of water to produce a single ton of lithium.\n\nConsequently, this aggressive extraction drastically lowers the regional water table, severely threatening the delicate ecosystems that rely on these scarce oases. Indigenous communities, who have engaged in sustainable agriculture and llama herding for millennia, are finding their ancestral wells completely dry. The depletion of fresh water forces these communities to abandon their traditional livelihoods and migrate to overcrowded urban centers. Thus, the global pursuit of clean energy inadvertently sacrifices the environmental and cultural stability of some of the world's most vulnerable populations.\n\nFurthermore, the end-of-life management of lithium-ion batteries remains a glaring vulnerability in the green energy narrative. Currently, fewer than five percent of these batteries are recycled globally. The recycling process is incredibly complex and financially unviable compared to mining raw materials. When discarded improperly, these batteries release toxic heavy metals, such as cobalt and nickel, which rapidly leach into the soil and contaminate groundwater, posing severe hazards to both human health and local biodiversity.\n\nTo truly achieve a sustainable energy paradigm, the industry must urgently address these hidden externalities. Governments must mandate stringent water conservation protocols for mining corporations and invest heavily in advanced extraction technologies, such as Direct Lithium Extraction (DLE), which filters lithium without evaporating the brine. Additionally, robust legislation is required to force manufacturers to design batteries with circular lifecycles in mind, making recycling economically feasible. Ultimately, replacing a fossil-fuel crisis with a mineral-extraction crisis is a short-sighted endeavor. The green transition must be ecologically sound from the origin of the raw materials to the final disposal of the battery; otherwise, it is merely substituting one form of environmental degradation for another.",
+   "questions": [
+    {
+     "id": "rd-c1-609-q1",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the primary purpose of the passage?",
+     "options": [
+      "To highlight the environmental and social costs associated with lithium extraction.",
+      "To persuade consumers to immediately stop purchasing electric vehicles.",
+      "To compare the mechanical differences between traditional cars and EVs.",
+      "To praise the mining corporations in the South American Lithium Triangle."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ชี้ให้เห็นถึงราคาที่ต้องจ่ายทั้งทางสังคมและสิ่งแวดล้อมเพื่อแลกกับการสกัดลิเธียม"
+    },
+    {
+     "id": "rd-c1-609-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to paragraph 2, how is lithium primarily extracted in South America?",
+     "options": [
+      "By pumping salty underground water into pools and letting it evaporate.",
+      "By blasting massive holes in the hard-rock mountains.",
+      "By filtering water directly from the local rivers and lakes.",
+      "By chemically melting the desert sand into a liquid form."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "สูบน้ำเกลือใต้ดินขึ้นมาใส่บ่อและปล่อยให้ระเหยด้วยแสงแดด"
+    },
+    {
+     "id": "rd-c1-609-q3",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "What does the word \"paradox\" in paragraph 1 most closely mean?",
+     "options": [
+      "A situation that seems contradictory but is true.",
+      "A perfect and flawless scientific solution.",
+      "A highly lucrative financial investment.",
+      "An outdated method of industrial manufacturing."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "paradox หมายถึง ความย้อนแย้ง (สิ่งที่ดูเหมือนขัดแย้งกันแต่เป็นเรื่องจริง)"
+    },
+    {
+     "id": "rd-c1-609-q4",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "How does lithium mining negatively affect indigenous communities?",
+     "options": [
+      "It drains their fresh water supply, ruining their agriculture.",
+      "It forces them to work in dangerous underground mines.",
+      "It introduces toxic smog into the air they breathe daily.",
+      "It causes their livestock to mutate due to heavy metal exposure."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "การสูบน้ำบาดาลทำให้แหล่งน้ำจืดของชาวพื้นเมืองแห้งขอด ทำลายการเกษตร"
+    },
+    {
+     "id": "rd-c1-609-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why are so few lithium-ion batteries currently recycled?",
+     "options": [
+      "The process is complicated and costs more than mining new materials.",
+      "It is strictly illegal to recycle them under international law.",
+      "The batteries explode violently if they are broken apart.",
+      "There is no demand for recycled lithium in the modern market."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "กระบวนการรีไซเคิลซับซ้อนมากและมีค่าใช้จ่ายสูงกว่าการขุดหาของใหม่"
+    },
+    {
+     "id": "rd-c1-609-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Which of the following is proposed as a solution in the final paragraph?",
+     "options": [
+      "Using Direct Lithium Extraction (DLE) to save water.",
+      "Banning the sale of electric vehicles until recycling improves.",
+      "Forcing indigenous people to relocate to urban areas permanently.",
+      "Replacing lithium with fossil fuels to power modern vehicles."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "เสนอให้ลงทุนในเทคโนโลยีใหม่ เช่น DLE ซึ่งกรองลิเธียมโดยไม่ต้องระเหยน้ำ"
+    },
+    {
+     "id": "rd-c1-609-q7",
+     "qtype": "INFERENCE",
+     "stem": "What is the author's stance on the current state of the green transition?",
+     "options": [
+      "It is flawed because it solves one crisis by creating another.",
+      "It is perfectly executed and will save the planet immediately.",
+      "It is entirely useless and should be abandoned immediately.",
+      "It is only beneficial to the wealthy nations in North America."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "มีจุดบอด เพราะการแก้ปัญหาฟอสซิลตอนนี้กลายเป็นการสร้างปัญหาสิ่งแวดล้อมเรื่องใหม่แทน"
+    },
+    {
+     "id": "rd-c1-609-q8",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "Which word is closest in meaning to \"externalities\" in the final paragraph?",
+     "options": [
+      "Unintended consequences",
+      "Physical appearances",
+      "Foreign policies",
+      "International borders"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "externalities หมายถึง ผลกระทบเชิงลบที่ไม่ตั้งใจ"
     }
    ]
   }
