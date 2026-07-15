@@ -12646,6 +12646,196 @@
    "explanation_th": "also help → also helps : series เป็นประธานเอกพจน์",
    "verified": true,
    "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-err-01",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Word Form",
+   "stem": "The (A)[extreme talented] musician, (B)[whose critically acclaimed compositions have won multiple international awards], decided to (C)[dedicate her entire career] to (D)[teaching underprivileged children in remote rural areas].",
+   "options": [
+    "(A) extreme talented",
+    "(B) whose critically acclaimed compositions have won multiple international awards",
+    "(C) dedicate her entire career",
+    "(D) teaching underprivileged children in remote rural areas"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "extreme talented → extremely talented : ขยาย adjective (talented) ต้องใช้ adverb (extremely)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-err-02",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "The wide variety of native plants (A)[found in this specific geographical region] (B)[provide essential nutrients for] (C)[several endangered bird species] (D)[throughout the harsh winter months].",
+   "options": [
+    "(A) found in this specific geographical region",
+    "(B) provide essential nutrients for",
+    "(C) several endangered bird species",
+    "(D) throughout the harsh winter months"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "provide → provides : ประธานหลักของประโยคคือ variety (เอกพจน์) ไม่ใช่ plants ที่อยู่ใกล้กริยา",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-err-03",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Parallel Structure",
+   "stem": "To (A)[successfully complete the rigorous certification program], candidates must attend all lectures, pass a (B)[written examination], and (C)[demonstrating practical skills] during a (D)[supervised clinical assessment].",
+   "options": [
+    "(A) successfully complete the rigorous certification program",
+    "(B) written examination",
+    "(C) demonstrating practical skills",
+    "(D) supervised clinical assessment"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "demonstrating → demonstrate : ต้องขนานกับกริยาช่อง 1 ชุดเดียวกัน (attend, pass, demonstrate)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-err-04",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Comparison",
+   "stem": "Although the newly developed software application is (A)[undeniably] (B)[more efficient than the older version], its complicated user interface makes it much harder to navigate for (C)[elderly users] than (D)[those of young adults].",
+   "options": [
+    "(A) undeniably",
+    "(B) more efficient than the older version",
+    "(C) elderly users",
+    "(D) those of young adults"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "those of young adults → young adults : เปรียบเทียบ elderly users กับ young adults โดยตรง ไม่ต้องมี those of ให้ซ้ำซ้อน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-err-05",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Pronouns",
+   "stem": "(A)[Their unwavering dedication to marine conservation] has earned the (B)[research institute numerous prestigious accolades] from international organizations (C)[that focus on] (D)[protecting ocean ecosystems around the globe].",
+   "options": [
+    "(A) Their unwavering dedication to marine conservation",
+    "(B) research institute numerous prestigious accolades",
+    "(C) that focus on",
+    "(D) protecting ocean ecosystems around the globe"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Their → Its : ประธานที่อ้างถึงคือ research institute (องค์กรเอกพจน์) จึงต้องใช้สรรพนามเอกพจน์ its ไม่ใช่ their",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-err-06",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Verb Pattern",
+   "stem": "The regional manager (A)[strongly suggested implementing a new customer feedback system], hoping it would prevent clients (B)[to cancel their annual] (C)[subscriptions before the upcoming fiscal year] (D)[begins].",
+   "options": [
+    "(A) strongly suggested implementing a new customer feedback system",
+    "(B) to cancel their annual",
+    "(C) subscriptions before the upcoming fiscal year",
+    "(D) begins"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "to cancel → from canceling : โครงสร้าง prevent someone from doing something",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-err-07",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Tenses",
+   "stem": "By the time the rescue team (A)[finally arrived at the remote mountain cabin], the stranded hikers (B)[consumed almost all of the emergency rations] they (C)[had stored in their] (D)[backpacks].",
+   "options": [
+    "(A) finally arrived at the remote mountain cabin",
+    "(B) consumed almost all of the emergency rations",
+    "(C) had stored in their",
+    "(D) backpacks"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "consumed → had consumed : เหตุการณ์นี้เกิดก่อน arrived (by the time + past) จึงต้องใช้ Past Perfect",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-err-08",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Articles",
+   "stem": "(A)[Had the committee members reviewed the budget proposal more carefully before the meeting], (B)[they would have identified several critical errors] (C)[that later caused significant financial complications] (D)[for entire department].",
+   "options": [
+    "(A) Had the committee members reviewed the budget proposal more carefully before the meeting",
+    "(B) they would have identified several critical errors",
+    "(C) that later caused significant financial complications",
+    "(D) for entire department"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "for entire department → for the entire department : ขาด article 'the' หน้านามที่เจาะจง (entire department)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-err-09",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Dangling Modifiers",
+   "stem": "(A)[Walking briskly through the dense forest], a rare venomous snake was unexpectedly (B)[spotted by the observant tour guide], (C)[who immediately warned the tourists] to stay (D)[perfectly still].",
+   "options": [
+    "(A) Walking briskly through the dense forest",
+    "(B) spotted by the observant tour guide",
+    "(C) who immediately warned the tourists",
+    "(D) perfectly still"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Walking briskly through the dense forest → While walking... : วลีนี้ไม่มีประธานที่ถูกต้องรองรับ (งูไม่ได้เป็นผู้เดิน) เป็น dangling participle",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-err-10",
+   "part": "WRITING_ERROR",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Relative Clauses",
+   "stem": "The board of directors (A)[ultimately rejected the merger proposal], a decision (B)[to which many shareholders strongly objected], demanding a clear explanation regarding (C)[whom the deal was suddenly] (D)[dismissed].",
+   "options": [
+    "(A) ultimately rejected the merger proposal",
+    "(B) to which many shareholders strongly objected",
+    "(C) whom the deal was suddenly",
+    "(D) dismissed"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "whom → why / for which : ต้องการคำเชื่อมบอกเหตุผลของการยกเลิก (the deal ไม่ใช่บุคคล จึงใช้ whom ไม่ได้)",
+   "verified": true,
+   "level": "B2-C1"
   }
  ],
  "writingSC": [
@@ -29539,6 +29729,196 @@
    "explanation_th": "empirical studies (การศึกษาเชิงประจักษ์) เข้ากับบริบทการพิสูจน์ทางวิทยาศาสตร์",
    "verified": true,
    "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-sc-01",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "The board of directors __________ the proposal if they had known about the hidden financial risks earlier.",
+   "options": [
+    "would not have approved",
+    "must not have approved",
+    "should not approve",
+    "could not approve"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "3rd Conditional: if-clause เป็น Past Perfect (had known) main clause จึงต้องเป็น would have + V.3",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-sc-02",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Participle Phrases",
+   "stem": "__________ to severe weather conditions for centuries, the ancient monument now requires extensive restoration to prevent structural collapse.",
+   "options": [
+    "Having exposed",
+    "Having been exposed",
+    "Exposing",
+    "To be exposed"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "Participle Phrase: ประธาน (monument) ถูกกระทำและเกิดก่อนหน้า จึงต้องใช้ Passive Perfect Participle (Having been exposed)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-sc-03",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Inversion",
+   "stem": "Not only __________ the local ecosystem, but it also creates numerous sustainable jobs for the indigenous residents.",
+   "options": [
+    "the new policy protects",
+    "protects the new policy",
+    "does the new policy protect",
+    "does protect the new policy"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Inversion: ขึ้นต้นประโยคด้วย Not only ต้องสลับกริยาช่วยกับประธาน (does the new policy protect)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-sc-04",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Vocabulary",
+   "stem": "The lead researcher managed to __________ the complex statistical data into a clear, concise report that the general public could easily understand.",
+   "options": [
+    "manipulate",
+    "accumulate",
+    "dominate",
+    "synthesize"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "synthesize (สังเคราะห์/รวบรวมให้เข้าใจง่าย) ตรงกับบริบทการทำข้อมูลซับซ้อนให้เป็นรายงานชัดเจน",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-sc-05",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Conditionals",
+   "stem": "If the manager had properly trained his staff last month, the department __________ so many customer complaints right now.",
+   "options": [
+    "would not be receiving",
+    "will not be receiving",
+    "had not been receiving",
+    "would not have received"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Mixed Conditional: เงื่อนไขอดีต (had trained) ส่งผลถึงปัจจุบัน (right now) main clause จึงเป็น would + V.inf ต่อเนื่อง",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-sc-06",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Subjunctive",
+   "stem": "The strict supervisor demanded that the newly hired technician __________ the safety protocols thoroughly before operating the heavy machinery.",
+   "options": [
+    "reviews",
+    "reviewed",
+    "review",
+    "to review"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "Subjunctive (Mandative): หลังกริยา demand that ต้องตามด้วย Subject + V.infinitive ไม่ผัน (review)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-sc-07",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Cleft Sentences",
+   "stem": "It was the unexpected funding from an anonymous private donor __________ the local charity to expand its operations overseas.",
+   "options": [
+    "who allowed",
+    "that allowed",
+    "which allowed",
+    "whom allowed"
+   ],
+   "answerIndex": 1,
+   "points": 2,
+   "explanation_th": "Cleft Sentence: โครงสร้าง It is/was + ส่วนที่เน้น + that ใช้ that เชื่อมประโยคเน้นย้ำ (funding เป็นสิ่งของ)",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-sc-08",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Vocabulary",
+   "stem": "Many consumers find it increasingly difficult to __________ between genuine organic products and those with misleading, greenwashed labels.",
+   "options": [
+    "perceive",
+    "extract",
+    "resolve",
+    "differentiate"
+   ],
+   "answerIndex": 3,
+   "points": 2,
+   "explanation_th": "differentiate between A and B (แยกแยะความแตกต่างระหว่าง) ตรงกับบริบทที่สุด",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-sc-09",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Subject-Verb Agreement",
+   "stem": "Neither the principal investigator nor the junior research assistants __________ aware of the sudden change in the publication schedule.",
+   "options": [
+    "were",
+    "was",
+    "has been",
+    "is"
+   ],
+   "answerIndex": 0,
+   "points": 2,
+   "explanation_th": "Neither A nor B: กริยาผันตามประธานตัวหลัง (research assistants เป็นพหูพจน์) จึงใช้ were",
+   "verified": true,
+   "level": "B2-C1"
+  },
+  {
+   "id": "b2c1Batch13-sc-10",
+   "part": "WRITING_SC",
+   "source": "b2c1Batch13",
+   "exam_type": "NETSAT",
+   "topic": "Dependent Preposition",
+   "stem": "The committee's final approval of the construction project is completely contingent __________ the results of the upcoming environmental impact assessment.",
+   "options": [
+    "with",
+    "to",
+    "upon",
+    "about"
+   ],
+   "answerIndex": 2,
+   "points": 2,
+   "explanation_th": "contingent upon (ขึ้นอยู่กับ) เป็น dependent preposition ที่ใช้คู่กันเสมอ",
+   "verified": true,
+   "level": "B2-C1"
   }
  ],
  "readingShort": [
@@ -34387,6 +34767,214 @@
      "explanation_th": "น้ำเสียงเป็นทางการและเด็ดขาด ให้ทิศทางชัดเจน"
     }
    ]
+  },
+  {
+   "id": "rd-b2c1batch13-short-01",
+   "title": "New Organic Waste Collection Rules",
+   "genre": "notice (correspondence)",
+   "category": "other",
+   "wordCount": 147,
+   "level": "B2",
+   "targetVocab": [
+    "mandatory",
+    "receptacle",
+    "deter",
+    "comply",
+    "misleading"
+   ],
+   "verified": true,
+   "passage": "Attention all Greenfield residents,\n\nBeginning October 1st, the City Council will introduce a mandatory organic waste collection program to reduce landfill usage. Every household will receive a specialized green receptacle for organic materials.\n\nAcceptable items include fruit and vegetable scraps, coffee grounds, and eggshells. However, you must absolutely exclude any dairy products, meat, and bones, as these attract pests. Furthermore, despite misleading packaging, do not place any \"biodegradable\" or \"compostable\" plastics in the green receptacle; our municipal facility cannot process them efficiently.\n\nPlease ensure your green receptacle is positioned at the curbside no later than 6:00 AM on your designated collection day. Bins placed out the night before must have the secure latch locked to deter local wildlife. Failure to comply with these sorting regulations may result in a formal warning, followed by a fine for repeated offenses. Thank you for your cooperation in making Greenfield greener.",
+   "questions": [
+    {
+     "id": "rd-b2c1batch13-short-01-q1",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What must residents do if they take their bins out the evening before collection?",
+     "options": [
+      "Place them slightly further from the curb.",
+      "Ensure the lid is physically locked.",
+      "Spray them to keep pests away.",
+      "Empty them completely by 6:00 AM."
+     ],
+     "answerIndex": 1,
+     "points": 3,
+     "explanation_th": "ตอบข้อ B — bins placed out the night before ต้อง have the secure latch locked เพื่อกันสัตว์ป่า"
+    },
+    {
+     "id": "rd-b2c1batch13-short-01-q2",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "The word \"deter\" in the passage is closest in meaning to:",
+     "options": [
+      "invite",
+      "capture",
+      "poison",
+      "discourage"
+     ],
+     "answerIndex": 3,
+     "points": 2,
+     "explanation_th": "ตอบข้อ D — deter แปลว่ายับยั้ง/ทำให้ท้อถอย ตรงกับ discourage"
+    },
+    {
+     "id": "rd-b2c1batch13-short-01-q3",
+     "qtype": "INFERENCE",
+     "stem": "What can be inferred about \"biodegradable\" plastics from the text?",
+     "options": [
+      "They are incompatible with the city's current composting infrastructure.",
+      "They are considered more toxic than regular plastics.",
+      "They should only be disposed of on special collection days.",
+      "They are acceptable as long as they do not contain dairy traces."
+     ],
+     "answerIndex": 0,
+     "points": 4,
+     "explanation_th": "ตอบข้อ A — ประกาศบอกว่า municipal facility cannot process them efficiently แปลว่าระบบกำจัดขยะยังไม่รองรับ"
+    },
+    {
+     "id": "rd-b2c1batch13-short-01-q4",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the primary purpose of this notice?",
+     "options": [
+      "To warn residents about the increasing wildlife problem.",
+      "To apologize for the delay in providing new garbage bins.",
+      "To outline the rules and procedures for a new waste program.",
+      "To promote the purchase of biodegradable packaging."
+     ],
+     "answerIndex": 2,
+     "points": 3,
+     "explanation_th": "ตอบข้อ C — ทั้งประกาศอธิบายกฎและขั้นตอนของโครงการเก็บขยะอินทรีย์แบบใหม่"
+    },
+    {
+     "id": "rd-b2c1batch13-short-01-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Which of the following is NOT permitted in the green receptacle?",
+     "options": [
+      "Coffee grounds",
+      "Dairy products",
+      "Fruit peels",
+      "Eggshells"
+     ],
+     "answerIndex": 1,
+     "points": 3,
+     "explanation_th": "ตอบข้อ B — ประกาศระบุชัดเจนว่าต้อง exclude dairy products, meat, and bones"
+    },
+    {
+     "id": "rd-b2c1batch13-short-01-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What is the consequence for a household that repeatedly ignores the sorting rules?",
+     "options": [
+      "A financial penalty",
+      "Confiscation of the green bin",
+      "Immediate suspension of all waste collection",
+      "A mandatory meeting with the City Council"
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ตอบข้อ A — ฝ่าฝืนซ้ำจะโดน a fine for repeated offenses (ค่าปรับ)"
+    }
+   ],
+   "tier": "B2-C1"
+  },
+  {
+   "id": "rd-b2c1batch13-short-02",
+   "title": "Curriculum Adjustment: Advanced Patisserie",
+   "genre": "email (correspondence)",
+   "category": "other",
+   "wordCount": 243,
+   "level": "B2",
+   "targetVocab": [
+    "procurement",
+    "prohibited",
+    "substitute",
+    "cross-contamination",
+    "allergy"
+   ],
+   "verified": true,
+   "passage": "To: All Culinary Instructors\nFrom: Chef Julian Vance, Head of Pastry Arts\nSubject: Curriculum Adjustment: Advanced Patisserie (Course 402)\nDate: August 14\n\nDear Team,\n\nAs we prepare for the upcoming fall semester, I need to bring an urgent matter to your attention regarding the Advanced Patisserie module. We have just been informed that a student enrolled in the morning session has a severe, life-threatening allergy to tree nuts and peanuts.\n\nConsequently, we must strictly adapt our lesson plans to ensure a completely safe learning environment. For the upcoming modules covering macarons and traditional French tarts, almond flour and hazelnut praline are strictly prohibited. Instead, we will be utilizing toasted sunflower seed flour and roasted oat blends as our primary substitutes. I have already coordinated with the procurement department, and these alternative ingredients will be delivered to the main kitchen by next Tuesday.\n\nPlease review your individual recipe handouts and revise them accordingly before printing the final copies for the students. Additionally, all workstations, including the commercial stand mixers and marble tempering slabs, must undergo a rigorous deep-cleaning process this Friday afternoon to eliminate any potential cross-contamination from previous summer workshops.\n\nI understand that modifying classic recipes alters the traditional texture and flavor profiles we normally aim for. However, student safety is our utmost priority. We will hold a brief meeting on Wednesday at 9:00 AM to test the new substitute blends and discuss any technical adjustments needed for baking times.\n\nBest regards,\nJulian",
+   "questions": [
+    {
+     "id": "rd-b2c1batch13-short-02-q1",
+     "qtype": "PURPOSE_TONE",
+     "stem": "What is Chef Julian's attitude towards the required recipe modifications?",
+     "options": [
+      "Resentful that classical techniques are being compromised.",
+      "Indifferent, as the alternative ingredients are cheaper.",
+      "Understanding, placing a higher value on safety than on tradition.",
+      "Enthusiastic, believing the new flavors will be superior to the old ones."
+     ],
+     "answerIndex": 2,
+     "points": 4,
+     "explanation_th": "ตอบข้อ C — Julian บอกว่าเข้าใจว่าสูตรเปลี่ยนไป แต่ 'student safety is our utmost priority'"
+    },
+    {
+     "id": "rd-b2c1batch13-short-02-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "What are the instructors asked to do before distributing materials to the class?",
+     "options": [
+      "Purchase alternative ingredients themselves.",
+      "Update the ingredient lists on their instructional sheets.",
+      "Ask students about their personal dietary restrictions.",
+      "Clean the printing machines thoroughly."
+     ],
+     "answerIndex": 1,
+     "points": 3,
+     "explanation_th": "ตอบข้อ B — ต้อง review recipe handouts และ revise ก่อน printing final copies"
+    },
+    {
+     "id": "rd-b2c1batch13-short-02-q3",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "In the context of the email, the phrase \"cross-contamination\" most likely refers to:",
+     "options": [
+      "mixing basic ingredients incorrectly.",
+      "students sharing utensils during an exam.",
+      "the spread of infectious diseases in a kitchen.",
+      "the accidental transfer of allergens to equipment."
+     ],
+     "answerIndex": 3,
+     "points": 2,
+     "explanation_th": "ตอบข้อ D — บริบททั้งอีเมลพูดถึงภูมิแพ้ cross-contamination จึงหมายถึงสารก่อภูมิแพ้ปนเปื้อนอุปกรณ์"
+    },
+    {
+     "id": "rd-b2c1batch13-short-02-q4",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the main subject of this correspondence?",
+     "options": [
+      "Implementing mandatory recipe and safety protocols due to a medical condition.",
+      "Introducing a modern twist on traditional French pastry recipes.",
+      "Complaining about the poor cleanliness of the main kitchen.",
+      "Rescheduling the Advanced Patisserie course to the spring semester."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ตอบข้อ A — อีเมลทั้งฉบับพูดถึงการปรับสูตรและความปลอดภัยเพราะนักเรียนแพ้อาหารรุนแรง"
+    },
+    {
+     "id": "rd-b2c1batch13-short-02-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to the email, when are the replacement ingredients expected to arrive?",
+     "options": [
+      "This Friday afternoon",
+      "Next Wednesday at 9:00 AM",
+      "Before the end of August",
+      "By the following Tuesday"
+     ],
+     "answerIndex": 3,
+     "points": 3,
+     "explanation_th": "ตอบข้อ D — 'alternative ingredients will be delivered to the main kitchen by next Tuesday'"
+    },
+    {
+     "id": "rd-b2c1batch13-short-02-q6",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Why does Chef Julian schedule a meeting for Wednesday?",
+     "options": [
+      "To discipline staff for failing to clean the marble slabs.",
+      "To evaluate the students' first attempts at making macarons.",
+      "To determine if the baking process needs altering due to the new ingredients.",
+      "To debate whether the student should be transferred to another class."
+     ],
+     "answerIndex": 2,
+     "points": 3,
+     "explanation_th": "ตอบข้อ C — ประชุมเพื่อ 'test the new substitute blends and discuss any technical adjustments needed for baking times'"
+    }
+   ],
+   "tier": "B2-C1"
   }
  ],
  "readingLong": [
@@ -40100,6 +40688,138 @@
      "explanation_th": "มองว่าเป็นทรัพยากรธรรมชาติที่สำคัญและต้องปกป้องเชิงรุก"
     }
    ]
+  },
+  {
+   "id": "rd-b2c1batch13-long-01",
+   "title": "Bilingualism and the Aging Brain",
+   "genre": "science article",
+   "category": "science",
+   "wordCount": 445,
+   "level": "C1",
+   "targetVocab": [
+    "plasticity",
+    "cognitive reserve",
+    "resilience",
+    "executive control",
+    "pathology"
+   ],
+   "verified": true,
+   "passage": "For decades, researchers have been fascinated by the human brain's remarkable plasticity—its ability to adapt and reorganize itself throughout a person's life. One of the most compelling discoveries in recent cognitive neuroscience is the profound impact of bilingualism on the aging brain. While speaking two or more languages is evidently advantageous for global communication, scientists now assert that it also serves as a potent form of neurological exercise, significantly building what is known as \"cognitive reserve.\"\n\nCognitive reserve refers to the brain's resilience against damage. It acts as a mental shock absorber, allowing an individual to maintain normal cognitive function despite experiencing physical brain deterioration associated with aging or diseases like Alzheimer's. The mechanism behind this resilience stems from the constant mental juggling required by bilingualism. When a bilingual person speaks, both language systems are simultaneously active in the brain. To communicate effectively without mixing vocabulary, the brain's executive control system must constantly suppress one language while activating the other. This continuous mental workout strengthens neural pathways, particularly in the prefrontal cortex, which is responsible for executive functions such as attention, problem-solving, and multitasking.\n\nA landmark study conducted by researchers in Canada provided compelling evidence for this phenomenon. The researchers examined the medical records of hundreds of patients diagnosed with various forms of dementia. They discovered that, on average, patients who were bilingual reported the onset of their symptoms four to five years later than their monolingual counterparts. Remarkably, when the researchers later examined the brains of these bilingual patients through neuroimaging, they found that their brains actually exhibited more physical signs of Alzheimer's pathology than the monolingual brains. Despite having more severe physical brain damage, the bilingual individuals had functioned normally for much longer.\n\nThis finding suggests that bilingualism does not necessarily prevent the physical disease from occurring; rather, it empowers the brain to cope with the damage more effectively. The enriched neural networks allow the brain to find alternative pathways to bypass damaged regions, thereby delaying the outward manifestation of memory loss and confusion.\n\nHowever, it is crucial to recognize that bilingualism is not a magic cure. The protective effects can vary widely depending on several factors, including the age at which the second language was acquired, the frequency of its use, and the individual's level of proficiency. Active, daily use of both languages appears to offer the strongest protective benefits. While learning a new language later in life may not provide the same profound structural changes as childhood acquisition, neuroscientists emphasize that any mentally demanding activity can contribute positively to cognitive reserve. As the global population ages, understanding and harnessing these non-pharmacological interventions will become increasingly vital for public health strategies worldwide.",
+   "questions": [
+    {
+     "id": "rd-b2c1batch13-long-01-q1",
+     "qtype": "VOCAB_IN_CONTEXT",
+     "stem": "The word \"potent\" in the first paragraph is closest in meaning to:",
+     "options": [
+      "toxic",
+      "powerful",
+      "imaginary",
+      "subtle"
+     ],
+     "answerIndex": 1,
+     "points": 2,
+     "explanation_th": "ตอบข้อ B — potent form of neurological exercise หมายถึงรูปแบบการออกกำลังสมองที่ 'ทรงพลัง'"
+    },
+    {
+     "id": "rd-b2c1batch13-long-01-q2",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "According to the passage, how does bilingualism act as a \"mental workout\"?",
+     "options": [
+      "By forcing the brain to constantly suppress one language while using another.",
+      "By expanding the physical size of the brain's memory center.",
+      "By preventing the activation of the executive control system.",
+      "By increasing the flow of oxygen to the prefrontal cortex."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ตอบข้อ A — ย่อหน้าที่ 2 บอกว่าสมองต้อง suppress ภาษาหนึ่งขณะ activate อีกภาษาตลอดเวลา"
+    },
+    {
+     "id": "rd-b2c1batch13-long-01-q3",
+     "qtype": "MAIN_IDEA",
+     "stem": "What is the central argument of the passage?",
+     "options": [
+      "Monolingual individuals are guaranteed to develop Alzheimer's disease.",
+      "Bilingualism is the only proven method to prevent physical brain deterioration.",
+      "Learning a language in adulthood is useless for cognitive health.",
+      "Bilingualism strengthens the brain's resilience, delaying symptoms of cognitive decline."
+     ],
+     "answerIndex": 3,
+     "points": 3,
+     "explanation_th": "ตอบข้อ D — แก่นเรื่องคือการพูดสองภาษาช่วยเสริมความทนทานของสมอง ทำให้อาการเสื่อมปรากฏช้าลง"
+    },
+    {
+     "id": "rd-b2c1batch13-long-01-q4",
+     "qtype": "INFERENCE",
+     "stem": "Based on the Canadian study, what can be inferred about the bilingual patients?",
+     "options": [
+      "Their brains healed the damage caused by Alzheimer's disease.",
+      "They experienced more severe symptoms of dementia than monolingual patients.",
+      "The disease progressed physically even though the patients appeared functionally normal.",
+      "They completely avoided developing any signs of Alzheimer's pathology."
+     ],
+     "answerIndex": 2,
+     "points": 4,
+     "explanation_th": "ตอบข้อ C — สมองมีร่องรอยโรคมากกว่าแต่ยังทำหน้าที่ปกติได้นานกว่า แปลว่าโรคลุกลามทางกายภาพแม้อาการยังไม่แสดง"
+    },
+    {
+     "id": "rd-b2c1batch13-long-01-q5",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Which factor is mentioned as influencing the extent of the brain's protective effect?",
+     "options": [
+      "How frequently the person uses their second language.",
+      "The specific languages the person chooses to learn.",
+      "The genetic background of the individual's parents.",
+      "The type of neuroimaging technology used in exams."
+     ],
+     "answerIndex": 0,
+     "points": 3,
+     "explanation_th": "ตอบข้อ A — ย่อหน้าสุดท้ายระบุ frequency of its use เป็นหนึ่งในปัจจัยที่มีผล"
+    },
+    {
+     "id": "rd-b2c1batch13-long-01-q6",
+     "qtype": "PURPOSE_TONE",
+     "stem": "The author's tone throughout the passage can best be described as:",
+     "options": [
+      "skeptical and critical.",
+      "informative and objective.",
+      "emotional and persuasive.",
+      "dismissive and arrogant."
+     ],
+     "answerIndex": 1,
+     "points": 4,
+     "explanation_th": "ตอบข้อ B — ผู้เขียนนำเสนองานวิจัยอย่างเป็นกลาง มีการเตือนข้อจำกัดด้วย ไม่ใช้น้ำเสียงชักจูงหรือดูแคลน"
+    },
+    {
+     "id": "rd-b2c1batch13-long-01-q7",
+     "qtype": "SUPPORTING_DETAIL",
+     "stem": "Which of the following is NOT true about cognitive reserve based on the text?",
+     "options": [
+      "It helps individuals maintain normal function despite brain deterioration.",
+      "It acts similarly to a mental shock absorber.",
+      "It is strengthened by mentally demanding activities.",
+      "It completely halts physical brain damage from occurring."
+     ],
+     "answerIndex": 3,
+     "points": 3,
+     "explanation_th": "ตอบข้อ D — บทความบอกชัดว่า bilingualism does not necessarily prevent the physical disease จึงไม่ใช่การหยุดความเสียหายทางกายภาพ"
+    },
+    {
+     "id": "rd-b2c1batch13-long-01-q8",
+     "qtype": "ORGANIZATION",
+     "stem": "What is the primary purpose of the final paragraph?",
+     "options": [
+      "To introduce a completely new theory about dementia.",
+      "To discourage elderly people from learning new languages.",
+      "To clarify limitations and offer a broader perspective on the findings.",
+      "To summarize the specific statistics from the Canadian study."
+     ],
+     "answerIndex": 2,
+     "points": 4,
+     "explanation_th": "ตอบข้อ C — ย่อหน้าสุดท้ายเตือนว่า 'ไม่ใช่ยาวิเศษ' และอธิบายปัจจัยที่ทำให้ผลต่างกัน เป็นการขยายมุมมองให้รอบด้าน"
+    }
+   ],
+   "tier": "B2-C1"
   }
  ]
 }
